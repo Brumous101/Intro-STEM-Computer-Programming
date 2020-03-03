@@ -1,0 +1,205 @@
+v.14
+
+assignment_practice.mpws
+
+INSTRUCTIONS
+
+1) Evaluate each of the following folds once. Each
+fold will launch a GUI-based application that will
+have you practice variable assignment skills.
+
+2) Do not delete ANY of the output folds that are
+created during the evaluation of these folds.
+
+
+
+
+%group,name="Problem 0",description="Programmer's information."
+========================================================================================================
+Problem 0
+
+In the following fold, replace "xxx" with your
+first name, replace "yyy" with your last name, and
+replace "000000" with your SSU ID number:
+
+%mathpiper,name="Problem 0",subtype="problem",unassign_all="true",unassign_all="true",truncate="6000",timeout="5000"
+
+[
+["firstName", "Kyle"],
+["lastName", "Johnson"],
+["ssuIDNumber", "264694"],
+];
+
+%/mathpiper
+
+    %output,parent="Problem 0",mpversion=".257",preserve="false"
+            Result: [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]]
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 0"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .254", 1, True)
+    {
+        StringToNumber(Version()) >=? .254;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable \"firstName\" is a string that is not \"xxx\"", 1, True)
+    {
+        String?(foldResult["firstName"]) &? foldResult["firstName"] !=? "xxx";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable \"lastName\" is a string that is not \"yyy\"", 1, True)
+    {
+        String?(foldResult["lastName"]) &? foldResult["lastName"] !=? "yyy";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable \"ssuIDNumber\" is not \"000000\"", 1, True)
+    {
+        foldResult["ssuIDNumber"] !=? "000000" &? foldResult["ssuIDNumber"] !=? 0;
+    }
+}
+
+%/mathpiper_grade
+
+%/group
+
+
+
+
+
+
+
+=========================================================
+Practice 1
+
+Note: practice folds do not have grading folds.
+
+%mathpiper,name="practice1",preserve_output="true"
+
+Practice(NumberOfVariables:2, CorrectInARow:3, NumberOfReassignments:1, VariableRange:0 .. 9);
+
+%/mathpiper
+
+    %output,parent="practice1",mpversion=".257",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",0],["TotalTime",52.354238501],["CorrectInARow",3],["GeneratedCode","b := 7;"],["CorrectInARowNeeded",3],["VariablesRange",[1,2,3,4,5,6,7,8,9]],["NumberOfReassignments",1],["NumberOfVariables",2],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := 1;","b := 2;","b := a;",[["a",1,1],["b",1,1],22.557092520],
+      "a := 2;","b := 4;","b := a;",[["a",2,2],["b",2,2],11.723015238],
+      "a := 5;","b := 7;","b := a;",[["a",5,5],["b",5,5],10.182692801],
+      ]
+      Number Of Variables: 2 
+      Number Of Reassignments: 1 
+      Variables Range: 1 2 3 4 5 6 7 8 9 
+      Correct In A Row: 3 
+      Correct In A Row Needed: 3 
+      Total Time: 52.354238501 
+      Wrong Count: 0 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+
+
+
+
+
+
+
+
+
+=========================================================
+Practice 2
+
+Note: practice folds do not have grading folds.
+
+%mathpiper,name="practice2",preserve_output="true"
+
+Practice(NumberOfVariables:3, CorrectInARow:3, NumberOfReassignments:1, VariableRange:0 .. 9);
+
+%/mathpiper
+
+    %output,parent="practice2",mpversion=".257",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",0],["TotalTime",54.530213382],["CorrectInARow",3],["GeneratedCode","c := 3;"],["CorrectInARowNeeded",3],["VariablesRange",[1,2,3,4,5,6,7,8,9]],["NumberOfReassignments",1],["NumberOfVariables",3],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := 7;","b := 5;","c := 9;","c := b;",[["a",7,7],["b",5,5],["c",5,5],18.373371000],
+      "a := 3;","b := 6;","c := 9;","a := c;",[["a",9,9],["b",6,6],["c",9,9],15.759061916],
+      "a := 2;","b := 4;","c := 3;","c := a;",[["a",2,2],["b",4,4],["c",2,2],14.762178385],
+      ]
+      Number Of Variables: 3 
+      Number Of Reassignments: 1 
+      Variables Range: 1 2 3 4 5 6 7 8 9 
+      Correct In A Row: 3 
+      Correct In A Row Needed: 3 
+      Total Time: 54.530213382 
+      Wrong Count: 0 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+
+
+
+
+
+
+
+
+========================================================================================================
+Practice 3
+
+Note: practice folds do not have grading folds.
+
+%mathpiper,name="practice3",preserve_output="true"
+
+Practice(NumberOfVariables:4, CorrectInARow:3, NumberOfReassignments:3, VariableRange:0 .. 9);
+
+%/mathpiper
+
+    %output,parent="practice3",mpversion=".257",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",0],["TotalTime",86.446018353],["CorrectInARow",3],["GeneratedCode","d := 5;"],["CorrectInARowNeeded",3],["VariablesRange",[1,2,3,4,5,6,7,8,9]],["NumberOfReassignments",3],["NumberOfVariables",4],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := 9;","b := 8;","c := 1;","d := 7;","a := d;","c := a;","c := a;",[["a",7,7],["b",8,8],["c",7,7],["d",7,7],39.383843791],
+      "a := 9;","b := 4;","c := 2;","d := 6;","b := a;","c := d;","d := b;",[["a",9,9],["b",9,9],["c",6,6],["d",9,9],22.192521593],
+      "a := 3;","b := 2;","c := 9;","d := 5;","a := d;","b := a;","b := d;",[["a",5,5],["b",5,5],["c",9,9],["d",5,5],16.856393868],
+      ]
+      Number Of Variables: 4 
+      Number Of Reassignments: 3 
+      Variables Range: 1 2 3 4 5 6 7 8 9 
+      Correct In A Row: 3 
+      Correct In A Row Needed: 3 
+      Total Time: 86.446018353 
+      Wrong Count: 0 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+

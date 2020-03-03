@@ -1,0 +1,380 @@
+v.08
+
+== Debugging programs
+
+
+
+=== Exceptions
+
+Exceptions indicate that something unexpected
+occured in the program while it was being
+parsed or when it was run.
+
+
+%mathpiper,title="Program with an unknown symbol."
+
+x := 1;
+
+While(x <*? 10)
+{
+    Echo(x);
+    x++;
+}
+
+%/mathpiper
+
+
+
+%mathpiper,title="Program with structure problem."
+
+x := 1;
+
+While(x 10 <=?)
+{
+    Echo(x);
+    x++;
+}
+
+%/mathpiper
+
+
+
+%mathpiper,title="Logical error.",timeout="3000"
+
+x := 1;
+
+While(x <=? 10)
+{
+    Echo(x);
+}
+
+%/mathpiper
+
+
+
+%todo
+- Unknown symbol problem (compare with English unknown word like fooboo.
+- Syntax error during parsing <=? vs <*? (compare with English grammar).
+- Logical errors such as not incrementing the loop counter
+in a loop. It is like leaving the step out of a receipe (not yeast).
+
+%/todo
+
+
+
+
+
+
+
+
+
+=== Checking procedure arguments.
+
+The "Check" procedure can be used to throw an exception
+if a procedure's arguments are not of the required type.
+
+What is worse than an exception is a procedure
+that produces a wrong result.
+
+A procedure without argument checking.
+
+%mathpiper
+Procedure("addTwoIntegers", ["integer1", "integer2"])
+{
+    
+    integer1 + integer2;
+}
+
+%/mathpiper
+
+
+
+
+In> addTwoIntegers(4, 2);
+
+
+
+In> addTwoIntegers("Hi!", 2);
+
+
+
+In> addTwoIntegers(4, "Bye!");
+
+
+
+A procedure without argument checking.
+
+%mathpiper
+Procedure("addTwoIntegers", ["integer1", "integer2"])
+{
+    Check(Integer?(integer1), "The first argument must be an integer.");
+
+    Check(Integer?(integer2), "The second argument must be an integer.");
+ 
+    integer1 + integer2;
+}
+
+%/mathpiper
+
+
+
+
+In> addTwoIntegers(4, 2);
+
+
+
+In> addTwoIntegers("Hi!", 2);
+
+
+
+In> addTwoIntegers(4, "Bye!");
+
+
+
+Code can be tested with the "Verify" procedure.
+
+In> Verify(addTwoIntegers(1,2), 3);
+
+
+
+"Verify" prints a message if a test failed.
+
+In> Verify(addTwoIntegers(1, 5), 3);
+
+
+
+
+
+
+"ExceptionCatch" catches exceptions and handles them. The
+following code returns "False" if it catches an exception.
+
+In> ExceptionCatch(addTwoIntegers("Hi", 4), "", {Echo("An exception was thrown."); False;})
+
+
+
+"ExceptionCatch" returns the value of its first argument
+if no exception was thrown.
+
+In> ExceptionCatch(addTwoIntegers(2, 4), "", False)
+
+
+
+
+
+Verifying that exception handling code works 
+correctly with the "Verify" procedure.
+
+%mathpiper,title="Test addTwoIntegers"
+
+Verify(ExceptionCatch(addTwoIntegers("Hi", 4), "", False), False);
+
+%/mathpiper
+
+
+
+
+
+
+
+
+============= Debugging with Echos
+
+Echoing specific variables while a program is
+running. Notice that the "Echo" procedure is not
+indentend to match the other code in the sequence
+it is in. This is done so that all of the "Echo"s
+can be more easily seen to remove them after the
+program is working correctly.
+
+%mathpiper,title=""
+
+sum := 0;
+
+index := 1;
+
+While(index <=? 10)
+{
+    sum := sum + index;
+Echo("index: " + index + ", sum: " + sum);    
+
+    index := index + 1;
+}
+
+sum;
+%/mathpiper
+
+
+
+
+
+
+Taking a snapshot of a variable at a certain point during
+the running of a program by assigning this variable to
+a temporary variable.
+
+%mathpiper
+
+sum := 0;
+
+index := 1;
+
+While(index <=? 10)
+{
+    sum := sum + index;
+    
+    index := index + 1;
+
+// Take a snapshot of "index".
+If(index =? 5)
+{
+    aa := sum;
+}
+
+
+}
+
+sum;
+
+%/mathpiper
+
+
+In> aa
+
+
+
+
+
+
+Large program example (worksheet grading program) shown
+at this point in the lecture.
+
+
+
+
+
+Tagging "Echo"s with identifiers to determine which
+debugging output came from which "Echo".
+
+%mathpiper
+
+Procedure("drawRectangle", ["lowerLeftX", "lowerLeftY", "pointCount"])
+{
+    Local(yIndex, xIndex);
+    
+    yIndex := lowerLeftY;
+    
+    // This outer loop tells the inner loop where to draw a line.
+    While(yIndex <=? lowerLeftY + 4)
+    {
+        xIndex := lowerLeftX;
+        
+Echo("AAAAA " + "outLoopindex: " + yIndex + ", lowerLeftY: " + lowerLeftY);
+
+        // This inner loop draws one line at the specified y coordinate.
+        While(xIndex <=? lowerLeftX + 10)
+        {
+            // Draws a single point at a specified xy location.
+            GeoGebraPoint("A" + ToString(pointCount),  xIndex, yIndex);
+            
+            pointCount++;
+            
+Echo("   BBBBB " + xIndex);  // Indent to make these Echos easier to see in the output.
+
+            xIndex++;
+        }
+Echo("CCCCC " + "yIndex: " + yIndex);Echo();
+
+    
+        yIndex++;
+    }
+}
+
+GeoGebraClear();
+
+drawRectangle(2,3,1);
+
+%/mathpiper
+
+
+
+
+
+
+Using multiple tagged "Echo"s to determine which
+call to a procedure contains a bug that produces
+wrong results or that causes it to throw an exception.
+
+%mathpiper
+
+Procedure("doWork", ["value"])
+{
+    //Simulate a bug when a 3 is passed in as an argument.
+    If(value =? 3)
+    {
+        ExceptionThrow("", "Test exception.");
+    }
+}
+
+
+
+
+Echo("AAAA");
+
+doWork(1);
+
+Echo("BBBB");
+
+doWork(2);
+
+Echo("CCCC");
+
+doWork(3); // Exception thrown during this call simulating a bug.
+
+Echo("DDDD");
+
+doWork(4);
+
+Echo("EEEE");
+
+doWork(5);
+
+Echo("FFFF");
+
+%/mathpiper
+
+
+
+
+
+Comment out sections of code to locate the section that contains the bug.
+
+%mathpiper
+
+{
+
+    callProcedureOne();
+    
+    /*
+    callProcedureTwo();
+    callProcedureThree();
+    callProcedureFour();
+    callProcedureFive();
+    */
+
+}
+
+%/mathpiper
+
+
+
+
+- Cut sections of code out of a program, run
+the program, and then Undo to restore them.
+
+- Cut sections of code out of a program and
+temporarily paste it into a blank document.
+
+- Determine what values are being sent
+as arguments to a procedure by temporarily
+placing an Echo at the top of the procedure.

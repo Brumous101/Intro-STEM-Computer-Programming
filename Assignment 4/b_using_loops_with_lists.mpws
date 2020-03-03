@@ -1,0 +1,386 @@
+v.07
+
+MORE APPLICATIONS OF USING WHILE LOOPS WITH LISTS
+
+CHANGING ELEMENTS IN A LIST
+
+Elements in a list at a given index can be changed
+by placing a list access expression on the left
+side of the ':=' assignment operator.
+
+In> list := [11,12,13,14,15]
+
+In> list[2] := 34
+
+In> list
+
+
+
+
+
+ADDING 1 TO EACH NUMBER IN A LIST
+
+Procedures that loop can be used to select each
+expression in a list in turn so that an operation
+can be performed on these expressions. The
+following program uses a While() loop to change each
+of the elements in a list by increasing them by 1.
+
+This program calculates the length of the list
+before the loop and assigns it to the variable
+'listLength'. The reason this is done is because
+the Length() procedure determines the length of a
+list by starting at the beginning of the list and
+counting each element it contains. If this length
+calculation is done in the loop, then the loop will
+run much slower than it needs to if the list it is
+working with is large. Calculating the length of a
+list once above the loop and assigning this value
+to a variable allows the program to run faster.
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false",truncate="1500",timeout="5000"
+
+// Add 1 to each element of a list.
+
+list := [55,93,40,21,7,24,15,14,82];
+
+listLength := Length(list);
+
+index := 1;
+
+While(index <=? listLength)
+{
+    list[index] := (list[index] + 1);
+
+    index := (index + 1);
+}
+
+list;
+
+%/mathpiper
+
+
+
+
+
+COUNTING THE NUMBER OF STRINGS IN A LIST
+
+Create a program that uses a While() loop and the
+String?() predicate procedure to analyze the
+following list and then return the number of
+strings it contains. Use a variable named
+"stringsCount" to count the strings.
+
+[32,"A",70,"Hello","C",17,53,"Red",24]
+
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false",truncate="1500",timeout="5000"
+
+list := [32,"A",70,"Hello","C",17,53,"Red",24];
+
+listLength := Length(list);
+
+stringCount := 0;
+
+index := 1;
+
+While(index <=? listLength)
+{
+    If(String?(list[index]))
+    {
+        stringCount := (stringCount + 1);
+    }
+
+    index := (index + 1);
+}
+
+stringCount;
+
+%/mathpiper
+
+
+
+
+
+DETERMINING IF A NUMBER IS IN A LIST
+
+A loop can also be used to search through a list.
+The following program uses a While() procedure and
+an If() procedure to search through a list to see
+if it contains the number 53. A message in a
+string is returned that indicates whether or not
+53 was found in the list.
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false",truncate="1500",timeout="5000"
+
+//Determine if 53 is in the list.
+
+testList := [18,26,32,42,53,43,54,6,97,41];
+
+listLength := Length(testList);
+
+result := "53 was not found in the list";
+
+index := 1;
+
+While(index <=? listLength)
+{
+    If(testList[index] =? 53)
+    {
+       result := "53 was found in the list at position " + index;
+    }
+        
+    index := (index + 1);
+}
+
+result;
+
+%/mathpiper
+
+
+When this program was executed, it determined that
+53 was present in the list at position 5.
+
+Human are able to quickly scan short lists to
+determine if they contain a value. However, they
+are unable to do so easily with longer lists. For
+example, it would be difficult for a human to
+determine how may 53s are in the following list
+just by scanning through it.
+
+In> RandomIntegerList(100, 1, 200)
+
+
+
+CALCULATING THE SUM OF THE INTEGERS IN A LIST
+
+The following code uses a loop to calculate the
+sum of the integers in a list, and it uses a
+variable named 'sum' to accumulate the sum.
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false",truncate="1500",timeout="5000"
+
+// Find the sum all all the integers in a list.
+
+list := [5,10,8,1,6,4,7,7,15,2];
+
+listLength := Length(list);
+
+sum := 0;
+
+index := 1;
+
+While(index <=? listLength)
+{
+    sum := (sum + list[index]);
+    
+    index := (index + 1);
+}
+
+sum;
+
+%/mathpiper
+
+
+
+COMBINING TWO LISTS BY ALTERNATELY ACCESSING THEM
+
+The following code copies the elements that are in
+two lists into a third list. It does this by
+alternately accessing the elements in the two
+lists. 
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false",truncate="1500",timeout="5000"
+
+list1 := ["A","B","C","D","E"];
+
+list2 := [11,12,13,14,15];
+
+combinedList := [];
+
+listLength := Length(list1);
+
+index := 1;
+
+While(index <=? listLength)
+{
+    Append!(combinedList, list1[index]);
+    
+    Append!(combinedList, list2[index]);
+
+    index := (index + 1);
+}
+
+combinedList;
+
+%/mathpiper
+
+
+
+SEPARATING THE VALUES IN A LIST BY THEIR POSITION
+
+This program does the opposite of what the
+previous program does in that it separates a list
+that contains alternating letters and numbers into
+two lists. The first list contains only the
+letters from the combined list, and the second
+list contains only the numbers from the combined
+list.
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false",truncate="1500",timeout="5000"
+
+combinedList := ["A",11,"B",12,"C",13,"D",14,"E",15];
+
+lettersList := [];
+
+numbersList := [];
+
+listLength := Length(combinedList);
+
+index := 1;
+
+While(index <=? listLength)
+{
+    Append!(lettersList, combinedList[index]);
+    
+    index := (index + 1);
+    
+    Append!(numbersList, combinedList[index]);
+
+    index := (index + 1);
+}
+
+[lettersList, numbersList];
+
+%/mathpiper
+
+
+
+SEPARATING THE VALUES IN A LIST BY THEIR TYPE
+
+In the following program, the list that is
+assigned to the variable named 'combinedList'
+contains letters, numbers, and boolean values. The
+program separates these three types of values into
+separate lists.
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false",truncate="1500",timeout="5000"
+
+combinedList :=  [1,"B","D",True,2,False,5,"E","A",False,"C",3,4,True];
+
+combinedListLength := Length(combinedList);
+
+stringsList := [];
+numbersList := [];
+booleansList := [];
+
+index := 1;
+
+While(index <=? combinedListLength)
+{
+    If(String?(combinedList[index]))
+    {
+        Append!(stringsList, combinedList[index]);
+    }
+    Else If(Integer?(combinedList[index]))
+    {
+        Append!(numbersList, combinedList[index]);
+    }    
+    Else If(Boolean?(combinedList[index]))
+    {
+        Append!(booleansList, combinedList[index]);
+    }
+    
+    index := (index + 1);    
+}
+
+[stringsList, numbersList, booleansList];
+
+%/mathpiper
+
+
+
+SWAPPING ADJACENT ELEMENTS IN A LIST
+
+This program swaps the letters that are at odd
+indexs in a list with the numbers that are to their
+immediate right.
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false",truncate="1500",timeout="5000"
+
+combinedList := ["A",11,"B",12,"C",13,"D",14,"E",15];
+
+swappedList := [];
+
+listLength := Length(combinedList);
+
+index := 1;
+
+While(index <=? listLength)
+{
+    Append!(swappedList, combinedList[index + 1]);
+    
+    Append!(swappedList, combinedList[index]);
+    
+    index := (index + 2);
+}
+
+swappedList;
+
+%/mathpiper
+
+
+
+REVERSE THE ORDER OF THE ELEMENTS IN A LIST
+
+The following program reverses the order of the
+elements that are in a list.
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false",truncate="1500",timeout="5000"
+
+list := ["A","B","C","D","E"];
+
+reversedList := [];
+
+index := Length(list);
+
+While(index >=? 1)
+{
+    Append!(reversedList, list[index]);
+
+    index := (index - 1);
+}
+
+reversedList;
+
+%/mathpiper
+
+
+
+CREATING A LIST THAT CONTAINS NUMBERS THAT ARE REPEATED TWICE
+
+This program uses a loop to create the following list:
+
+[1,1,2,2,3,3,4,4,5,5,6,6,7,7]
+
+
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false",truncate="1500",timeout="5000"
+
+resultList := [];
+
+index := 1;
+
+While(index <=? 7)
+{
+    Append!(resultList, index);
+    
+    Append!(resultList, index);
+    
+    index := index + 1;
+}
+
+resultList;
+
+%/mathpiper  
+

@@ -1,0 +1,243 @@
+
+Values
+
+In> 4
+
+In> -2
+
+
+In> 'a
+
+
+In> "Hello"
+
+
+In> [1,6,5,4]
+
+Literals (all of the above are literals.
+
+
+Numbers.
+
+Integers
+
+In> 3
+
+
+In> 3.23454
+
+
+
+Variables and variable assignment.
+
+In> aa := 4
+
+
+
+In> aa
+
+
+
+In> aa + 2
+
+
+Strings
+
+In> bb := "Hello there!"
+
+
+In> bb[5]
+
+
+
+
+In> "Hi " + "there!"
+
+
+In> "Number " + 1
+
+
+
+Lists
+
+In> cc := RandomIntegerList(50, 1, 75)
+
+In> cc[3]
+
+
+In> dd := [11,12,13,["a","b"],14,15]
+
+
+In> dd[4]
+
+
+In> dd[4][2]
+
+Printing side effect output with Echo.
+
+In> "Hello"
+
+In> Echo("Hello")
+
+
+
+In> Echo("Hello ", " There ", "number ", 5)
+
+
+Code sequence.
+
+In> ee := {11; 22; 33; 44;}
+
+In> ff := {Echo("Hi"); Echo("There!");}
+
+
+Boolean (predicate) expressions. Talk about the practice assignment for this week.
+
+
+
+Making decisions with If/Else.
+
+%mathpiper,title=""
+
+If(True)
+{
+    Echo("Hello");
+}
+
+
+Echo("Done");
+
+%/mathpiper
+
+
+
+%mathpiper,flowchart="true",image_scale="2.0"
+
+If(True)
+{
+    Echo("One");
+    
+    If(True)
+    {
+        Echo("Two");
+        
+        If(True)
+        {
+            Echo("Three");
+            
+            If(True)
+            {
+                Echo("Hello");
+            }        
+        }    
+    }
+}
+
+
+%/mathpiper
+
+
+
+
+
+
+
+
+Flowcharts.
+
+
+
+Looping with While.
+
+%mathpiper,title=""
+
+index := 1;
+
+While(index <=? 10)
+{
+    Echo(index);
+
+    index := index + 1;
+}
+
+
+%/mathpiper
+
+
+%mathpiper,title=""
+
+index := 10;
+
+While(index >=? 1)
+{
+    Echo(index);
+
+    index := index - 1;
+}
+
+
+%/mathpiper
+
+    %output,mpversion=".258",preserve="false"
+      Result: 0
+      
+      Side Effects:
+      10 
+      9 
+      8 
+      7 
+      6 
+      5 
+      4 
+      3 
+      2 
+      1 
+      
+.   %/output
+
+
+Looping with lists.
+
+
+%mathpiper,title=""
+
+list := [4,77,73,17,48,82,79,48,70,8];
+
+listLength := Length(list);
+
+index := 1;
+
+numberFound := False;
+
+While(index <=? listLength)
+{
+    If(list[index] =? 79)
+    {
+        numberFound := True;
+    }
+    
+    index := index + 1;
+}
+
+If(numberFound =? True)
+{
+    Echo("79 is in the list");
+}
+Else
+{
+    Echo("79 is not in the list");
+}
+
+
+%/mathpiper
+
+    %output,mpversion=".258",preserve="false"
+      Result: True
+      
+      Side Effects:
+      79 is in the list
+      
+.   %/output
+
+
+

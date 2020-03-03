@@ -1,0 +1,1088 @@
+v.05
+
+MathPiper PROGRAMMING FUNDAMENTALS
+
+The MathPiper language consists of expressions and
+an EXPRESSION consists of one or more symbols that
+represent values, operators, variables, and
+procedures. In this section expressions are
+explained along with the values, operators,
+variables, and procedures they consist of.
+
+
+
+VALUES, LITERALS, AND EXPRESSIONS
+
+A VALUE is a single symbol or a group of symbols
+that represent an idea. For example, the value:
+
+3
+
+represents the number three, the value:
+
+0.5 
+
+represents the number one half, and the value:
+
+"Mathematics is powerful!"
+
+is a "string" of characters that represents an
+English sentence (strings are covered in a later
+section).
+
+A LITERAL is any notation in computer source code
+that represents a value. Any number that is
+present in the source code of a program is a
+literal. For example, the 3 above is an integer
+number literal, and the number 0.5 is a real
+number literal. Additional literals will be
+discussed in later sections.
+
+EXPRESSIONS can be created by using VALUES and
+OPERATORS as building blocks. The following are
+examples of simple expressions that have been
+created this way:
+
+3
+
+2 + 3
+
+5 + 6*21/7 - 2^3
+
+In MathPiper, expressions can be EVALUATED, which
+means that they can be transformed into a RESULT
+VALUE by predefined rules. For example, when the
+expression 2 + 3 is evaluated, the result value
+that is produced is 5:
+
+%mathpiper
+
+2 + 3;
+
+%/mathpiper
+
+
+
+OPERATORS
+
+In the above expressions, the characters +, −, *,
+/, ^ are called OPERATORS and their purpose is to
+tell MathPiper what OPERATIONS to perform on the
+VALUES in an expression. For example, in the
+expression 2 + 3, the ADDITION operator + tells
+MathPiper to add the integer 3 to the integer 2
+and return the result.
+
+An operator's input values are called its OPERANDS. For
+example, the '+' operator above had 2 and 3 as its
+operands. The number 2 is its left operand, and
+the number 3 is its right operand.
+
+The SUBTRACTION operator is −, the MULTIPLICATION
+operator is *, / is the DIVISION operator, % is
+the REMAINDER operator, and ^ is the EXPONENT
+operator. MathPiper has more operators in addition
+to these and some of them will be covered later.
+
+The following examples show the −, *, /,%, and ^
+operators being used:
+
+%mathpiper
+
+5 - 2;
+
+%/mathpiper
+
+
+
+%mathpiper
+
+3*4;
+
+%/mathpiper
+
+
+
+%mathpiper
+
+30/3;
+
+%/mathpiper
+
+
+
+%mathpiper
+
+11%5;
+
+%/mathpiper
+
+
+
+%mathpiper
+
+2^3;
+
+%/mathpiper
+
+
+
+The − character can also be used to indicate a
+negative number:
+
+%mathpiper
+
+-3;
+
+%/mathpiper
+
+
+
+Subtracting a negative number results in a
+positive number (Note: there must be a space
+between the two negative signs):
+
+%mathpiper
+
+- -3;
+
+%/mathpiper
+
+
+
+In MathPiper, operators are symbols (or groups of
+symbols) that are implemented with procedures. One
+can either call the procedure that an operator
+represents directly, or use the operator to call
+the procedure indirectly. However, using operators
+requires less typing and they often make a program
+easier to read.
+
+
+
+OPERATOR PRECEDENCE
+
+When expressions contain more than one operator,
+MathPiper uses a set of rules called OPERATOR
+PRECEDENCE to determine the order in which the
+operators are applied to the values in the
+expression. Operator precedence is also referred
+to as the ORDER OF OPERATIONS. Operators with
+higher precedence are evaluated before operators
+with lower precedence. The following table shows a
+subset of MathPiper's operator precedence rules
+with higher precedence operators being placed
+higher in the table:
+
+^    Exponents (right associative).
+/    Then division (left associative).
+*    Then multiplication (left associative).
+%    Then the remainder operator (left associative).
++, −    Finally, addition and subtraction (left associative).
+
+This multi-operator expression will be used as an
+example to illustrate the precedence rules.
+
+1) source code form:
+
+    5 + 6*21/7 - 2^3
+
+2) traditional mathematics form:
+
+%mathpiper
+
+Show(LatexView(UnparseLatex('(5 + 6*21/7 - 2^3))), returnContent:True);
+
+%/mathpiper
+
+
+
+The ' operator in the above code is named the
+"hold" operator, and it prevents an expression
+from being evaluated. In the following code, the '
+operator is used to prevent the expression 2 + 3
+and the variable 'a' from being evaluated:
+
+%mathpiper
+
+'(2 + 3);
+
+%/mathpiper
+
+
+
+%mathpiper,globalStateShow="true"
+
+var1 := 3;
+
+%/mathpiper
+
+
+
+%mathpiper
+
+'var1;
+
+%/mathpiper
+
+
+
+MathPiper uses post-order evaluation of
+expressions instead of PEMDAS.
+
+1) Start with the operator that is evaluated last in the expression.
+
+2) Evaluate the operator's left operand.
+
+3) Evaluate the operator's right operand.
+
+4) Evaluate the operator.
+
+Let's manually apply the precedence rules and
+post-order evaluation to the multi-operator
+expression we used earlier.
+
+According to post-order evaluation and the
+precedence rules, this is the order in which
+MathPiper evaluates the operations in this
+expression:
+
+5 + 6*21/7 - 2^3
+5 + 6*3 - 2^3
+5 + 18 - 2^3
+23 - 2^3
+23 - 8
+4
+
+Starting with the first line, MathPiper evaluates
+the / operator first, which results in the 3 in
+the line below it. In the second line, the *
+operator is evaluated next, and so on. The last
+line shows that the final result after all of the
+operators have been evaluated is 15.
+
+
+
+CHANGING THE ORDER OF OPERATIONS IN AN EXPRESSION
+
+The default order of operations for an expression
+can be changed by grouping various parts of the
+expression within parentheses (). Parentheses
+force the code that is placed inside of them to be
+evaluated before any other operators are
+evaluated. For example, the expression 2 + 4*5
+evaluates to 22 using the default precedence
+rules:
+
+%mathpiper
+
+2 + 4*5;
+
+%/mathpiper
+
+
+
+If parentheses are placed around 2 + 4, however,
+the addition operator is forced to be evaluated
+before the multiplication operator and the result
+is 30:
+
+%mathpiper
+
+(2 + 4)*5;
+
+%/mathpiper
+
+
+
+Parentheses can also be nested, and nested
+parentheses are evaluated from the most deeply
+nested parentheses outward:
+
+%mathpiper
+
+((2 + 4)*3)*5;
+
+%/mathpiper
+
+
+
+(Note: precedence adjusting parentheses are
+different from the parentheses that are used when
+calling procedures.)
+
+Since parentheses are evaluated before any other
+operators, they are placed at the top of the
+precedence table:
+
+()   Parentheses are evaluated from the inside out.
+^    Exponents (right associative).
+/    Then division (left associative).
+*    Then multiplication (left associative).
+%    Then the remainder operator (left associative).
++, −    Finally, addition and subtraction (left associative).
+
+
+
+PROCEDURES & PROCEDURE NAMES
+
+In programming, procedures are named sequences of
+code that can be evaluated one or more times by
+being called from other parts of the same program
+or called from other programs. Procedures can have
+values passed to them from the calling code
+(called ARGUMENTS), and they always return a VALUE
+back to the calling code when they are finished
+executing. An example of a procedure is the
+Even?() procedure, which was discussed in an
+previous section.
+
+Procedures are one way that MathPiper enables code
+to be reused. Most programming languages allow
+code to be reused in this way, although in other
+languages these named sequences of code are
+sometimes called SUBROUTINES, PROCEDURES, FUNCTIONS, or
+METHODS.
+
+The procedures that come with MathPiper have names
+that consist of either a single word (such as
+Sum()) or multiple words that have been put
+together to form a compound word (such as
+FillList()). All letters in the names of
+procedures that come with MathPiper are lower case
+except the beginning letter in each word, which
+are upper case.
+
+
+
+PROCEDURES THAT PRODUCE SIDE EFFECTS
+
+Most procedures are evaluated to obtain the RESULTS
+they produce, but some procedures are evaluated in
+order to HAVE THEM PERFORM WORK THAT IS NOT IN THE
+FORM OF A RESULT. Procedures that perform work
+that is not in the form of a result are said to
+produce side effects. SIDE EFFECTS include many
+forms of work such as sending information to the
+user, opening files, and changing values in the
+computer's memory.
+
+When a procedure produces a side effect that sends
+information to the user, this information has the
+words "Side Effects:" placed before it in the output
+instead of the word "Result:". The Echo() and
+Write() procedures are examples of procedures that
+produce side effects, and they are covered in the
+next section.
+
+
+
+PRINTING RELATED PROCEDURES: Echo(), Write(), AND Newline()
+
+The printing related procedures send text
+information to the user and this is usually
+referred to as "printing" in this document.
+However, it may also be called "echoing" and
+"writing".
+
+
+
+THE Echo() PROCEDURE
+
+The Echo() procedure takes one expression as an
+argument, or multiple expressions separated by
+commas. BY DEFAULT, ARGUMENTS ARE EVALUATED BEFORE
+THEY ARE PASSED TO A PROCEDURE. This means the
+argument 2 + 3 would be evaluated to 5, and then 5
+would be be passed to the procedure. 
+
+Echo() prints its results as side effect output.
+The following examples illustrate this:
+
+%mathpiper,flowchart="false"
+
+Echo(1);
+
+%/mathpiper
+
+
+
+In this example, the number 1 was passed to the
+Echo() procedure, the number was evaluated (all
+numbers evaluate to themselves), and the result of
+the evaluation was then printed as a side effect.
+Notice that Echo() ALSO RETURNED A RESULT. In
+MathPiper, all procedures return a result, but
+procedures whose main purpose is to produce a side
+effect usually just return a result of True if the
+side effect succeeded or False if it failed. In
+this case, Echo() returned a result of True
+because it was able to successfully print a 1 as
+its side effect.
+
+The next example shows multiple expressions being
+sent to Echo() (notice that the expressions are
+separated by commas):
+
+%mathpiper,flowchart="false"
+
+Echo(1, 1+2, 2*3);
+
+%/mathpiper
+
+
+
+The arguments were each evaluated when they were
+passed to the Echo() procedure and their results
+were returned (separated by spaces) as side effect
+output.
+
+Each time an Echo() procedure is evaluated, it
+always forces the display to drop down to the next
+line after it is finished. This can be seen in the
+following program, which is similar to the
+previous one except it uses a separate Echo()
+procedure to display each expression:
+
+%mathpiper,flowchart="false"
+
+Echo(1);
+
+Echo(1+2);
+
+Echo(2*3);
+
+%/mathpiper
+
+
+Notice how the 1, the 3, and the 6 are each on
+their own line.
+
+Now that we have seen how Echo() works, let's use
+it to do something useful. If more than one
+expression is evaluated in a mathpiper fold, only
+the result from the last expression that was
+evaluated (which is usually the bottommost
+expression) is displayed:
+
+%mathpiper,globalStateShow="true",flowchart="false"
+
+var1 := 5;
+var2 := 6;
+var3 := 7;
+
+%/mathpiper
+
+
+In MathPiper, PROGRAMS ARE EVALUATED ONE LINE AT A
+TIME, STARTING AT THE TOPMOST LINE OF CODE AND
+WORKING DOWNWARDS FROM THERE. In this example, the
+line var1 := 1; is evaluated first, then the line var2 :=
+2; is evaluated, and so on. Notice, however, that
+even though we wanted to see what was assigned to
+all three variables, only the last variable's
+value was displayed.
+
+The following example shows how Echo() can be used
+to display the values that are assigned to all
+three variables:
+
+%mathpiper,globalStateShow="false",flowchart="false"
+
+var1 := 5;
+Echo(var1);
+
+var2 := 6;
+Echo(var2);
+
+var3 := 7;
+Echo(var3);
+
+%/mathpiper
+
+
+
+Echo PROCEDURES ARE USEFUL FOR "DEBUGGING" PROGRAMS
+
+The errors that are in a program are often called
+"bugs". This name came from the days when
+computers were the size of large rooms and were
+made using electromechanical parts. Periodically,
+bugs would crawl into the machines and interfere
+with its moving mechanical parts and this would
+cause the machine to malfunction. The bugs needed
+to be located and removed before the machine would
+run properly again.
+
+Of course, even back then most program errors were
+produced by programmers entering wrong programs or
+entering programs wrong, but they liked to say
+that all of the errors were caused by bugs and not
+by themselves! The process of fixing errors in a
+program became known as DEBUGGING and the names
+"bugs" and "debugging" are still used by
+programmers today.
+
+One of the standard ways to locate bugs in a
+program is to place Echo() procedure calls in the
+code at strategic places that print the contents
+of variables and display messages. These Echo()
+procedures will enable you to see what your
+program is doing while it is running. After you
+have found and fixed the bugs in your program, you
+can remove the debugging Echo() procedure calls or
+comment them out if you think they may be needed
+later.
+
+
+THE Write() PROCEDURE
+
+The Write() procedure is similar to the Echo()
+procedure except it does not automatically drop
+the display down to the next line after it
+finishes executing:
+
+%mathpiper,flowchart="false"
+
+Write(1);
+
+Write(2);
+
+Write(3);
+
+%/mathpiper
+
+
+Write() and Echo() have other differences besides
+the one discussed here and more information about
+them can be found in the documentation for these
+procedures.
+
+
+
+THE NewLine() PROCEDURE
+
+The NewLine() procedure starts a new line in the
+side effects output. It can be used to print blank
+lines, which are useful for placing vertical space
+between printed lines:
+
+%mathpiper,globalStateShow="true",flowchart="false"
+
+var1 := 6;
+Echo(var1);
+NewLine();
+
+var2 := 7;
+Echo(var2);
+NewLine();
+
+var3 := 8;
+Echo(var3);
+
+%/mathpiper
+
+
+
+EXPRESSIONS ARE SEPARATED BY SEMICOLONS
+
+As discussed earlier, all of the expressions that
+are inside of a MathPiper fold must have a
+semicolon (;) after them. However, the expressions
+evaluated in "In" prompts do not have a semicolon
+after them. MathPiper actually requires that all
+expressions end with a semicolon, but one does not
+need to add a semicolon to an expression that is
+typed to the right on an "In" prompt because the
+prompt adds it automatically when the expression
+is evaluated.
+
+
+
+PLACING MORE THAN ONE EXPRESSION ON A LINE IN A FOLD
+
+All the previous code examples have had each of
+their expressions on a separate line, but multiple
+expressions can also be placed on a single line
+because the semicolons tell MathPiper where one
+expression ends and the next one begins:
+
+%mathpiper,globalStateShow="true",flowchart="false"
+
+a := 1; Echo(a); b := 2; Echo(b); c := 3; Echo(c);
+
+%/mathpiper
+
+The spaces that are in the code of this example
+are used to make the code more readable. Any
+spaces that are present within any expressions or
+between them are ignored by MathPiper and if we
+remove the spaces from the previous code, the
+output remains the same:
+
+%mathpiper,globalStateShow="true",flowchart="false"
+
+a:=1;Echo(a);b:=2;Echo(b);c:=3;Echo(c);
+
+%/mathpiper
+
+
+
+PLACING CONSECUTIVE EXPRESSIONS INTO A CODE SEQUENCE
+
+It is often useful to place a sequence of
+expressions that are used together to accomplish a
+task into a group. In MathPiper these groups are
+called "code sequences." A CODE SEQUENCE (which is
+also called a COMPOUND EXPRESSION) consists of one
+or more expressions that are separated by
+semicolons and placed within an open brace ({) and
+close brace (}) pair. When a code sequence is
+evaluated, each expression in the sequence will be
+evaluated from left-to-right or top-to-bottom. The
+following example shows expressions being evaluated
+within a code sequence inside the MathPiper
+console:
+
+%mathpiper,globalStateShow="true",flowchart="false"
+
+{a := 1; Echo(a); b := 2; Echo(b); c := 3; Echo(c);}
+
+%/mathpiper
+
+
+Notice that all of the expressions were evaluated,
+and 1-3 was printed as a side effect. Code
+sequences ALWAYS RETURN THE RESULT OF THE LAST
+EXPRESSION EXECUTED AS THE RESULT OF THE WHOLE
+SEQUENCE. In this case, True was returned as the
+result because the last Echo(c) procedure returned
+True. If we place another expression after the
+Echo(c) procedure, however, the sequence will
+execute this new expression last and its result
+will be the one returned by the sequence:
+
+%mathpiper,globalStateShow="true",flowchart="false"
+
+{a := 1; Echo(a); b := 2; Echo(b); c := 3; Echo(c); 2 + 2;}
+
+%/mathpiper
+
+
+
+Finally, code sequences can have their contents
+placed on separate lines if desired:
+
+%mathpiper,globalStateShow="true",flowchart="false"
+{
+    a := 1;
+    
+    Echo(a);
+    
+    b := 2; 
+    
+    Echo(b); 
+    
+    c := 3; 
+    
+    Echo(c);
+}
+
+%/mathpiper
+
+
+Code sequences are very powerful, and we will be
+discussing them further in later sections.
+
+
+
+COMMENTS
+
+Source code can often be difficult to understand
+and therefore all programming languages provide
+the ability for comments to be included in the
+code. Comments are used to explain what the code
+near them is doing and they are usually meant to
+be read by humans instead of being processed by a
+computer. Therefore, comments are ignored by the
+computer when a program is evaluated.
+
+There are two ways that MathPiper allows comments
+to be added to source code. The first way is by
+placing two forward slashes // to the left of any
+text that is meant to serve as a comment. The text
+from the slashes to the end of the line the
+slashes are on will be treated as a comment. Here
+is a program that contains comments that use
+slashes:
+
+%mathpiper
+// This is a comment.
+
+x := 2; // The variable x becomes 2.
+
+%/mathpiper
+
+
+When this program is evaluated, any text that
+starts with slashes is ignored.
+
+The second way to add comments to a MathPiper
+program is by enclosing the comments inside of
+slash-asterisk/asterisk-slash symbols /* */. This
+option is useful when a comment is too large to
+fit on one line. Any text between these symbols is
+ignored by the computer. This program shows a
+longer comment that has been placed between these
+symbols:
+
+%mathpiper
+
+/*
+ This is a longer comment and it uses
+ more than one line. The following
+ code assigns the number 3 to variable
+ x and then returns it as a result.
+*/
+
+x := 3;
+
+%/mathpiper
+
+
+
+AUTOMATIC BRACKET, PARENTHESES, AND BRACE MATCH INDICATING
+
+In programming, most open brackets '[' have a
+close bracket ']', most open parentheses '(' have
+a close parentheses ')', and most open braces '{'
+have a close brace '}'. It is often difficult to
+make sure that each "open" character has a
+matching "close" character and if any of these
+characters don't have a match, then an error will
+be produced.
+
+Thankfully, most programming text editors have a
+character match indicating tool that will help
+locate problems. To try this tool, paste the
+following code into a .mpws file and following the
+directions that are present in its comments:
+
+%mathpiper,globalStateShow="true",flowchart="false"
+
+/*
+    Place the cursor to the immediate right of any 
+    {, }, [, ], (, or ) character. You should notice 
+    that the match to this character is indicated by 
+    a rectangle being drawing around it.
+*/
+
+
+list := [1,2,3];
+
+{
+    Echo("Hello");
+    
+    Echo(list);
+}
+
+%/mathpiper
+
+
+
+STRINGS
+
+A STRING is a value that is used to hold
+text-based information. The typical expression
+that is used to create a string consists of TEXT
+THAT IS ENCLOSED WITHIN DOUBLE QUOTES. Text in a
+program's source code that is enclosed in double
+quotes is called a STRING LITERAL. Strings can be
+assigned to variables just like numbers can, and
+strings can also be displayed using the Echo()
+procedure. The following program assigns a string
+value to the variable 'a' and then prints it to
+the user:
+
+%mathpiper,globalStateShow="true",flowchart="false"
+
+a := "Hello, I am a string.";
+
+Echo(a);
+
+%/mathpiper
+
+
+
+USING STRINGS TO MAKE ECHO'S OUTPUT EASIER TO READ
+
+When the Echo() procedure is used to print the
+values of multiple variables, it is often helpful
+to print some information next to each variable so
+that it is easier to determine which value came
+from which Echo() procedure in the code. The
+following program prints the name of the variable
+that each value came from next to it in the side
+effects output:
+
+%mathpiper,globalStateShow="true",flowchart="false"
+
+a := 1;
+Echo("Variable a: ", a);
+
+b := 2;
+Echo("Variable b: ", b);
+
+c := 3;
+Echo("Variable c: ", c);
+
+%/mathpiper
+
+
+
+COMBINING STRINGS WITH THE + OPERATOR
+
+If you need to combine two or more strings into
+one string, you can use the + operator like this:
+
+%mathpiper
+
+"Hello " + "there!";
+
+%/mathpiper
+
+
+
+%mathpiper
+
+"A" + "B" + "C";
+
+%/mathpiper
+
+
+
+If one of the '+' operator's operands is not a
+string, it will be converted into a string before
+being contatenated with the other operand.
+
+%mathpiper
+
+"A" + 1;
+
+%/mathpiper
+
+
+
+
+THE WriteString() PROCEDURE
+
+The WriteString() procedure prints a string
+without showing the double quotes that are around
+it. For example, here is the Write() procedure
+being used to print the string "Hello":
+
+%mathpiper
+
+Write("Hello");
+
+%/mathpiper
+
+
+
+Notice the double quotes? Here is how the
+WriteString() procedure prints "Hello":
+
+%mathpiper
+
+WriteString("Hello");
+
+%/mathpiper
+
+
+
+
+THE Nl() PROCEDURE
+
+The Nl() (New Line) procedure is used with the +
+procedure to place newline characters inside of
+strings:
+
+%mathpiper
+
+WriteString("A" + Nl() + "B");
+
+%/mathpiper
+
+
+
+
+THE Space() PROCEDURE
+
+The Space() procedure is used to add spaces to
+printed output:
+
+%mathpiper,flowchart="false"
+
+WriteString("A"); Space(5); WriteString("B");
+
+%/mathpiper
+
+
+
+%mathpiper,flowchart="false"
+
+WriteString("A"); Space(10); WriteString("B");
+
+%/mathpiper
+
+
+
+%mathpiper,flowchart="false"
+
+WriteString("A"); Space(20); WriteString("B");
+
+%/mathpiper
+
+
+
+
+ACCESSING THE INDIVIDUAL LETTERS/CHARACTERS IN A STRING
+
+Individual letters in a string (which are also
+called CHARACTERS) can be accessed by placing the
+character's position number (also called an index)
+inside of brackets [] after the variable it is
+assigned to. A character's position is determined
+by its distance from the left side of the string
+starting at 1. For example, in the string "Hello",
+'H' is at position 1, 'e' is at position 2, etc.
+The following code shows individual characters in
+the above string being accessed:
+
+%mathpiper,globalStateShow="true"
+
+a := "Hello, I am a string.";
+
+%/mathpiper
+
+
+
+%mathpiper
+
+a[1];
+
+%/mathpiper
+
+
+
+%mathpiper
+
+a[2];
+
+%/mathpiper
+
+
+
+%mathpiper
+
+a[3];
+
+%/mathpiper
+
+
+
+%mathpiper
+
+a[4];
+
+%/mathpiper
+
+
+
+%mathpiper
+
+a[5];
+
+%/mathpiper
+
+
+
+
+INDEXING BEFORE THE BEGINNING OF A STRING OR PAST THE END OF A STRING
+
+Let's see what happens if an index is used that is
+less than 1 or greater than the length of a given
+string. First, we will assign the string "Hello"
+to the variable 'a':
+
+%mathpiper,flowchart="false"
+
+a := "Hello";
+
+%/mathpiper
+
+
+
+Then, we'll index the character at position 1 and
+then the character at position 0:
+
+%mathpiper
+
+a[1];
+
+%/mathpiper
+
+
+
+%mathpiper
+
+a[0];
+
+%/mathpiper
+
+
+
+Notice that using an index of 0 resulted in an
+error.
+
+Next, let's access the character at position 5
+(which is the 'o'), and finally the character at
+position 6:
+
+%mathpiper
+
+a[5];
+
+%/mathpiper
+
+
+
+%mathpiper
+
+a[6];
+
+%/mathpiper
+
+
+
+HOW TO TELL IF MathPiper HAS CRASHED AND WHAT TO DO IF IT HAS
+
+Sometimes code will be evaluated that has one or
+more unusual errors in it, and the errors will
+cause MathPiper to "crash". Unfortunately,
+beginners are more likely to crash MathPiper than
+more experienced programmers are because a
+beginner's program is more likely to have errors
+in it. When MathPiper crashes, no harm is done but
+it will not work correctly after that. THE ONLY
+WAY TO RECOVER FROM A MATHPIPER CRASH IS TO EXIT
+MATHPIPERIDE AND THEN RELAUNCH IT.
+
+One way to tell if MathPiperIDE has crashed is
+that it will indicate that THERE ARE ERRORS IN
+LINES OF CODE THAT ARE ACTUALLY FINE. If you are
+receiving an error in code that looks okay to you,
+simply restarting MathPiperIDE may fix the
+problem. If you restart MathPiperIDE and the error
+is still present, this usually means that there
+really is an error in the code.

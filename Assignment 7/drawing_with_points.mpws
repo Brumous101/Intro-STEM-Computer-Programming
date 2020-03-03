@@ -1,0 +1,197 @@
+v.08
+
+*****************************************************
+NOTE: the Plotter plugin must be opened at least once
+before the PlotterXXX commands will work.
+*****************************************************
+
+
+Plot random points in Plotter.
+
+%mathpiper
+
+PlotterClear();
+
+pointCount := 1;
+
+index := 1;
+
+While(index <=? 50)
+{
+    xCoordinate := RandomInteger(8);
+    
+    yCoordinate := RandomInteger(8);
+    
+    PlotterPoint("A" + pointCount, xCoordinate, yCoordinate);
+    
+    pointCount++;
+    
+    index++;
+}
+
+%/mathpiper
+
+    %output,mpversion=".259",preserve="false"
+      Result: 50
+.   %/output
+
+
+
+
+
+
+
+Draw a line with a loop and one For
+procedure from (1,3) to (10,3) with
+points.
+
+%mathpiper
+
+PlotterClear();
+
+pointCount := 1;
+For(yIndex := 3, yIndex <=? 15, yIndex++)
+{
+    PlotterPoint("A" + pointCount++, 3, yIndex);
+}
+
+%/mathpiper
+
+    %output,mpversion=".259",preserve="false"
+      Result: Null
+.   %/output
+
+
+
+
+
+
+
+Draw a diagonal line with a loop from
+(1,1) to (10,10) with points.
+
+%mathpiper,title=""
+
+PlotterClear();
+
+labelCount := 1;
+
+xIndex := 2;
+
+yIndex := 1;
+
+While(xIndex <=? 10)
+{
+    PlotterPoint("A" + labelCount, xIndex, yIndex);
+
+    labelCount++;
+    
+    xIndex++;
+    
+    yIndex++;
+}
+
+%/mathpiper
+
+    %output,mpversion=".259",preserve="false"
+      Result: 9
+.   %/output
+
+
+
+
+
+
+
+Draw a solid rectangle in Plotter with nested loops.
+
+%mathpiper
+
+PlotterClear();
+
+pointCount := 1;
+
+yIndex := 1;
+
+While(yIndex <=? 4)
+{
+    xIndex := 1;
+    
+    While(xIndex <=? 10)
+    {
+        PlotterPoint("A" + pointCount, xIndex, yIndex);
+            
+        pointCount++;
+        
+        xIndex++;
+        
+        //Delay(500);
+    }
+
+    yIndex++;
+}
+
+%/mathpiper
+
+    %output,mpversion=".259",preserve="false"
+      Result: 4
+.   %/output
+
+
+
+
+
+
+
+Convert the above code that draws a rectangle in
+Plotter into a procedure.
+
+%mathpiper
+
+Procedure("drawSolidRectangle", ["lowerLeftX", "lowerLeftY", "pointCount"])
+{
+    Local(xIndex, yIndex);
+    
+    yIndex := lowerLeftY;
+    
+    While(yIndex <=? lowerLeftY + 4)
+    {
+        xIndex := lowerLeftX;
+        
+        While(xIndex <=? lowerLeftX + 10)
+        {
+            PlotterPoint("A" + pointCount, xIndex, yIndex);
+                
+            pointCount++;
+            
+            xIndex++;
+        }
+    
+        yIndex++;
+    }
+    pointCount;
+}
+
+Procedure("mainProcedure", [])
+{
+    PlotterClear();
+    
+    drawSolidRectangle(2,3,1);
+}
+
+mainProcedure();
+
+%/mathpiper
+
+    %output,mpversion=".259",preserve="false"
+      Result: 56
+.   %/output
+
+
+
+
+
+Draw another rectangle at a different location.
+
+In> drawSolidRectangle(8,11,100);
+

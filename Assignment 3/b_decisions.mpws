@@ -1,0 +1,648 @@
+v.04
+
+MAKING DECISIONS
+
+The simple programs that have been discussed up to
+this point show some of the power that software
+makes available to programmers. However, these
+programs are limited in their problem solving
+ability because they are unable to make decisions.
+This section shows how programs that have the
+ability to make decisions are able to solve a
+wider range of problems than programs that can't
+make decisions.
+
+
+
+RELATIONAL OPERATORS
+
+A program's decision making ability is based on a
+set of special operators that are called
+relational operators. Another name for them is
+comparison operators, but we will call them
+relational operators in this document. A RELATIONAL
+OPERATOR is an operator that is used to compare
+two values.
+
+Expressions that contain relational operators
+return a boolean value and a BOOLEAN VALUE is one
+that can only be True or False. When the words
+"True" and "False" are present in a program's
+source code, they are called BOOLEAN LITERALS. In
+case you are curious about the strange name,
+boolean values come from the area of mathematics
+called BOOLEAN LOGIC. This logic was created by a
+mathematician named George Boole and this is where
+the name boolean came from. The following are a
+list of the relational operators that MathPiper
+uses:
+
+x =? y 
+
+Returns True if the two values are equal and False
+if they are not equal. Notice that =? performs a
+comparison and not an assignment like := does.  
+
+
+x !=? y
+
+Returns True if the values are not equal and False
+if they are equal.  
+
+
+x <? y
+
+Returns True if the left value is less than the
+right value and False if the left value is not
+less than the right value.  
+
+
+x <=? y
+
+Returns True if the left value is less than or
+equal to the right value and False if the left
+value is not less than or equal to the right
+value.  
+
+
+x >? y
+
+Returns True if the left value is greater than the
+right value and False if the left value is not
+greater than the right value.  
+
+x >=? y
+
+Returns True if the left value is greater than or
+equal to the right value and False if the left
+value is not greater than or equal to the right
+value.
+
+
+This example shows some of these relational
+operators being evaluated in the MathPiper
+console:
+
+In> 1 <? 2
+
+
+In> 4 >? 5
+
+
+In> 8 >=? 8
+
+
+In> 5 <=? 10
+
+
+The following examples show each of the relational
+operators being used to compare values that have
+been assigned to variables x and y:
+
+%mathpiper
+
+// Example 1.
+x := 2;
+y := 3; 
+
+Echo(x, "=? ", y, ": ", x =? y);
+Echo(x, "!=? ", y, ": ", x !=? y);
+Echo(x, "<? ", y, ": ", x <? y);
+Echo(x, "<=? ", y, ": ", x <=? y);
+Echo(x, ">? ", y, ": ", x >? y);
+Echo(x, ">=? ", y, ": ", x >=? y);
+
+%/mathpiper
+
+
+
+
+
+%mathpiper
+
+    // Example 2.
+    x := 2;
+    y := 2;  
+
+    Echo(x, "=? ", y, ": ", x =? y);
+    Echo(x, "!=? ", y, ": ", x !=? y);
+    Echo(x, "<? ", y, ": ", x <? y);
+    Echo(x, "<=? ", y, ": ", x <=? y);
+    Echo(x, ">? ", y, ": ", x >? y);
+    Echo(x, ">=? ", y, ": ", x >=? y);
+
+%/mathpiper
+
+
+
+
+
+%mathpiper
+
+// Example 3.
+x := 3;
+y := 2; 
+
+Echo(x, "=? ", y, ": ", x =? y);
+Echo(x, "!=? ", y, ": ", x !=? y);
+Echo(x, "<? ", y, ": ", x <? y);
+Echo(x, "<=? ", y, ": ", x <=? y);
+Echo(x, ">? ", y, ": ", x >? y);
+Echo(x, ">=? ", y, ": ", x >=? y);
+
+%/mathpiper
+
+
+Relational operators are placed at a lower level
+of precedence than the other operators we have
+covered to this point:
+
+()    Parentheses are evaluated from the inside out.
+^    Exponents (right associative).
+/    Then division (left associative).
+*    Then multiplication (left associative).
+%    Then the remainder operator (left associative).
++, −    Addition and subtraction (left associative).
+=?,!=?,<?,<=?,>?,>=? Finally, relational operators are evaluated (left associative).
+
+
+
+PREDICATE EXPRESSIONS
+
+Expressions that return either True or False are
+called PREDICATE EXPRESSIONS. By themselves,
+predicate expressions are not very useful. They
+only become so when they are used with special
+decision making procedures, like the If()
+procedure (which is discussed in the next
+section).
+
+
+
+MAKING DECISIONS WITH THE If() PROCEDURE & PREDICATE EXPRESSIONS
+
+Most programming languages have the ability to
+make decisions, and the most commonly used
+procedure for making decisions in MathPiper is the
+If() procedure:
+
+
+----- Calling Format With Code Sequence Body -----
+
+If(predicate)                                            
+{                                                    
+    body_expressions                                        
+}
+
+--------------------------------------------------
+
+
+---- Calling Format Without Code Sequence Body ----
+
+If(predicate) body_expression;
+
+---------------------------------------------------
+                                                    
+The expression or expressions that are contained
+in an If() procedure are called its BODY, and all
+procedures that have bodies are called BODIED
+procedures. If a body contains more than one
+expression, then these expressions need to be
+placed within a code sequence (code sequences were
+discussed in an earlier section). What a
+procedure's body is will become clearer after
+studying some example programs.
+
+The way the If() procedure works is it evaluates
+the "predicate" expression that is passed to it as
+an argument, and then it looks at the value that
+the expression returned. If this value is True, the
+body of the If() procedure is executed. If the
+predicate expression evaluates to False, the body
+is not executed. (Note: any procedure that accepts
+a predicate expression as a parameter can also
+accept the boolean values True and False).
+
+The following program uses an If() procedure to
+determine if the value in variable 'number' is
+greater than 5. If 'number' is greater than 5, the
+program will echo "Greater" and then "End of
+program":
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false"
+
+number := 6;
+
+If(number >? 5)
+{
+    Echo(number, "is greater than 5.");
+}
+
+Echo("End of program.");
+
+%/mathpiper
+
+
+In this program, number has been set to 6 and
+therefore the expression 'number >? 5' is True. When
+the If() procedures evaluates the predicate
+expression and determines it is True, it then
+executes the Echo() procedure that is in its body.
+The second Echo() procedure at the bottom of the
+program prints "End of program" regardless of what
+the If() procedure does.
+
+Here is the same program except that 'number' has
+been set to 4 instead of 6:
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false"
+
+number := 4;
+
+If(number >? 5)
+{
+    Echo(number, "is greater than 5.");
+}
+
+Echo("End of program.");
+
+%/mathpiper
+
+
+
+
+This time the expression 'number >? 5' returns a
+value of False, which causes the If() procedure to
+not execute its body.
+
+
+
+ONE If() PROCEDURE USED WITH ONE ELSE OPERATOR
+
+An If() procedure can be used with an 'Else'
+operator to evaluate one sequence if a predicate
+expression is True, and an alternative sequence if the
+predicate expression is False. The format for
+If/Else code is as follows:
+
+--------- Calling Format --------------
+
+If(predicate)                                            
+{                                                    
+    evaluate_this_sequence_if_True.                                
+}                                                    
+Else                                                    
+{                                                    
+    evaluate_this_sequence_if_False                                
+}
+
+---------------------------------------
+
+The following program prints "4 is NOT greater
+than 5" because the predicate 'x >? 5' is False:
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false"
+
+x := 4;
+
+If(x >? 5)
+{
+    Echo(x,"is greater than 5.");
+}
+Else
+{
+    Echo(x,"is NOT greater than 5.");
+}
+
+Echo("End of program.");
+
+%/mathpiper
+
+
+
+MULTIPLE If() PROCEDURES USED WITH MULTIPLE ELSE OPERATORS
+
+Multiple If() procedures can be used with multiple 'Else'
+operators to make complex decisions. The format for
+If/Else code is as follows:
+
+--------- Calling Format --------------
+
+If(predicate1)                                            
+{                                                    
+    evaluate_this_sequence_if_True.                                
+}                                                    
+Else If(predicate2)                                                    
+{                                                    
+    evaluate_this_sequence_if_True                                
+}
+Else If(predicate3)                                                    
+{                                                    
+    evaluate_this_sequence_if_True                                
+}
+
+---------------------------------------
+
+The following program prints "the number
+is 3" because the predicate 'x =? 3' is True:
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false"
+
+x := 3;
+
+If(x =? 1)
+{
+    Echo("The number is 1.");
+}
+Else If(x =? 2)
+{
+    Echo("The number is 2.");
+}
+Else If(x =? 3)
+{
+    Echo("The number is 3.");
+}
+Else If(x =? 4)
+{
+    Echo("The number is 4.");
+}
+Else
+{
+    Echo("The number is not between 1 and 4 inclusive.");
+}
+
+%/mathpiper
+
+Notice that this If/Else expression contains an
+'Else' at its end that handles the case of none of
+the If() procedures above it have a true
+predicate.
+
+
+THE &?, |?, AND !? BOOLEAN OPERATORS
+
+THE &? "AND" OPERATOR
+
+Sometimes a programmer needs to check if two
+expressions are True and one way to do this is
+with the &? operator (which is read "and"). This
+is the calling format for the &? operator:
+
+--------- Calling Format --------------
+
+expression1 &? expression2
+
+---------------------------------------
+
+If BOTH of these expressions return a value of
+True, the &? operator will also return a True.
+However, if EITHER of the expressions return a
+False, then the &? operator will return a False.
+
+Todo:tk:Only show the truth table here.
+
+In> ViewMath(TruthTable(_a &? _b))
+
+
+
+This can be seen in the following example:
+
+In> True &? True
+
+
+In> True &? False
+
+
+In> False &? True
+
+
+In> False &? False
+
+
+In> True &? True &? True &? True
+
+
+In> True &? True &? False &? True
+
+
+The following program demonstrates the &? operator
+being used:
+
+%mathpiper
+
+a := 7;
+b := 9;
+
+Echo("1: ", a <? 5 &? b <? 10);
+Echo("2: ", a >? 5 &? b >? 10);
+Echo("3: ", a <? 5 &? b >? 10);
+Echo("4: ", a >? 5 &? b <? 10);
+
+If(a >? 5 &? b <? 10)
+{ 
+    Echo("These expressions are both true.");
+}
+
+%/mathpiper
+
+
+
+THE |? "OR" OPERATOR
+
+The |? operator (which is read "or") is similar to
+the &? operator in that it only works with
+predicate expressions. However, instead of
+requiring that both expressions be True in order
+to return a True, |? will return a True if ONE OR
+BOTH expressions are True. Here is the calling
+format for |?:
+
+--------- Calling Format --------------
+
+expression1 |? expression2
+
+---------------------------------------
+
+Todo:tk:place truth table viewer here.
+In> ViewMath(TruthTable(_a |? _b))
+
+This example shows the |? operator being used:
+
+In> True |? True
+
+
+In> True |? False
+
+
+In> False |? True
+
+
+In> False |? False
+
+
+In> False |? False |? True |? False
+
+
+The following program also demonstrates the |?
+operator being used:
+
+%mathpiper
+
+a := 7;
+b := 9;
+
+Echo("1: ", a <? 5 |? b <? 10);
+Echo("2: ", a >? 5 |? b >? 10);
+Echo("3: ", a >? 5 |? b <? 10);
+Echo("4: ", a <? 5 |? b >? 10);
+
+If(a <? 5 |? b <? 10)
+{
+    Echo("At least one of these expressions is true.");
+}
+
+%/mathpiper
+
+
+
+THE !? "NOT" OPERATOR
+
+The !? operator (which is read "not") works with
+predicate expressions like the &? and |? operators
+do, except it can only accept one expression as
+input. The way !? works is that it changes a True
+value to a False value and a False value to a True
+value. Here is the !? operator's calling format:
+
+--------- Calling Format --------------
+
+!? expression
+
+---------------------------------------
+
+Todo:tk:place truth table viewer here.
+In> ViewMath(TruthTable(!? _a))
+
+These are examples of Not> being used:
+
+In> !? True
+
+
+In> !? False
+
+
+The following is a program that uses the !?
+operator:
+
+%mathpiper
+
+Echo("3 =? 3 is ", 3 =? 3);
+
+Echo("!? 3 =? 3 is ", !? 3 =? 3);
+
+%/mathpiper
+
+%mathpiper,title=""
+
+ViewTreeParts('(!? 3 =? 3), Scale:4, IncludeExpression:True, Code:True);
+
+
+%/mathpiper
+
+
+
+
+The three boolean operators are placed at the end
+of the precedence table:
+
+()    Parentheses are evaluated from the inside out.
+^    Exponents (right associative).
+/    Then division (left associative).
+*    Then multiplication (left associative).
+%    Then the remainder operator (left associative).
++, − Addition and subtraction (left associative).
+=?,!=?,<?,<=?,>?,>=?  Relational operators are evaluated (left associative).
+!?    The 'not' boolean operator.
+&?  The 'and' boolean operator. todo:tk:
+|?  The 'or' boolean operator.
+
+
+
+The |? operator has a lower precedence than the <?
+operator, so it is higher in the following
+expression.
+
+%mathpiper,treeview="true"
+
+'(a <? 5 |? b <? 10);
+
+%/mathpiper
+
+
+
+USING MULTIPLE RELATIONAL OPERATORS IN A PREDICATE EXPRESSION
+
+%mathpiper,treeview="true"
+
+'(a <? 5 |? b <? 10 &? c =? 4);
+
+%/mathpiper
+
+
+
+%mathpiper,treeview="true"
+
+'(a <? 5 &? b <? 10 |? c =? 4);
+
+%/mathpiper
+
+
+
+%mathpiper
+
+a := 1;
+b := 2;
+c := 3;
+
+Echo("1: ", a <? 5 |? b <? 10 &? c =? 4);
+
+
+
+If(a <? 5 |? b <? 10)
+{
+    Echo("At least one of these expressions is true.");
+}
+
+%/mathpiper
+
+
+Notice that the &? operator has a higher
+precedence than the |? operator.
+
+%mathpiper,treeview="true"
+
+'(a <? 5 |? b <? 10 &? c =? 4);
+
+%/mathpiper
+
+
+The |? operator can be given a higher precedence
+than the &? operator by placing it in parentheses.
+
+%mathpiper,treeview="true"
+
+'((a <? 5 |? b <? 10) &? c =? 4);
+
+%/mathpiper
+
+
+The |? operator can also be given a higher
+precedence than the !? operator by placing it in
+parentheses.
+
+%mathpiper,treeview="true"
+
+'(!? (a <? 5 |? b <? 10) &? c =? 4);
+
+%/mathpiper
+

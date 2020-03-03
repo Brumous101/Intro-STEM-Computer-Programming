@@ -1,0 +1,140 @@
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 0",sequence="1",timestamp="2018-11-01 16:02:28.983",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶[¶["firstName", "Kyle"],¶["lastName", "Johnson"],¶["ssuIDNumber", "264694"],¶];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 0",sequence="2",timestamp="2018-11-01 16:02:41.835",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="3",timestamp="2018-11-01 16:10:31.913",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("sevens", [])¶{¶    Local(resultList, index, stringNumber);¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    While(index <=? 200)¶    {¶        stringNumber := ToString(index);¶        ¶        If((stringNumber[Length(stringNumber)] =? "7" &? index !=? 57 &? index !=? 117 &? index !=? 187)¶        {¶            Append!(resultList, index);¶        }¶        ¶        index++¶    }¶    ¶    resultList;¶}¶¶sevens();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="4",timestamp="2018-11-01 16:11:03.373",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("sevens", [])¶{¶    Local(resultList, index, stringNumber);¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    While(index <=? 200)¶    {¶        stringNumber := ToString(index);¶        ¶        If((stringNumber[Length(stringNumber)] =? "7") &? index !=? 57 &? index !=? 117 &? index !=? 187)¶        {¶            Append!(resultList, index);¶        }¶        ¶        index++¶    }¶    ¶    resultList;¶}¶¶sevens();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="5",timestamp="2018-11-01 16:11:15.526",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("sevens", [])¶{¶    Local(resultList, index, stringNumber);¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    While(index <=? 200)¶    {¶        stringNumber := ToString(index);¶        ¶        If((stringNumber[Length(stringNumber)] =? "7") &? index !=? 57 &? index !=? 117 &? index !=? 187)¶        {¶            Append!(resultList, index);¶        }¶        ¶        index := index++¶    }¶    ¶    resultList;¶}¶¶sevens();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="6",timestamp="2018-11-01 16:11:23.044",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("sevens", [])¶{¶    Local(resultList, index, stringNumber);¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    While(index <=? 200)¶    {¶        stringNumber := ToString(index);¶        ¶        If((stringNumber[Length(stringNumber)] =? "7") &? index !=? 57 &? index !=? 117 &? index !=? 187)¶        {¶            Append!(resultList, index);¶        }¶        ¶        index := index + 1;¶    }¶    ¶    resultList;¶}¶¶sevens();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 1",sequence="7",timestamp="2018-11-01 16:11:30.237",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="8",timestamp="2018-11-01 16:12:40.307",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("combineProcedure3",["list1, list2, list3])¶¶¶¶¶[¶    combineProcedure3([3,4,5], ["a","b","c"], [6,7,8]),¶    combineProcedure3([3,4,5,6], [6,7,8,9,0], ["t","r","u","c","k"])¶];
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="9",timestamp="2018-11-01 16:18:03.184",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("combineProcedure3",["list1", "list2", "list3"])¶{¶    Local(resultList, list1Length, list2Length, list3Length, index);¶    ¶    Check(List?(list1), "The first argument must be a list."¶    ¶    Check(List?(list2), "The second argument must be a list."¶    ¶    Check(List?(list3), "The third argument must be a list."¶    ¶    resultList := [];¶    ¶    //List 1¶    list1Length := Length(list1);¶    ¶    While(index <=? list1Length)¶    {¶        Append!(resultList, list1[index])¶        ¶        index++;¶    }¶    //List 2¶    list2Length := Length(list2);¶    ¶    While(index <=? list2Length)¶    {¶        Append!(resultList, list2[index])¶        ¶        index++;¶    }¶    //List 3¶    list3Length := Length(list3);¶    ¶    While(index <=? list3Length)¶    {¶        Append!(resultList, list3[index])¶        ¶        index++;¶    }¶    ¶    resultList;¶}¶¶[¶    combineProcedure3([3,4,5], ["a","b","c"], [6,7,8]),¶    combineProcedure3([3,4,5,6], [6,7,8,9,0], ["t","r","u","c","k"])¶];
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="10",timestamp="2018-11-01 16:18:20.754",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("combineProcedure3",["list1", "list2", "list3"])¶{¶    Local(resultList, list1Length, list2Length, list3Length, index);¶    ¶    Check(List?(list1), "The first argument must be a list.")¶    ¶    Check(List?(list2), "The second argument must be a list.")¶    ¶    Check(List?(list3), "The third argument must be a list.")¶    ¶    resultList := [];¶    ¶    //List 1¶    list1Length := Length(list1);¶    ¶    While(index <=? list1Length)¶    {¶        Append!(resultList, list1[index])¶        ¶        index++;¶    }¶    //List 2¶    list2Length := Length(list2);¶    ¶    While(index <=? list2Length)¶    {¶        Append!(resultList, list2[index])¶        ¶        index++;¶    }¶    //List 3¶    list3Length := Length(list3);¶    ¶    While(index <=? list3Length)¶    {¶        Append!(resultList, list3[index])¶        ¶        index++;¶    }¶    ¶    resultList;¶}¶¶[¶    combineProcedure3([3,4,5], ["a","b","c"], [6,7,8]),¶    combineProcedure3([3,4,5,6], [6,7,8,9,0], ["t","r","u","c","k"])¶];
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="11",timestamp="2018-11-01 16:18:51.863",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("combineProcedure3",["list1", "list2", "list3"])¶{¶    Local(resultList, list1Length, list2Length, list3Length, index);¶    ¶    Check(List?(list1), "The first argument must be a list.");¶    ¶    Check(List?(list2), "The second argument must be a list.");¶    ¶    Check(List?(list3), "The third argument must be a list.");¶    ¶    resultList := [];¶    ¶    //List 1¶    list1Length := Length(list1);¶    ¶    While(index <=? list1Length)¶    {¶        Append!(resultList, list1[index])¶        ¶        index++;¶    }¶    //List 2¶    list2Length := Length(list2);¶    ¶    While(index <=? list2Length)¶    {¶        Append!(resultList, list2[index])¶        ¶        index++;¶    }¶    //List 3¶    list3Length := Length(list3);¶    ¶    While(index <=? list3Length)¶    {¶        Append!(resultList, list3[index])¶        ¶        index++;¶    }¶    ¶    resultList;¶}¶¶[¶    combineProcedure3([3,4,5], ["a","b","c"], [6,7,8]),¶    combineProcedure3([3,4,5,6], [6,7,8,9,0], ["t","r","u","c","k"])¶];
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="12",timestamp="2018-11-01 16:19:59.69",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("combineProcedure3",["list1", "list2", "list3"])¶{¶    Local(resultList, list1Length, list2Length, list3Length, index);¶    ¶    Check(List?(list1), "The first argument must be a list.");¶    ¶    Check(List?(list2), "The second argument must be a list.");¶    ¶    Check(List?(list3), "The third argument must be a list.");¶    ¶    resultList := [];¶    ¶    //List 1¶    list1Length := Length(list1);¶    ¶    index := 1;¶    ¶    While(index <=? list1Length)¶    {¶        Append!(resultList, list1[index])¶        ¶        index++;¶    }¶    //List 2¶    list2Length := Length(list2);¶    ¶    index := 1;¶    ¶    While(index <=? list2Length)¶    {¶        Append!(resultList, list2[index])¶        ¶        index++;¶    }¶    //List 3¶    list3Length := Length(list3);¶    ¶    index := 1;¶    ¶    While(index <=? list3Length)¶    {¶        Append!(resultList, list3[index])¶        ¶        index++;¶    }¶    ¶    resultList;¶}¶¶[¶    combineProcedure3([3,4,5], ["a","b","c"], [6,7,8]),¶    combineProcedure3([3,4,5,6], [6,7,8,9,0], ["t","r","u","c","k"])¶];
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="13",timestamp="2018-11-01 16:20:34.392",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("combineProcedure3",["list1", "list2", "list3"])¶{¶    Local(resultList, list1Length, list2Length, list3Length, index);¶    ¶    Check(List?(list1), "The first argument must be a list.");¶    ¶    Check(List?(list2), "The second argument must be a list.");¶    ¶    Check(List?(list3), "The third argument must be a list.");¶    ¶    resultList := [];¶    ¶    //List 1¶    list1Length := Length(list1);¶    ¶    index := 1;¶    ¶    While(index <=? list1Length)¶    {¶        Append!(resultList, list1[index]);¶        ¶        index++;¶    }¶    //List 2¶    list2Length := Length(list2);¶    ¶    index := 1;¶    ¶    While(index <=? list2Length)¶    {¶        Append!(resultList, list2[index]);¶        ¶        index++;¶    }¶    //List 3¶    list3Length := Length(list3);¶    ¶    index := 1;¶    ¶    While(index <=? list3Length)¶    {¶        Append!(resultList, list3[index]);¶        ¶        index++;¶    }¶    ¶    resultList;¶}¶¶[¶    combineProcedure3([3,4,5], ["a","b","c"], [6,7,8]),¶    combineProcedure3([3,4,5,6], [6,7,8,9,0], ["t","r","u","c","k"])¶];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 2",sequence="14",timestamp="2018-11-01 16:20:51.629",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="15",timestamp="2018-11-01 16:25:56.431",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("combinations3",[])¶{¶    Local(resultList, digit1, digit2, digit3);¶    ¶    resultList := [];¶    ¶    For(digit1 := 0, digit1 <=? 9, digit1++)¶    {¶        For(digit2 := 0, digit2 <=? 9, digit2++)¶        {¶            For(digit3 := 0, digit3 <=? 9, digit3++)¶            {¶                Append!(resultList, [digit1, digit2, digit3])¶            }¶        }¶    }¶    resultsList;¶}¶¶combinations3();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="16",timestamp="2018-11-01 16:26:02.707",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("combinations3",[])¶{¶    Local(resultList, digit1, digit2, digit3);¶    ¶    resultList := [];¶    ¶    For(digit1 := 0, digit1 <=? 9, digit1++)¶    {¶        For(digit2 := 0, digit2 <=? 9, digit2++)¶        {¶            For(digit3 := 0, digit3 <=? 9, digit3++)¶            {¶                Append!(resultList, [digit1, digit2, digit3]);¶            }¶        }¶    }¶    resultsList;¶}¶¶combinations3();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="17",timestamp="2018-11-01 16:26:10.15",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("combinations3",[])¶{¶    Local(resultList, digit1, digit2, digit3);¶    ¶    resultList := [];¶    ¶    For(digit1 := 0, digit1 <=? 9, digit1++)¶    {¶        For(digit2 := 0, digit2 <=? 9, digit2++)¶        {¶            For(digit3 := 0, digit3 <=? 9, digit3++)¶            {¶                Append!(resultList, [digit1, digit2, digit3]);¶            }¶        }¶    }¶    resultList;¶}¶¶combinations3();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 3",sequence="18",timestamp="2018-11-01 16:26:54.633",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="20",timestamp="2018-11-01 16:41:59.393",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("lineInSquare", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    //horizontal¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + lengthOfSide, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX, xIndex);¶        ¶        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftY + lengthOfSide);¶    }¶    ¶    //vertical¶    For(yIndex := lowerLeftY + 1, yIndex <=? lowerLeftX + lengthOfSide - 1, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX, yIndex);¶        ¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX + lengthOfSide, yIndex);¶    }¶    ¶    yIndex := lowerLeftY + lengthOfSide - 1;¶    ¶    //line¶    For(xIndex := lowerLeftX + 1, xIndex <=? lowerLeftX + lengthOfSide - 1, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++),xIndex, yIndex++);¶    }¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    lineInSquare(1, 1, 5, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="21",timestamp="2018-11-01 16:42:19.008",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("lineInSquare", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    //horizontal¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + lengthOfSide, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX, xIndex);¶        ¶        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftY + lengthOfSide);¶    }¶    ¶    //vertical¶    For(yIndex := lowerLeftY + 1, yIndex <=? lowerLeftX + lengthOfSide - 1, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX, yIndex);¶        ¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX + lengthOfSide, yIndex);¶    }¶    ¶    yIndex := lowerLeftY + lengthOfSide - 1;¶    ¶    //line¶    For(xIndex := lowerLeftX + 1, xIndex <=? lowerLeftX + lengthOfSide - 1, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++),xIndex, yIndex--);¶    }¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    lineInSquare(1, 1, 5, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="22",timestamp="2018-11-01 16:43:17.263",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("lineInSquare", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    //horizontal¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + lengthOfSide, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftX);¶        ¶        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftY + lengthOfSide);¶    }¶    ¶    //vertical¶    For(yIndex := lowerLeftY + 1, yIndex <=? lowerLeftX + lengthOfSide - 1, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX, yIndex);¶        ¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX + lengthOfSide, yIndex);¶    }¶    ¶    yIndex := lowerLeftY + lengthOfSide - 1;¶    ¶    //line¶    For(xIndex := lowerLeftX + 1, xIndex <=? lowerLeftX + lengthOfSide - 1, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++),xIndex, yIndex--);¶    }¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    lineInSquare(1, 1, 5, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="23",timestamp="2018-11-01 16:44:18.259",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("lineInSquare", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    //horizontal¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + lengthOfSide, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftX);¶        ¶        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftY + lengthOfSide);¶    }¶    ¶    //vertical¶    For(yIndex := lowerLeftY + 1, yIndex <=? lowerLeftX + lengthOfSide - 1, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX, yIndex);¶        ¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX + lengthOfSide, yIndex);¶    }¶    ¶    yIndex := lowerLeftY + lengthOfSide - 1;¶    ¶    //line¶    For(xIndex := lowerLeftX + 1, xIndex <=? lowerLeftX + lengthOfSide - 1, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++),xIndex, yIndex++);¶    }¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    lineInSquare(1, 1, 5, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="24",timestamp="2018-11-01 16:44:49.103",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("lineInSquare", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    //horizontal¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + lengthOfSide, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftX);¶        ¶        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftY + lengthOfSide);¶    }¶    ¶    //vertical¶    For(yIndex := lowerLeftY + 1, yIndex <=? lowerLeftX + lengthOfSide - 1, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX, yIndex);¶        ¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX + lengthOfSide, yIndex);¶    }¶    ¶    yIndex := lowerLeftY + lengthOfSide - 1;¶    ¶    //line¶    For(xIndex := lowerLeftX + 1, xIndex <=? lowerLeftX + lengthOfSide - 1, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++),xIndex, yIndex);¶    }¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    lineInSquare(1, 1, 5, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="25",timestamp="2018-11-01 16:45:16.378",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("lineInSquare", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    //horizontal¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + lengthOfSide, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftX);¶        ¶        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftY + lengthOfSide);¶    }¶    ¶    //vertical¶    For(yIndex := lowerLeftY + 1, yIndex <=? lowerLeftX + lengthOfSide - 1, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX, yIndex);¶        ¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX + lengthOfSide, yIndex);¶    }¶    ¶    yIndex := lowerLeftY + lengthOfSide - 1;¶    ¶    //line¶    For(xIndex := lowerLeftX + 3, xIndex <=? lowerLeftX + lengthOfSide - 1, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++),xIndex, yIndex);¶    }¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    lineInSquare(1, 1, 5, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="26",timestamp="2018-11-01 16:45:23.285",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("lineInSquare", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    //horizontal¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + lengthOfSide, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftX);¶        ¶        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftY + lengthOfSide);¶    }¶    ¶    //vertical¶    For(yIndex := lowerLeftY + 1, yIndex <=? lowerLeftX + lengthOfSide - 1, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX, yIndex);¶        ¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX + lengthOfSide, yIndex);¶    }¶    ¶    yIndex := lowerLeftY + lengthOfSide - 1;¶    ¶    //line¶    For(xIndex := lowerLeftX + 1, xIndex <=? lowerLeftX + lengthOfSide - 1, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++),xIndex, yIndex);¶    }¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    lineInSquare(1, 1, 5, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="27",timestamp="2018-11-01 16:45:35.637",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("lineInSquare", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    //horizontal¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + lengthOfSide, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftX);¶        ¶        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftY + lengthOfSide);¶    }¶    ¶    //vertical¶    For(yIndex := lowerLeftY + 1, yIndex <=? lowerLeftX + lengthOfSide - 1, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX, yIndex);¶        ¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX + lengthOfSide, yIndex);¶    }¶    ¶    yIndex := lowerLeftY + 1;¶    ¶    //line¶    For(xIndex := lowerLeftX + 1, xIndex <=? lowerLeftX + lengthOfSide - 1, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++),xIndex, yIndex);¶    }¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    lineInSquare(1, 1, 5, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="28",timestamp="2018-11-01 16:45:59.416",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+¶Procedure("lineInSquare", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    //horizontal¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + lengthOfSide, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftX);¶        ¶        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftY + lengthOfSide);¶    }¶    ¶    //vertical¶    For(yIndex := lowerLeftY + 1, yIndex <=? lowerLeftX + lengthOfSide - 1, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX, yIndex);¶        ¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX + lengthOfSide, yIndex);¶    }¶    ¶    //line¶    yIndex := lowerLeftY + 1;¶    ¶    For(xIndex := lowerLeftX + 1, xIndex <=? lowerLeftX + lengthOfSide - 1, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++),xIndex, yIndex++);¶    }¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    lineInSquare(1, 1, 5, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 4",sequence="29",timestamp="2018-11-01 16:46:13.209",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.58",mpversion=".259"
+Not logged.
+
+%/info
+

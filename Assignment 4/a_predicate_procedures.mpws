@@ -1,0 +1,271 @@
+v.03
+
+PREDICATE PROCEDURES
+
+A predicate procedure is a procedure that either
+returns True or False. Most predicate procedures
+in MathPiper have names that end with a question
+mark "?". For example, Even?(), Odd?(),
+Integer?(), etc. The following examples show some
+of the predicate procedures that are in MathPiper.
+
+In> Even?(4)
+
+
+In> Even?(5)
+
+
+In> Even?("A")
+
+
+In> Zero?(0)
+
+
+In> Zero?(1)
+
+
+In> NegativeInteger?(-1)
+
+
+In> NegativeInteger?(1)
+
+
+In> Prime?(7)
+
+
+In> Prime?(100)
+
+
+There is also an Assigned?() predicate procedure
+that can be used to determine whether or not a
+value is assigned to a given variable.
+
+In> State()
+
+
+In> Assigned?(a)
+
+
+In> a := 1
+
+
+In> State()
+
+
+In> Assigned?(a)
+
+
+In> Unassign(a)
+
+
+In> State()
+
+
+In> Assigned?(a)
+
+
+The complete list of predicate procedures is
+contained in the Programming Procedures/Predicates
+node in the MathPiperDocs plugin.
+
+
+
+FINDING PRIME NUMBERS WITH A LOOP
+
+Predicate procedures are very powerful when they
+are combined with loops because they can be used
+to automatically make numerous checks. The
+following program uses a While() loop to pass the
+integers 1 through 20 (one at a time) to the
+Prime?() procedure in order to determine which
+integers are prime and which integers are not
+prime.
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false",truncate="1500",timeout="5000"
+
+// Determine which integers between 1 and 20 (inclusive)
+// are prime and which ones are not prime.
+
+primesList := [];
+
+nonPrimesList := [];
+
+index := 1;
+
+While(index <=? 20)
+{
+    primeStatus := Prime?(index);
+    
+    If(primeStatus =? True)
+    {
+        Append!(primesList, index);
+    }
+    Else
+    {
+        Append!(nonPrimesList, index);
+    }
+    
+    index := (index + 1);
+}
+
+[primesList, nonPrimesList];
+
+%/mathpiper
+
+
+
+The above program works fairly well, but it can be
+shortened by moving the Prime?() procedure inside
+of the If() procedure instead of using the
+primeStatus variable to communicate with it.
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false",truncate="1500",timeout="5000"
+
+// Determine which integers between 1 and 20 (inclusive)
+// are prime and which ones are not prime.
+
+primesList := [];
+
+nonPrimesList := [];
+
+index := 1;
+
+While(index <=? 20)
+{
+    If(Prime?(index))
+    {
+        Append!(primesList, index);
+    }
+    Else
+    {
+        Append!(nonPrimesList, index);
+    }
+    
+    index := (index + 1);
+}
+
+[primesList, nonPrimesList];
+
+%/mathpiper
+
+
+
+FINDING THE LENGTH OF A STRING WITH THE Length() PROCEDURE
+
+Strings can contain zero or more characters, and
+the Length() procedure can be used to determine
+how many characters a string holds.
+
+In> s := "Red"
+
+
+In> Length(s)
+
+
+In this example, the string "Red" is assigned to
+the variable s and then s is passed to the
+Length() procedure. The Length() procedure
+returned a 3, which means the string contained 3
+characters.
+
+The following example shows that strings can also
+be passed to procedures directly.
+
+In> Length("Red")
+
+
+An empty string is represented by two double quote
+marks with no space in between them. The length of
+an empty string is 0.
+
+In> Length("")
+
+
+
+CONVERTING NUMBERS TO STRINGS WITH THE ToString() PROCEDURE
+
+Sometimes it is useful to convert a number to a
+string so that the individual digits in the number
+can be analyzed or manipulated. The following
+example shows a number being converted to a string
+with the ToString() procedure so that its leftmost
+and rightmost digits can be assigned to variables.
+
+In> number := 678
+
+
+In> stringNumber := ToString(number)
+
+
+In> leftmostDigit := stringNumber[1]
+
+
+In> rightMostDigit := stringNumber[3]
+
+
+
+
+In> Length(stringNumber);
+
+
+
+
+In> rightmostDigit := stringNumber[ Length(stringNumber) ]
+
+
+Notice that the Length() procedure is used here to
+determine which character in stringNumber held the
+rightmost digit. Also, keep in mind that when
+numbers are in string form, operations such as +,
+-, *, and / cannot be performed on them.
+
+
+
+FINDING PRIME NUMBERS THAT END WITH 7
+
+Now that we have covered how to turn a number into
+a string, let's use this ability inside a loop.
+The following program finds all the prime numbers
+between 1 and 500 that have a 7 as their rightmost
+digit. Notice that it has one If() procedure
+placed inside of another If() procedure. Placing
+an If() procedure inside of another If() procedure
+is called NESTING, and nesting is used to to make
+more complex decisions.
+
+When the program is executed, it finds 24 prime
+numbers that have 7 as their rightmost digit.
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false",truncate="1500",timeout="5000"
+/*
+    Find all the prime numbers between 1 and 500 that have a 7
+    as their rightmost digit.
+*/
+
+resultList := [];
+
+index := 1;
+
+While(index <=? 500)
+{
+    If(Prime?(index))
+    {
+        stringVersionOfNumber := ToString(index);
+            
+        stringLength := Length(stringVersionOfNumber);
+            
+        //Notice that If() procedures can be placed inside of other 
+        // If() procedures.
+        If(stringVersionOfNumber[stringLength] =? "7")
+        {
+            Append!(resultList, index);
+        }
+     }
+    
+    index := (index + 1);
+}
+
+resultList;
+
+%/mathpiper
+

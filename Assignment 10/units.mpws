@@ -1,0 +1,228 @@
+            Opposite
+Sin(angle)= ----------
+            Hypotenuse
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            Adjacent
+Cos(angle)= ---------
+            Hypotenuse
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            Opposite
+Tan(angle)= ---------
+            Adjacent
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+Radians
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.14
+
+6.28
+
+
+
+
+
+
+
+
+
+
+
+         12 inches
+2 foot x ---------  = 24 inches
+          1 foot  
+
+
+
+          
+          
+          
+
+         
+         
+Units fractions.      
+         
+12 inches
+--------- = 1
+1 foot
+         
+
+1 foot
+--------- = 1
+12 inches      
+         
+         
+         
+        
+
+
+
+
+
+         
+2 foot   12 inches    24 inches
+------ x ---------  = ---------
+   1     1 foot           1
+         
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+
+
+
+
+
+
+
+            1 foot
+50 inches x --------- = 4.16 foot
+            12 inches
+            
+            
+            
+      
+            
+How many seconds are in a day?
+Units in: day
+Units out: seconds
+
+
+
+1 day * 24 hours / 1 day * 60 minutes / 1 hour * 60 seconds / 1 minute =  
+
+
+In>  1 * 24/1 * 60/ 1 * 60 / 1.      
+
+    %output,mpversion=".226",preserve="false"
+      Result: 86400
+.   %/output
+            
+            
+            
+Convert 30 degrees to radians.
+Units in: degrees.
+Units out: radians.
+
+30 degrees * Pi radians / 180 degrees         
+            
+            
+            
+            
+              3.14 radians
+30 degrees x  ------------ 
+              180 degrees
+           
+              
+              
+              
+              
+              
+              
+              
+In> Pi
+
+    %output,mpversion=".242",preserve="false"
+      Result: Pi
+.   %/output
+              
+              
+In> NM(Pi)
+
+    %output,mpversion=".226",preserve="false"
+      Result: 3.141592654
+.   %/output
+              
+              Pi radians
+30 degrees x  ----------- 
+              180 degrees
+              
+In> 30 * NM(Pi/180)
+
+    %output,mpversion=".242",preserve="false"
+      Result: 0.5235987756
+.   %/output
+
+
+Degrees to Radians.
+In> 90 * NM(Pi/180)
+
+    %output,mpversion=".226",preserve="false"
+      Result: 1.570796327
+.   %/output
+
+Sine of 90 degrees.
+
+In> SinD(90 * NM(Pi/180))
+
+    %output,mpversion=".226",preserve="false"
+      Result: 1.0
+.   %/output
+

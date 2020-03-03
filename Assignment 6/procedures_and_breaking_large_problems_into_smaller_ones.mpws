@@ -1,0 +1,989 @@
+v.08
+
+== User Defined Procedures 
+
+In computer programming, a PROCEDURE is a named
+section of code that can be CALLED (which means
+"used") from other sections of code. Arguments can
+be sent to a procedure for processing as part of
+the call, and a procedure always returns a value
+as its result. A procedure can also generate side
+effects when it is called.
+
+The values that are sent to a procedure when it is
+called are named ARGUMENTS or ACTUAL PARAMETERS,
+and a procedure can accept zero or more of them.
+These arguments are usually placed within
+parentheses. MathPiper has many predefined
+procedures (some of which have been discussed in
+previous sections) but users can create their own
+procedures too. The following program creates a
+procedure named "addNums" which takes two numbers
+as arguments, adds them together, and returns
+their sum back to the calling code as a result.
+
+
+In> addNums(2,3)
+
+
+
+%mathpiper
+
+Procedure("addNums", ["num1", "num2"])
+{
+    num1 + num2;
+}
+
+%/mathpiper
+
+
+In> addNums(2,3)
+
+
+In> addNums(_a,_b)
+
+
+This code uses the "Procedure" procedure to DEFINE
+a new procedure named "addNums", and it specifies
+that it will accept two arguments when it is
+called. The first argument will be assigned to the
+variable "num1" and the second argument will be
+assigned to the variable "num2". Variables like
+"num1" and "num2" that are used in a procedure to
+accept arguments from calling code are called
+FORMAL PARAMETERS. Formal parameter variables are
+used inside a procedure to process the
+VALUES/ACTUAL PARAMETERS/ARGUMENTS that were
+assigned to them by the calling code.
+
+The first argument to "Procedure" is the name of
+the new procedure, and the second argument is a
+list that contains zero or more formal parameters
+for the new procedure. "Procedure" is a bodied
+procedure, and its body becomes the body of the
+new procedure. In this case, the body for
+"addNums" is a Sequence {}, and it is executed
+each time addNums is called.
+
+The following example shows the new addNums
+procedure being called multiple times with
+different arguments being passed to it.
+
+In> addNums(2,3)
+
+
+In> addNums(4,5)
+
+
+In> addNums(9,1)
+
+
+In> addNums(addNums(1,2),3)
+
+
+Notice that, unlike the procedures that come with
+MathPiper, we chose to have this procedure's name
+start with a LOWER CASE LETTER. We could have had
+"addNums" begin with an upper case letter, but it
+is a convention in MathPiper for user defined
+procedure names to begin with a lower case letter
+to distinguish them from the procedures that come
+with MathPiper.
+
+
+== The values that are returned from procedures can be assigned to variables
+
+The values that are returned from user defined
+procedures can also be assigned to variables. The
+following example uses a MathPiper fold to define
+a procedure named "evenIntegers", and then this
+procedure is used to assign a list of even
+integers to the variable "returnedValue".
+
+%mathpiper
+
+Procedure("evenIntegers", ["endInteger"])
+{
+    resultList := [];
+
+    index := 2; 
+    
+    While(index <=? endInteger) 
+    { 
+        Append!(resultList, index);
+
+        index := index + 2; 
+    } 
+  
+    resultList;
+}
+
+%/mathpiper
+
+
+In> evenIntegers(10)
+
+
+In> evenIntegers(16)
+
+
+In> returnedValue := evenIntegers(10)
+
+
+In> Length(returnedValue)
+
+%todo
+List user defined procedures in the global state plugin.
+%/todo
+
+The procedure "evenIntegers" returns a list that
+contains all the even integers from 2 up through
+the value that was passed into it. The fold that
+contains the "evenIntegers" code was first
+executed in order to define the "evenIntegers"
+procedure and make it ready for use. The
+"evenIntegers" procedure was then called from an
+In prompt and 10 was passed to it.
+
+After the procedure was finished executing, it
+returned a list of even integers as its result,
+and this result was assigned to the variable
+"returnedValue". The list that was assigned to
+"returnedValue" was then sent to the the "Length"
+procedure in order to determine its size.
+
+
+
+== Global Variables, Local Variables, and the "Local" Procedure
+
+The new "evenIntegers" procedure seems to work
+well, but there is a problem. The variables "index"
+and "resultList" were defined inside the procedure
+as GLOBAL VARIABLES, which means they are
+accessible from any code in MathPiper, including
+from within other procedures, and within other
+MathPiper folds:
+
+%mathpiper
+
+[index, resultList];
+
+%/mathpiper
+
+
+and from In prompts:
+
+In> index
+
+
+In> resultList
+
+
+
+
+Using global variables inside of procedures is
+usually not a good idea because code in other
+procedures and folds might already be using (or
+will use) the same variable names. Global
+variables that have the same name are the same
+variable. When one section of code changes the
+value of a given global variable, the value is
+changed everywhere that variable is used, and this
+will eventually cause problems.
+
+In order to prevent errors from being caused by
+global variables having the same name, a procedure
+named "Local" can be called from inside the body
+of a procedure to define what are called local
+variables. A LOCAL VARIABLE is only accessible
+inside the Sequence {} it has been defined in,
+even if it has the same name as a global variable.
+
+The following example shows a second version of
+the "evenIntegers" procedure that uses "Local" to
+make "index" and "resultList" local variables
+which are local to the body of the procedure.
+
+%mathpiper
+
+/* This version of "evenIntegers" uses "Local" to make "index" and
+"resultList" local variables */
+
+Procedure("evenIntegers2", ["endInteger"])
+{ 
+    Local(index2, resultList2);
+    
+    resultList2 := [];
+
+    index2 := 2; 
+    
+    While(index2 <=? endInteger) 
+    { 
+        resultList2 := Append!(resultList2, index2);
+
+        index2 := index2 + 2; 
+    } 
+    
+    resultList2; 
+}
+
+%/mathpiper
+   
+
+    
+We can verify that "index2" and "resultList2" are
+now local variables by first unassigning them,
+calling "evenIntegers", and then seeing what
+"index2" and "resultList2" contain:
+
+In> Unassign(index2, resultList2)
+
+
+In> evenIntegers2(10)
+
+
+In> index2
+
+
+In> resultList2
+
+
+%todo
+Note: Do not make parameters local.
+%/todo
+
+
+== Converting programs from the 
+predicate_procedures_and_loops_with_lists_exercises 
+assignment worksheet to use procedures
+
+========================================================================================================
+Problem 1
+
+Write a program that uses a "While" loop to
+determine how many prime numbers there are between
+1 and 1000. Return the amount of prime numbers as
+the result of the program. Use a varilable named
+"primesCount" to hold the count of the primes that
+are found.
+
+%mathpiper,title="No procedure version."
+
+primesCount := 0;
+
+number := 1;
+
+While(number <=? 1000)
+{
+    If(Prime?(number))
+    {
+        primesCount := (primesCount + 1);
+    }
+
+    number := (number + 1);
+}
+
+primesCount;
+
+%/mathpiper
+
+
+
+
+
+%mathpiper,title="No argument procedure version."
+
+Procedure("primesCountProcedure", [])
+{
+    Local(primesCount, number);
+    
+    primesCount := 0;
+    
+    number := 1;
+    
+    While(number <=? 1000)
+    {
+        If(Prime?(number))
+        {
+            primesCount := (primesCount + 1);
+        }
+    
+        number := number + 1;
+    }
+    
+    primesCount;
+}
+
+%/mathpiper
+
+
+In> primesCountProcedure()
+
+
+%todo
+Explain that the above procedure does not
+have any arguments.
+%/todo
+
+
+
+
+%todo
+Hand drill for plastic, wood, metal, concrete example.
+Many good tools are configurable.
+%/todo
+
+
+%mathpiper,title="One argument procedure version."
+
+Procedure("primesCountProcedure2", ["upTo"])
+{
+    Local(primesCount, number);
+    
+    primesCount := 0;
+    
+    number := 1;
+    
+    While(number <=? upTo)
+    {
+        If(Prime?(number))
+        {
+            primesCount := (primesCount + 1);
+        }
+    
+        number := number + 1;
+    }
+    
+    primesCount;
+}
+
+%/mathpiper
+
+
+In> primesCountProcedure2(150)
+
+
+In> primesCountProcedure2(275)
+
+
+
+
+%todo
+Maybe encode these images in Base64.
+%/todo
+=== Procedures are like tools in a toolbox.
+In> BrowserOpen("http://www.unitedwaynorman.org/sites/unitedwaynorman.org/files/toolbox.png");
+In> BrowserOpen("https://cdn1.msw.usc.edu/content/e463d92c088d4b5c8420732825c52739/Toolbox.jpg");
+In> BrowserOpen("http://blogs.screenconnect.com/image.axd?picture=tool-box1.jpg"); //todo:tk
+In> BrowserOpen("http://www.badgerwoodworks.com/wp-content/uploads/2011/09/AnarchistsToolchest.jpg");
+
+
+
+
+
+
+========================================================================================================
+Problem 2
+
+Create a program that uses a "While" loop and the
+"Odd?" predicate procedure to analyze the following
+list and then return the number of odd numbers it
+contains. Use a variable named "oddsCount" to
+count the odd numbers.
+
+[73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25]
+
+
+
+%mathpiper,title="No procedure version."
+
+list := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];
+
+listLength := Length(list);
+
+oddsCount := 0;
+
+index := 1;
+
+While(index <=? listLength)
+{
+    If(Odd?(list[index]))
+    {
+        oddsCount := (oddsCount + 1);
+    }
+
+    index := (index + 1);
+}
+
+oddsCount;
+
+%/mathpiper
+
+
+
+
+
+%mathpiper,title="One argument procedure verison."
+
+Procedure("numberOfOdds", ["list"])
+{
+    Local(index, listLength, oddsCount);
+    
+    listLength := Length(list);
+    
+    oddsCount := 0;
+    
+    index := 1;
+    
+    While(index <=? listLength)
+    {
+        If(Odd?(list[index]))
+        {
+            oddsCount := (oddsCount + 1);
+        }
+    
+        index := (index + 1);
+    }
+    
+    oddsCount;
+}
+
+%/mathpiper
+
+
+
+In> numberOfOdds([73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25])
+
+
+
+In> list := RandomIntegerList(50, 1, 1000)
+
+
+
+In> numberOfOdds(list)
+
+
+
+%todo
+Show the making of the parts of a hand drill. The
+handle and the drive wheel.
+
+Also talk about Robinson Cursoe and the net.
+%/todo
+
+Imagine the tool first. Then, build the tool, then
+use it.
+
+
+
+========================================================================================================
+Problem 3
+
+Create a program that uses a "While" loop and a
+NegativeNumber?() procedure to copy all of the
+negative numbers in the following list into a new
+list in the order which they appear in the
+original list. Use the variable
+"negativeNumbersList" to hold the new list. Return
+the contents of the list after it has been created
+along with the number of negative numbers that are
+in the result list.
+
+[36,-29,-33,-6,14,7,-16,-3,-14,37,-38,-8,-45,-21,-26,6,6,38,-20,33,41,-4,24,37,40,29]
+
+
+
+%mathpiper,title="No procedure version."
+
+inList := [36,-29,-33,-6,14,7,-16,-3,-14,37,-38,-8,-45,-21,-26,6,6,38,-20,33,41,-4,24,37,40,29];
+
+negativeNumbersList := [];
+
+listLength := Length(inList);
+
+negativeNumbersCounter := 0;
+
+index := 1;
+
+While(index <=? listLength)
+{
+    If(NegativeNumber?(inList[index]))
+    {
+        Append!(negativeNumbersList, inList[index]);
+        
+        negativeNumbersCounter := negativeNumbersCounter + 1;
+    }
+
+    index := (index + 1);
+}
+
+[negativeNumbersList, negativeNumbersCounter];
+
+%/mathpiper
+
+
+
+
+%mathpiper,title="One argument procedure version."
+
+Procedure("negativeNumbers", ["inList"])
+{
+    Local(index, listLength, negativeNumbersCounter, negativeNumbersList);
+    
+    negativeNumbersList := [];
+    
+    listLength := Length(inList);
+    
+    negativeNumbersCounter := 0;
+    
+    index := 1;
+    
+    While(index <=? listLength)
+    {
+        If(NegativeNumber?(inList[index]))
+        {
+            Append!(negativeNumbersList, inList[index]);
+            negativeNumbersCounter := negativeNumbersCounter + 1;
+        }
+    
+        index := (index + 1);
+    }
+    
+    [negativeNumbersList, negativeNumbersCounter];
+}
+%/mathpiper
+
+
+
+
+In> negativeNumbers([36,-29,-33,-6,14,7,-16,-3,-14,37,-38,-8,-45,-21,-26,6,6,38,-20,33,41,-4,24,37,40,29])
+
+
+
+
+
+
+
+
+== Break large parallel problems into smaller sequential problems
+
+Imagine every day when you come home to your house
+or apartment there is a large strong bully who
+bars the way to your front door. If you try to
+open the door, or if you try to enter your house
+through another door or a window, the bully beats
+you up. You have tried to fight back, but the
+bully is just too strong for you.
+
+Now imagine that on your way home one day someone
+with a pointed hat gives you a stick (which has
+"Frobozz Bully Buster" written on it) and tells you
+to point it at the bully and give it a shake. Soon
+afterwards you arrive home, point the stick at the
+bully, and shake it. There is a loud popping
+sound, and a puff of smoke engulfs the bully. When
+the smoke clears you see that the large bully has
+been replaced by a steel bar cage which contains
+ten much smaller bullies.
+
+The cage is directly in front of your front door,
+and it is too heavy to move with the bullies in
+it. It has a special door that only opens from the
+outside and which will only allow one bully to
+leave the cage at a time. You look at the smaller
+bullies who are in the cage and determine you are
+stronger than any of them. If you fight these
+smaller bullies one at a time, you think you can
+beat them all.
+
+You get ready, open the door to the cage, and a
+small bully rushes out and attackes you. However,
+you are able to defeate this bully without too
+much trouble. You rest for a while, and then you
+let the next bully out. You struggle a bit,
+but you eventually defeat this bully too. You let
+the rest of the bullies who are in the cage out
+one at a time and fight them. Some are more
+difficult to defeat than others are, but in the
+end you defeat all of them, push the cage aside,
+and open your front door.
+
+todo:tk:When a given bully is broken down, the smaller
+bullies will be different sizes. Some will be small
+enough to defeat as is, while some will need to be broken
+down further. Froboz Bully Buster
+
+
+
+== Give the code that defeats a given smaller bully a name
+
+
+=== Problem 1
+
+Write a program that generates the following list
+using one or more loops:
+[1,2,3,4,5,4,3,2,1]
+
+
+
+Shake the Frobozz bully buster at this list to
+make the follwing list.
+
+
+[1,2,3,4,5, 4,3,2,1]
+
+
+
+
+
+smallBully1
+[1,2,3,4,5]
+
+smallBully2
+[4,3,2,1]
+
+
+smallBully3
+Put smallBully1 and smallBully2 into a single list.
+
+
+Generate the list [1,2,3,4,5] todo:tk
+%mathpiper,title=""
+
+Procedure("smallBully1", [])
+{
+    Local(index, resultList);
+    
+    resultList := [];
+    
+    index := 1;
+    
+    While(index <=? 5)
+    {
+        Append!(resultList, index);
+        
+        index := index + 1;
+    }
+    
+    resultList;
+}
+
+%/mathpiper
+
+In> smallBully1()
+
+
+
+%mathpiper
+
+// Generate the list [4,3,2,1] todo:tk
+Procedure("smallBully2", [])
+{
+    Local(index, resultList);
+    
+    resultList := [];
+    
+    index := 4;
+    
+    While(index >=? 1)
+    {
+        Append!(resultList, index);
+        
+        index := index - 1;
+    }
+    
+    resultList;
+}
+
+%/mathpiper
+
+In> smallBully2()
+
+
+
+First attempt to put the lists together.
+
+In> [smallBully1(), smallBully2()]
+
+
+
+How can we make these two lists a single list?
+Using "Append!" does not work.
+
+In> Append!(smallBully1(), smallBully2())
+
+
+
+== The Concat() Procedure
+Calling format:
+
+Concat(list1, list2, ...)
+
+The Concat() procedure is short for "concatenate",
+which means to join together sequentially. It
+takes two or more lists and joins them together
+into a single larger list:
+
+In> Concat(["a","b","c"], [1,2,3], ["x","y","z"])
+
+
+
+
+In> Concat(smallBully1(), smallBully2())
+
+
+
+Making our own concatenation procedure.
+
+%mathpiper
+Procedure("smallBully3", ["list1", "list2"])
+{
+    Local(index, resultList, list1Length, list2Length);
+    
+    resultList := [];
+        
+    
+    // Process list 1.
+    
+    list1Length := Length(list1);
+    
+    index := 1;
+    
+    While(index <=? list1Length)
+    {
+        Append!(resultList, list1[index]);
+        
+        index := index + 1;
+    }
+    
+    
+    // Process list 2.
+    
+    list2Length := Length(list2);
+    
+    index := 1;
+    
+    While(index <=? list2Length)
+    {
+        Append!(resultList, list2[index]);
+        
+        index := index + 1;
+    }
+    
+    resultList;
+}
+
+%/mathpiper
+
+
+In> smallBully3(smallBully1(), smallBully2())
+
+
+
+========= Another bully example
+
+Write a procedure that accepts a list of single
+digit integers and returns a list which has each
+of the integers in the original list converted
+into the digit's English name.
+
+Input list: [1,2,3]
+Result list: ["one","two","three"]
+
+
+
+
+
+
+smallBully1: Accept a single digit integer as an
+argument, and return its English name equivalent.
+
+
+
+smallBully2: Accept a list of single digit integers,
+and return a list that contains the English name
+equivalents of these integers.
+
+
+%mathpiper,title="If/Else version."
+
+Procedure("smallBully1", ["singleDigitInteger"])
+{
+    If(singleDigitInteger =? 0)
+    {
+        result := "zero";
+    }
+    Else If(singleDigitInteger =? 1)
+    {
+        result := "one";
+    }
+    Else If(singleDigitInteger =? 2)
+    {
+        result := "two";
+    }
+    Else If(singleDigitInteger =? 3)
+    {
+        result := "three";
+    }
+    Else If(singleDigitInteger =? 4)
+    {
+        result := "four";
+    }
+    Else If(singleDigitInteger =? 5)
+    {
+        result := "five";
+    }
+    Else If(singleDigitInteger =? 6)
+    {
+        result := "six";
+    }
+    Else If(singleDigitInteger =? 7)
+    {
+        result := "seven";
+    }
+    Else If(singleDigitInteger =? 8)
+    {
+        result := "eight";
+    }
+    Else If(singleDigitInteger =? 9)
+    {
+        result := "nine";
+    }
+
+    result;
+}
+
+%/mathpiper
+
+
+In> smallBully1(1)
+
+
+In> smallBully1(8)
+
+
+
+%todo
+Discuss tools that use other tools you made.
+%/todo
+
+%mathpiper
+
+Procedure("smallBully2", ["list"])
+{
+    Local(resultList, listLength, index);
+    
+    resultList := [];
+    
+    listLength := Length(list);
+    
+    index := 1;
+    
+    While(index <=? listLength)
+    {
+        Append!(resultList, smallBully1(list[index]));
+        
+        index := index + 1;
+    }
+    
+    resultList;
+}
+
+%/mathpiper
+
+
+
+In> smallBully2([1,2,3])
+
+
+In> smallBully2(RandomIntegerList(30, 0, 9))
+
+
+
+%todo
+Assignment idea. Create procedure that accepts a
+positive integer, and have it return a string that
+contains its English equivalent. 123 "One hundred
+twenty three."
+%/todo
+
+
+
+== Alternative smallBully1 implementation that uses a lookup table.
+
+%mathpiper,title="Lookup table example."
+
+Procedure("smallBully1", ["singleDigitInteger"])
+{
+    Local(list);
+    
+    list := ["zero","one","two","three","four","five","six","seven","eight","nine"];
+    
+    list[singleDigitInteger + 1];
+}
+
+%/mathpiper
+
+
+
+In> smallBully1(4);
+
+
+
+== How can the "smaller bully" technique be used on the following problem?
+
+Write a program that generates the following list
+with one or more loops:
+
+[1,2,3,"one","two","three"]
+
+
+
+
+
+
+smallBully1 - convert a single digit integer into
+its English word equivalent.
+
+
+
+smallBully2 - generate the numbers from 1 to
+an end number and place them in a list. At
+the same time convert each generated digit to
+its word equivalent, and place it in a separate list.
+
+smallBully3 - concatenate the two lists that are
+returned from smallBully2.
+
+
+%todo
+Talk about testing each procedure as it is
+created.
+
+Also talk about putting the testing code at the
+bottom of the fold so that the places in the code
+where exceptions occurred can be identified.
+%/todo
+
+
+
+%mathpiper,title="If/Else version with an error."
+
+Procedure("smallBullyWithError", ["singleDigitInteger"])
+{
+    Local(list);
+    
+    list := ["zero","one","two","three","four","five","six","seven","eight","nine"];
+    
+    list[singleDigitInteger + 10];
+}
+
+//smallBullyWithError(1);
+
+%/mathpiper
+
+
+
+In> smallBullyWithError(1)
+
+

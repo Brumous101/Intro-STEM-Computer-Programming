@@ -1,0 +1,328 @@
+v.06
+
+decision_practice_if_else.mpws
+
+INSTRUCTIONS
+
+1) Evaluate each of the following folds once. Each
+fold will launch a GUI-based application that will
+have you practice variable assignment skills.
+
+2) Do not delete ANY of the output folds that are
+created during the evaluation of these folds. 
+
+
+
+
+
+%group,name="Problem 0",description="Programmer's information."
+========================================================================================================
+Problem 0
+
+In the following fold, replace "xxx" with your
+first name, replace "yyy" with your last name, and
+replace "000000" with your SSU ID number:
+
+%mathpiper,name="Problem 0",subtype="problem",unassign_all="true",truncate="6000",timeout="5000"
+
+[
+["firstName", "Kyle"],
+["lastName", "Johnson"],
+["ssuIDNumber", "264694"],
+];
+
+%/mathpiper
+
+    %output,parent="Problem 0",mpversion=".257",preserve="false"
+            Result: [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]]
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 0"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable \"firstName\" a string that is not \"xxx\"", 1, True)
+    {
+        String?(foldResult["firstName"]) &? foldResult["firstName"] !=? "xxx";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable \"lastName\" is a string that is not \"yyy\"", 1, True)
+    {
+        String?(foldResult["lastName"]) &? foldResult["lastName"] !=? "yyy";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable \"ssuIDNumber\" is not \"000000\"", 1, True)
+    {
+        foldResult["ssuIDNumber"] !=? "000000" &? foldResult["ssuIDNumber"] !=? 0;
+    }
+}
+
+%/mathpiper_grade
+
+%/group
+
+
+
+
+
+
+
+
+
+
+
+========================================================
+Practice 1
+
+%mathpiper,name="practice1",preserve_output="true"
+                    
+Practice(NumberOfVariables:2, CorrectInARow:3, NumberOfReassignments:1, VariableRange:0 .. 9, IncludeIf?:True);
+
+%/mathpiper
+
+    %output,parent="practice1",mpversion=".257",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",0],["TotalTime",51.225310084],["CorrectInARow",3],["GeneratedCode","b := 3;"],["CorrectInARowNeeded",3],["VariablesRange",[1,2,3,4,5,6,7,8,9]],["NumberOfReassignments",1],["NumberOfVariables",2],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := 3;","b := 7;","If(b >=? a)|{|  a := b;|}|",[["a",7,7],["b",7,7],19.605245806],
+      "a := 7;","b := 5;","If(a !=? b)|{|  b := a;|}|",[["a",7,7],["b",7,7],11.759318379],
+      "a := 5;","b := 3;","If(b !=? a)|{|  b := a;|}|",[["a",5,5],["b",5,5],14.150828336],
+      ]
+      Number Of Variables: 2 
+      Number Of Reassignments: 1 
+      Variables Range: 1 2 3 4 5 6 7 8 9 
+      Correct In A Row: 3 
+      Correct In A Row Needed: 3 
+      Total Time: 51.225310084 
+      Wrong Count: 0 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+
+
+
+
+
+
+
+
+
+
+
+========================================================
+Practice 2
+
+%mathpiper,name="practice2",preserve_output="true"
+                    
+Practice(NumberOfVariables:3, CorrectInARow:3, NumberOfReassignments:2, VariableRange:0 .. 9, IncludeIf?:True);
+                    
+%/mathpiper
+
+    %output,parent="practice2",mpversion=".257",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",0],["TotalTime",80.759753462],["CorrectInARow",3],["GeneratedCode","c := 8;"],["CorrectInARowNeeded",3],["VariablesRange",[1,2,3,4,5,6,7,8,9]],["NumberOfReassignments",2],["NumberOfVariables",3],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := 9;","b := 3;","c := 6;","If(a >? c)|{|  c := b;|}|","If(b !=? a)|{|  b := a;|}|",[["a",9,9],["b",9,9],["c",3,3],22.477705839],
+      "a := 3;","b := 9;","c := 1;","If(b !=? a)|{|  c := a;|}|","If(b <? c)|{|  c := b;|}|",[["a",3,3],["b",9,9],["c",3,3],40.205367611],
+      "a := 1;","b := 3;","c := 8;","If(a >? c)|{|  b := a;|}|","If(a !=? c)|{|  b := c;|}|",[["a",1,1],["b",8,8],["c",8,8],13.643560164],
+      ]
+      Number Of Variables: 3 
+      Number Of Reassignments: 2 
+      Variables Range: 1 2 3 4 5 6 7 8 9 
+      Correct In A Row: 3 
+      Correct In A Row Needed: 3 
+      Total Time: 80.759753462 
+      Wrong Count: 0 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+
+
+
+
+
+
+
+
+
+
+========================================================
+Practice 3
+
+%mathpiper,name="practice3",preserve_output="true"
+
+Practice(NumberOfVariables:3, CorrectInARow:3, NumberOfReassignments:3, VariableRange:0 .. 9, IncludeIf?:True);
+
+%/mathpiper
+
+    %output,parent="practice3",mpversion=".257",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",1],["TotalTime",147.077775882],["CorrectInARow",3],["GeneratedCode","c := 2;"],["CorrectInARowNeeded",3],["VariablesRange",[1,2,3,4,5,6,7,8,9]],["NumberOfReassignments",3],["NumberOfVariables",3],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := 2;","b := 3;","c := 7;","If(c =? b)|{|  b := a;|}|","If(b >? a)|{|  a := b;|}|","If(b >=? a)|{|  c := b;|}|",[["a",3,2],["b",3,2],["c",3,2],["a",3,3],["b",3,3],["c",3,3],67.666513245],
+      "a := 8;","b := 7;","c := 3;","If(c <=? a)|{|  c := b;|}|","If(a <=? b)|{|  a := c;|}|","If(a >=? c)|{|  c := b;|}|",[["a",8,8],["b",7,7],["c",7,7],32.403768762],
+      "a := 3;","b := 8;","c := 2;","If(b >? a)|{|  c := a;|}|","If(c !=? a)|{|  c := b;|}|","If(b <=? c)|{|  a := b;|}|",[["a",3,3],["b",8,8],["c",3,3],42.162688898],
+      ]
+      Number Of Variables: 3 
+      Number Of Reassignments: 3 
+      Variables Range: 1 2 3 4 5 6 7 8 9 
+      Correct In A Row: 3 
+      Correct In A Row Needed: 3 
+      Total Time: 147.077775882 
+      Wrong Count: 1 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+
+
+
+
+
+
+
+
+
+
+========================================================
+Practice 4
+
+%mathpiper,name="practice4",preserve_output="true"
+
+Practice(NumberOfVariables:2, CorrectInARow:3, NumberOfReassignments:2, VariableRange:0 .. 9, IncludeIf?:True, IncludeElse?:True);
+
+%/mathpiper
+
+    %output,parent="practice4",mpversion=".257",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",0],["TotalTime",128.023133083],["CorrectInARow",3],["GeneratedCode","b := 1;"],["CorrectInARowNeeded",3],["VariablesRange",[1,2,3,4,5,6,7,8,9]],["NumberOfReassignments",2],["NumberOfVariables",2],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := 9;","b := 2;","If(a <=? b)|{|  b := a;|}|Else|{|  b := a;|}|","If(b >=? a)|{|  b := a;|}|Else|{|  b := a;|}|",[["a",9,9],["b",9,9],45.126634826],
+      "a := 3;","b := 8;","If(a >=? b)|{|  a := b;|}|Else|{|  a := b;|}|","If(b !=? a)|{|  b := a;|}|Else|{|  b := a;|}|",[["a",8,8],["b",8,8],57.547619447],
+      "a := 9;","b := 1;","If(a >=? b)|{|  a := b;|}|Else|{|  a := b;|}|","If(a <? b)|{|  a := b;|}|Else|{|  b := a;|}|",[["a",1,1],["b",1,1],20.366006534],
+      ]
+      Number Of Variables: 2 
+      Number Of Reassignments: 2 
+      Variables Range: 1 2 3 4 5 6 7 8 9 
+      Correct In A Row: 3 
+      Correct In A Row Needed: 3 
+      Total Time: 128.023133083 
+      Wrong Count: 0 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+
+
+
+
+
+
+
+
+
+
+========================================================
+Practice 5
+
+%mathpiper,name="practice5",preserve_output="true"
+
+Practice(NumberOfVariables:3, CorrectInARow:3, NumberOfReassignments:3, VariableRange:0 .. 9, IncludeIf?:True, IncludeElse?:True);
+
+%/mathpiper
+
+    %output,parent="practice5",mpversion=".257",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",0],["TotalTime",112.329185354],["CorrectInARow",3],["GeneratedCode","c := 9;"],["CorrectInARowNeeded",3],["VariablesRange",[1,2,3,4,5,6,7,8,9]],["NumberOfReassignments",3],["NumberOfVariables",3],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := 6;","b := 3;","c := 5;","If(a <=? b)|{|  b := a;|}|Else|{|  a := b;|}|","If(c <=? b)|{|  a := c;|}|Else|{|  c := a;|}|","If(b <? a)|{|  b := a;|}|Else|{|  a := c;|}|",[["a",3,3],["b",3,3],["c",3,3],30.776020347],
+      "a := 2;","b := 6;","c := 7;","If(a <? c)|{|  b := a;|}|Else|{|  b := a;|}|","If(c !=? b)|{|  c := b;|}|Else|{|  a := b;|}|","If(a >? c)|{|  b := c;|}|Else|{|  b := a;|}|",[["a",2,2],["b",2,2],["c",2,2],42.918537804],
+      "a := 2;","b := 7;","c := 9;","If(a <? c)|{|  b := a;|}|Else|{|  b := a;|}|","If(a <? c)|{|  b := c;|}|Else|{|  c := b;|}|","If(b =? c)|{|  a := b;|}|Else|{|  c := b;|}|",[["a",9,9],["b",9,9],["c",9,9],34.904871625],
+      ]
+      Number Of Variables: 3 
+      Number Of Reassignments: 3 
+      Variables Range: 1 2 3 4 5 6 7 8 9 
+      Correct In A Row: 3 
+      Correct In A Row Needed: 3 
+      Total Time: 112.329185354 
+      Wrong Count: 0 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+
+
+
+
+
+
+
+
+
+
+========================================================
+Practice 6
+
+%mathpiper,name="practice6",preserve_output="true"
+
+Practice(NumberOfVariables:4, CorrectInARow:3, NumberOfReassignments:3, VariableRange:0 .. 9, IncludeIf?:True, IncludeElse?:True);
+
+%/mathpiper
+
+    %output,parent="practice6",mpversion=".257",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",1],["TotalTime",222.817638166],["CorrectInARow",3],["GeneratedCode","d := 3;"],["CorrectInARowNeeded",3],["VariablesRange",[1,2,3,4,5,6,7,8,9]],["NumberOfReassignments",3],["NumberOfVariables",4],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := 5;","b := 2;","c := 9;","d := 7;","If(b !=? a)|{|  c := d;|}|Else|{|  a := b;|}|","If(c =? a)|{|  a := c;|}|Else|{|  c := d;|}|","If(c !=? d)|{|  c := b;|}|Else|{|  a := c;|}|",[["a",7,5],["b",2,2],["c",7,2],["d",7,7],["a",7,7],["b",2,2],["c",7,7],["d",7,7],90.456050547],
+      "a := 1;","b := 8;","c := 7;","d := 4;","If(c <=? a)|{|  a := c;|}|Else|{|  b := d;|}|","If(d =? c)|{|  d := b;|}|Else|{|  a := b;|}|","If(b <? d)|{|  a := c;|}|Else|{|  c := d;|}|",[["a",4,4],["b",4,4],["c",4,4],["d",4,4],87.073045927],
+      "a := 6;","b := 2;","c := 1;","d := 3;","If(b !=? d)|{|  b := d;|}|Else|{|  a := d;|}|","If(c <? b)|{|  a := d;|}|Else|{|  b := a;|}|","If(a >=? c)|{|  c := a;|}|Else|{|  d := c;|}|",[["a",3,3],["b",3,3],["c",3,3],["d",3,3],40.908233376],
+      ]
+      Number Of Variables: 4 
+      Number Of Reassignments: 3 
+      Variables Range: 1 2 3 4 5 6 7 8 9 
+      Correct In A Row: 3 
+      Correct In A Row Needed: 3 
+      Total Time: 222.817638166 
+      Wrong Count: 1 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+
+
+
+

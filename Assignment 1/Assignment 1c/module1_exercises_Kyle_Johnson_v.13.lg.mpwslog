@@ -1,0 +1,245 @@
+%info,parentFoldType="mathpiper",parent="Problem 0",sequence="1",timestamp="2018-08-30 17:08:29.617",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶[¶["firstName", "Kyle"],¶["lastName", "Johnson"],¶["ssuIDNumber", "264694"],¶];
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="2",timestamp="2018-08-30 17:10:24.637",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶sum :=1 + 2 + 3 + 4 + 5;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-08-30 17:11:14.782",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+t="5000"¶¶// Enter your program into this fold.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="3",timestamp="2018-08-30 17:11:57.341",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶answer := 1- 2 * 5 / 7;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="4",timestamp="2018-08-30 17:12:10.117",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶answer := 1 - 2 * 5 / 7;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="5",timestamp="2018-08-30 17:12:58.533",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+Hint("CmFuc3dlciA6PSAxIC0gMiAqIDUgLyA3OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="6",timestamp="2018-08-30 17:13:34.495",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶result := 1/4 + 3/8 - 7/16;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="7",timestamp="2018-08-30 17:14:08.297",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+Hint("CnR3b1RvVGhlVGhpcmRQb3dlciA6PSAyXjM7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="8",timestamp="2018-08-30 17:14:40.492",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶twoToTheThirdPower := 2^3;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="9",timestamp="2018-08-30 17:15:10.814",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶value := 7/16;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="10",timestamp="2018-08-30 17:17:08.989",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶value := 7/16¶numerator := 7/16;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-08-30 17:17:10.789",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 5",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Error parsing expression near token ***( numerator )***. Error on or before line 474 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="11",timestamp="2018-08-30 17:17:31.109",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+Hint("CnZhbHVlIDo9IDcvMTY7CgpOdW1lcmF0b3IodmFsdWUpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="12",timestamp="2018-08-30 17:17:44.515",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶value := 7/16¶numerator(7/16);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-08-30 17:17:46.136",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 5",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Error parsing expression near token ***( numerator )***. Error on or before line 478 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="13",timestamp="2018-08-30 17:18:00.307",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+Hint("CnZhbHVlIDo9IDcvMTY7CgpOdW1lcmF0b3IodmFsdWUpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="14",timestamp="2018-08-30 17:18:11.288",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶value := 7/16¶Numerator(7/16);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-08-30 17:18:12.619",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 5",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Error parsing expression near token ***( Numerator )***. Error on or before line 478 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="15",timestamp="2018-08-30 17:18:29.308",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶value := 7/16¶Numerator(value);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-08-30 17:18:30.821",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 5",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Error parsing expression near token ***( Numerator )***. Error on or before line 478 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="16",timestamp="2018-08-30 17:18:42.087",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+Hint("CnZhbHVlIDo9IDcvMTY7CgpOdW1lcmF0b3IodmFsdWUpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="17",timestamp="2018-08-30 17:18:56.183",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶value := 7/16;¶¶Numerator(value);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="18",timestamp="2018-08-30 17:20:35.267",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶value := 7/16;¶Denominator(value);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-08-30 17:21:23.109",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+// Enter your program into this fold.¶
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="19",timestamp="2018-08-30 17:21:46.29",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶value := 7/16;¶NM(value);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 8",sequence="20",timestamp="2018-08-30 17:23:36.033",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶a := 1/4;¶b := 3/8;¶c := 7/16;¶answer := a + b + c;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-08-30 17:25:31.97",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+ssuCostPerYear := 21818;¶¶ssuCostPerSemester := ssuCostPerYear / 2.;¶¶weeksInASemester := 17;¶¶costPerWeek := NM(ssuCostPerSemester / weeksInASemester);¶¶hoursInClassPerWeek := 20;¶¶costPerHour := NM(costPerWeek / hoursInClassPerWeek);¶
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 9",sequence="21",timestamp="2018-08-30 17:27:44.302",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶ssuCostPerYear := 21818;¶¶ssuCostPerSemester := ssuCostPerYear / 2.;¶¶weeksInASemester := 17;¶¶costPerWeek := NM(ssuCostPerSemester / weeksInASemester);¶¶hoursInClassPerWeek := 20;¶¶costPerHour := NM(costPerWeek / hoursInClassPerWeek);¶¶costPerMinute := costPerHour / 60;¶¶result:= costPerMinute;
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 1",sequence="1",timestamp="2018-09-16 14:16:24.144",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="2",timestamp="2018-09-16 14:17:10.752",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+Hint("CmFuc3dlciA6PSAxIC0gMiAqIDUgLyA3OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="3",timestamp="2018-09-16 14:17:21.324",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+¶answer := 1 - 2 * 5 / 7;
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 2",sequence="4",timestamp="2018-09-16 14:17:34.146",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="5",timestamp="2018-09-16 14:17:46.265",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+¶result := 1/4 + 3/8 - 7/16;
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 3",sequence="6",timestamp="2018-09-16 14:17:54.532",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="7",timestamp="2018-09-16 14:18:05.836",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+¶twoToTheThirdPower := 2^3;
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 4",sequence="8",timestamp="2018-09-16 14:18:14.902",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="9",timestamp="2018-09-16 14:18:25.131",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+¶value := 7/16;¶¶Numerator(value);
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 5",sequence="10",timestamp="2018-09-16 14:18:32.619",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="11",timestamp="2018-09-16 14:23:48.402",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+¶value := 7/16;¶Denominator(value);
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 6",sequence="12",timestamp="2018-09-16 14:23:55.918",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="13",timestamp="2018-09-16 14:24:06.661",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+¶value := 7/16;¶NM(value);
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 7",sequence="14",timestamp="2018-09-16 14:24:16.462",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 8",sequence="15",timestamp="2018-09-16 14:24:23.502",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+¶a := 1/4;¶b := 3/8;¶c := 7/16;¶answer := a + b + c;
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 8",sequence="16",timestamp="2018-09-16 14:24:31.065",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 8",sequence="17",timestamp="2018-09-16 14:26:11.671",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+¶variable1 := 1/4;¶variable2 := 3/8;¶variable3 := 7/16;¶answer := variable1 + variable2 + variable3;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 8",sequence="18",timestamp="2018-09-16 14:26:17.882",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+¶variable1 := 1/4;¶variable2 := 3/8;¶variable3 := 7/16;¶answer := variable1 + variable2 + variable3;
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 8",sequence="19",timestamp="2018-09-16 14:26:27.57",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 9",sequence="20",timestamp="2018-09-16 14:26:36.398",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+¶ssuCostPerYear := 21818;¶¶ssuCostPerSemester := ssuCostPerYear / 2.;¶¶weeksInASemester := 17;¶¶costPerWeek := NM(ssuCostPerSemester / weeksInASemester);¶¶hoursInClassPerWeek := 20;¶¶costPerHour := NM(costPerWeek / hoursInClassPerWeek);¶¶costPerMinute := costPerHour / 60;¶¶result:= costPerMinute;
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 9",sequence="21",timestamp="2018-09-16 14:26:43.142",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.1.170",mpversion=".257"
+Not logged.
+
+%/info
+

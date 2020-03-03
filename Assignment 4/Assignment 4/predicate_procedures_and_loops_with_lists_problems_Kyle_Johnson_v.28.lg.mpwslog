@@ -1,0 +1,1245 @@
+%info,parentFoldType="mathpiper_grade",parent="Problem 0",sequence="1",timestamp="2018-09-20 16:22:27.148",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:25:34.606",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:26:05.042",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:26:09.101",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="2",timestamp="2018-09-20 16:27:23.294",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("CnByaW1lc0NvdW50IDo9IDA7CgpudW1iZXIgOj0gMTsKCldoaWxlKG51bWJlciA8PT8gMTAwMCkKewogICAgSWYoUHJpbWU/KG51bWJlcikpCiAgICB7CiAgICAgICAgcHJpbWVzQ291bnQgOj0gKHByaW1lc0NvdW50ICsgMSk7CiAgICB9CgogICAgbnVtYmVyIDo9IG51bWJlciArIDE7Cn0KCnByaW1lc0NvdW50OwoK");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:28:28.394",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:28:29.406",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:28:33.952",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:28:34.298",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:28:58.028",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:28:58.285",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:29:01.107",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:29:09.973",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+         
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:29:12.756",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+         
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="3",timestamp="2018-09-20 16:29:33.438",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("CnByaW1lc0NvdW50IDo9IDA7CgpudW1iZXIgOj0gMTsKCldoaWxlKG51bWJlciA8PT8gMTAwMCkKewogICAgSWYoUHJpbWU/KG51bWJlcikpCiAgICB7CiAgICAgICAgcHJpbWVzQ291bnQgOj0gKHByaW1lc0NvdW50ICsgMSk7CiAgICB9CgogICAgbnVtYmVyIDo9IG51bWJlciArIDE7Cn0KCnByaW1lc0NvdW50OwoK");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:30:09.323",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:30:20.871",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="4",timestamp="2018-09-20 16:30:45.156",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶number := 1;¶¶primesCount := 0;¶¶While(number <=? 1000)¶¶{¶    If(prime?(number));¶        ¶        primesCount + 1;¶        ¶}        ¶¶number + 1;¶¶primesCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:30:47.865",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 1",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ; )*** end of statement token in program block but found ***( primesCount )*** instead. Error on or before line 188 starting at index 8.¶.   %/error
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:31:11.982",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+        
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="5",timestamp="2018-09-20 16:31:17.245",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶number := 1;¶¶primesCount := 0;¶¶While(number <=? 1000)¶¶{¶    If(prime?(number));¶        ¶        {¶        primesCount + 1;¶        }¶}        ¶¶number + 1;¶¶primesCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:31:19.41",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 1",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ; )*** end of statement token in program block but found ***( { )*** instead. Error on or before line 188 starting at index 8.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="6",timestamp="2018-09-20 16:31:42.917",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("CnByaW1lc0NvdW50IDo9IDA7CgpudW1iZXIgOj0gMTsKCldoaWxlKG51bWJlciA8PT8gMTAwMCkKewogICAgSWYoUHJpbWU/KG51bWJlcikpCiAgICB7CiAgICAgICAgcHJpbWVzQ291bnQgOj0gKHByaW1lc0NvdW50ICsgMSk7CiAgICB9CgogICAgbnVtYmVyIDo9IG51bWJlciArIDE7Cn0KCnByaW1lc0NvdW50OwoK");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:32:28.403",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:32:30.35",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+        
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="7",timestamp="2018-09-20 16:32:34.903",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶number := 1;¶¶primesCount := 0;¶¶While(number <=? 1000)¶¶{¶    If(Prime?(number));¶        ¶        {¶        ¶        (primesCount := primesCount + 1);¶        ¶        }¶}        ¶¶number + 1;¶¶primesCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:32:36.77",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 1",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ; )*** end of statement token in program block but found ***( { )*** instead. Error on or before line 188 starting at index 8.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="8",timestamp="2018-09-20 16:32:55.998",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶number := 1;¶¶primesCount := 0;¶¶While(number <=? 1000);¶¶{¶    If(Prime?(number));¶        ¶        {¶        ¶        (primesCount := primesCount + 1);¶        ¶        }¶}        ¶¶number + 1;¶¶primesCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:32:57.839",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 1",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Error parsing expression near token ***( { )***. Error on or before line 185 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="9",timestamp="2018-09-20 16:33:20.971",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("CnByaW1lc0NvdW50IDo9IDA7CgpudW1iZXIgOj0gMTsKCldoaWxlKG51bWJlciA8PT8gMTAwMCkKewogICAgSWYoUHJpbWU/KG51bWJlcikpCiAgICB7CiAgICAgICAgcHJpbWVzQ291bnQgOj0gKHByaW1lc0NvdW50ICsgMSk7CiAgICB9CgogICAgbnVtYmVyIDo9IG51bWJlciArIDE7Cn0KCnByaW1lc0NvdW50OwoK");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:33:40.669",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:33:42.463",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+        
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="10",timestamp="2018-09-20 16:34:07.696",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶number := 1;¶¶primesCount := 0;¶¶While(number <=? 1000)¶¶{¶    If(Prime?(number));¶        ¶        ¶        ¶        (primesCount := primesCount + 1);¶        ¶        ¶        ¶        number + 1;¶¶}¶¶primesCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:34:13.841",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 1",mpversion=".257",preserve="false"¶      Result: Evaluation timeout exceeded or user halted evaluation. Error on or before line 183 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="11",timestamp="2018-09-20 16:35:05.067",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶number := 1;¶¶primesCount := 0;¶¶While(number <=? 1000)¶¶{¶    If(Prime?(number));¶        ¶        ¶        ¶        (primesCount := primesCount + 1);¶        ¶        ¶        ¶        number := number + 1;¶¶}¶¶primesCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:35:07.416",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 1",mpversion=".257",preserve="false"¶      Result: The 1 parameter version of procedure <;> is not defined (MAKE SURE THE PROCEDURE'S NAME IS SPELLED CORRECTLY and the correct number of arguments are being passed to it.)  Error on or before line 186 starting at index 22.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="12",timestamp="2018-09-20 16:35:47.17",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("CnByaW1lc0NvdW50IDo9IDA7CgpudW1iZXIgOj0gMTsKCldoaWxlKG51bWJlciA8PT8gMTAwMCkKewogICAgSWYoUHJpbWU/KG51bWJlcikpCiAgICB7CiAgICAgICAgcHJpbWVzQ291bnQgOj0gKHByaW1lc0NvdW50ICsgMSk7CiAgICB9CgogICAgbnVtYmVyIDo9IG51bWJlciArIDE7Cn0KCnByaW1lc0NvdW50OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="13",timestamp="2018-09-20 16:36:24.87",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶number := 1;¶¶primesCount := 0;¶¶While(number <=? 1000)¶¶{¶    If(Prime?(number))¶        ¶        {¶        ¶        (primesCount := primesCount + 1);¶        ¶        }¶        ¶        number := number + 1;¶¶}¶¶primesCount;
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 1",sequence="14",timestamp="2018-09-20 16:36:48.52",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="15",timestamp="2018-09-20 16:39:14.05",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzczLDk0LDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobGlzdCk7CgpvZGRzQ291bnQgOj0gMDsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoT2RkPyhsaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgb2Rkc0NvdW50IDo9IChvZGRzQ291bnQgKyAxKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKb2Rkc0NvdW50OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="16",timestamp="2018-09-20 16:40:00.077",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶oddsCount := 0;¶¶listLength := Length(List);¶¶¶¶While()¶¶Odd?()
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:40:01.998",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: The name <List> is a procedure that cannot be evaluated without arguments.  Error on or before line 384 starting at index 21.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="17",timestamp="2018-09-20 16:40:46.626",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶oddsCount := 0;¶¶listLength := Length(List);¶¶index := 1;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:40:48.419",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: The name <List> is a procedure that cannot be evaluated without arguments.  Error on or before line 384 starting at index 21.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="18",timestamp="2018-09-20 16:41:34.629",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzczLDk0LDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobGlzdCk7CgpvZGRzQ291bnQgOj0gMDsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoT2RkPyhsaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgb2Rkc0NvdW50IDo9IChvZGRzQ291bnQgKyAxKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKb2Rkc0NvdW50OwoK");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:42:01.399",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+[73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25]¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:42:45.066",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:42:57.865",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="19",timestamp="2018-09-20 16:43:35.818",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzczLDk0LDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobGlzdCk7CgpvZGRzQ291bnQgOj0gMDsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoT2RkPyhsaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgb2Rkc0NvdW50IDo9IChvZGRzQ291bnQgKyAxKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKb2Rkc0NvdW50OwoK");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:44:32.948",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:44:33.955",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:44:36.598",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:44:37.01",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:44:51.073",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:44:52.103",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:44:56.305",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:44:57.146",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:45:20.0",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:45:21.314",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="20",timestamp="2018-09-20 16:45:45.219",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶List := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25]¶¶oddsCount := 0;¶¶listLength := Length(List);¶¶index := 1;¶¶While (index <=? listLength)¶¶{¶¶    If?(Odd?(listLength))¶    ¶    {¶    ¶    oddsCount := oddsCount +1;¶    ¶    }¶    ¶    index := index + 1;¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:45:47.218",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Error parsing expression near token ***( oddsCount )***. Error on or before line 384 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="21",timestamp="2018-09-20 16:46:54.376",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶List := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(List);¶¶index := 1;¶¶While (index <=? listLength)¶¶{¶¶    If?(Odd?(listLength))¶    ¶    {¶    ¶    oddsCount := oddsCount + 1;¶    ¶    }¶    ¶    index := index + 1;¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:46:56.206",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ; )*** end of statement token in program block but found ***( { )*** instead. Error on or before line 396 starting at index 4.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="22",timestamp="2018-09-20 16:47:04.746",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶List := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(List);¶¶index := 1;¶¶While (index <=? listLength)¶¶{¶¶    If?(Odd?(listLength));¶    ¶    {¶    ¶    oddsCount := oddsCount + 1;¶    ¶    }¶    ¶    index := index + 1;¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:47:06.477",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: The 1 parameter version of procedure <If?> is not defined (MAKE SURE THE PROCEDURE'S NAME IS SPELLED CORRECTLY and the correct number of arguments are being passed to it.)  Error on or before line 394 starting at index 4.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="23",timestamp="2018-09-20 16:47:38.283",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶List := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(List);¶¶index := 1;¶¶While (index <=? listLength)¶¶{¶¶    If?(Odd?(Length(List)));¶    ¶    {¶    ¶    oddsCount := oddsCount + 1;¶    ¶    }¶    ¶    index := index + 1;¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:47:40.095",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: The 1 parameter version of procedure <If?> is not defined (MAKE SURE THE PROCEDURE'S NAME IS SPELLED CORRECTLY and the correct number of arguments are being passed to it.)  Error on or before line 394 starting at index 4.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="24",timestamp="2018-09-20 16:47:50.173",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶List := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(List);¶¶index := 1;¶¶While (index <=? listLength);¶¶{¶¶    If?(Odd?(Length(List)));¶    ¶    {¶    ¶    oddsCount := oddsCount + 1;¶    ¶    }¶    ¶    index := index + 1;¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:47:52.21",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Error parsing expression near token ***( { )***. Error on or before line 392 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="25",timestamp="2018-09-20 16:48:04.206",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzczLDk0LDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobGlzdCk7CgpvZGRzQ291bnQgOj0gMDsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoT2RkPyhsaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgb2Rkc0NvdW50IDo9IChvZGRzQ291bnQgKyAxKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKb2Rkc0NvdW50OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="26",timestamp="2018-09-20 16:48:35.194",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶List := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(List);¶¶index := 1;¶¶While (index <=? listLength)¶¶{¶¶    If?(Odd?(list(index)));¶    ¶    {¶    ¶    oddsCount := oddsCount + 1;¶    ¶    }¶    ¶    index := index + 1;¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:48:37.218",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: The 1 parameter version of procedure <If?> is not defined (MAKE SURE THE PROCEDURE'S NAME IS SPELLED CORRECTLY and the correct number of arguments are being passed to it.)  Error on or before line 394 starting at index 4.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="27",timestamp="2018-09-20 16:48:51.502",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶List := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(List);¶¶index := 1;¶¶While (index <=? listLength)¶¶{¶¶    If(Odd?(list(index)));¶    ¶    {¶    ¶    oddsCount := oddsCount + 1;¶    ¶    }¶    ¶    index := index + 1;¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:48:53.568",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ; )*** end of statement token in program block but found ***( { )*** instead. Error on or before line 396 starting at index 4.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="28",timestamp="2018-09-20 16:49:38.724",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶List := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(List);¶¶index := 1;¶¶While (index <=? listLength)¶¶{¶¶    If(Odd?(list(index)))¶    ¶    {¶    ¶    oddsCount := oddsCount + 1;¶    ¶    }¶    ¶    index := index + 1;¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:49:40.666",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: The 1 parameter version of procedure <list> is not defined (MAKE SURE THE PROCEDURE'S NAME IS SPELLED CORRECTLY and the correct number of arguments are being passed to it.)  Error on or before line 394 starting at index 12.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="29",timestamp="2018-09-20 16:50:14.671",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶List := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(List);¶¶index := 1;¶¶While (index <=? listLength);¶¶{¶¶    If(Odd?(list(index)))¶    ¶    {¶    ¶    oddsCount := oddsCount + 1;¶    ¶    }¶    ¶    index := index + 1;¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:50:16.588",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Error parsing expression near token ***( { )***. Error on or before line 392 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="30",timestamp="2018-09-20 16:50:27.571",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzczLDk0LDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobGlzdCk7CgpvZGRzQ291bnQgOj0gMDsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoT2RkPyhsaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgb2Rkc0NvdW50IDo9IChvZGRzQ291bnQgKyAxKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKb2Rkc0NvdW50OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="31",timestamp="2018-09-20 16:50:39.878",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzczLDk0LDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobGlzdCk7CgpvZGRzQ291bnQgOj0gMDsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoT2RkPyhsaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgb2Rkc0NvdW50IDo9IChvZGRzQ291bnQgKyAxKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKb2Rkc0NvdW50OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="32",timestamp="2018-09-20 16:51:23.125",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶List := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(List);¶¶index := 1;¶¶While (index <=? listLength)¶¶{¶¶    If(Odd?(list(index)))¶    ¶    {¶    ¶    oddsCount := (oddsCount + 1);¶    ¶    }¶    ¶    index := (index + 1);¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:51:25.105",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: The 1 parameter version of procedure <list> is not defined (MAKE SURE THE PROCEDURE'S NAME IS SPELLED CORRECTLY and the correct number of arguments are being passed to it.)  Error on or before line 394 starting at index 12.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="33",timestamp="2018-09-20 16:51:38.809",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzczLDk0LDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobGlzdCk7CgpvZGRzQ291bnQgOj0gMDsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoT2RkPyhsaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgb2Rkc0NvdW50IDo9IChvZGRzQ291bnQgKyAxKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKb2Rkc0NvdW50OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="34",timestamp="2018-09-20 16:52:04.902",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶List := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(List);¶¶index := 1;¶¶While (index <=? listLength)¶¶{¶¶    If(Odd?(List(index)))¶    ¶    {¶    ¶    oddsCount := (oddsCount + 1);¶    ¶    }¶    ¶    index := (index + 1);¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 2",sequence="35",timestamp="2018-09-20 16:53:02.56",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="36",timestamp="2018-09-20 16:53:25.074",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶List := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(List);¶¶index := 1;¶¶While (index <=? listLength);¶¶{¶¶    If(Odd?(List(index)))¶    ¶    {¶    ¶    oddsCount := (oddsCount + 1);¶    ¶    }¶    ¶    index := (index + 1);¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:53:26.97",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Error parsing expression near token ***( { )***. Error on or before line 392 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="37",timestamp="2018-09-20 16:53:35.358",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶List := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(List);¶¶index := 1;¶¶While (index <=? listLength)¶¶{¶¶    If(Odd?(List(index)));¶    ¶    {¶    ¶    oddsCount := (oddsCount + 1);¶    ¶    }¶    ¶    index := (index + 1);¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:53:37.159",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ; )*** end of statement token in program block but found ***( { )*** instead. Error on or before line 396 starting at index 4.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="38",timestamp="2018-09-20 16:53:48.292",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶List := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(List);¶¶index := 1;¶¶While (index <=? listLength)¶¶{¶¶    If(Odd?(List(index)))¶    ¶    {¶    ¶    oddsCount := (oddsCount + 1);¶    ¶    }¶    ¶    index := (index + 1);¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="39",timestamp="2018-09-20 16:53:55.54",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzczLDk0LDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobGlzdCk7CgpvZGRzQ291bnQgOj0gMDsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoT2RkPyhsaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgb2Rkc0NvdW50IDo9IChvZGRzQ291bnQgKyAxKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKb2Rkc0NvdW50OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="40",timestamp="2018-09-20 16:54:07.247",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzczLDk0LDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobGlzdCk7CgpvZGRzQ291bnQgOj0gMDsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoT2RkPyhsaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgb2Rkc0NvdW50IDo9IChvZGRzQ291bnQgKyAxKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKb2Rkc0NvdW50OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="41",timestamp="2018-09-20 16:54:29.115",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶List := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(List);¶¶index := 1;¶¶While (index <=? listLength)¶¶{¶¶    If(Odd?(list(index)))¶    ¶    {¶    ¶    oddsCount := (oddsCount + 1);¶    ¶    }¶    ¶    index := (index + 1);¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:54:31.051",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: The 1 parameter version of procedure <list> is not defined (MAKE SURE THE PROCEDURE'S NAME IS SPELLED CORRECTLY and the correct number of arguments are being passed to it.)  Error on or before line 394 starting at index 12.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="42",timestamp="2018-09-20 16:54:39.291",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzczLDk0LDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobGlzdCk7CgpvZGRzQ291bnQgOj0gMDsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoT2RkPyhsaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgb2Rkc0NvdW50IDo9IChvZGRzQ291bnQgKyAxKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKb2Rkc0NvdW50OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="43",timestamp="2018-09-20 16:54:50.994",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzczLDk0LDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobGlzdCk7CgpvZGRzQ291bnQgOj0gMDsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoT2RkPyhsaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgb2Rkc0NvdW50IDo9IChvZGRzQ291bnQgKyAxKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKb2Rkc0NvdW50OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="44",timestamp="2018-09-20 16:55:20.315",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶list := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(List);¶¶index := 1;¶¶While (index <=? listLength)¶¶{¶¶    If(Odd?(list(index)))¶    ¶    {¶    ¶    oddsCount := (oddsCount + 1);¶    ¶    }¶    ¶    index := (index + 1);¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:55:22.101",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: The name <List> is a procedure that cannot be evaluated without arguments.  Error on or before line 386 starting at index 21.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="45",timestamp="2018-09-20 16:55:32.298",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzczLDk0LDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobGlzdCk7CgpvZGRzQ291bnQgOj0gMDsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoT2RkPyhsaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgb2Rkc0NvdW50IDo9IChvZGRzQ291bnQgKyAxKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKb2Rkc0NvdW50OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="46",timestamp="2018-09-20 16:56:40.295",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶list := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(List);¶¶index := 1;¶¶While (index <=? listLength)¶¶{¶¶    If(Odd?(list(index)))¶    ¶    {¶    ¶    oddsCount := (oddsCount + 1);¶    ¶    }¶    ¶    index := (index + 1);¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:56:42.139",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: The name <List> is a procedure that cannot be evaluated without arguments.  Error on or before line 386 starting at index 21.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="47",timestamp="2018-09-20 16:56:57.661",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶list := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(list);¶¶index := 1;¶¶While (index <=? listLength)¶¶{¶¶    If(Odd?(list(index)))¶    ¶    {¶    ¶    oddsCount := (oddsCount + 1);¶    ¶    }¶    ¶    index := (index + 1);¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:56:59.519",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: The 1 parameter version of procedure <list> is not defined (MAKE SURE THE PROCEDURE'S NAME IS SPELLED CORRECTLY and the correct number of arguments are being passed to it.)  Error on or before line 394 starting at index 12.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="48",timestamp="2018-09-20 16:57:13.384",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶list := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(list);¶¶index := 1;¶¶While (index <=? listLength)¶¶{¶¶    If(Odd?(List(index)))¶    ¶    {¶    ¶    oddsCount := (oddsCount + 1);¶    ¶    }¶    ¶    index := (index + 1);¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="49",timestamp="2018-09-20 16:57:24.97",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzczLDk0LDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobGlzdCk7CgpvZGRzQ291bnQgOj0gMDsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoT2RkPyhsaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgb2Rkc0NvdW50IDo9IChvZGRzQ291bnQgKyAxKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKb2Rkc0NvdW50OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="50",timestamp="2018-09-20 16:57:35.897",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzczLDk0LDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobGlzdCk7CgpvZGRzQ291bnQgOj0gMDsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoT2RkPyhsaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgb2Rkc0NvdW50IDo9IChvZGRzQ291bnQgKyAxKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKb2Rkc0NvdW50OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="51",timestamp="2018-09-20 16:57:46.975",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzczLDk0LDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobGlzdCk7CgpvZGRzQ291bnQgOj0gMDsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoT2RkPyhsaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgb2Rkc0NvdW50IDo9IChvZGRzQ291bnQgKyAxKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKb2Rkc0NvdW50OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="52",timestamp="2018-09-20 16:57:58.635",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzczLDk0LDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobGlzdCk7CgpvZGRzQ291bnQgOj0gMDsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoT2RkPyhsaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgb2Rkc0NvdW50IDo9IChvZGRzQ291bnQgKyAxKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKb2Rkc0NvdW50OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="53",timestamp="2018-09-20 16:58:38.471",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶list := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(list);¶¶index := 1;¶¶While (index <=? listLength)¶¶{¶¶    If(Odd?(list(index)))¶    ¶    {¶    ¶    oddsCount := (oddsCount + 1);¶    ¶    }¶    ¶    index := (index + 1);¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:58:40.192",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: The 1 parameter version of procedure <list> is not defined (MAKE SURE THE PROCEDURE'S NAME IS SPELLED CORRECTLY and the correct number of arguments are being passed to it.)  Error on or before line 394 starting at index 12.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="54",timestamp="2018-09-20 16:59:09.866",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶list := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(list);¶¶index := 1;¶¶While (index <=? listLength);¶¶{¶¶    If(Odd?(list(index)))¶    ¶    {¶    ¶    oddsCount := (oddsCount + 1);¶    ¶    }¶    ¶    index := (index + 1);¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 16:59:11.51",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Error parsing expression near token ***( { )***. Error on or before line 392 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="55",timestamp="2018-09-20 16:59:42.104",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzczLDk0LDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobGlzdCk7CgpvZGRzQ291bnQgOj0gMDsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoT2RkPyhsaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgb2Rkc0NvdW50IDo9IChvZGRzQ291bnQgKyAxKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKb2Rkc0NvdW50OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="56",timestamp="2018-09-20 16:59:53.656",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzczLDk0LDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobGlzdCk7CgpvZGRzQ291bnQgOj0gMDsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoT2RkPyhsaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgb2Rkc0NvdW50IDo9IChvZGRzQ291bnQgKyAxKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKb2Rkc0NvdW50OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="57",timestamp="2018-09-20 17:00:43.239",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶list := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(list);¶¶index := 1;¶¶While(index <=? listLength)¶¶{¶¶    If(Odd?(list(index)))¶    ¶    {¶    ¶    oddsCount := (oddsCount + 1);¶    ¶    }¶    ¶    index := (index + 1);¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:00:45.007",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 2",mpversion=".257",preserve="false"¶      Result: The 1 parameter version of procedure <list> is not defined (MAKE SURE THE PROCEDURE'S NAME IS SPELLED CORRECTLY and the correct number of arguments are being passed to it.)  Error on or before line 394 starting at index 12.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="58",timestamp="2018-09-20 17:01:37.555",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶list := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶oddsCount := 0;¶¶listLength := Length(list);¶¶index := 1;¶¶While(index <=? listLength)¶¶{¶¶    If(Odd?(list[index]))¶    ¶    {¶    ¶    oddsCount := (oddsCount + 1);¶    ¶    }¶    ¶    index := (index + 1);¶    ¶}¶¶oddsCount;
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 2",sequence="59",timestamp="2018-09-20 17:01:53.792",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:02:37.394",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+[36,-29,-33,-6,14,7,-16,-3,-14,37,-38,-8,-45,-21,-26,6,6,38,-20,33,41,-4,24,37,40,29]¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:04:39.785",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:05:23.339",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:05:23.787",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:05:24.763",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:05:25.173",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:05:31.482",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:05:31.787",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:05:37.115",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:05:37.22",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:06:08.913",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:06:09.338",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:06:18.397",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:06:19.394",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:06:23.99",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:06:55.56",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:06:56.914",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="60",timestamp="2018-09-20 17:07:17.303",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶list := [36,-29,-33,-6,14,7,-16,-3,-14,37,-38,-8,-45,-21,-26,6,6,38,-20,33,41,-4,24,37,40,29];¶¶listLength := Length(list);¶¶negativeNumbersList := 0;¶¶index := 1;¶¶While(index <=? listLength)¶¶{¶¶    If(NegativeNumber?(list[index]))¶        ¶        {¶            ¶            negativeNumbersList := (negativeNumbersList + 1);¶            ¶        }¶        ¶    index := (index + 1);¶    ¶}¶¶negativeNumbersList;
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 3",sequence="61",timestamp="2018-09-20 17:07:28.531",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="62",timestamp="2018-09-20 17:07:54.346",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzM2LC0yOSwtMzMsLTYsMTQsNywtMTYsLTMsLTE0LDM3LC0zOCwtOCwtNDUsLTIxLC0yNiw2LDYsMzgsLTIwLDMzLDQxLC00LDI0LDM3LDQwLDI5XTsKCm5lZ2F0aXZlTnVtYmVyc0xpc3QgOj0gW107CgpsaXN0TGVuZ3RoIDo9IExlbmd0aChsaXN0KTsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoTmVnYXRpdmVOdW1iZXI/KGxpc3RbaW5kZXhdKSkKICAgIHsKICAgICAgICBBcHBlbmQhKG5lZ2F0aXZlTnVtYmVyc0xpc3QsIGxpc3RbaW5kZXhdKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKbmVnYXRpdmVOdW1iZXJzTGlzdDsKCg==");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="63",timestamp="2018-09-20 17:08:40.108",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzM2LC0yOSwtMzMsLTYsMTQsNywtMTYsLTMsLTE0LDM3LC0zOCwtOCwtNDUsLTIxLC0yNiw2LDYsMzgsLTIwLDMzLDQxLC00LDI0LDM3LDQwLDI5XTsKCm5lZ2F0aXZlTnVtYmVyc0xpc3QgOj0gW107CgpsaXN0TGVuZ3RoIDo9IExlbmd0aChsaXN0KTsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoTmVnYXRpdmVOdW1iZXI/KGxpc3RbaW5kZXhdKSkKICAgIHsKICAgICAgICBBcHBlbmQhKG5lZ2F0aXZlTnVtYmVyc0xpc3QsIGxpc3RbaW5kZXhdKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKbmVnYXRpdmVOdW1iZXJzTGlzdDsKCg==");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="64",timestamp="2018-09-20 17:09:28.012",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶list := [36,-29,-33,-6,14,7,-16,-3,-14,37,-38,-8,-45,-21,-26,6,6,38,-20,33,41,-4,24,37,40,29];¶¶listLength := Length(list);¶¶negativeNumbersList := [];¶¶index := 1;¶¶While(index <=? listLength)¶¶{¶¶    If(NegativeNumber?(list[index]))¶        ¶        {¶            ¶            Append(negativeNumbersList, list[index]);¶            ¶        }¶        ¶    index := (index + 1);¶    ¶}¶¶negativeNumbersList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="65",timestamp="2018-09-20 17:09:41.504",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶list := [36,-29,-33,-6,14,7,-16,-3,-14,37,-38,-8,-45,-21,-26,6,6,38,-20,33,41,-4,24,37,40,29];¶¶listLength := Length(list);¶¶negativeNumbersList := [];¶¶index := 1;¶¶While(index <=? listLength)¶¶{¶¶    If(NegativeNumber?(list[index]))¶        ¶        {¶            ¶            !Append(negativeNumbersList, list[index]);¶            ¶        }¶        ¶    index := (index + 1);¶    ¶}¶¶negativeNumbersList;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:09:43.512",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 3",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ; )*** end of statement token in program block but found ***( Append )*** instead. Error on or before line 608 starting at index 13.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="66",timestamp="2018-09-20 17:09:51.697",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzM2LC0yOSwtMzMsLTYsMTQsNywtMTYsLTMsLTE0LDM3LC0zOCwtOCwtNDUsLTIxLC0yNiw2LDYsMzgsLTIwLDMzLDQxLC00LDI0LDM3LDQwLDI5XTsKCm5lZ2F0aXZlTnVtYmVyc0xpc3QgOj0gW107CgpsaXN0TGVuZ3RoIDo9IExlbmd0aChsaXN0KTsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoTmVnYXRpdmVOdW1iZXI/KGxpc3RbaW5kZXhdKSkKICAgIHsKICAgICAgICBBcHBlbmQhKG5lZ2F0aXZlTnVtYmVyc0xpc3QsIGxpc3RbaW5kZXhdKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKbmVnYXRpdmVOdW1iZXJzTGlzdDsKCg==");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="67",timestamp="2018-09-20 17:10:03.046",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzM2LC0yOSwtMzMsLTYsMTQsNywtMTYsLTMsLTE0LDM3LC0zOCwtOCwtNDUsLTIxLC0yNiw2LDYsMzgsLTIwLDMzLDQxLC00LDI0LDM3LDQwLDI5XTsKCm5lZ2F0aXZlTnVtYmVyc0xpc3QgOj0gW107CgpsaXN0TGVuZ3RoIDo9IExlbmd0aChsaXN0KTsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoTmVnYXRpdmVOdW1iZXI/KGxpc3RbaW5kZXhdKSkKICAgIHsKICAgICAgICBBcHBlbmQhKG5lZ2F0aXZlTnVtYmVyc0xpc3QsIGxpc3RbaW5kZXhdKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKbmVnYXRpdmVOdW1iZXJzTGlzdDsKCg==");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="68",timestamp="2018-09-20 17:10:24.664",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶list := [36,-29,-33,-6,14,7,-16,-3,-14,37,-38,-8,-45,-21,-26,6,6,38,-20,33,41,-4,24,37,40,29];¶¶listLength := Length(list);¶¶negativeNumbersList := [];¶¶index := 1;¶¶While(index <=? listLength)¶¶{¶¶    If(NegativeNumber?(list[index]))¶        ¶        {¶            ¶            Append!(negativeNumbersList, list[index]);¶            ¶        }¶        ¶    index := (index + 1);¶    ¶}¶¶negativeNumbersList;
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 3",sequence="69",timestamp="2018-09-20 17:10:31.099",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:12:03.139",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+largest := 0;¶¶numbersList := [4,6,2,9,7,1,3];¶¶listLength := Length(numbersList);¶¶index := 1;¶¶While(index <=? listLength)¶{¶    // Echo("Largest so far: ", largest);¶    ¶    If(numbersList[index] >? largest)¶    {¶        largest := numbersList[index];¶    }¶    ¶    index := index + 1;¶}¶¶largest;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:12:17.542",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+[73,12,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25]¶
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="70",timestamp="2018-09-20 17:12:43.304",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶largest := 0;¶¶numbersList := [73,12,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶listLength := Length(numbersList);¶¶index := 1;¶¶While(index <=? listLength)¶{¶    // Echo("Largest so far: ", largest);¶    ¶    If(numbersList[index] >? largest)¶    {¶        largest := numbersList[index];¶    }¶    ¶    index := index + 1;¶}¶¶largest;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:13:25.39",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:13:57.896",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:13:58.049",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:14:49.138",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:14:50.898",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:14:53.981",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:14:55.086",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="71",timestamp="2018-09-20 17:15:31.318",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶largest := 0;¶¶smallest := Infinity;¶¶numbersList := [73,12,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶listLength := Length(numbersList);¶¶index := 1;¶¶While(index <=? listLength)¶{¶    ¶    If(numbersList[index] >? largest)¶    {¶        largest := numbersList[index];¶    }¶    ¶    If(numbersList[index] <? smallest)¶    {¶        smallest := numbersList[index];¶    }¶    ¶    ¶    index := index + 1;¶}¶¶largest;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="72",timestamp="2018-09-20 17:15:43.071",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxhcmdlc3QgOj0gMDsKCnNtYWxsZXN0IDo9IDEwMDsKCnN1bSA6PSAwOwoKbnVtYmVyc0xpc3QgOj0gWzczLDEyLDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobnVtYmVyc0xpc3QpOwoKaW5kZXggOj0gMTsKCldoaWxlKGluZGV4IDw9PyBsaXN0TGVuZ3RoKQp7ICAgIAogICAgSWYobnVtYmVyc0xpc3RbaW5kZXhdID4/IGxhcmdlc3QpCiAgICB7CiAgICAgICAgbGFyZ2VzdCA6PSBudW1iZXJzTGlzdFtpbmRleF07CiAgICB9CiAgICAKICAgIElmKG51bWJlcnNMaXN0W2luZGV4XSA8PyBzbWFsbGVzdCkKICAgIHsKICAgICAgICBzbWFsbGVzdCA6PSBudW1iZXJzTGlzdFtpbmRleF07CiAgICB9CgogICAgc3VtIDo9IChzdW0gKyBudW1iZXJzTGlzdFtpbmRleF0pOwogICAgCiAgICBpbmRleCA6PSBpbmRleCArIDE7Cn0KCltsYXJnZXN0LCBzbWFsbGVzdCwgc3VtXTsKCg==");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="73",timestamp="2018-09-20 17:15:54.147",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxhcmdlc3QgOj0gMDsKCnNtYWxsZXN0IDo9IDEwMDsKCnN1bSA6PSAwOwoKbnVtYmVyc0xpc3QgOj0gWzczLDEyLDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobnVtYmVyc0xpc3QpOwoKaW5kZXggOj0gMTsKCldoaWxlKGluZGV4IDw9PyBsaXN0TGVuZ3RoKQp7ICAgIAogICAgSWYobnVtYmVyc0xpc3RbaW5kZXhdID4/IGxhcmdlc3QpCiAgICB7CiAgICAgICAgbGFyZ2VzdCA6PSBudW1iZXJzTGlzdFtpbmRleF07CiAgICB9CiAgICAKICAgIElmKG51bWJlcnNMaXN0W2luZGV4XSA8PyBzbWFsbGVzdCkKICAgIHsKICAgICAgICBzbWFsbGVzdCA6PSBudW1iZXJzTGlzdFtpbmRleF07CiAgICB9CgogICAgc3VtIDo9IChzdW0gKyBudW1iZXJzTGlzdFtpbmRleF0pOwogICAgCiAgICBpbmRleCA6PSBpbmRleCArIDE7Cn0KCltsYXJnZXN0LCBzbWFsbGVzdCwgc3VtXTsKCg==");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="74",timestamp="2018-09-20 17:16:04.958",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxhcmdlc3QgOj0gMDsKCnNtYWxsZXN0IDo9IDEwMDsKCnN1bSA6PSAwOwoKbnVtYmVyc0xpc3QgOj0gWzczLDEyLDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobnVtYmVyc0xpc3QpOwoKaW5kZXggOj0gMTsKCldoaWxlKGluZGV4IDw9PyBsaXN0TGVuZ3RoKQp7ICAgIAogICAgSWYobnVtYmVyc0xpc3RbaW5kZXhdID4/IGxhcmdlc3QpCiAgICB7CiAgICAgICAgbGFyZ2VzdCA6PSBudW1iZXJzTGlzdFtpbmRleF07CiAgICB9CiAgICAKICAgIElmKG51bWJlcnNMaXN0W2luZGV4XSA8PyBzbWFsbGVzdCkKICAgIHsKICAgICAgICBzbWFsbGVzdCA6PSBudW1iZXJzTGlzdFtpbmRleF07CiAgICB9CgogICAgc3VtIDo9IChzdW0gKyBudW1iZXJzTGlzdFtpbmRleF0pOwogICAgCiAgICBpbmRleCA6PSBpbmRleCArIDE7Cn0KCltsYXJnZXN0LCBzbWFsbGVzdCwgc3VtXTsKCg==");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="75",timestamp="2018-09-20 17:16:25.019",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶largest := 0;¶¶smallest := Infinity;¶¶numbersList := [73,12,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶listLength := Length(numbersList);¶¶index := 1;¶¶While(index <=? listLength)¶{¶    ¶    If(numbersList[index] >? largest)¶    {¶        largest := numbersList[index];¶    }¶    ¶    If(numbersList[index] <? smallest)¶    {¶        smallest := numbersList[index];¶    }¶    ¶    ¶    index := index + 1;¶}¶¶[largest, smallest, sum];
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:16:26.846",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 4",mpversion=".257",preserve="false"¶      Result: The variable <sum> does not have a value assigned to it.  Error on or before line 882 starting at index 20.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="76",timestamp="2018-09-20 17:16:33.797",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶largest := 0;¶¶smallest := Infinity;¶¶numbersList := [73,12,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶listLength := Length(numbersList);¶¶index := 1;¶¶While(index <=? listLength)¶{¶    ¶    If(numbersList[index] >? largest)¶    {¶        largest := numbersList[index];¶    }¶    ¶    If(numbersList[index] <? smallest)¶    {¶        smallest := numbersList[index];¶    }¶    ¶    ¶    index := index + 1;¶}¶¶[largest, smallest];
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:17:17.949",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:17:19.002",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:17:24.191",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:17:24.541",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="77",timestamp="2018-09-20 17:18:16.454",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶largest := 0;¶¶smallest := Infinity;¶¶sum := 0¶¶numbersList := [73,12,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶listLength := Length(numbersList);¶¶index := 1;¶¶While(index <=? listLength)¶{¶    ¶    If(numbersList[index] >? largest)¶    {¶        largest := numbersList[index];¶    }¶    ¶    If(numbersList[index] <? smallest)¶    {¶        smallest := numbersList[index];¶    }¶    If(numbersList[index] =? sum)¶    {¶        sum := numbersList[index];¶    }¶    ¶    index := index + 1;¶}¶¶[largest, smallest, sum];
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:18:18.389",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 4",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Error parsing expression near token ***( numbersList )***. Error on or before line 861 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="78",timestamp="2018-09-20 17:18:27.18",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxhcmdlc3QgOj0gMDsKCnNtYWxsZXN0IDo9IDEwMDsKCnN1bSA6PSAwOwoKbnVtYmVyc0xpc3QgOj0gWzczLDEyLDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobnVtYmVyc0xpc3QpOwoKaW5kZXggOj0gMTsKCldoaWxlKGluZGV4IDw9PyBsaXN0TGVuZ3RoKQp7ICAgIAogICAgSWYobnVtYmVyc0xpc3RbaW5kZXhdID4/IGxhcmdlc3QpCiAgICB7CiAgICAgICAgbGFyZ2VzdCA6PSBudW1iZXJzTGlzdFtpbmRleF07CiAgICB9CiAgICAKICAgIElmKG51bWJlcnNMaXN0W2luZGV4XSA8PyBzbWFsbGVzdCkKICAgIHsKICAgICAgICBzbWFsbGVzdCA6PSBudW1iZXJzTGlzdFtpbmRleF07CiAgICB9CgogICAgc3VtIDo9IChzdW0gKyBudW1iZXJzTGlzdFtpbmRleF0pOwogICAgCiAgICBpbmRleCA6PSBpbmRleCArIDE7Cn0KCltsYXJnZXN0LCBzbWFsbGVzdCwgc3VtXTsKCg==");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:19:11.896",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="79",timestamp="2018-09-20 17:19:14.203",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶largest := 0;¶¶smallest := Infinity;¶¶sum := 0¶¶numbersList := [73,12,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶listLength := Length(numbersList);¶¶index := 1;¶¶While(index <=? listLength)¶{¶    ¶    If(numbersList[index] >? largest)¶    {¶        largest := numbersList[index];¶    }¶    ¶    If(numbersList[index] <? smallest)¶    {¶        smallest := numbersList[index];¶    }¶    ¶    sum := sum + numbersList;¶    ¶    index := index + 1;¶}¶¶[largest, smallest, sum];
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:19:16.007",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 4",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Error parsing expression near token ***( numbersList )***. Error on or before line 861 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="80",timestamp="2018-09-20 17:19:24.295",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxhcmdlc3QgOj0gMDsKCnNtYWxsZXN0IDo9IDEwMDsKCnN1bSA6PSAwOwoKbnVtYmVyc0xpc3QgOj0gWzczLDEyLDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobnVtYmVyc0xpc3QpOwoKaW5kZXggOj0gMTsKCldoaWxlKGluZGV4IDw9PyBsaXN0TGVuZ3RoKQp7ICAgIAogICAgSWYobnVtYmVyc0xpc3RbaW5kZXhdID4/IGxhcmdlc3QpCiAgICB7CiAgICAgICAgbGFyZ2VzdCA6PSBudW1iZXJzTGlzdFtpbmRleF07CiAgICB9CiAgICAKICAgIElmKG51bWJlcnNMaXN0W2luZGV4XSA8PyBzbWFsbGVzdCkKICAgIHsKICAgICAgICBzbWFsbGVzdCA6PSBudW1iZXJzTGlzdFtpbmRleF07CiAgICB9CgogICAgc3VtIDo9IChzdW0gKyBudW1iZXJzTGlzdFtpbmRleF0pOwogICAgCiAgICBpbmRleCA6PSBpbmRleCArIDE7Cn0KCltsYXJnZXN0LCBzbWFsbGVzdCwgc3VtXTsKCg==");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="81",timestamp="2018-09-20 17:19:44.552",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶largest := 0;¶¶smallest := Infinity;¶¶sum := 0¶¶numbersList := [73,12,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶listLength := Length(numbersList);¶¶index := 1;¶¶While(index <=? listLength)¶{¶    ¶    If(numbersList[index] >? largest)¶    {¶        largest := numbersList[index];¶    }¶    ¶    If(numbersList[index] <? smallest)¶    {¶        smallest := numbersList[index];¶    }¶    ¶    sum := sum + numbersList[index];¶    ¶    index := index + 1;¶}¶¶[largest, smallest, sum];
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:19:46.438",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 4",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Error parsing expression near token ***( numbersList )***. Error on or before line 861 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="82",timestamp="2018-09-20 17:20:16.68",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxhcmdlc3QgOj0gMDsKCnNtYWxsZXN0IDo9IDEwMDsKCnN1bSA6PSAwOwoKbnVtYmVyc0xpc3QgOj0gWzczLDEyLDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobnVtYmVyc0xpc3QpOwoKaW5kZXggOj0gMTsKCldoaWxlKGluZGV4IDw9PyBsaXN0TGVuZ3RoKQp7ICAgIAogICAgSWYobnVtYmVyc0xpc3RbaW5kZXhdID4/IGxhcmdlc3QpCiAgICB7CiAgICAgICAgbGFyZ2VzdCA6PSBudW1iZXJzTGlzdFtpbmRleF07CiAgICB9CiAgICAKICAgIElmKG51bWJlcnNMaXN0W2luZGV4XSA8PyBzbWFsbGVzdCkKICAgIHsKICAgICAgICBzbWFsbGVzdCA6PSBudW1iZXJzTGlzdFtpbmRleF07CiAgICB9CgogICAgc3VtIDo9IChzdW0gKyBudW1iZXJzTGlzdFtpbmRleF0pOwogICAgCiAgICBpbmRleCA6PSBpbmRleCArIDE7Cn0KCltsYXJnZXN0LCBzbWFsbGVzdCwgc3VtXTsKCg==");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="83",timestamp="2018-09-20 17:20:27.72",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxhcmdlc3QgOj0gMDsKCnNtYWxsZXN0IDo9IDEwMDsKCnN1bSA6PSAwOwoKbnVtYmVyc0xpc3QgOj0gWzczLDEyLDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobnVtYmVyc0xpc3QpOwoKaW5kZXggOj0gMTsKCldoaWxlKGluZGV4IDw9PyBsaXN0TGVuZ3RoKQp7ICAgIAogICAgSWYobnVtYmVyc0xpc3RbaW5kZXhdID4/IGxhcmdlc3QpCiAgICB7CiAgICAgICAgbGFyZ2VzdCA6PSBudW1iZXJzTGlzdFtpbmRleF07CiAgICB9CiAgICAKICAgIElmKG51bWJlcnNMaXN0W2luZGV4XSA8PyBzbWFsbGVzdCkKICAgIHsKICAgICAgICBzbWFsbGVzdCA6PSBudW1iZXJzTGlzdFtpbmRleF07CiAgICB9CgogICAgc3VtIDo9IChzdW0gKyBudW1iZXJzTGlzdFtpbmRleF0pOwogICAgCiAgICBpbmRleCA6PSBpbmRleCArIDE7Cn0KCltsYXJnZXN0LCBzbWFsbGVzdCwgc3VtXTsKCg==");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="84",timestamp="2018-09-20 17:20:38.398",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("Cmxhcmdlc3QgOj0gMDsKCnNtYWxsZXN0IDo9IDEwMDsKCnN1bSA6PSAwOwoKbnVtYmVyc0xpc3QgOj0gWzczLDEyLDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobnVtYmVyc0xpc3QpOwoKaW5kZXggOj0gMTsKCldoaWxlKGluZGV4IDw9PyBsaXN0TGVuZ3RoKQp7ICAgIAogICAgSWYobnVtYmVyc0xpc3RbaW5kZXhdID4/IGxhcmdlc3QpCiAgICB7CiAgICAgICAgbGFyZ2VzdCA6PSBudW1iZXJzTGlzdFtpbmRleF07CiAgICB9CiAgICAKICAgIElmKG51bWJlcnNMaXN0W2luZGV4XSA8PyBzbWFsbGVzdCkKICAgIHsKICAgICAgICBzbWFsbGVzdCA6PSBudW1iZXJzTGlzdFtpbmRleF07CiAgICB9CgogICAgc3VtIDo9IChzdW0gKyBudW1iZXJzTGlzdFtpbmRleF0pOwogICAgCiAgICBpbmRleCA6PSBpbmRleCArIDE7Cn0KCltsYXJnZXN0LCBzbWFsbGVzdCwgc3VtXTsKCg==");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="85",timestamp="2018-09-20 17:20:58.693",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶largest := 0;¶¶smallest := Infinity;¶¶sum := 0¶¶numbersList := [73,12,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶listLength := Length(numbersList);¶¶index := 1;¶¶While(index <=? listLength)¶{¶    ¶    If(numbersList[index] >? largest)¶    {¶        largest := numbersList[index];¶    }¶    ¶    If(numbersList[index] <? smallest)¶    {¶        smallest := numbersList[index];¶    }¶    ¶    sum := (sum + numbersList[index]);¶    ¶    index := index + 1;¶}¶¶[largest, smallest, sum];
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:21:00.596",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 4",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Error parsing expression near token ***( numbersList )***. Error on or before line 861 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="86",timestamp="2018-09-20 17:21:14.307",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶largest := 0;¶¶smallest := Infinity;¶¶sum := 0¶¶numbersList := [73,12,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶listLength := Length(numbersList);¶¶index := 1;¶¶While(index <=? listLength)¶{¶    ¶    If(numbersList[index] >? largest)¶    {¶        largest := numbersList[index];¶    }¶    ¶    If(numbersList[index] <? smallest)¶    {¶        smallest := numbersList[index];¶    }¶    ¶    sum := (sum + numbersList[index]);¶    ¶    index := (index + 1);¶}¶¶[largest, smallest, sum];
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:21:16.111",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 4",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Error parsing expression near token ***( numbersList )***. Error on or before line 861 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="87",timestamp="2018-09-20 17:21:35.902",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶largest := 0;¶¶smallest := Infinity;¶¶sum := 0;¶¶numbersList := [73,12,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];¶¶listLength := Length(numbersList);¶¶index := 1;¶¶While(index <=? listLength)¶{¶    ¶    If(numbersList[index] >? largest)¶    {¶        largest := numbersList[index];¶    }¶    ¶    If(numbersList[index] <? smallest)¶    {¶        smallest := numbersList[index];¶    }¶    ¶    sum := (sum + numbersList[index]);¶    ¶    index := (index + 1);¶}¶¶[largest, smallest, sum];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 4",sequence="88",timestamp="2018-09-20 17:21:43.656",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:21:52.556",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+%javascript,title="",timeout="5000"¶¶%/javascript¶¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:26:40.063",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+resultList := [];¶¶index := 1;¶¶While(index <=? 500)¶{¶    If(Prime?(index))¶    {¶        stringVersionOfNumber := ToString(index);¶            ¶        stringLength := Length(stringVersionOfNumber);¶            ¶        //Notice that If() procedures can be placed inside of other ¶        // If() procedures.¶        If(stringVersionOfNumber[stringLength] =? "7")¶        {¶            Append!(resultList, index);¶        }¶     }¶    ¶    index := (index + 1);¶}¶¶resultList;¶
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="89",timestamp="2018-09-20 17:28:07.504",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶resultList := [];¶¶index := 10;¶¶While(index <=? 99)¶{¶    If(Prime?(index))¶    {¶        stringVersionOfNumber := ToString(index);¶            ¶        stringLength := Length(stringVersionOfNumber);¶            ¶        If(stringVersionOfNumber[stringLength] =? "3")¶        {¶            Append!(resultList, index);¶        }¶     }¶    ¶    index := (index + 1);¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 5",sequence="90",timestamp="2018-09-20 17:29:08.464",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="91",timestamp="2018-09-20 17:29:50.161",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgpudW1iZXIgOj0gMTA7CgpXaGlsZShudW1iZXIgPD0/IDk5KQp7CiAgICBJZihQcmltZT8obnVtYmVyKSkKICAgIHsKICAgICAgICBzdHJpbmdOdW1iZXIgOj0gVG9TdHJpbmcobnVtYmVyKTsKICAgICAgICAKICAgICAgICBJZihzdHJpbmdOdW1iZXJbMV0gPT8gIjMiIHw/IHN0cmluZ051bWJlcltMZW5ndGgoc3RyaW5nTnVtYmVyKV0gPT8gIjMiKQogICAgICAgIHsKICAgICAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBudW1iZXIpOwogICAgICAgIH0KICAgIH0KCiAgICBudW1iZXIgOj0gKG51bWJlciArIDEpOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="92",timestamp="2018-09-20 17:30:01.099",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgpudW1iZXIgOj0gMTA7CgpXaGlsZShudW1iZXIgPD0/IDk5KQp7CiAgICBJZihQcmltZT8obnVtYmVyKSkKICAgIHsKICAgICAgICBzdHJpbmdOdW1iZXIgOj0gVG9TdHJpbmcobnVtYmVyKTsKICAgICAgICAKICAgICAgICBJZihzdHJpbmdOdW1iZXJbMV0gPT8gIjMiIHw/IHN0cmluZ051bWJlcltMZW5ndGgoc3RyaW5nTnVtYmVyKV0gPT8gIjMiKQogICAgICAgIHsKICAgICAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBudW1iZXIpOwogICAgICAgIH0KICAgIH0KCiAgICBudW1iZXIgOj0gKG51bWJlciArIDEpOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="93",timestamp="2018-09-20 17:30:13.202",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgpudW1iZXIgOj0gMTA7CgpXaGlsZShudW1iZXIgPD0/IDk5KQp7CiAgICBJZihQcmltZT8obnVtYmVyKSkKICAgIHsKICAgICAgICBzdHJpbmdOdW1iZXIgOj0gVG9TdHJpbmcobnVtYmVyKTsKICAgICAgICAKICAgICAgICBJZihzdHJpbmdOdW1iZXJbMV0gPT8gIjMiIHw/IHN0cmluZ051bWJlcltMZW5ndGgoc3RyaW5nTnVtYmVyKV0gPT8gIjMiKQogICAgICAgIHsKICAgICAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBudW1iZXIpOwogICAgICAgIH0KICAgIH0KCiAgICBudW1iZXIgOj0gKG51bWJlciArIDEpOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:30:41.141",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+(stringVersionOfNumber[stringLength]
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:31:03.428",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+        
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="94",timestamp="2018-09-20 17:31:31.716",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgpudW1iZXIgOj0gMTA7CgpXaGlsZShudW1iZXIgPD0/IDk5KQp7CiAgICBJZihQcmltZT8obnVtYmVyKSkKICAgIHsKICAgICAgICBzdHJpbmdOdW1iZXIgOj0gVG9TdHJpbmcobnVtYmVyKTsKICAgICAgICAKICAgICAgICBJZihzdHJpbmdOdW1iZXJbMV0gPT8gIjMiIHw/IHN0cmluZ051bWJlcltMZW5ndGgoc3RyaW5nTnVtYmVyKV0gPT8gIjMiKQogICAgICAgIHsKICAgICAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBudW1iZXIpOwogICAgICAgIH0KICAgIH0KCiAgICBudW1iZXIgOj0gKG51bWJlciArIDEpOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:31:59.157",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+(stringVersionOfNumber[stringLength]
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:32:39.856",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+ |
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="95",timestamp="2018-09-20 17:32:48.16",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶resultList := [];¶¶index := 10;¶¶While(index <=? 99)¶{¶    If(Prime?(index))¶    {¶        stringVersionOfNumber := ToString(index);¶            ¶        stringLength := Length(stringVersionOfNumber);¶            ¶        If(stringVersionOfNumber[1] =? "3" | (stringVersionOfNumber[stringLength] =? "3")¶        {¶            Append!(resultList, index);¶        }¶     }¶    ¶    index := (index + 1);¶}¶¶resultList;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:32:50.417",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 5",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ) )*** close parentheses token for sub-expression but found ***( | )*** instead.  Error on or before line 1095 starting at index 43.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="96",timestamp="2018-09-20 17:33:21.894",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶resultList := [];¶¶index := 10;¶¶While(index <=? 99)¶{¶    If(Prime?(index))¶    {¶        stringVersionOfNumber := ToString(index);¶            ¶        stringLength := Length(stringVersionOfNumber);¶            ¶        If(stringVersionOfNumber[1] =? "3") | (stringVersionOfNumber[stringLength] =? "3")¶        {¶            Append!(resultList, index);¶        }¶     }¶    ¶    index := (index + 1);¶}¶¶resultList;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:33:23.974",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 5",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ; )*** end of statement token in program block but found ***( { )*** instead. Error on or before line 1096 starting at index 8.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="97",timestamp="2018-09-20 17:33:43.656",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶resultList := [];¶¶index := 10;¶¶While(index <=? 99)¶{¶    If(Prime?(index))¶    {¶        stringVersionOfNumber := ToString(index);¶            ¶        stringLength := Length(stringVersionOfNumber);¶            ¶        If(stringVersionOfNumber[1] =? "3") | (stringVersionOfNumber[stringLength] =? "3");¶        {¶            Append!(resultList, index);¶        }¶     }¶    ¶    index := (index + 1);¶}¶¶resultList;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:33:45.626",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 5",mpversion=".257",preserve="false"¶      Result: The 1 parameter version of procedure <|> is not defined (MAKE SURE THE PROCEDURE'S NAME IS SPELLED CORRECTLY and the correct number of arguments are being passed to it.)  Error on or before line 1095 starting at index 44.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="98",timestamp="2018-09-20 17:33:54.086",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgpudW1iZXIgOj0gMTA7CgpXaGlsZShudW1iZXIgPD0/IDk5KQp7CiAgICBJZihQcmltZT8obnVtYmVyKSkKICAgIHsKICAgICAgICBzdHJpbmdOdW1iZXIgOj0gVG9TdHJpbmcobnVtYmVyKTsKICAgICAgICAKICAgICAgICBJZihzdHJpbmdOdW1iZXJbMV0gPT8gIjMiIHw/IHN0cmluZ051bWJlcltMZW5ndGgoc3RyaW5nTnVtYmVyKV0gPT8gIjMiKQogICAgICAgIHsKICAgICAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBudW1iZXIpOwogICAgICAgIH0KICAgIH0KCiAgICBudW1iZXIgOj0gKG51bWJlciArIDEpOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="99",timestamp="2018-09-20 17:34:12.441",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶resultList := [];¶¶index := 10;¶¶While(index <=? 99)¶{¶    If(Prime?(index))¶    {¶        stringVersionOfNumber := ToString(index);¶            ¶        stringLength := Length(stringVersionOfNumber);¶            ¶        If(stringVersionOfNumber[1] =? "3" |? (stringVersionOfNumber[stringLength] =? "3")¶        {¶            Append!(resultList, index);¶        }¶     }¶    ¶    index := (index + 1);¶}¶¶resultList;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:34:14.462",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 5",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ) )*** close parentheses token for sub-expression but found ***( { )*** instead.  Error on or before line 1096 starting at index 8.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="100",timestamp="2018-09-20 17:34:23.303",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgpudW1iZXIgOj0gMTA7CgpXaGlsZShudW1iZXIgPD0/IDk5KQp7CiAgICBJZihQcmltZT8obnVtYmVyKSkKICAgIHsKICAgICAgICBzdHJpbmdOdW1iZXIgOj0gVG9TdHJpbmcobnVtYmVyKTsKICAgICAgICAKICAgICAgICBJZihzdHJpbmdOdW1iZXJbMV0gPT8gIjMiIHw/IHN0cmluZ051bWJlcltMZW5ndGgoc3RyaW5nTnVtYmVyKV0gPT8gIjMiKQogICAgICAgIHsKICAgICAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBudW1iZXIpOwogICAgICAgIH0KICAgIH0KCiAgICBudW1iZXIgOj0gKG51bWJlciArIDEpOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="101",timestamp="2018-09-20 17:34:34.918",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgpudW1iZXIgOj0gMTA7CgpXaGlsZShudW1iZXIgPD0/IDk5KQp7CiAgICBJZihQcmltZT8obnVtYmVyKSkKICAgIHsKICAgICAgICBzdHJpbmdOdW1iZXIgOj0gVG9TdHJpbmcobnVtYmVyKTsKICAgICAgICAKICAgICAgICBJZihzdHJpbmdOdW1iZXJbMV0gPT8gIjMiIHw/IHN0cmluZ051bWJlcltMZW5ndGgoc3RyaW5nTnVtYmVyKV0gPT8gIjMiKQogICAgICAgIHsKICAgICAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBudW1iZXIpOwogICAgICAgIH0KICAgIH0KCiAgICBudW1iZXIgOj0gKG51bWJlciArIDEpOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:35:35.627",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+number
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:35:40.548",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+number
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="102",timestamp="2018-09-20 17:37:16.153",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶resultList := [];¶¶number := 10;¶¶While(index <=? 99)¶{¶    If(Prime?(number))¶    {¶        stringVersionOfNumber := ToString(number);¶            ¶        stringLength := Length(stringVersionOfNumber);¶            ¶        If(stringVersionOfNumber[1] =? "3" |? (stringVersionOfNumber[stringLength] =? "3")¶        {¶            Append!(resultList, index);¶        }¶     }¶    ¶    number := (number + 1);¶}¶¶resultList;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:37:18.373",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 5",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ) )*** close parentheses token for sub-expression but found ***( { )*** instead.  Error on or before line 1096 starting at index 8.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="103",timestamp="2018-09-20 17:39:09.578",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶resultList := [];¶¶number := 10;¶¶While(number <=? 99)¶{¶    If(Prime?(number))¶    {¶        stringVersionOfNumber := ToString(number);¶            ¶        stringLength := Length(stringVersionOfNumber);¶            ¶        If(stringVersionOfNumber[1] =? "3" |? (stringVersionOfNumber[stringLength] =? "3")¶        {¶            Append!(resultList, number);¶        }¶     }¶    ¶    number := (number + 1);¶}¶¶resultList;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:39:11.685",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 5",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ) )*** close parentheses token for sub-expression but found ***( { )*** instead.  Error on or before line 1096 starting at index 8.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="104",timestamp="2018-09-20 17:39:35.674",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgpudW1iZXIgOj0gMTA7CgpXaGlsZShudW1iZXIgPD0/IDk5KQp7CiAgICBJZihQcmltZT8obnVtYmVyKSkKICAgIHsKICAgICAgICBzdHJpbmdOdW1iZXIgOj0gVG9TdHJpbmcobnVtYmVyKTsKICAgICAgICAKICAgICAgICBJZihzdHJpbmdOdW1iZXJbMV0gPT8gIjMiIHw/IHN0cmluZ051bWJlcltMZW5ndGgoc3RyaW5nTnVtYmVyKV0gPT8gIjMiKQogICAgICAgIHsKICAgICAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBudW1iZXIpOwogICAgICAgIH0KICAgIH0KCiAgICBudW1iZXIgOj0gKG51bWJlciArIDEpOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="105",timestamp="2018-09-20 17:40:30.807",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶resultList := [];¶¶number := 10;¶¶While(number <=? 99)¶{¶    If(Prime?(number))¶    {¶        stringVersionOfNumber := ToString(number);¶            ¶        stringLength := Length(stringVersionOfNumber);¶            ¶        If(stringVersionOfNumber[1] =? "3" |? (stringVersionOfNumber[2] =? "3")¶        {¶            Append!(resultList, number);¶        }¶     }¶    ¶    number := (number + 1);¶}¶¶resultList;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:40:32.894",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 5",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ) )*** close parentheses token for sub-expression but found ***( { )*** instead.  Error on or before line 1096 starting at index 8.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="106",timestamp="2018-09-20 17:42:04.098",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶resultList := [];¶¶number := 10;¶¶While(number <=? 99)¶{¶    If(Prime?(number))¶    {¶        stringVersionOfNumber := ToString(number);¶            ¶        stringLength := Length(stringVersionOfNumber);¶            ¶        If(stringVersionOfNumber[1] =? "3" |? (stringVersionOfNumber[Length(stringVersionOfNumber)] =? "3")¶        {¶            Append!(resultList, number);¶        }¶    }¶    ¶    number := (number + 1);¶}¶¶resultList;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:42:06.299",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 5",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ) )*** close parentheses token for sub-expression but found ***( { )*** instead.  Error on or before line 1096 starting at index 8.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="107",timestamp="2018-09-20 17:44:47.125",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶resultList := [];¶¶number := 10;¶¶While(number <=? 99)¶{¶    If(Prime?(number))¶    {¶        stringVersionOfNumber := ToString(number);¶            ¶        stringLength := Length(stringVersionOfNumber);¶            ¶        If(stringVersionOfNumber[1] =? "3" |? (stringVersionOfNumber[Length(stringVersionOfNumber)] =? "3")¶        {¶            Append!(resultList, number);¶        }¶    }¶    ¶    number := (number + 1);¶}¶¶resultList;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:44:49.235",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 5",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ) )*** close parentheses token for sub-expression but found ***( { )*** instead.  Error on or before line 1096 starting at index 8.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="108",timestamp="2018-09-20 17:45:05.304",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgpudW1iZXIgOj0gMTA7CgpXaGlsZShudW1iZXIgPD0/IDk5KQp7CiAgICBJZihQcmltZT8obnVtYmVyKSkKICAgIHsKICAgICAgICBzdHJpbmdOdW1iZXIgOj0gVG9TdHJpbmcobnVtYmVyKTsKICAgICAgICAKICAgICAgICBJZihzdHJpbmdOdW1iZXJbMV0gPT8gIjMiIHw/IHN0cmluZ051bWJlcltMZW5ndGgoc3RyaW5nTnVtYmVyKV0gPT8gIjMiKQogICAgICAgIHsKICAgICAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBudW1iZXIpOwogICAgICAgIH0KICAgIH0KCiAgICBudW1iZXIgOj0gKG51bWJlciArIDEpOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="109",timestamp="2018-09-20 17:45:29.158",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶resultList := [];¶¶number := 10;¶¶While(number <=? 99)¶{¶    If(Prime?(number))¶    {¶        stringVersionOfNumber := ToString(number);¶            ¶        ¶            ¶        If(stringVersionOfNumber[1] =? "3" |? (stringVersionOfNumber[Length(stringVersionOfNumber)] =? "3")¶        {¶            Append!(resultList, number);¶        }¶    }¶    ¶    number := (number + 1);¶}¶¶resultList;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:45:31.287",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 5",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ) )*** close parentheses token for sub-expression but found ***( { )*** instead.  Error on or before line 1096 starting at index 8.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="110",timestamp="2018-09-20 17:47:13.77",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+¶resultList := [];¶¶number := 10;¶¶While(number <=? 99)¶{¶    If(Prime?(number))¶    {¶        stringVersionOfNumber := ToString(number);¶                        ¶        If(stringVersionOfNumber[1] =? "3" |? stringVersionOfNumber[Length(stringVersionOfNumber)] =? "3")¶        {¶            Append!(resultList, number);¶        }¶    }¶    ¶    number := (number + 1);¶}¶¶resultList;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:48:04.12",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-20 17:48:06.631",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+        
+
+%/info
+
+%info,parentFoldType="output",sequence="111",timestamp="2018-09-20 17:51:12.088",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+      Result: False¶      ¶      Side Effects:¶      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: ¶      ¶        resultList := [];¶      ¶        index := 10;¶      ¶        While(index <=? 99)¶        {¶          If(Prime?(index))¶          {¶            stringVersionOfNumber := ToString(index);¶      ¶            stringLength := Length(stringVersionOfNumber);¶      ¶            If(stringVersionOfNumber[stringLength] =? "3")¶            {¶              Append!(resultList,index);¶            }¶          }¶      ¶          index := index + 1;¶        }¶      ¶        resultList;¶      ¶        PASS: The code does not throw an exception when parsed. (1/1)¶        PASS: The fold is not empty. (1/1)¶        PASS: The ':' operator is not used. (1/1)¶        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)¶        PASS: The program uses variable names that are longer than a single character. (1/1)¶        PASS: The program uses variable names that start with a lower case letter. (1/1)¶        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)¶        ------------------------------------------¶        PASS: The code does not throw an exception when evaluated. (1/1)¶        PASS: MathPiper version >= .257. (1/1)¶        PASS: The code does not produce side effect output. (1/1)¶        PASS: The Append!() procedure is used. (1/1)¶        PASS: The Append!() procedure's first argument is 'resultList'. (1/1)¶        PASS: The result is a list. (1/1)¶        PASS: The expression 'resultList;' is the last expression in the fold. (1/1)¶        PASS: The result is not in the code as a literal. (1/1)¶      FAIL:(CRITICAL, TESTING HALTED, 0 FOR THE PROBLEM. ): The correct value is returned. (0/1)¶        SKIPPED: The procedure While() is used in the code. (0/1)¶        SKIPPED: The procedure Sum() is not used in the code. (0/1)¶      ¶        0/18 passes
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 5",sequence="112",timestamp="2018-09-20 17:51:25.512",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.120",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="1",timestamp="2018-09-21 18:58:06.82",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Hint("CmlucHV0TGlzdCA6PSBbNzksMzQsIkEiLCAzMCw4Miw3NSwiUiIsMTEsMjMsNTIsIk0iLDY0LDg5LDE5LDIxLDgzLCJGIiwyLDg3LDY1LDU0LCJWIiwxNyw5Miw0XTsKCmV2ZW5OdW1iZXJzTGlzdCA6PSBbXTsKCm9kZE51bWJlcnNMaXN0IDo9IFtdOwoKaW5kZXggOj0gMTsKCldoaWxlKGluZGV4IDw9PyBMZW5ndGgoaW5wdXRMaXN0KSkKewogICAgSWYoRXZlbj8oaW5wdXRMaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgQXBwZW5kIShldmVuTnVtYmVyc0xpc3QsIGlucHV0TGlzdFtpbmRleF0pOwogICAgfQogICAgCiAgICBJZihPZGQ/KGlucHV0TGlzdFtpbmRleF0pKQogICAgewogICAgICAgIEFwcGVuZCEob2RkTnVtYmVyc0xpc3QsIGlucHV0TGlzdFtpbmRleF0pOwogICAgfQogICAgCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKW2V2ZW5OdW1iZXJzTGlzdCwgb2RkTnVtYmVyc0xpc3RdOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="2",timestamp="2018-09-21 19:00:05.506",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Hint("CmlucHV0TGlzdCA6PSBbNzksMzQsIkEiLCAzMCw4Miw3NSwiUiIsMTEsMjMsNTIsIk0iLDY0LDg5LDE5LDIxLDgzLCJGIiwyLDg3LDY1LDU0LCJWIiwxNyw5Miw0XTsKCmV2ZW5OdW1iZXJzTGlzdCA6PSBbXTsKCm9kZE51bWJlcnNMaXN0IDo9IFtdOwoKaW5kZXggOj0gMTsKCldoaWxlKGluZGV4IDw9PyBMZW5ndGgoaW5wdXRMaXN0KSkKewogICAgSWYoRXZlbj8oaW5wdXRMaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgQXBwZW5kIShldmVuTnVtYmVyc0xpc3QsIGlucHV0TGlzdFtpbmRleF0pOwogICAgfQogICAgCiAgICBJZihPZGQ/KGlucHV0TGlzdFtpbmRleF0pKQogICAgewogICAgICAgIEFwcGVuZCEob2RkTnVtYmVyc0xpc3QsIGlucHV0TGlzdFtpbmRleF0pOwogICAgfQogICAgCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKW2V2ZW5OdW1iZXJzTGlzdCwgb2RkTnVtYmVyc0xpc3RdOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="3",timestamp="2018-09-21 19:10:21.062",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶inputList := [79,34,"A", 30,82,75,"R",11,23,52,"M",64,89,19,21,83,"F",2,87,65,54,"V",17,92,4];¶¶evenNumbersList := [];¶¶oddNumbersList := [];¶¶number := 1;¶¶While(number <=? Length(inputList))¶{¶¶    If(Even?(inputList[number]))¶    {    ¶        Append!(evenNumbersList, inputList);¶    }¶    If(Odd?(inputList[number]))¶    {¶        Append!(oddNumbersList, inputList);¶    }¶    ¶    number := number + 1;¶}¶¶[evenNumbersList, oddNumbersList];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 6",sequence="4",timestamp="2018-09-21 19:11:20.228",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="5",timestamp="2018-09-21 19:12:34.339",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Hint("CmlucHV0TGlzdCA6PSBbNzksMzQsIkEiLCAzMCw4Miw3NSwiUiIsMTEsMjMsNTIsIk0iLDY0LDg5LDE5LDIxLDgzLCJGIiwyLDg3LDY1LDU0LCJWIiwxNyw5Miw0XTsKCmV2ZW5OdW1iZXJzTGlzdCA6PSBbXTsKCm9kZE51bWJlcnNMaXN0IDo9IFtdOwoKaW5kZXggOj0gMTsKCldoaWxlKGluZGV4IDw9PyBMZW5ndGgoaW5wdXRMaXN0KSkKewogICAgSWYoRXZlbj8oaW5wdXRMaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgQXBwZW5kIShldmVuTnVtYmVyc0xpc3QsIGlucHV0TGlzdFtpbmRleF0pOwogICAgfQogICAgCiAgICBJZihPZGQ/KGlucHV0TGlzdFtpbmRleF0pKQogICAgewogICAgICAgIEFwcGVuZCEob2RkTnVtYmVyc0xpc3QsIGlucHV0TGlzdFtpbmRleF0pOwogICAgfQogICAgCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKW2V2ZW5OdW1iZXJzTGlzdCwgb2RkTnVtYmVyc0xpc3RdOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="6",timestamp="2018-09-21 19:13:24.747",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶inputList := [79,34,"A", 30,82,75,"R",11,23,52,"M",64,89,19,21,83,"F",2,87,65,54,"V",17,92,4];¶¶evenNumbersList := [];¶¶oddNumbersList := [];¶¶number := 1;¶¶While(number <=? Length(inputList))¶{¶¶    If(Even?(inputList[number]))¶    {    ¶        Append!(evenNumbersList, inputList);¶    }¶    If(Odd?(inputList[number]))¶    {¶        Append!(oddNumbersList, inputList);¶    }¶    ¶    number := (number + 1);¶}¶¶[evenNumbersList, oddNumbersList];
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="7",timestamp="2018-09-21 19:15:52.065",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶inputList := [79,34,"A", 30,82,75,"R",11,23,52,"M",64,89,19,21,83,"F",2,87,65,54,"V",17,92,4];¶¶evenNumbersList := [];¶¶oddNumbersList := [];¶¶number := 1;¶¶While(number <=? Length(inputList))¶{¶¶    If(Even?(inputList[number]))¶    {    ¶        Append!(evenNumbersList, inputList);¶    }¶    ¶    If(Odd?(inputList[number]))¶    {¶        Append!(oddNumbersList, inputList);¶    }¶    ¶    number := (number + 1);¶}¶¶[evenNumbersList, oddNumbersList];
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="8",timestamp="2018-09-21 19:16:20.426",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶inputList := [79,34,"A", 30,82,75,"R",11,23,52,"M",64,89,19,21,83,"F",2,87,65,54,"V",17,92,4];¶¶evenNumbersList := [];¶¶oddNumbersList := [];¶¶number := 1;¶¶While(number <=? Length(inputList))¶{¶¶    If(Even?(inputList[number]))¶    {    ¶        Append!(evenNumbersList, inputList);¶    }¶    ¶    If(Odd?(inputList[number]))¶    {¶        Append!(oddNumbersList, inputList);¶    }¶    ¶    number := (number + 1);¶}¶¶[evenNumbersList, oddNumbersList];
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="9",timestamp="2018-09-21 19:16:44.686",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶inputList := [79,34,"A", 30,82,75,"R",11,23,52,"M",64,89,19,21,83,"F",2,87,65,54,"V",17,92,4];¶¶evenNumbersList := [];¶¶oddNumbersList := [];¶¶number := 1;¶¶While(number <=? Length(inputList))¶{¶¶    If(Even?(inputList[number]))¶    {    ¶        Append!(evenNumbersList, inputList[number]);¶    }¶    ¶    If(Odd?(inputList[number]))¶    {¶        Append!(oddNumbersList, inputList[number]);¶    }¶    ¶    number := (number + 1);¶}¶¶[evenNumbersList, oddNumbersList];
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="10",timestamp="2018-09-21 19:17:21.641",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶inputList := [79,34,"A", 30,82,75,"R",11,23,52,"M",64,89,19,21,83,"F",2,87,65,54,"V",17,92,4];¶¶evenNumbersList := [];¶¶oddNumbersList := [];¶¶number := 1;¶¶While(number <=? Length(inputList))¶{¶¶    If(Even?(inputList[number]))¶    {    ¶        Append!(evenNumbersList, inputList[number]);¶    }¶    ¶    If(Odd?(inputList[number]))¶    {¶        Append!(oddNumbersList, inputList[number]);¶    }¶    ¶    number := (number + 1);¶}¶¶[evenNumbersList, oddNumbersList];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 6",sequence="11",timestamp="2018-09-21 19:17:34.59",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="plantuml",sequence="12",timestamp="2018-09-21 19:18:03.294",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+      "@startuml¶      start¶      scale 1.5¶      skinparam shadowing false¶      ¶      ¶       :list := [8,3,2,5,4];¶       :listLength := Length(list);¶       :index1 := 2;¶       while(index1 <=? listLength) is (True)¶        ¶         :element := list[index1];¶         :index2 := index1 - 1;¶         while(index2 >? 0 &? list[index2] >? element) is (True)¶          ¶           :list[index2 + 1] := list[index2];¶           :index2 := index2 - 1;¶           ¶          ¶          endwhile (False)¶         :list[index2 + 1] := element;¶         :index1 := index1 + 1;¶         ¶        ¶        endwhile (False)¶       :list;¶¶      stop¶      @enduml"
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="13",timestamp="2018-09-21 19:25:52.488",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzgsMywyLDUsNF07CgpsaXN0TGVuZ3RoIDo9IExlbmd0aChsaXN0KTsKCmluZGV4MSA6PSAyOwoKV2hpbGUoaW5kZXgxIDw9PyBsaXN0TGVuZ3RoKQp7CiAgICBlbGVtZW50IDo9IGxpc3RbaW5kZXgxXTsKICAgIAogICAgaW5kZXgyIDo9IGluZGV4MSAtIDE7CiAgICAKICAgIFdoaWxlKGluZGV4MiA+PyAwICY/IGxpc3RbaW5kZXgyXSA+PyBlbGVtZW50KQogICAgewogICAgICAgIGxpc3RbaW5kZXgyICsgMV0gOj0gbGlzdFtpbmRleDJdOwogICAgICAgIAogICAgICAgIGluZGV4MiA6PSBpbmRleDIgLSAxOwogICAgfQogICAgCiAgICBsaXN0W2luZGV4MiArIDFdIDo9IGVsZW1lbnQ7CiAgICAKICAgIGluZGV4MSA6PSAoaW5kZXgxICsgMSk7Cn0KCmxpc3Q7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="14",timestamp="2018-09-21 19:38:24.325",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶list := [8,3,2,5,4];¶¶listLength := Length(list);¶¶index1 := 2;¶¶While(index1 <=? listLength)¶¶{¶¶    element := list[index1];¶    ¶    index2 := (index2 - 1);¶    ¶    If(index2 >? 0 &? list[index2] >? element)¶    ¶        {¶        ¶        list[index2 + 1] := list[index2];¶        ¶        index2 := (index 2 - 1);¶        ¶        }¶    Else¶        {¶        ¶        list[index2 + 1] := element;¶        ¶        index1 := (index + 1);¶        ¶        }¶}¶¶Else¶¶{¶¶    list;¶¶}
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="15",timestamp="2018-09-21 19:38:54.376",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Hint("Cmxpc3QgOj0gWzgsMywyLDUsNF07CgpsaXN0TGVuZ3RoIDo9IExlbmd0aChsaXN0KTsKCmluZGV4MSA6PSAyOwoKV2hpbGUoaW5kZXgxIDw9PyBsaXN0TGVuZ3RoKQp7CiAgICBlbGVtZW50IDo9IGxpc3RbaW5kZXgxXTsKICAgIAogICAgaW5kZXgyIDo9IGluZGV4MSAtIDE7CiAgICAKICAgIFdoaWxlKGluZGV4MiA+PyAwICY/IGxpc3RbaW5kZXgyXSA+PyBlbGVtZW50KQogICAgewogICAgICAgIGxpc3RbaW5kZXgyICsgMV0gOj0gbGlzdFtpbmRleDJdOwogICAgICAgIAogICAgICAgIGluZGV4MiA6PSBpbmRleDIgLSAxOwogICAgfQogICAgCiAgICBsaXN0W2luZGV4MiArIDFdIDo9IGVsZW1lbnQ7CiAgICAKICAgIGluZGV4MSA6PSAoaW5kZXgxICsgMSk7Cn0KCmxpc3Q7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="16",timestamp="2018-09-21 19:39:50.801",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶list := [8,3,2,5,4];¶¶listLength := Length(list);¶¶index1 := 2;¶¶While(index1 <=? listLength)¶¶{¶¶    element := list[index1];¶    ¶    index2 := (index1 - 1);¶    ¶    If(index2 >? 0 &? list[index2] >? element)¶    ¶        {¶        ¶        list[index2 + 1] := list[index2];¶        ¶        index2 := (index 2 - 1);¶        ¶        }¶    Else¶        {¶        ¶        list[index2 + 1] := element;¶        ¶        index1 := (index + 1);¶        ¶        }¶}¶¶list;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="17",timestamp="2018-09-21 19:41:17.42",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶list := [8,3,2,5,4];¶¶listLength := Length(list);¶¶index1 := 2;¶¶While(index1 <=? listLength)¶¶{¶¶    element := list[index1];¶    ¶    index2 := (index1 - 1);¶    ¶    While(index2 >? 0 &? list[index2] >? element)¶    {¶        ¶        list[index2 + 1] := list[index2];¶        ¶        index2 := (index 2 - 1);¶        ¶    }¶  ¶    list[index2 + 1] := element;¶        ¶    index1 := (index + 1);¶¶}¶¶list;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="18",timestamp="2018-09-21 19:43:36.989",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶list := [8,3,2,5,4];¶¶listLength := Length(list);¶¶index1 := 2;¶¶While(index1 <=? listLength)¶{¶¶    element := list[index1];¶    ¶    index2 := (index1 - 1);¶    ¶    While(index2 >? 0 &? list[index2] >? element)¶    {¶        ¶        list[index2 + 1] := list[index2];¶        ¶        index2 := (index2 - 1);¶        ¶    }¶  ¶    list[index2 + 1] := element;¶        ¶    index1 := (index + 1);¶¶}¶¶list;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="19",timestamp="2018-09-21 19:43:49.446",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶list := [8,3,2,5,4];¶¶listLength := Length(list);¶¶index1 := 2;¶¶While(index1 <=? listLength)¶{¶¶    element := list[index1];¶    ¶    index2 := (index1 - 1);¶    ¶    While(index2 >? 0 &? list[index2] >? element)¶    {¶        ¶        list[index2 + 1] := list[index2];¶        ¶        index2 := (index2 - 1);¶        ¶    }¶  ¶    list[index2 + 1] := element;¶        ¶    index1 := (index1 + 1);¶¶}¶¶list;
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 7",sequence="20",timestamp="2018-09-21 19:44:22.92",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+

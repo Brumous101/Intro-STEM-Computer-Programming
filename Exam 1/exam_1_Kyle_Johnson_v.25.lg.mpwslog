@@ -1,0 +1,1430 @@
+%info,parentFoldType="mathpiper",parent="Problem 0",sequence="1",timestamp="2018-10-04 20:52:35.952",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶[¶["firstName", "Kyle"],¶["lastName", "Johnson"],¶["ssuIDNumber", "264694"],¶];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 0",sequence="2",timestamp="2018-10-04 20:52:40.821",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:54:46.989",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:54:55.521",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:55:39.64",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:55:39.815",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:55:49.135",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:56:14.131",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:56:25.403",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:56:45.359",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:56:45.763",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:56:53.744",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:56:54.179",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:56:59.297",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:57:01.403",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:57:01.502",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:57:11.045",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:57:13.05",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:57:25.408",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:57:53.854",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:57:55.403",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:58:14.878",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="3",timestamp="2018-10-04 20:58:24.664",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶flipsCount := 0;¶¶headsCount := 0;¶¶tailsCount := 0;¶¶While(flipscount <=? 100)¶{¶    RandomInteger(100, 1, 2);    ¶¶    If(RandomInteger =? 1)¶    {¶        headsCount := (headsCount + 1);¶    }¶    ¶    If(RandomInteger =? 2)¶    {¶        tailsCount := (tailsCount + 1);¶    }¶    ¶    flipsCount := (flipsCount + 1);¶}¶¶flipsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:58:25.31",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    %error,parent="Problem 1",mpversion=".257",preserve="false"¶      Result: The variable <flipscount> does not have a value assigned to it.  Error on or before line 187 starting at index 6.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="4",timestamp="2018-10-04 20:58:55.28",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶flipsCount := 1;¶¶headsCount := 0;¶¶tailsCount := 0;¶¶While(flipscount <=? 100)¶{¶    RandomInteger(100, 1, 2);    ¶¶    If(RandomInteger =? 1)¶    {¶        headsCount := (headsCount + 1);¶    }¶    ¶    If(RandomInteger =? 2)¶    {¶        tailsCount := (tailsCount + 1);¶    }¶    ¶    flipsCount := (flipsCount + 1);¶}¶¶flipsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:58:55.859",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    %error,parent="Problem 1",mpversion=".257",preserve="false"¶      Result: The variable <flipscount> does not have a value assigned to it.  Error on or before line 187 starting at index 6.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="5",timestamp="2018-10-04 20:59:05.376",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶flipsCount := 0;¶¶headsCount := 0;¶¶tailsCount := 0;¶¶While(flipsCount <=? 100)¶{¶    RandomInteger(100, 1, 2);    ¶¶    If(RandomInteger =? 1)¶    {¶        headsCount := (headsCount + 1);¶    }¶    ¶    If(RandomInteger =? 2)¶    {¶        tailsCount := (tailsCount + 1);¶    }¶    ¶    flipsCount := (flipsCount + 1);¶}¶¶flipsCount;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 20:59:05.942",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    %error,parent="Problem 1",mpversion=".257",preserve="false"¶      Result: The 3 parameter version of procedure <RandomInteger> is not defined (MAKE SURE THE PROCEDURE'S NAME IS SPELLED CORRECTLY and the correct number of arguments are being passed to it.)  Error on or before line 189 starting at index 4.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="6",timestamp="2018-10-04 21:00:20.067",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶flipsCount := 0;¶¶headsCount := 0;¶¶tailsCount := 0;¶¶coin := 0;¶¶While(flipsCount <=? 100)¶{¶    coin := RandomInteger(1, 2);    ¶¶    If(coin =? 1)¶    {¶        headsCount := (headsCount + 1);¶    }¶    ¶    If(coin =? 2)¶    {¶        tailsCount := (tailsCount + 1);¶    }¶    ¶    flipsCount := (flipsCount + 1);¶}¶¶flipsCount;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="7",timestamp="2018-10-04 21:01:25.79",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶flipsCount := 0;¶¶headsCount := 0;¶¶tailsCount := 0;¶¶coin := 0;¶¶resultList := [];¶¶While(flipsCount <=? 100)¶{¶    coin := RandomInteger(1, 2);    ¶¶    If(coin =? 1)¶    {¶        headsCount := (headsCount + 1);¶    }¶    ¶    If(coin =? 2)¶    {¶        tailsCount := (tailsCount + 1);¶    }¶    ¶    flipsCount := (flipsCount + 1);¶}¶¶Append!(resultList, headsCount, tailsCount);¶¶resultList;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:01:26.362",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    %error,parent="Problem 1",mpversion=".257",preserve="false"¶      Result: The 3 parameter version of procedure <Append!> is not defined (MAKE SURE THE PROCEDURE'S NAME IS SPELLED CORRECTLY and the correct number of arguments are being passed to it.)  Error on or before line 208 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="8",timestamp="2018-10-04 21:01:49.935",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶flipsCount := 0;¶¶headsCount := 0;¶¶tailsCount := 0;¶¶coin := 0;¶¶resultList := [];¶¶While(flipsCount <=? 100)¶{¶    coin := RandomInteger(1, 2);    ¶¶    If(coin =? 1)¶    {¶        headsCount := (headsCount + 1);¶    }¶    ¶    If(coin =? 2)¶    {¶        tailsCount := (tailsCount + 1);¶    }¶    ¶    flipsCount := (flipsCount + 1);¶}¶¶List(headsCount, tailsCount);
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 1",sequence="9",timestamp="2018-10-04 21:01:53.843",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="10",timestamp="2018-10-04 21:02:00.154",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶flipsCount := 0;¶¶headsCount := 0;¶¶tailsCount := 0;¶¶coin := 0;¶¶While(flipsCount <=? 100)¶{¶    coin := RandomInteger(1, 2);    ¶¶    If(coin =? 1)¶    {¶        headsCount := (headsCount + 1);¶    }¶    ¶    If(coin =? 2)¶    {¶        tailsCount := (tailsCount + 1);¶    }¶    ¶    flipsCount := (flipsCount + 1);¶}¶¶List(headsCount, tailsCount);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="11",timestamp="2018-10-04 21:02:22.105",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶flipsCount := 0;¶¶headsCount := 0;¶¶tailsCount := 0;¶¶coin := 0;¶¶While(flipsCount =? 100)¶{¶    coin := RandomInteger(1, 2);    ¶¶    If(coin =? 1)¶    {¶        headsCount := (headsCount + 1);¶    }¶    ¶    If(coin =? 2)¶    {¶        tailsCount := (tailsCount + 1);¶    }¶    ¶    flipsCount := (flipsCount + 1);¶}¶¶List(headsCount, tailsCount);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="12",timestamp="2018-10-04 21:02:25.488",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶flipsCount := 0;¶¶headsCount := 0;¶¶tailsCount := 0;¶¶coin := 0;¶¶While(flipsCount =? 100)¶{¶    coin := RandomInteger(1, 2);    ¶¶    If(coin =? 1)¶    {¶        headsCount := (headsCount + 1);¶    }¶    ¶    If(coin =? 2)¶    {¶        tailsCount := (tailsCount + 1);¶    }¶    ¶    flipsCount := (flipsCount + 1);¶}¶¶List(headsCount, tailsCount);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="13",timestamp="2018-10-04 21:02:38.075",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶flipsCount := 0;¶¶headsCount := 0;¶¶tailsCount := 0;¶¶coin := 0;¶¶While(flipsCount <? 100)¶{¶    coin := RandomInteger(1, 2);    ¶¶    If(coin =? 1)¶    {¶        headsCount := (headsCount + 1);¶    }¶    ¶    If(coin =? 2)¶    {¶        tailsCount := (tailsCount + 1);¶    }¶    ¶    flipsCount := (flipsCount + 1);¶}¶¶List(headsCount, tailsCount);
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 1",sequence="14",timestamp="2018-10-04 21:02:43.089",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 1",sequence="15",timestamp="2018-10-04 21:02:53.731",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:04:43.154",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+[1,2,4,8,16,32,64,32,16,8,4,2,1]¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:06:42.775",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:07:26.862",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+index =? 1
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:07:29.989",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+index =? 1
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:07:37.021",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+|? index =? 2
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:07:43.22",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+|? index =? 2
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:07:46.062",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+|? index =? 2
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:07:52.647",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+|? index =? 2
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:07:56.296",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+|? index =? 2
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:08:02.461",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:08:03.739",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:08:04.21",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:08:25.475",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:09:33.68",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:09:43.983",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+index =? 1|? index =? 2 |? index =? 4 |? index =? 8 |? index =? 16 |? index =? 32
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:09:49.363",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:09:51.24",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:09:51.807",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:10:03.054",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:10:04.166",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:10:39.954",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:10:43.122",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:10:43.698",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:10:44.134",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+index := (index + 1);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:10:51.847",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="16",timestamp="2018-10-04 21:11:01.887",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶// 3, 5-7,9-15,17-31,33-63 do not appear as a result¶// [1,2,4,8,16,32,64,32,16,8,4,2,1] is the goal¶¶index := 1;¶¶resultList := [];¶¶While(index <=? 64)¶{¶    If(index =? 1|? index =? 2 |? index =? 4 |? index =? 8 |? index =? 16 |? index =? 32 |? index =? 64)¶    {¶        Append!(resultList, index);¶    }¶    ¶    index := (index + 1);¶}¶¶index := 33;¶¶While(index >=?1)¶{¶    If(index =? 1|? index =? 2 |? index =? 4 |? index =? 8 |? index =? 16 |? index =? 32)¶    {¶        Append!(resultList, index);¶    }¶    ¶    index := (index - 1);¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 2",sequence="17",timestamp="2018-10-04 21:11:12.991",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:15:20.08",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:15:52.238",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:15:53.987",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:15:54.121",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:16:19.015",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:16:21.403",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:16:22.392",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:16:31.971",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:16:35.459",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:17:08.842",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:17:08.982",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:17:27.646",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:17:30.703",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:17:30.858",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:17:44.583",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:17:46.886",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:17:47.047",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:17:49.116",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:17:55.612",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:18:59.571",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:19:02.517",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:19:02.613",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:23:26.362",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:23:26.522",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:23:29.198",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="18",timestamp="2018-10-04 21:24:59.241",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 1;¶¶resultList := [];¶¶aa := [1,2,3,4,5];¶¶bb := [10,9,8,7,6];¶¶List(aa,bb);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="19",timestamp="2018-10-04 21:26:22.23",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 1;¶¶resultList := [];¶¶aa := [1,2,3,4,5];¶¶bb := [10,9,8,7,6];¶¶LnCombine(aa,bb);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:26:22.81",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    %error,parent="Problem 3",mpversion=".257",preserve="false"¶      Result: The 2 parameter version of procedure <LnCombine> is not defined (MAKE SURE THE PROCEDURE'S NAME IS SPELLED CORRECTLY and the correct number of arguments are being passed to it.)  Error on or before line 633 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="20",timestamp="2018-10-04 21:27:04.719",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 1;¶¶resultList := [];¶¶aa := [1,2,3,4,5];¶¶bb := [10,9,8,7,6];¶¶CombinationsList(aa,bb);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:27:05.304",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    %error,parent="Problem 3",mpversion=".257",preserve="false"¶      Result:  Error: The second argument must be <=? the length of the list.  Error on or before line 633 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="21",timestamp="2018-10-04 21:27:29.011",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 1;¶¶resultList := [];¶¶aa := [1,2,3,4,5];¶¶bb := [10,9,8,7,6];¶¶result list := (aa,bb);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:27:29.601",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    %error,parent="Problem 3",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Error parsing expression near token ***( list )***. Error on or before line 633 starting at index 7.¶.   %/error
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:32:32.91",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:32:35.018",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:34:55.197",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:34:56.375",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:34:56.549",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:35:43.545",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:35:44.182",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:35:56.549",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:36:27.688",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:36:27.854",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:36:31.577",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:37:25.895",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:37:30.911",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:37:31.533",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:37:32.385",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:37:50.467",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:37:50.848",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:38:58.867",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:38:59.513",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:39:00.23",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:39:01.9",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:39:05.007",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+                
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:39:16.99",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:39:24.027",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+If(index >=? 6)¶    {¶        Append!(bb, index);¶        ¶        index := (index - 1);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:39:26.377",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:39:47.486",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:39:48.613",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:39:49.435",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:39:49.946",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+If(index =? 6)¶            {       ¶                index := (index - 5);¶                ¶            }  
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="22",timestamp="2018-10-04 21:40:29.917",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 10;¶¶resultList := [];¶¶aa := [];¶¶bb := [];¶¶While(index >=? 1)¶{    ¶    If(index >=? 6)¶    {¶        Append!(bb, index);¶        ¶        index := (index - 1);¶        ¶            If(index =? 6)¶            {       ¶                index := (index - 5);¶                ¶            }        ¶    }¶    ¶    If(index <=? 5)¶    {¶        Append!(aa, index);¶        ¶        index := (index + 1);¶        ¶            If(index =? 5)¶            {       ¶                index := (index + 6);¶                ¶            }  ¶}    ¶¶aa;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:40:30.527",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    %error,parent="Problem 3",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expression must end with a semi-colon ***( ; )*** or a closing brace  ***( } )***  Error on or before line 661 starting at index 3.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="23",timestamp="2018-10-04 21:40:39.03",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 10;¶¶resultList := [];¶¶aa := [];¶¶bb := [];¶¶While(index >=? 1)¶{    ¶    If(index >=? 6)¶    {¶        Append!(bb, index);¶        ¶        index := (index - 1);¶        ¶            If(index =? 6)¶            {       ¶                index := (index - 5);¶                ¶            }        ¶    }¶    ¶    If(index <=? 5)¶    {¶        Append!(aa, index);¶        ¶        index := (index + 1);¶        ¶            If(index =? 5)¶            {       ¶                index := (index + 6);¶                ¶            }  ¶}    ¶¶aa;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:40:39.651",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    %error,parent="Problem 3",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expression must end with a semi-colon ***( ; )*** or a closing brace  ***( } )***  Error on or before line 661 starting at index 3.¶.   %/error
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:41:17.457",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+            
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="24",timestamp="2018-10-04 21:41:24.318",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 10;¶¶resultList := [];¶¶aa := [];¶¶bb := [];¶¶While(index >=? 1)¶{    ¶    If(index >=? 6)¶    {¶        Append!(bb, index);¶        ¶        index := (index - 1);¶        ¶            If(index =? 6)¶            {       ¶                index := (index - 5);¶                ¶            }        ¶    }¶    ¶    If(index <=? 5)¶    {¶        Append!(aa, index);¶        ¶        index := (index + 1);¶        ¶            If(index =? 5)¶            {       ¶                index := (index + 6);¶                ¶            } ¶    }¶}    ¶¶aa;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:41:29.645",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    %error,parent="Problem 3",mpversion=".257",preserve="false"¶      Result: Evaluation timeout exceeded or user halted evaluation. Error on or before line 650 starting at index 8.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="25",timestamp="2018-10-04 21:41:42.502",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 10;¶¶resultList := [];¶¶aa := [];¶¶bb := [];¶¶While(index >=? 1)¶{    ¶    If(index >=? 6)¶    {¶        Append!(bb, index);¶        ¶        index := (index - 1);¶        ¶            If(index =? 6)¶            {       ¶                index := (index - 5);¶                ¶            }        ¶    }¶    ¶    If(index <=? 5)¶    {¶        Append!(aa, index);¶        ¶        index := (index + 1);¶        ¶            If(index =? 5)¶            {       ¶                index := (index + 6);¶                ¶            } ¶    }¶}    ¶¶bb;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:41:47.824",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    %error,parent="Problem 3",mpversion=".257",preserve="false"¶      Result: Evaluation timeout exceeded or user halted evaluation. Error on or before line 650 starting at index 8.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="26",timestamp="2018-10-04 21:42:21.094",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 10;¶¶resultList := [];¶¶aa := [];¶¶bb := [];¶¶While(index >=? 1)¶{    ¶    If(index >=? 6)¶    {¶        Append!(bb, index);¶        ¶        index := (index - 1);¶        ¶            If(index =? 6)¶            {       ¶                index := (index - 5);¶                ¶            }        ¶    }¶    ¶    If(index <=? 5)¶    {¶        Append!(aa, index);¶        ¶        index := (index + 1);¶        ¶            If(index =? 5)¶            {       ¶                index := (index - 100);¶                ¶            } ¶    }¶}    ¶¶bb;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="27",timestamp="2018-10-04 21:42:27.693",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 10;¶¶resultList := [];¶¶aa := [];¶¶bb := [];¶¶While(index >=? 1)¶{    ¶    If(index >=? 6)¶    {¶        Append!(bb, index);¶        ¶        index := (index - 1);¶        ¶            If(index =? 6)¶            {       ¶                index := (index - 5);¶                ¶            }        ¶    }¶    ¶    If(index <=? 5)¶    {¶        Append!(aa, index);¶        ¶        index := (index + 1);¶        ¶            If(index =? 5)¶            {       ¶                index := (index - 100);¶                ¶            } ¶    }¶}    ¶¶aa;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="28",timestamp="2018-10-04 21:43:43.746",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 10;¶¶resultList := [];¶¶aa := [];¶¶bb := [];¶¶While(index >=? 1)¶{    ¶    If(index >=? 5)¶    {¶        Append!(bb, index);¶        ¶        index := (index - 1);¶        ¶            If(index =? 5)¶            {       ¶                index := (index - 4);¶                ¶            }        ¶    }¶    ¶    If(index <=? 5)¶    {¶        Append!(aa, index);¶        ¶        index := (index + 1);¶        ¶            If(index =? 5)¶            {       ¶                index := (index - 100);¶                ¶            } ¶    }¶}    ¶¶aa;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="29",timestamp="2018-10-04 21:43:48.879",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 10;¶¶resultList := [];¶¶aa := [];¶¶bb := [];¶¶While(index >=? 1)¶{    ¶    If(index >=? 5)¶    {¶        Append!(bb, index);¶        ¶        index := (index - 1);¶        ¶            If(index =? 5)¶            {       ¶                index := (index - 4);¶                ¶            }        ¶    }¶    ¶    If(index <=? 5)¶    {¶        Append!(aa, index);¶        ¶        index := (index + 1);¶        ¶            If(index =? 5)¶            {       ¶                index := (index - 100);¶                ¶            } ¶    }¶}    ¶¶bb;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="30",timestamp="2018-10-04 21:44:01.754",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 10;¶¶resultList := [];¶¶aa := [];¶¶bb := [];¶¶While(index >=? 1)¶{    ¶    If(index >=? 5)¶    {¶        Append!(bb, index);¶        ¶        index := (index - 1);¶        ¶            If(index =? 5)¶            {       ¶                index := (index - 4);¶                ¶            }        ¶    }¶    ¶    If(index <=? 5)¶    {¶        Append!(aa, index);¶        ¶        index := (index + 1);¶        ¶            If(index =? 5)¶            {       ¶                index := (index - 100);¶                ¶            } ¶    }¶}    ¶¶aa;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="31",timestamp="2018-10-04 21:44:22.029",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 10;¶¶resultList := [];¶¶aa := [];¶¶bb := [];¶¶While(index >=? 1)¶{    ¶    If(index >=? 5)¶    {¶        Append!(bb, index);¶        ¶        index := (index - 1);¶        ¶            If(index =? 5)¶            {       ¶                index := (index - 4);¶                ¶            }        ¶    }¶    ¶    If(index <=? 5)¶    {¶        Append!(aa, index);¶        ¶        index := (index + 1);¶        ¶            If(index =? 6)¶            {       ¶                index := (index - 100);¶                ¶            } ¶    }¶}    ¶¶aa;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:44:27.298",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    %error,parent="Problem 3",mpversion=".257",preserve="false"¶      Result: Evaluation timeout exceeded or user halted evaluation. Error on or before line 650 starting at index 8.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="32",timestamp="2018-10-04 21:44:35.33",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 10;¶¶resultList := [];¶¶aa := [];¶¶bb := [];¶¶While(index >=? 1)¶{    ¶    If(index >=? 5)¶    {¶        Append!(bb, index);¶        ¶        index := (index - 1);¶        ¶            If(index =? 5)¶            {       ¶                index := (index - 4);¶                ¶            }        ¶    }¶    ¶    If(index <=? 6)¶    {¶        Append!(aa, index);¶        ¶        index := (index + 1);¶        ¶            If(index =? 6)¶            {       ¶                index := (index - 100);¶                ¶            } ¶    }¶}    ¶¶aa;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:44:38.308",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    %error,parent="Problem 3",mpversion=".257",preserve="false"¶      Result: User halted evaluation. Error on or before line 635 starting at index 13.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="33",timestamp="2018-10-04 21:44:59.308",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 10;¶¶resultList := [];¶¶aa := [];¶¶bb := [];¶¶While(index >=? 1)¶{    ¶    If(index >=? 5)¶    {¶        Append!(bb, index);¶        ¶        index := (index - 1);¶        ¶            If(index =? 5)¶            {       ¶                index := (index - 4);¶                ¶            }        ¶    }¶    ¶    If(index <=? 6)¶    {¶        Append!(aa, index);¶        ¶        index := (index + 1);¶        ¶            If(index =? 6)¶            {       ¶                index := (index - 100);¶                ¶            } ¶    }¶}    ¶¶bb;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:45:04.583",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    %error,parent="Problem 3",mpversion=".257",preserve="false"¶      Result: Evaluation timeout exceeded or user halted evaluation. Error on or before line 650 starting at index 8.¶.   %/error
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:47:52.595",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:48:21.707",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:48:25.42",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+If(index =? 5)¶     {       ¶        index := (index - 4);¶                ¶     }  
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:48:27.435",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:48:28.076",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:48:29.345",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:48:30.187",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:49:46.35",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:49:47.267",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:50:21.593",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+1,2,3,4,5
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:50:36.291",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:50:38.332",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+   
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:50:39.269",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:50:40.196",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:50:48.32",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+index := (index - 100);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:50:49.919",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:50:53.882",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="34",timestamp="2018-10-04 21:51:09.148",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 10;¶¶resultList := [];¶¶aa := [];¶¶bb := [];¶¶While(index >=? 1)¶{    ¶    If(index >? 5)¶    {¶        Append!(bb, index);¶        ¶        index := (index - 1);¶     }   ¶     ¶     If(index =? 5)¶     {       ¶        index := (index - 4);¶                ¶     }        ¶    ¶    ¶    If(index <? 6)¶    {¶        If(aa =? [1,2,3,4,5])¶        {  ¶            index := (index - 100);¶        }¶        ¶        If(index =? 5)¶        {       ¶           index := (index - 4);¶                ¶        }  ¶        Append!(aa, index);¶        ¶        index := (index + 1);¶        ¶        ¶    }¶}    ¶¶aa;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:51:14.43",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    %error,parent="Problem 3",mpversion=".257",preserve="false"¶      Result: Evaluation timeout exceeded or user halted evaluation. Error on or before line 661 starting at index 8.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="35",timestamp="2018-10-04 21:53:23.654",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 10;¶¶resultList := [];¶¶aa := [];¶¶bb := [];¶¶While(index >=? 1)¶{    ¶    If(index >? 5)¶    {¶        Append!(bb, index);¶        ¶        index := (index - 1);¶    }   ¶     ¶    If(index =? 5 &? aa =? [])¶    {       ¶        index := (index - 4);¶                ¶    }            ¶    ¶    If(index <? 6)¶    {                      ¶        Append!(aa, index);¶        ¶        index := (index + 1);¶                ¶    }¶}    ¶¶aa;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 21:53:28.959",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    %error,parent="Problem 3",mpversion=".257",preserve="false"¶      Result: Evaluation timeout exceeded or user halted evaluation. Error on or before line 637 starting at index 8.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 3",sequence="36",timestamp="2018-10-04 21:53:42.47",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 3",sequence="1",timestamp="2018-10-04 21:55:23.079",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 3",sequence="1",timestamp="2018-10-04 21:56:19.213",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:01:55.13",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:02:35.64",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:02:36.008",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:02:51.186",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:02:51.672",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:03:00.217",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="3",timestamp="2018-10-04 22:03:07.652",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 1;¶¶resultList := [];¶¶list1 := [1,2,3,4,5];¶¶list2 := [10,9,8,7,6];¶¶listLength := Length(list1);¶¶While(index <=? listLength)¶{¶    Append!(resultList, list1[index]);¶    ¶    Append!(resultList, list2[index]);¶    ¶    index := (index + 1);¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 3",sequence="4",timestamp="2018-10-04 22:03:19.56",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:04:10.562",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+[1,2,2,4,5,6,7,8,10,11,11,12,14,15]¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:06:40.263",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:06:42.728",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:09:08.761",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:09:09.979",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:09:11.066",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:10:21.567",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:10:25.162",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:10:30.503",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:10:30.632",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:10:30.774",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:10:30.948",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:19:48.876",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:20:06.057",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:20:07.685",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:20:13.373",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:20:39.075",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+ If(index =? 3)¶    {¶    index := (index + 1);¶    }
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:20:43.349",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:20:45.423",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:20:46.898",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:20:55.031",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:20:56.861",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:20:57.822",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:21:02.443",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:21:02.87",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:21:03.461",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+If(index =? 3)¶    {¶        index := (index + 1);¶    }
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:21:34.714",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:21:39.976",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:21:40.181",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:22:06.322",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:22:23.773",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:22:23.934",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:22:29.588",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:22:35.667",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:22:36.494",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:22:37.461",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+Append!(resultList, index);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:22:39.446",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:22:45.585",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:22:46.121",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:22:46.962",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+Append!(resultList, index);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:22:49.794",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:22:50.988",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:23:02.008",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:23:05.476",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:23:10.308",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:23:10.888",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="5",timestamp="2018-10-04 22:24:15.38",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶//resultList needs to = [1,2,2,4,5,6,7,8,10,11,11,12,14,15] as a result¶// 1 while, 3 appends, as many ifs no | or &¶¶index := 1;¶¶resultList := [];¶¶While(index <=? 15)¶{¶    If(index =? 3)¶    {¶        ¶    }¶    ¶    If(index =? 9)¶    {¶        ¶    ¶    }¶    ¶    If(index =? 13)¶    {¶        ¶    }¶    ¶    If(index =? 2)¶    {¶        Append!(resultList, index);¶        ¶    }¶    ¶    If(index =? 11)¶    {¶        Append!(resultList, index);¶        ¶    }¶    ¶    If(index <=? 15)¶    {¶        Append!(resultList, index);¶        ¶        index := (index + 1);¶    }¶    ¶}¶¶resultList;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:26:27.877",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:27:22.785",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:27:25.215",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:27:26.127",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:27:34.577",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:27:39.263",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:27:40.115",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:27:47.072",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+                
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:28:01.825",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:28:02.247",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:28:03.772",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:28:13.951",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+                
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:28:16.927",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:28:31.02",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+                    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:28:31.28",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+                    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:28:42.196",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+                    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:28:57.296",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:29:07.907",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="6",timestamp="2018-10-04 22:29:16.79",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶//resultList needs to = [1,2,2,4,5,6,7,8,10,11,11,12,14,15] as a result¶// 1 while, 3 appends, as many ifs no | or &¶¶index := 1;¶¶resultList := [];¶¶While(index <=? 15)¶{¶    If(index =? 2)¶    {¶        Append!(resultList, index);¶        ¶    }¶    ¶    If(index =? 11)¶    {¶        Append!(resultList, index);¶        ¶    }¶    ¶    If(index <=? 15)¶    {¶    ¶        If(index !=? 3)¶        {¶        ¶            If(index !=? 9)¶            {¶            ¶                If(index !=? 13)¶                {¶                    Append!(resultList, index);¶                    ¶                    index := (index + 1)¶                }    ¶            }¶        }¶    }     ¶}¶¶resultList;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:29:17.442",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    %error,parent="Problem 4",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ; )*** end of statement token in program block but found ***( } )*** instead. Error on or before line 874 starting at index 16.¶.   %/error
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:29:43.846",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:29:53.899",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:29:55.077",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:29:55.287",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="7",timestamp="2018-10-04 22:30:07.427",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶//resultList needs to = [1,2,2,4,5,6,7,8,10,11,11,12,14,15] as a result¶// 1 while, 3 appends, as many ifs no | or &¶¶index := 1;¶¶resultList := [];¶¶While(index <=? 15)¶{¶    If(index =? 2)¶    {¶        Append!(resultList, index);¶        ¶    }¶    ¶    If(index =? 11)¶    {¶        Append!(resultList, index);¶        ¶    }¶    ¶    If(index <=? 15)¶    {¶    ¶        If(index !=? 3)¶        {¶        ¶            If(index !=? 9)¶            {¶            ¶                If(index !=? 13)¶                {¶                    Append!(resultList, index);¶                    ¶                    index := (index + 1);¶                }    ¶            }¶        }¶    }             ¶}¶¶resultList;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:30:12.699",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    %error,parent="Problem 4",mpversion=".257",preserve="false"¶      Result: Evaluation timeout exceeded or user halted evaluation. Error on or before line 846 starting at index 12.¶.   %/error
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:30:23.41",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:30:24.431",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:30:30.956",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:30:32.32",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:30:32.99",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:30:42.084",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+index := (index + 1);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:30:44.117",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:30:46.577",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:30:47.765",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:30:52.581",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+If(index =? 3)¶    {¶        index := (index + 1);¶    }
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:30:56.481",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:30:57.078",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:30:57.739",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+If(index =? 3)¶    {¶        index := (index + 1);¶    }
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:30:58.886",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="8",timestamp="2018-10-04 22:31:02.428",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶//resultList needs to = [1,2,2,4,5,6,7,8,10,11,11,12,14,15] as a result¶// 1 while, 3 appends, as many ifs no | or &¶¶index := 1;¶¶resultList := [];¶¶While(index <=? 15)¶{¶    If(index =? 2)¶    {¶        Append!(resultList, index);¶        ¶    }¶    ¶    If(index =? 11)¶    {¶        Append!(resultList, index);¶        ¶    }¶    ¶    If(index <=? 15)¶    {¶    ¶        If(index !=? 3)¶        {¶        ¶            If(index !=? 9)¶            {¶            ¶                If(index !=? 13)¶                {¶                    Append!(resultList, index);¶                    ¶                    index := (index + 1);¶                }    ¶            }¶        }¶    }   ¶    ¶    If(index =? 3)¶    {¶        index := (index + 1);¶    }¶    ¶    If(index =? 9)¶    {¶        index := (index + 1);¶    }¶    ¶    If(index =? 13)¶    {¶        index := (index + 1);¶    }¶    ¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 4",sequence="9",timestamp="2018-10-04 22:31:15.205",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:32:15.857",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+[49,59,48,59,8,58,61,68,23,58,28,46,79,31,1,39,26,16,64,71,94,1,10,26,93,91,80,48,24,65]¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:33:30.672",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:35:31.585",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+inputList[index]
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:35:45.517",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+inputList[index]
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:36:03.039",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+inputList[index]
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:36:14.65",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:36:16.973",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:36:17.187",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:36:51.936",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:36:59.431",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:37:01.912",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="10",timestamp="2018-10-04 22:37:07.276",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 1;¶¶inputList := [49,59,48,59,8,58,61,68,23,58,28,46,79,31,1,39,26,16,64,71,94,1,10,26,93,91,80,48,24,65];¶¶inputListLength := Length(inputList);¶¶resultList := [];¶¶While(index <=? inputListLength)¶{¶¶    If(inputList[index] >=? 30 &? inputList[index] <=? 40 |? inputList[index] <=? 70 &? inputList[index] >? 60)¶    {¶        Append!(resultList, index);¶        ¶    }¶¶}¶¶resultList;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:37:12.529",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    %error,parent="Problem 5",mpversion=".257",preserve="false"¶      Result: Evaluation timeout exceeded or user halted evaluation. Error on or before line 1151 starting at index 105.¶.   %/error
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:38:00.089",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-04 22:38:01.337",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".257"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="11",timestamp="2018-10-04 22:38:10.619",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 1;¶¶inputList := [49,59,48,59,8,58,61,68,23,58,28,46,79,31,1,39,26,16,64,71,94,1,10,26,93,91,80,48,24,65];¶¶inputListLength := Length(inputList);¶¶resultList := [];¶¶While(index <=? inputListLength)¶{¶¶    If(inputList[index] >=? 30 &? inputList[index] <=? 40 |? inputList[index] <=? 70 &? inputList[index] >? 60)¶    {¶        Append!(resultList, index);¶        ¶    }¶¶    index := (index + 1);¶    ¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="12",timestamp="2018-10-04 22:38:46.091",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶index := 1;¶¶inputList := [49,59,48,59,8,58,61,68,23,58,28,46,79,31,1,39,26,16,64,71,94,1,10,26,93,91,80,48,24,65];¶¶inputListLength := Length(inputList);¶¶resultList := [];¶¶While(index <=? inputListLength)¶{¶¶    If(inputList[index] >=? 30 &? inputList[index] <=? 40 |? inputList[index] <=? 70 &? inputList[index] >? 60)¶    {¶        Append!(resultList, inputList[index]);¶        ¶    }¶¶    index := (index + 1);¶    ¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 5",sequence="13",timestamp="2018-10-04 22:38:54.03",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+

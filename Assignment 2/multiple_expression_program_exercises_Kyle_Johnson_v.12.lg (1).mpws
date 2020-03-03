@@ -1,0 +1,1267 @@
+v.12
+
+multiple_expression_program_exercises.mpws
+
+Complete all of the problems in this worksheet by
+placing the code you write for each exercise into
+the empty fold which is provided in each exercise
+section. Each empty fold has a subtype attribute
+named "exercise". Immediately below each empty
+fold is a mathpiper_grade fold that contains code
+which will automatically grade the code you place
+into the fold above it.
+
+Periodically, when you are writing your program
+and it runs without throwing an exception,
+evaluate its mathpiper_grade fold to see how many
+assessment units your program has gained so far.
+You can run the mathpiper_grade fold for each
+exercise as many times as you would like.
+
+Further information:
+
+- Do not use the "Echo" or "Write" procedures in
+your programs unless you are using them for
+debugging. Remove all procedures from your code
+that produce side effects output before submitting
+your worksheet.
+
+- The string "Head" is not equal to the string
+"HEAD".
+
+- The "truncate" attribute in a fold header limits
+the amount of output that a program will insert
+into the worksheet. This reduces the chances of
+crashing MathPiperIDE.
+
+- The "timeout" attribute in a fold header stops a
+running program after the specified number of
+milliseconds. This prevents programs that contain
+infinite loops from locking up MathPiperIDE.
+
+
+%group,name="Problem 0",description="Programmer's information."
+========================================================================================================
+Problem 0
+
+In the following fold, replace "xxx" with your
+first name, replace "yyy" with your last name, and
+replace "000000" with your SSU ID number:
+
+%mathpiper,name="Problem 0",subtype="problem",unassign_all="true",truncate="6000",timeout="5000"
+
+[
+["firstName", "Kyle"],
+["lastName", "Johnson"],
+["ssuIDNumber", "264694"],
+];
+
+%/mathpiper
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 0"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+
+    FoldGrade("The code does not produce side effect output", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'firstName' a string that is not 'xxx'", 1, True)
+    {
+        String?(foldResult["firstName"]) &? foldResult["firstName"] !=? "xxx";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'lastName' is a string that is not 'yyy'", 1, True)
+    {
+        String?(foldResult["lastName"]) &? foldResult["lastName"] !=? "yyy";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'ssuIDNumber' is not '000000'", 1, True)
+    {
+        foldResult["ssuIDNumber"] !=? "000000" &? foldResult["ssuIDNumber"] !=? 0;
+    }
+}
+
+%/mathpiper_grade
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 1",description="Change the order of operations."
+========================================================================================================
+Problem 1
+
+Type the following expression into the MathPiper
+fold that is below:
+
+result := 5 + 6*21/7 - 2^3 
+
+Change the precedence of your copy of the
+expression using parentheses so that it prints 25
+instead of 15.
+
+
+%mathpiper,name="Problem 1",subtype="hint"
+Hint("CnJlc3VsdCA6PSAoNSArIDYpKjIxLzcgLSAyXjM7Cgo=");
+%/mathpiper
+
+    %output,parent="Problem 1",mpversion=".257",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 1",subtype="problem",truncate="1000",timeout="5000"
+
+result := ((5 + 6)*21)/7 - 2^3 ;
+
+%/mathpiper
+
+    %output,parent="Problem 1",mpversion=".257",preserve="false"
+            Result: 25
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 1"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+    FoldGrade("The code does not produce side effect output", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a number", 1, True)
+    {
+        Rational?(foldResult) |? Decimal?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result of the evaluation is assigned to the variable named \"result\"", 1, False)
+    {
+        Contains?(VarList(?foldCode), 'result);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 1, True)
+    LocalSymbols(values)
+    {
+        values := SubtreesPattern(?foldCode, a_::(Rational?(a) |? Decimal?(a)) );
+
+        !? Contains?(values, 25);
+    }
+
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 1, True)
+    {
+        foldResult =? 25;
+    }
+}
+
+%/mathpiper_grade
+
+%/group
+
+
+
+
+
+
+%group,name="Problem 2",description="Four expressions four Echo() procedures."
+========================================================================================================
+Problem 2
+
+Place the following code into the MathPiper fold
+that is included below, and then use one Echo()
+procedure per variable (four Echo() procedures in
+total) to print the results of the calculations.
+Put strings in the Echo() procedures that indicate
+which variable each calculated value is assigned
+to:
+
+--------------------------------------------
+var1 := (1+2+3+4+5);
+Echo("var1: ", var1);
+var2 := (1-2-3-4-5);
+var3 := (1*2*3*4*5);
+var4 := (1/2/3/4/5);
+--------------------------------------------
+
+
+The side effect output your code produces should
+look like this:
+
+Side Effects:
+var1: 15 
+var2: -13 
+var3: 120 
+var4: 1/120
+
+
+%mathpiper,name="Problem 2",subtype="hint"
+Hint("CnZhcjEgOj0gKDErMiszKzQrNSk7CkVjaG8oInZhcjE6ICIsIHZhcjEpOwoKdmFyMiA6PSAoMS0yLTMtNC01KTsKRWNobygidmFyMjogIiwgdmFyMik7Cgp2YXIzIDo9ICgxKjIqMyo0KjUpOwpFY2hvKCJ2YXIzOiAiLCB2YXIzKTsKCnZhcjQgOj0gKDEvMi8zLzQvNSk7CkVjaG8oInZhcjQ6ICIsIHZhcjQpOwoK");
+%/mathpiper
+
+    %output,parent="Problem 2",mpversion=".257",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 2",subtype="problem",globalStateShow="true",truncate="1000",timeout="5000"
+
+var1 := (1+2+3+4+5);
+Echo("var1: ", var1);
+var2 := (1-2-3-4-5);
+Echo("var2: ", var2);
+var3 := (1*2*3*4*5);
+Echo("var3: ", var3);
+var4 := (1/2/3/4/5);
+Echo("var4: ", var4);
+
+
+
+
+
+%/mathpiper
+
+    %output,parent="Problem 2",mpversion=".257",preserve="false"
+            Result: True
+            
+            Side Effects:
+            var1: 15 
+            var2: -13 
+            var3: 120 
+            var4: 1/120 
+            
+.   %/output
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 2"
+
+LocalSymbols(foldResult)
+{
+    ?echoAppendList := [];
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 0, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+                
+    FoldGrade("Four \"Echo\" procedures are used ", 1, True)
+    LocalSymbols(procedureNames, procedureCount)
+    {
+        procedureNames := ProcedureListAll(?foldCode);
+        procedureCount := Count(procedureNames,"Echo");
+        procedureCount =? 4;
+    }
+
+    // --------------------------------------------------------
+
+    FoldGrade("An \"Echo\" procedure is the last expression in the fold", 1, False)
+    LocalSymbols(echoPosition)
+    {
+        echoPosition := Length(?foldCode[1]);
+    
+        If(?foldCode[1][echoPosition][0] =? 'Echo)
+        {
+            True;
+        }
+        Else
+        {
+            False;
+        }
+    
+    }
+
+    // --------------------------------------------------------
+    
+    ?foldCode := Substitute('Echo, ToAtom("EchoAppend!")) ?foldCode;
+
+    foldResult := Eval(Eval(?foldCode));
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct output is printed", 1, True)
+    {
+        foldResult =? 
+["var1: ",15,"
+","var2: ",-13,"
+","var3: ",120,"
+","var4: ",1/120,"
+"];
+    }
+    
+}
+    
+%/mathpiper_grade
+
+%/group
+
+
+
+
+
+
+%group,name="Problem 3",description="Four expressions one Echo() procedure."
+========================================================================================================
+Problem 3
+
+Place the following code into the MathPiper fold
+that is below, and then use one Echo() procedure
+to print the values of all the variables on a
+single line (Remember, the Echo() procedure can
+print multiple values if they are separated by
+commas.):
+
+--------------------------------------------
+var1 := (2*2*2*2*2);
+var2 := 1/2;
+var3 := (_x^2 * _x^3);
+var4 := "Hello";
+--------------------------------------------
+
+
+The side effect output your code produces should
+look like this:
+
+    Side Effects:
+    32 1/2 _x^5 Hello
+
+
+%mathpiper,name="Problem 3",subtype="hint"
+Hint("CnZhcjEgOj0gKDIqMioyKjIqMik7CnZhcjIgOj0gMS8yOwp2YXIzIDo9IChfeF4yICogX3heMyk7CnZhcjQgOj0gIkhlbGxvIjsKCkVjaG8odmFyMSwgdmFyMiwgdmFyMywgdmFyNCk7Cgo=");
+%/mathpiper
+
+    %output,parent="Problem 3",mpversion=".257",preserve="false"
+      Result: True
+.   %/output
+
+      
+%mathpiper,name="Problem 3",subtype="problem",globalStateShow="true",truncate="1000",timeout="5000"
+
+var1 := (2*2*2*2*2);
+var2 := 1/2;
+var3 := (_x^2 * _x^3);
+var4 := "Hello";
+Echo(var1, var2, var3, var4);
+
+%/mathpiper
+
+    %output,parent="Problem 3",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      32 1/2 _x^5 Hello
+      
+.   %/output
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 3"
+
+LocalSymbols(foldResult)
+{
+    ?echoAppendList := [];
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 0, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+                
+    FoldGrade("One \"Echo\" procedure is used ", 1, True)
+    LocalSymbols(procedureNames, procedureCount)
+    {
+        procedureNames := ProcedureListAll(?foldCode);
+        procedureCount := Count(procedureNames,"Echo");
+        procedureCount =? 1;
+    }
+
+    // --------------------------------------------------------
+
+    FoldGrade("An \"Echo\" procedure is the last expression in the fold, and it contains 4 arguments", 1, False)
+    LocalSymbols(echoPosition)
+    {
+        echoPosition := Length(?foldCode[1]);
+        
+        If(?foldCode[1][echoPosition][0] =? 'Echo &? Length(?foldCode[1][echoPosition]) =? 4)
+        {
+            True;
+        }
+        Else
+        {
+            False;
+        }
+    }
+
+    // --------------------------------------------------------
+    
+    ?foldCode := Substitute('Echo, ToAtom("EchoAppend!")) ?foldCode;
+
+    foldResult := Eval(Eval(?foldCode));
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct output is printed", 1, True)
+    {
+        foldResult =? 
+[32,1/2,_x^5,"Hello","
+"];
+    }
+    
+}
+    
+%/mathpiper_grade
+
+%/group
+
+
+
+
+
+
+%group,name="Problem 4",description="Uppercase alphabet."
+========================================================================================================
+Problem 4
+
+The following code assigns a string that contains
+all of the upper case letters of the alphabet to
+the variable upper. Each of the three Echo()
+procedures prints an index number and the letter
+that is at that position in the string. Place this
+code into the included fold and then continue the
+Echo() procedures so that all 26 letters and their
+index numbers are printed.
+
+--------------------------------------------
+upper := "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+Echo(1,upper[1]);
+Echo(2,upper[2]);
+Echo(3,upper[3]);
+<add more Echos here>
+--------------------------------------------
+
+
+The side effect output your code produces should
+look like this:
+
+        Side Effects:
+        1 A
+        2 B
+        3 C
+        4 D
+        5 E
+        6 F
+        7 G
+        8 H
+        9 I
+        10 J
+        11 K
+        12 L
+        13 M
+        14 N
+        15 O
+        16 P
+        17 Q
+        18 R
+        19 S
+        20 T
+        21 U
+        22 V
+        23 W
+        24 X
+        25 Y
+        26 Z
+        
+
+%mathpiper,name="Problem 4",subtype="hint"
+Hint("CnVwcGVyIDo9ICJBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWiI7CgpFY2hvKDEsdXBwZXJbMV0pOwpFY2hvKDIsdXBwZXJbMl0pOwpFY2hvKDMsdXBwZXJbM10pOwpFY2hvKDQsdXBwZXJbNF0pOwpFY2hvKDUsdXBwZXJbNV0pOwpFY2hvKDYsdXBwZXJbNl0pOwpFY2hvKDcsdXBwZXJbN10pOwpFY2hvKDgsdXBwZXJbOF0pOwpFY2hvKDksdXBwZXJbOV0pOwpFY2hvKDEwLHVwcGVyWzEwXSk7CkVjaG8oMTEsdXBwZXJbMTFdKTsKRWNobygxMix1cHBlclsxMl0pOwpFY2hvKDEzLHVwcGVyWzEzXSk7CkVjaG8oMTQsdXBwZXJbMTRdKTsKRWNobygxNSx1cHBlclsxNV0pOwpFY2hvKDE2LHVwcGVyWzE2XSk7CkVjaG8oMTcsdXBwZXJbMTddKTsKRWNobygxOCx1cHBlclsxOF0pOwpFY2hvKDE5LHVwcGVyWzE5XSk7CkVjaG8oMjAsdXBwZXJbMjBdKTsKRWNobygyMSx1cHBlclsyMV0pOwpFY2hvKDIyLHVwcGVyWzIyXSk7CkVjaG8oMjMsdXBwZXJbMjNdKTsKRWNobygyNCx1cHBlclsyNF0pOwpFY2hvKDI1LHVwcGVyWzI1XSk7CkVjaG8oMjYsdXBwZXJbMjZdKTsKCg==");
+%/mathpiper
+
+
+%mathpiper,name="Problem 4",subtype="problem",truncate="1000",timeout="5000"
+
+upper := "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+Echo(1,upper[1]);
+Echo(2,upper[2]);
+Echo(3,upper[3]);
+Echo(4,upper[4]);
+Echo(5,upper[5]);
+Echo(6,upper[6]);
+Echo(7,upper[7]);
+Echo(8,upper[8]);
+Echo(9,upper[9]);
+Echo(10,upper[10]);
+Echo(11,upper[11]);
+Echo(12,upper[12]);
+Echo(13,upper[13]);
+Echo(14,upper[14]);
+Echo(15,upper[15]);
+Echo(16,upper[16]);
+Echo(17,upper[17]);
+Echo(18,upper[18]);
+Echo(19,upper[19]);
+Echo(20,upper[20]);
+Echo(21,upper[21]);
+Echo(22,upper[22]);
+Echo(23,upper[23]);
+Echo(24,upper[24]);
+Echo(25,upper[25]);
+Echo(26,upper[26]);
+
+%/mathpiper
+
+    %output,parent="Problem 4",mpversion=".257",preserve="false"
+            Result: True
+            
+            Side Effects:
+            1 A
+            2 B
+            3 C
+            4 D
+            5 E
+            6 F
+            7 G
+            8 H
+            9 I
+            10 J
+            11 K
+            12 L
+            13 M
+            14 N
+            15 O
+            16 P
+            17 Q
+            18 R
+            19 S
+            20 T
+            21 U
+            22 V
+            23 W
+            24 X
+            25 Y
+            26 Z
+            
+.   %/output
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 4"
+
+LocalSymbols(foldResult)
+{
+    ?echoAppendList := [];
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 0, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+                
+    FoldGrade("26 \"Echo\" procedures are used ", 1, True)
+    LocalSymbols(procedureNames, procedureCount)
+    {
+        procedureNames := ProcedureListAll(?foldCode);
+        procedureCount := Count(procedureNames,"Echo");
+        procedureCount =? 26;
+    }
+
+    // --------------------------------------------------------
+    
+    ?foldCode := Substitute('Echo, ToAtom("EchoAppend!")) ?foldCode;
+
+    foldResult := Eval(Eval(?foldCode));
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct output is printed", 1, True)
+    {
+        foldResult =? 
+[1,"A","
+",2,"B","
+",3,"C","
+",4,"D","
+",5,"E","
+",6,"F","
+",7,"G","
+",8,"H","
+",9,"I","
+",10,"J","
+",11,"K","
+",12,"L","
+",13,"M","
+",14,"N","
+",15,"O","
+",16,"P","
+",17,"Q","
+",18,"R","
+",19,"S","
+",20,"T","
+",21,"U","
+",22,"V","
+",23,"W","
+",24,"X","
+",25,"Y","
+",26,"Z","
+"];
+    }
+    
+}
+    
+%/mathpiper_grade
+
+%/group
+
+
+
+
+
+
+%group,name="Problem 5",description="Punctionation characters."
+========================================================================================================
+Problem 5
+
+Use Echo() procedures to print an index number and
+the character at this position for the following
+string (this is similar to what was done in the
+previous problem.):
+
+--------------------------------------------
+extra := ".!@#$%^&*() _+<>,?/{}[]|-=;";
+
+Echo(1,extra[1]);
+Echo(2,extra[2]);
+Echo(3,extra[3]);
+--------------------------------------------
+
+
+%mathpiper,name="Problem 5",subtype="hint"
+Hint("CmV4dHJhIDo9ICIuIUAjJCVeJiooKSBfKzw+LD8ve31bXXwtPTsiOwoKRWNobygxLGV4dHJhWzFdKTsKRWNobygyLGV4dHJhWzJdKTsKRWNobygzLGV4dHJhWzNdKTsKRWNobyg0LGV4dHJhWzRdKTsKRWNobyg1LGV4dHJhWzVdKTsKRWNobyg2LGV4dHJhWzZdKTsKRWNobyg3LGV4dHJhWzddKTsKRWNobyg4LGV4dHJhWzhdKTsKRWNobyg5LGV4dHJhWzldKTsKRWNobygxMCxleHRyYVsxMF0pOwpFY2hvKDExLGV4dHJhWzExXSk7CkVjaG8oMTIsZXh0cmFbMTJdKTsKRWNobygxMyxleHRyYVsxM10pOwpFY2hvKDE0LGV4dHJhWzE0XSk7CkVjaG8oMTUsZXh0cmFbMTVdKTsKRWNobygxNixleHRyYVsxNl0pOwpFY2hvKDE3LGV4dHJhWzE3XSk7CkVjaG8oMTgsZXh0cmFbMThdKTsKRWNobygxOSxleHRyYVsxOV0pOwpFY2hvKDIwLGV4dHJhWzIwXSk7CkVjaG8oMjEsZXh0cmFbMjFdKTsKRWNobygyMixleHRyYVsyMl0pOwpFY2hvKDIzLGV4dHJhWzIzXSk7CkVjaG8oMjQsZXh0cmFbMjRdKTsKRWNobygyNSxleHRyYVsyNV0pOwpFY2hvKDI2LGV4dHJhWzI2XSk7CkVjaG8oMjcsZXh0cmFbMjddKTsKCg==");
+%/mathpiper
+
+    %output,parent="Problem 5",mpversion=".257",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 5",subtype="problem",truncate="1000",timeout="5000"
+
+extra := ".!@#$%^&*() _+<>,?/{}[]|-=;";
+
+Echo(1,extra[1]);
+Echo(2,extra[2]);
+Echo(3,extra[3]);
+Echo(4,extra[4]);
+Echo(5,extra[5]);
+Echo(6,extra[6]);
+Echo(7,extra[7]);
+Echo(8,extra[8]);
+Echo(9,extra[9]);
+Echo(10,extra[10]);
+Echo(11,extra[11]);
+Echo(12,extra[12]);
+Echo(13,extra[13]);
+Echo(14,extra[14]);
+Echo(15,extra[15]);
+Echo(16,extra[16]);
+Echo(17,extra[17]);
+Echo(18,extra[18]);
+Echo(19,extra[19]);
+Echo(20,extra[20]);
+Echo(21,extra[21]);
+Echo(22,extra[22]);
+Echo(23,extra[23]);
+Echo(24,extra[24]);
+Echo(25,extra[25]);
+Echo(26,extra[26]);
+Echo(27,extra[27]);
+
+%/mathpiper
+
+    %output,parent="Problem 5",mpversion=".257",preserve="false"
+            Result: True
+            
+            Side Effects:
+            1 .
+            2 !
+            3 @
+            4 #
+            5 $
+            6 %
+            7 ^
+            8 &
+            9 *
+            10 (
+            11 )
+            12  
+            13 _
+            14 +
+            15 <
+            16 >
+            17 ,
+            18 ?
+            19 /
+            20 {
+            21 }
+            22 [
+            23 ]
+            24 |
+            25 -
+            26 =
+            27 ;
+            
+.   %/output
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 5"
+
+LocalSymbols(foldResult)
+{
+    ?echoAppendList := [];
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 0, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+                
+    FoldGrade("27 \"Echo\" procedures are used ", 1, True)
+    LocalSymbols(procedureNames, procedureCount)
+    {
+        procedureNames := ProcedureListAll(?foldCode);
+        procedureCount := Count(procedureNames,"Echo");
+        procedureCount =? 27;
+    }
+
+    // --------------------------------------------------------
+    
+    ?foldCode := Substitute('Echo, ToAtom("EchoAppend!")) ?foldCode;
+
+    foldResult := Eval(Eval(?foldCode));
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct output is printed", 1, True)
+    {
+        foldResult =? 
+[1,".","
+",2,"!","
+",3,"@","
+",4,"#","
+",5,"$","
+",6,"%","
+",7,"^","
+",8,"&","
+",9,"*","
+",10,"(","
+",11,")","
+",12," ","
+",13,"_","
+",14,"+","
+",15,"<","
+",16,">","
+",17,",","
+",18,"?","
+",19,"/","
+",20,"{","
+",21,"}","
+",22,"[","
+",23,"]","
+",24,"|","
+",25,"-","
+",26,"=","
+",27,";","
+"];
+    }
+    
+}
+    
+%/mathpiper_grade
+
+%/group
+
+
+
+
+
+
+%group,name="Problem 6",description="Favorite musical bands."
+========================================================================================================
+Problem 6
+
+The following program uses strings and index
+numbers to print a person's name. Create a program
+that uses the three strings from this program to
+print the names of three of your favorite musical
+bands or artists.
+
+---------------------------
+/*
+  This program uses strings and index numbers to print
+  a person's name.
+*/
+
+upper := "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+lower := "abcdefghijklmnopqrstuvwxyz";
+extra := ".!@#$%^&*() _+<>,?/{}[]|\-=";
+
+
+//Print "Mary Smith.".
+Echo(upper[13],lower[1],lower[18],lower[25],extra[12],
+upper[19],lower[13],lower[9],lower[20],lower[8],extra[1]);
+--------------------------------------------
+
+
+%mathpiper,name="Problem 6",subtype="hint"
+Hint("CnVwcGVyIDo9ICJBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWiI7Cmxvd2VyIDo9ICJhYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3h5eiI7CmV4dHJhIDo9ICIuIUAjJCVeJiooKSBfKzw+LD8ve31bXXxcLT0iOwoKCi8vUHJpbnQgIk1hcnkgU21pdGguIi4KRWNobyh1cHBlclsxM10sbG93ZXJbMV0sbG93ZXJbMThdLGxvd2VyWzI1XSxleHRyYVsxMl0sCnVwcGVyWzE5XSxsb3dlclsxM10sbG93ZXJbOV0sbG93ZXJbMjBdLGxvd2VyWzhdLGV4dHJhWzFdKTsKCg==");
+%/mathpiper
+
+    %output,parent="Problem 6",mpversion=".257",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 6",subtype="problem",globalStateShow="true",truncate="1000",timeout="5000"
+
+upper := "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+lower := "abcdefghijklmnopqrstuvwxyz";
+extra := ".!@#$%^&*() _+<>,?/{}[]|\-=";
+Echo(upper[11],lower[1],lower[14],lower[25],lower[5],extra[12],upper[23],lower[5],lower[19],lower[20]);
+Echo(upper[11],lower[5],lower[14],lower[4],lower[18],lower[9],lower[3],lower[11],extra[12],upper[12],lower[1],lower[13],lower[1],lower[18]);
+Echo(upper[2],lower[18],lower[15],lower[3],lower[11],lower[8],lower[1],lower[13],lower[16],lower[20],lower[15],lower[14]);
+
+
+%/mathpiper
+
+    %output,parent="Problem 6",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      Kanye West
+      Kendrick Lamar
+      Brockhampton
+      
+.   %/output
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 6"
+
+LocalSymbols(foldResult)
+{
+    ?echoAppendList := [];
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 0, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+                
+    FoldGrade("\"Echo\" procedures are used ", 1, True)
+    LocalSymbols(procedureNames, procedureCount)
+    {
+        procedureNames := ProcedureListAll(?foldCode);
+        procedureCount := Count(procedureNames,"Echo");
+        procedureCount >=? 0;
+    }
+
+    // --------------------------------------------------------
+    
+    ?foldCode := Substitute('Echo, ToAtom("EchoAppend!")) ?foldCode;
+
+    foldResult := Eval(Eval(?foldCode));
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("Output is printed that is longer than 5 characters", 1, True)
+    {
+        List?(foldResult) &? Length(foldResult) >? 5; 
+    }
+    
+}
+    
+%/mathpiper_grade
+
+%/group
+
+
+
+
+
+
+%group,name="Problem 7",description="Appending to a list with multiple Append!() procedures."
+========================================================================================================
+Problem 7
+
+The following code creates a new empty list, and
+then it places the values 5, 8, and 3 into it:
+
+-----------------------------
+exampleList := [];
+Append!(exampleList, 5);
+Append!(exampleList, 8);
+Append!(exampleList, 3);
+exampleList;
+-----------------------------
+
+The result this program returns is:
+
+    Side Effects:
+    [5,8,3]
+        
+        
+Create a program that is similar to this example
+program that returns the following result:
+
+[43,99,34,93,6,8,25,76,54,88,98,45,62,94,73]
+
+You must use the "Append!" procedure to create
+this list. Do not include this list in your
+program as a list literal. Use the variable name
+"resultList" in your program to hold this list.
+
+
+%mathpiper,name="Problem 7",subtype="hint"
+Hint("CnJlc3VsdExpc3QgOj0gW107CkFwcGVuZCEocmVzdWx0TGlzdCwgNDMpOwpBcHBlbmQhKHJlc3VsdExpc3QsIDk5KTsKQXBwZW5kIShyZXN1bHRMaXN0LCAzNCk7CkFwcGVuZCEocmVzdWx0TGlzdCwgOTMpOwpBcHBlbmQhKHJlc3VsdExpc3QsIDYpOwpBcHBlbmQhKHJlc3VsdExpc3QsIDgpOwpBcHBlbmQhKHJlc3VsdExpc3QsIDI1KTsKQXBwZW5kIShyZXN1bHRMaXN0LCA3Nik7CkFwcGVuZCEocmVzdWx0TGlzdCwgNTQpOwpBcHBlbmQhKHJlc3VsdExpc3QsIDg4KTsKQXBwZW5kIShyZXN1bHRMaXN0LCA5OCk7CkFwcGVuZCEocmVzdWx0TGlzdCwgNDUpOwpBcHBlbmQhKHJlc3VsdExpc3QsIDYyKTsKQXBwZW5kIShyZXN1bHRMaXN0LCA5NCk7CkFwcGVuZCEocmVzdWx0TGlzdCwgNzMpOwpyZXN1bHRMaXN0OwoK");
+%/mathpiper
+
+    %output,parent="Problem 7",mpversion=".257",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 7",subtype="problem",truncate="1000",timeout="5000"
+
+resultList := [];
+Append!(resultList, 43);
+Append!(resultList, 99);
+Append!(resultList, 34);
+Append!(resultList, 93);
+Append!(resultList, 6);
+Append!(resultList, 8);
+Append!(resultList, 25);
+Append!(resultList, 76);
+Append!(resultList, 54);
+Append!(resultList, 88);
+Append!(resultList, 98);
+Append!(resultList, 45);
+Append!(resultList, 62);
+Append!(resultList, 94);
+Append!(resultList, 73);
+resultList;
+
+
+%/mathpiper
+
+    %output,parent="Problem 7",mpversion=".257",preserve="false"
+      Result: [43,99,34,93,6,8,25,76,54,88,98,45,62,94,73]
+.   %/output
+
+
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 7"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 0, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 0, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+    FoldGrade("The code does not produce side effect output", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a list", 1, True)
+    {
+        List?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable name \"resultList\" is used to hold the identified numbers", 1, False)
+    {
+        Contains?(VarList(?foldCode), 'resultList);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 1, True)
+    {
+        !? Contains?(SubtreesPattern(?foldCode, a_List?), [43,99,34,93,6,8,25,76,54,88,98,45,62,94,73]);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 1, True)
+    {
+        foldResult =? [43,99,34,93,6,8,25,76,54,88,98,45,62,94,73];
+    }
+
+}
+
+%/mathpiper_grade
+
+%/group
+
+
+
+
+
+
+%group,name="Problem 8",description="Generating random sentences with adjectives."
+========================================================================================================
+Problem 8
+
+The following program generates random sentences:
+
+--------------------------------------------
+nouns := ["dog", "cat", "man", "stick"];
+
+verbs := ["poked", "hit", "tickled", "lifted"];
+
+"The " + nouns[RandomInteger(Length(nouns))] + " " +
+verbs[RandomInteger(Length(verbs))] + " the " +
+nouns[RandomInteger(Length(nouns))] + " with the " +
+nouns[RandomInteger(Length(nouns))] + ".";
+--------------------------------------------
+    Result: "The cat hit the cat with the man."
+
+Modify this program to include adjectives.
+
+
+%mathpiper,name="Problem 8",subtype="hint"
+Hint("Cm5vdW5zIDo9IFsiZG9nIiwgImNhdCIsICJtYW4iLCAic3RpY2siXTsKCnZlcmJzIDo9IFsicG9rZWQiLCAiaGl0IiwgInRpY2tsZWQiLCAibGlmdGVkIl07CgoiVGhlICIgKyBub3Vuc1tSYW5kb21JbnRlZ2VyKExlbmd0aChub3VucykpXSArICIgIiArCnZlcmJzW1JhbmRvbUludGVnZXIoTGVuZ3RoKHZlcmJzKSldICsgIiB0aGUgIiArCm5vdW5zW1JhbmRvbUludGVnZXIoTGVuZ3RoKG5vdW5zKSldICsgIiB3aXRoIHRoZSAiICsKbm91bnNbUmFuZG9tSW50ZWdlcihMZW5ndGgobm91bnMpKV0gKyAiLiI7Cgo=");
+%/mathpiper
+
+
+%mathpiper,name="Problem 8",subtype="problem",globalStateShow="true",truncate="1000",timeout="5000"
+
+nouns := ["dog", "cat", "man", "stick"];
+
+verbs := ["poked", "hit", "tickled", "lifted"];
+
+adjectives := ["big", "intelligent", "kind", "arrogant"];
+
+"The " + 
+
+adjectives[RandomInteger(Length(adjectives))] + " " +
+nouns[RandomInteger(Length(nouns))] + " " +
+verbs[RandomInteger(Length(verbs))] + " the " +
+adjectives[RandomInteger(Length(adjectives))] + " " +
+nouns[RandomInteger(Length(nouns))] + " with the " +
+adjectives[RandomInteger(Length(adjectives))] + " " +
+nouns[RandomInteger(Length(nouns))] + ".";
+
+
+
+%/mathpiper
+
+    %output,parent="Problem 8",mpversion=".257",preserve="false"
+      Result: "The kind cat poked the arrogant stick with the big stick."
+.   %/output
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 8"
+
+FoldGrade("MathPiper version >= .257", 1, True)
+{
+    StringToNumber(Version()) >=? .257;
+}
+
+// --------------------------------------------------------
+    
+LocalSymbols(foldResult)
+{
+    ?echoAppendList := [];
+    
+    // --------------------------------------------------------
+                
+    FoldGrade("No \"Echo\" procedures are used ", 1, True)
+    LocalSymbols(procedureNames, procedureCount)
+    {
+        procedureNames := ProcedureListAll(?foldCode);
+        procedureCount := Count(procedureNames,"Echo");
+        procedureCount =? 0;
+    }
+
+    // --------------------------------------------------------
+
+    foldResult := Eval(Eval(?foldCode));
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a string that is longer than 10 characters ", 1, True)
+    {
+        String?(foldResult) &? Length(foldResult) >? 10; 
+    }
+    
+}
+    
+%/mathpiper_grade
+
+%/group
+

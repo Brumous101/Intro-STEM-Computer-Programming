@@ -1,0 +1,20 @@
+%info,parentFoldType="mathpiper",parent="Problem 0",sequence="1",timestamp="2018-08-30 16:40:28.508",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶[¶["firstName", "Kyle"],¶["lastName", "Johnson"],¶["ssuIDNumber", "264694"],¶];
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice1",sequence="2",timestamp="2018-08-30 16:41:27.274",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶Practice(NumberOfVariables:2, CorrectInARow:3, NumberOfReassignments:1, VariableRange:0 .. 9);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice2",sequence="3",timestamp="2018-08-30 16:42:59.704",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶Practice(NumberOfVariables:3, CorrectInARow:3, NumberOfReassignments:1, VariableRange:0 .. 9);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice3",sequence="4",timestamp="2018-08-30 16:44:39.136",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.215",mpversion=".257"
+¶Practice(NumberOfVariables:4, CorrectInARow:3, NumberOfReassignments:3, VariableRange:0 .. 9);
+
+%/info
+

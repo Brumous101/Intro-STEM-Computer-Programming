@@ -1,0 +1,1127 @@
+v.05
+
+exam_1_dry_run_problems_b.mpws
+
+Complete all of the problems in this worksheet by
+placing the code you write for each problem into
+the empty fold which is provided in each problem
+section. Each empty fold has a subtype attribute
+named "exercise". Immediately below each empty
+fold is a mathpiper_grade fold that contains code
+which will automatically grade the code you place
+into the fold above it.
+
+Periodically, when you are writing your program
+and it runs without throwing an exception,
+evaluate its mathpiper_grade fold to see how many
+assessment units your program has gained so far.
+You can run the mathpiper_grade fold for each
+exercise as many times as you would like.
+
+Further information:
+
+- Do not use the "Echo" or "Write" procedures in
+your programs unless you are using them for
+debugging. Remove all procedures from your code
+that produce side effects output before submitting
+your worksheet.
+
+- The string "Head" is not equal to the string
+"HEAD".
+
+- The "truncate" attribute in a fold header limits
+the amount of output that a program will insert
+into the worksheet. This reduces the chances of
+crashing MathPiperIDE.
+
+- The "timeout" attribute in a fold header stops a
+running program after the specified number of
+milliseconds. This prevents programs that contain
+infinite loops from locking up MathPiperIDE.
+
+
+
+%group,name="Problem 0",description="Programmer's information."
+========================================================================================================
+Problem 0
+
+In the following fold, replace "xxx" with your
+first name, replace "yyy" with your last name, and
+replace "000000" with your SSU ID number:
+
+%mathpiper,name="Problem 0",subtype="problem",unassign_all="true",truncate="6000",timeout="5000"
+
+[
+["firstName", "Kyle"],
+["lastName", "Johnson"],
+["ssuIDNumber", "264694"],
+];
+
+%/mathpiper
+
+    %output,parent="Problem 0",mpversion=".257",preserve="false"
+            Result: [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]]
+.   %/output
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 0"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+    FoldGrade("The code does not produce side effect output", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'firstName' a string that is not 'xxx'", 1, True)
+    {
+        String?(foldResult["firstName"]) &? foldResult["firstName"] !=? "xxx";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'lastName' is a string that is not 'yyy'", 1, True)
+    {
+        String?(foldResult["lastName"]) &? foldResult["lastName"] !=? "yyy";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'ssuIDNumber' is not '000000'", 1, True)
+    {
+        foldResult["ssuIDNumber"] !=? "000000" &? foldResult["ssuIDNumber"] !=? 0;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 0",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]];
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .257. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The variable 'firstName' a string that is not 'xxx'. (1/1)
+        PASS: The variable 'lastName' is a string that is not 'yyy'. (1/1)
+        PASS: The variable 'ssuIDNumber' is not '000000'. (1/1)
+      
+        13/13 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+%group,name="Problem 1",description="One through five twice in a list."
+========================================================================================================
+Problem 1
+
+Write a program that uses a variable named
+"index", two While() loops, and one or two
+Append!() procedures to build the following list
+and return it as a result:
+
+[1,2,3,4,5,1,2,3,4,5]
+
+Use a variable named "resultList" to hold the new list.
+
+
+%mathpiper,name="Problem 1",subtype="hint"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgppbmRleCA6PSAxOwoKV2hpbGUoaW5kZXggPD0/IDUpCnsKICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgaW5kZXgpOwogICAgCiAgICBpbmRleCA6PSBpbmRleCArIDE7Cn0KCgppbmRleCA6PSAxOwoKV2hpbGUoaW5kZXggPD0/IDUpCnsKICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgaW5kZXgpOwogICAgCiAgICBpbmRleCA6PSBpbmRleCArIDE7Cn0KCnJlc3VsdExpc3Q7Cgo=");
+%/mathpiper
+
+
+%mathpiper,name="Problem 1",subtype="problem",unassign_all="true",globalStateShow="true",truncate="6000",timeout="5000"
+
+resultList := [];
+
+index := 1;
+
+While(index <=? 5)
+{
+    Append!(resultList,index);
+  
+    index := (index + 1);
+    
+}
+
+index := 1;
+
+While(index <=? 5)
+{
+    Append!(resultList,index);
+  
+    index := (index + 1);
+    
+}
+
+resultList;
+
+%/mathpiper
+
+    %output,parent="Problem 1",mpversion=".257",preserve="false"
+      Result: [1,2,3,4,5,1,2,3,4,5]
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 1",assessment_unit="points"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+    FoldGrade("The code does not produce side effect output", 1, True)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+        
+    FoldGrade("The result is a list", 1, True) 
+    {
+        List?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The Append!() procedure is used", 1, True)
+    LocalSymbols(procedureNames)
+    {
+        
+        procedureNames := ProcedureList(?foldCode);
+        Contains?(procedureNames,"Append!");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The Append!() procedure's first argument is 'resultList'", 1, True)
+    {
+        PositionsPattern2(?foldCode, '( Append!(a_, b_)::(a =? 'resultList))) !=? [];
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The expression 'resultList;' is the last expression in the fold", 1, True)
+    LocalSymbols(mainPosition)
+    {
+        ?foldCode[1][Length(?foldCode[1])] =? 'resultList;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 1, True)
+    LocalSymbols(values)
+    {
+        values := SubtreesPattern(?foldCode, a_List? );
+        
+        !? Contains?(values, [1,2,3,4,5,1,2,3,4,5]) &?
+        !? Contains?(values, [1,2,3,4,5]);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable name \"index\" is used", 1, True)
+    {
+        Contains?(VarList(?foldCode), 'index);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 1, True) 
+    {
+        foldResult =? [1,2,3,4,5,1,2,3,4,5];
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("Two \"While\" loops are used, and no other loop procedures are used", 1, True)
+    LocalSymbols(procedureNames, procedureCount)
+    {
+        procedureNames := ProcedureListAll(?foldCode);
+        procedureCount := Count(procedureNames,"While");
+        procedureCount =? 2 &? !? Contains?(procedureNames,"Until");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("One or two \"Append!\" procedures are used ", 1, True)
+    LocalSymbols(procedureNames, numberOfAppends)
+    {
+        procedureNames := ProcedureListAll(?foldCode);
+        numberOfAppends := Count(procedureNames,"Append!");
+        numberOfAppends =? 1 |? numberOfAppends =? 2;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 1",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        resultList := [];
+      
+        index := 1;
+      
+        While(index <=? 5)
+        {
+          Append!(resultList,index);
+      
+          index := index + 1;
+        }
+      
+        index := 1;
+      
+        While(index <=? 5)
+        {
+          Append!(resultList,index);
+      
+          index := index + 1;
+        }
+      
+        resultList;
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: MathPiper version >= .257. (1/1)
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The result is a list. (1/1)
+        PASS: The Append!() procedure is used. (1/1)
+        PASS: The Append!() procedure's first argument is 'resultList'. (1/1)
+        PASS: The expression 'resultList;' is the last expression in the fold. (1/1)
+        PASS: The result is not in the code as a literal. (1/1)
+        PASS: The variable name "index" is used. (1/1)
+        PASS: The correct value is returned. (1/1)
+        PASS: Two "While" loops are used, and no other loop procedures are used. (1/1)
+        PASS: One or two "Append!" procedures are used . (1/1)
+      
+        19/19 points
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 2",description="Intersperse numbers."
+========================================================================================================
+Problem 2
+
+Write a program that uses a variable named
+"index", a single While() loop, and two Append!()
+procedures to build the following list and return
+it as a result:
+
+[1,11,2,21,3,31,4,41,5,51]
+
+Hint: there are two sequences of numbers in this
+list. One sequence goes from 1 up to 5 like this: 1,2,3,4,5.
+The other sequence goes from 11 up to 51 like this: 11,21,31,41,51.
+Two variables can be used to generate these two sequences.
+
+Use a variable named "resultList" to hold the new list.
+
+
+%mathpiper,name="Problem 2",subtype="hint"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgoKCmluZGV4IDo9IDE7CgppbmRleDIgOj0gMTE7CgpXaGlsZShpbmRleCA8PT8gNSkKewogICAgQXBwZW5kIShyZXN1bHRMaXN0LCBpbmRleCk7CiAgICAKICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgaW5kZXgyKTsKICAgIAogICAgaW5kZXggOj0gaW5kZXggKyAxOwogICAgCiAgICBpbmRleDIgOj0gaW5kZXgyICsgMTA7Cn0KCnJlc3VsdExpc3Q7Cgo=");
+%/mathpiper
+
+    %output,parent="Problem 2",mpversion=".257",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 2",subtype="problem",unassign_all="true",globalStateShow="true",truncate="6000",timeout="5000"
+
+resultList := [];
+
+index := 1;
+
+index1 := 1;
+
+index2 := 11;
+
+While(index <=? 5)
+{
+
+    Append!(resultList,index1);
+    
+    Append!(resultList,index2);
+    
+    index1 := (index1 + 1);
+    
+    index2 := (index2 + 10);
+    
+    index := index1;
+
+}
+
+resultList;
+
+%/mathpiper
+
+    %output,parent="Problem 2",mpversion=".257",preserve="false"
+      Result: [1,11,2,21,3,31,4,41,5,51]
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 2",assessment_unit="points"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+
+    //-----------------------------------------------------------------------------------------    
+    
+    FoldGrade("The code does not produce side effect output", 1, True)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a list", 3, True) 
+    {
+        List?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("Two Append!() procedures are used", 3, True)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureListAll(?foldCode);
+        Count(procedureNames,"Append!") =? 2;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The Append!() procedure's first argument is 'resultList'", 3, True)
+    {
+        Length(PositionsPattern2(?foldCode, '( Append!(a_, b_)::(a =? 'resultList)))) =? 2;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The expression 'resultList;' is the last expression in the fold", 3, True)
+    {
+        ?foldCode[1][Length(?foldCode[1])] =? 'resultList;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable name \"index\" is used", 1, True)
+    {
+        Contains?(VarList(?foldCode), 'index);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 5, True)
+    LocalSymbols(values)
+    {
+        values := SubtreesPattern(?foldCode, a_List? );
+
+        !? Contains?(values, [1,11,2,21,3,31,4,41,5,51]);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 10, True) 
+    {
+        foldResult =? [1,11,2,21,3,31,4,41,5,51];
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("A single \"While\" loop is used, and no other loop procedure is used", 5, True)
+    LocalSymbols(procedureNames, procedureCount)
+    {
+        procedureNames := ProcedureListAll(?foldCode);
+        procedureCount := Count(procedureNames,"While");
+        procedureCount =? 1 &? !? Contains?(procedureNames,"Until");
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 2",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        resultList := [];
+      
+        index := 1;
+      
+        index1 := 1;
+      
+        index2 := 11;
+      
+        While(index <=? 5)
+        {
+          Append!(resultList,index1);
+      
+          Append!(resultList,index2);
+      
+          index1 := index1 + 1;
+      
+          index2 := index2 + 10;
+      
+          index := index1;
+        }
+      
+        resultList;
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: MathPiper version >= .257. (1/1)
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The result is a list. (3/3)
+        PASS: Two Append!() procedures are used. (3/3)
+        PASS: The Append!() procedure's first argument is 'resultList'. (3/3)
+        PASS: The expression 'resultList;' is the last expression in the fold. (3/3)
+        PASS: The variable name "index" is used. (1/1)
+        PASS: The result is not in the code as a literal. (5/5)
+        PASS: The correct value is returned. (10/10)
+        PASS: A single "While" loop is used, and no other loop procedure is used. (5/5)
+      
+        43/43 points
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 3",description="List of integers some skipped."
+========================================================================================================
+Problem 3
+
+Write a program that uses a variable named
+"index", a single While() loop, at least one If()
+procedure, a single Append!() procedure, and no &?
+or |? operators to build the following list and
+return it as a result (Note, some numbers are
+missing from the sequence):
+
+[1,2,4,5,6,7,8,10,11,12,14,15]
+
+Hint: If() procedures can be placed inside of If()
+procedures to achieve the same effect as using one
+or more &? operators in a single If() procedure
+would produce. For example, another way of
+achieving:
+
+If(index !=? 1 &? index !=? 2)
+{
+    //Do something.
+}
+
+is by using nested If() procedures like this:
+
+If(index !=? 1)
+{
+    If(index !=? 2)
+    {
+        // Do something.
+    }
+}
+
+Use a variable named "resultList" to hold the new list.
+
+
+%mathpiper,name="Problem 3",subtype="hint"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgppbmRleCA6PSAxOwoKV2hpbGUoaW5kZXggPD0/IDE1KQp7CiAgICBJZihpbmRleCAhPT8gMykKICAgIHsKICAgICAgICBJZihpbmRleCAhPT8gOSkKICAgICAgICB7CiAgICAgICAgICAgIElmKGluZGV4ICE9PyAxMykKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBpbmRleCk7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CiAgICAKICAgIGluZGV4IDo9IGluZGV4ICsgMTsKfQoKcmVzdWx0TGlzdDsKCg==");
+%/mathpiper
+
+
+%mathpiper,name="Problem 3",subtype="problem",unassign_all="true",globalStateShow="true",truncate="6000",timeout="5000"
+
+//Write a program that uses a variable named
+//"index", a single While() loop, at least one If()
+//procedure, a single Append!() procedure, and no &?
+//or |? operators to build the following list and
+//return it as a result (Note, some numbers are
+//missing from the sequence):
+
+//[1,2,4,5,6,7,8,10,11,12,14,15]
+
+index := 1;
+
+resultList := [];
+
+While(index <=? 15)
+{
+    If(index !=? 3)
+    {
+        If(index !=? 9)
+        {
+            If(index !=? 13)
+            {    
+                Append!(resultList, index);
+            
+                }
+            }
+    }
+    index := (index + 1);
+}
+            
+resultList;
+    
+%/mathpiper
+
+    %output,parent="Problem 3",mpversion=".257",preserve="false"
+      Result: [1,2,4,5,6,7,8,10,11,12,14,15]
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 3",assessment_unit="points"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+    FoldGrade("The code does not produce side effect output", 1, True)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a list", 3, True) 
+    {
+        List?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The Append!() procedure is used once", 3, True)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureListAll(?foldCode);
+        Count(procedureNames,"Append!") =? 1;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The Append!() procedure's first argument is 'resultList'", 3, True)
+    {
+        PositionsPattern2(?foldCode, '( Append!(a_, b_)::(a =? 'resultList))) !=? [];
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The expression 'resultList;' is the last expression in the fold", 3, True)
+    LocalSymbols(mainPosition)
+    {
+        ?foldCode[1][Length(?foldCode[1])] =? 'resultList;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 5, True)
+    LocalSymbols(values)
+    {
+        values := SubtreesPattern(?foldCode, a_List? );
+
+        !? Contains?(values, [1,2,4,5,6,7,8,10,11,12,14,15]);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable name \"index\" is used", 1, True)
+    {
+        Contains?(VarList(?foldCode), 'index);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 10, True) 
+    {
+        foldResult =? [1,2,4,5,6,7,8,10,11,12,14,15];
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("A single \"While\" loop is used, and no other loop procedure is used", 3, True)
+    LocalSymbols(procedureNames, procedureCount)
+    {
+        procedureNames := ProcedureListAll(?foldCode);
+        procedureCount := Count(procedureNames,"While");
+        procedureCount =? 1 &? !? Contains?(procedureNames,"Until");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("One or more \"If\" procedures are used ", 3, True)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        Contains?(procedureNames,"If");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The operators \"&?\" and \"|?\" are not used ", 5, True)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        !? Contains?(procedureNames,"&?") &?
+        !? Contains?(procedureNames,"|?");
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 3",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        index := 1;
+      
+        resultList := [];
+      
+        While(index <=? 15)
+        {
+          If(index !=? 3)
+          {
+            If(index !=? 9)
+            {
+              If(index !=? 13)
+              {
+                Append!(resultList,index);
+              }
+            }
+          }
+      
+          index := index + 1;
+        }
+      
+        resultList;
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: MathPiper version >= .257. (1/1)
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The result is a list. (3/3)
+        PASS: The Append!() procedure is used once. (3/3)
+        PASS: The Append!() procedure's first argument is 'resultList'. (3/3)
+        PASS: The expression 'resultList;' is the last expression in the fold. (3/3)
+        PASS: The result is not in the code as a literal. (5/5)
+        PASS: The variable name "index" is used. (1/1)
+        PASS: The correct value is returned. (10/10)
+        PASS: A single "While" loop is used, and no other loop procedure is used. (3/3)
+        PASS: One or more "If" procedures are used . (3/3)
+        PASS: The operators "&?" and "|?" are not used . (5/5)
+      
+        49/49 points
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 4",description="List of integers some duplicated."
+========================================================================================================
+Problem 4
+
+Write a program that uses a variable named
+"index", a single While() loop, at least one If()
+procedure, a four Append!() procedures, and no &?
+or |? operators to build the following list and
+return it as a result (Note, some numbers are
+missing from the sequence):
+
+[1,2,3,3,4,5,6,7,8,9,9,10,11,12,13,13,14,15]
+
+Hint: If() procedures can be placed one after the
+other in sequence to achieve the same effect as
+using one or more |? operators. For example,
+another way of achieving:
+
+If(index =? 1 |? index =? 2)
+{
+    Echo("Hello");
+}
+
+is by using nested If() procedures like this:
+
+If(index =? 1)
+{
+    Echo("Hello");
+}
+
+If(index =? 2)
+{
+    Echo("Hello");
+}
+
+
+Use a variable named "resultList" to hold the new list.
+
+
+%mathpiper,name="Problem 4",subtype="hint"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgppbmRleCA6PSAxOwoKV2hpbGUoaW5kZXggPD0/IDE1KQp7CiAgICBBcHBlbmQhKHJlc3VsdExpc3QsIGluZGV4KTsKICAgIAogICAgSWYoaW5kZXggPT8gMykKICAgIHsKICAgICAgICBBcHBlbmQhKHJlc3VsdExpc3QsIGluZGV4KTsKICAgIH0KICAgIAogICAgSWYoaW5kZXggPT8gOSkKICAgIHsKICAgICAgICBBcHBlbmQhKHJlc3VsdExpc3QsIGluZGV4KTsKICAgIH0KCiAgICBJZihpbmRleCA9PyAxMykKICAgIHsKICAgICAgICBBcHBlbmQhKHJlc3VsdExpc3QsIGluZGV4KTsKICAgIH0KCiAgICBpbmRleCA6PSBpbmRleCArIDE7Cn0KCnJlc3VsdExpc3Q7Cgo=");
+%/mathpiper
+
+
+%mathpiper,name="Problem 4",subtype="problem",unassign_all="true",globalStateShow="true",truncate="6000",timeout="5000"
+
+// 3x2 9x2 13x2
+
+index := 1;
+
+resultList := [];
+
+While(index <=? 15)
+{
+    Append!(resultList, index);
+    
+    If(index =? 3)
+    {
+        Append!(resultList, index);
+    }
+    If(index =? 9)
+    {
+        Append!(resultList, index);
+    }
+    If(index =? 13)
+    {
+        Append!(resultList, index);
+    }
+    
+    index := (index + 1);
+}
+            
+resultList;
+    
+
+%/mathpiper
+
+    %output,parent="Problem 4",mpversion=".257",preserve="false"
+      Result: [1,2,3,3,4,5,6,7,8,9,9,10,11,12,13,13,14,15]
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 4",assessment_unit="points"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+    FoldGrade("The code does not produce side effect output", 1, True)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a list", 3, True) 
+    {
+        List?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The Append!() procedure is used four times", 3, True)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureListAll(?foldCode);
+        Count(procedureNames,"Append!") =? 4;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The Append!() procedure's first argument is 'resultList'", 3, True)
+    {
+        PositionsPattern2(?foldCode, '( Append!(a_, b_)::(a =? 'resultList))) !=? [];
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The expression 'resultList;' is the last expression in the fold", 3, True)
+    LocalSymbols(mainPosition)
+    {
+        ?foldCode[1][Length(?foldCode[1])] =? 'resultList;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 5, True)
+    LocalSymbols(values)
+    {
+        values := SubtreesPattern(?foldCode, a_List? );
+
+        !? Contains?(values, [1,2,3,3,4,5,6,7,8,9,9,10,11,12,13,13,14,15]);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable name \"index\" is used", 1, True)
+    {
+        Contains?(VarList(?foldCode), 'index);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 10, True) 
+    {
+        foldResult =? [1,2,3,3,4,5,6,7,8,9,9,10,11,12,13,13,14,15];
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("A single \"While\" loop is used, and no other loop procedure is used", 3, True)
+    LocalSymbols(procedureNames, procedureCount)
+    {
+        procedureNames := ProcedureListAll(?foldCode);
+        procedureCount := Count(procedureNames,"While");
+        procedureCount =? 1 &? !? Contains?(procedureNames,"Until");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("One or more \"If\" procedures are used ", 3, True)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        Contains?(procedureNames,"If");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The operators \"&?\" and \"|?\" are not used ", 5, True)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        !? Contains?(procedureNames,"&?") &?
+        !? Contains?(procedureNames,"|?");
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 4",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        index := 1;
+      
+        resultList := [];
+      
+        While(index <=? 15)
+        {
+          Append!(resultList,index);
+      
+          If(index =? 3)
+          {
+            Append!(resultList,index);
+          }
+      
+          If(index =? 9)
+          {
+            Append!(resultList,index);
+          }
+      
+          If(index =? 13)
+          {
+            Append!(resultList,index);
+          }
+      
+          index := index + 1;
+        }
+      
+        resultList;
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: MathPiper version >= .257. (1/1)
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The result is a list. (3/3)
+        PASS: The Append!() procedure is used four times. (3/3)
+        PASS: The Append!() procedure's first argument is 'resultList'. (3/3)
+        PASS: The expression 'resultList;' is the last expression in the fold. (3/3)
+        PASS: The result is not in the code as a literal. (5/5)
+        PASS: The variable name "index" is used. (1/1)
+        PASS: The correct value is returned. (10/10)
+        PASS: A single "While" loop is used, and no other loop procedure is used. (3/3)
+        PASS: One or more "If" procedures are used . (3/3)
+        PASS: The operators "&?" and "|?" are not used . (5/5)
+      
+        49/49 points
+.   %/output
+
+%/group

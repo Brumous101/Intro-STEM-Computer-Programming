@@ -1,0 +1,650 @@
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 0",sequence="1",timestamp="2018-10-11 16:25:00.338",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+¶[¶["firstName", "Kyle"],¶["lastName", "Johnson"],¶["ssuIDNumber", "264694"],¶];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 0",sequence="2",timestamp="2018-10-11 16:25:15.716",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:27:52.16",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+[¶    combineProcedure(["a","b","c"], [6,7,8]),¶    combineProcedure([6,7,8,9,0], ["a","b","c","d"])¶];
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 1",sequence="3",timestamp="2018-10-11 16:28:16.445",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiY29tYmluZVByb2NlZHVyZSIsIFsibGlzdDEiLCAibGlzdDIiXSkKewogICAgTG9jYWwocmVzdWx0TGlzdCwgbGlzdDFMZW5ndGgsIGxpc3QyTGVuZ3RoLCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIAogICAgbGlzdDFMZW5ndGggOj0gTGVuZ3RoKGxpc3QxKTsKICAgIAogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QxTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDFbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gICAgCiAgICAKICAgIGxpc3QyTGVuZ3RoIDo9IExlbmd0aChsaXN0Mik7CgogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QyTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDJbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICByZXN1bHRMaXN0Owp9CgoKLy8gVGVzdGluZyBjb2RlLgpbCiAgICBjb21iaW5lUHJvY2VkdXJlKFsiYSIsImIiLCJjIl0sIFs2LDcsOF0pLAogICAgY29tYmluZVByb2NlZHVyZShbNiw3LDgsOSwwXSwgWyJhIiwiYiIsImMiLCJkIl0pCl07Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 1",sequence="4",timestamp="2018-10-11 16:29:03.924",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiY29tYmluZVByb2NlZHVyZSIsIFsibGlzdDEiLCAibGlzdDIiXSkKewogICAgTG9jYWwocmVzdWx0TGlzdCwgbGlzdDFMZW5ndGgsIGxpc3QyTGVuZ3RoLCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIAogICAgbGlzdDFMZW5ndGggOj0gTGVuZ3RoKGxpc3QxKTsKICAgIAogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QxTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDFbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gICAgCiAgICAKICAgIGxpc3QyTGVuZ3RoIDo9IExlbmd0aChsaXN0Mik7CgogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QyTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDJbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICByZXN1bHRMaXN0Owp9CgoKLy8gVGVzdGluZyBjb2RlLgpbCiAgICBjb21iaW5lUHJvY2VkdXJlKFsiYSIsImIiLCJjIl0sIFs2LDcsOF0pLAogICAgY29tYmluZVByb2NlZHVyZShbNiw3LDgsOSwwXSwgWyJhIiwiYiIsImMiLCJkIl0pCl07Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 1",sequence="5",timestamp="2018-10-11 16:29:48.31",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiY29tYmluZVByb2NlZHVyZSIsIFsibGlzdDEiLCAibGlzdDIiXSkKewogICAgTG9jYWwocmVzdWx0TGlzdCwgbGlzdDFMZW5ndGgsIGxpc3QyTGVuZ3RoLCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIAogICAgbGlzdDFMZW5ndGggOj0gTGVuZ3RoKGxpc3QxKTsKICAgIAogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QxTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDFbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gICAgCiAgICAKICAgIGxpc3QyTGVuZ3RoIDo9IExlbmd0aChsaXN0Mik7CgogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QyTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDJbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICByZXN1bHRMaXN0Owp9CgoKLy8gVGVzdGluZyBjb2RlLgpbCiAgICBjb21iaW5lUHJvY2VkdXJlKFsiYSIsImIiLCJjIl0sIFs2LDcsOF0pLAogICAgY29tYmluZVByb2NlZHVyZShbNiw3LDgsOSwwXSwgWyJhIiwiYiIsImMiLCJkIl0pCl07Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 1",sequence="6",timestamp="2018-10-11 16:30:29.891",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiY29tYmluZVByb2NlZHVyZSIsIFsibGlzdDEiLCAibGlzdDIiXSkKewogICAgTG9jYWwocmVzdWx0TGlzdCwgbGlzdDFMZW5ndGgsIGxpc3QyTGVuZ3RoLCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIAogICAgbGlzdDFMZW5ndGggOj0gTGVuZ3RoKGxpc3QxKTsKICAgIAogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QxTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDFbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gICAgCiAgICAKICAgIGxpc3QyTGVuZ3RoIDo9IExlbmd0aChsaXN0Mik7CgogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QyTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDJbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICByZXN1bHRMaXN0Owp9CgoKLy8gVGVzdGluZyBjb2RlLgpbCiAgICBjb21iaW5lUHJvY2VkdXJlKFsiYSIsImIiLCJjIl0sIFs2LDcsOF0pLAogICAgY29tYmluZVByb2NlZHVyZShbNiw3LDgsOSwwXSwgWyJhIiwiYiIsImMiLCJkIl0pCl07Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 1",sequence="7",timestamp="2018-10-11 16:30:43.318",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiY29tYmluZVByb2NlZHVyZSIsIFsibGlzdDEiLCAibGlzdDIiXSkKewogICAgTG9jYWwocmVzdWx0TGlzdCwgbGlzdDFMZW5ndGgsIGxpc3QyTGVuZ3RoLCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIAogICAgbGlzdDFMZW5ndGggOj0gTGVuZ3RoKGxpc3QxKTsKICAgIAogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QxTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDFbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gICAgCiAgICAKICAgIGxpc3QyTGVuZ3RoIDo9IExlbmd0aChsaXN0Mik7CgogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QyTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDJbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICByZXN1bHRMaXN0Owp9CgoKLy8gVGVzdGluZyBjb2RlLgpbCiAgICBjb21iaW5lUHJvY2VkdXJlKFsiYSIsImIiLCJjIl0sIFs2LDcsOF0pLAogICAgY29tYmluZVByb2NlZHVyZShbNiw3LDgsOSwwXSwgWyJhIiwiYiIsImMiLCJkIl0pCl07Cgo=");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:30:56.838",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 1",sequence="8",timestamp="2018-10-11 16:31:42.478",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiY29tYmluZVByb2NlZHVyZSIsIFsibGlzdDEiLCAibGlzdDIiXSkKewogICAgTG9jYWwocmVzdWx0TGlzdCwgbGlzdDFMZW5ndGgsIGxpc3QyTGVuZ3RoLCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIAogICAgbGlzdDFMZW5ndGggOj0gTGVuZ3RoKGxpc3QxKTsKICAgIAogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QxTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDFbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gICAgCiAgICAKICAgIGxpc3QyTGVuZ3RoIDo9IExlbmd0aChsaXN0Mik7CgogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QyTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDJbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICByZXN1bHRMaXN0Owp9CgoKLy8gVGVzdGluZyBjb2RlLgpbCiAgICBjb21iaW5lUHJvY2VkdXJlKFsiYSIsImIiLCJjIl0sIFs2LDcsOF0pLAogICAgY29tYmluZVByb2NlZHVyZShbNiw3LDgsOSwwXSwgWyJhIiwiYiIsImMiLCJkIl0pCl07Cgo=");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:32:01.106",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 1",sequence="9",timestamp="2018-10-11 16:32:45.193",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiY29tYmluZVByb2NlZHVyZSIsIFsibGlzdDEiLCAibGlzdDIiXSkKewogICAgTG9jYWwocmVzdWx0TGlzdCwgbGlzdDFMZW5ndGgsIGxpc3QyTGVuZ3RoLCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIAogICAgbGlzdDFMZW5ndGggOj0gTGVuZ3RoKGxpc3QxKTsKICAgIAogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QxTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDFbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gICAgCiAgICAKICAgIGxpc3QyTGVuZ3RoIDo9IExlbmd0aChsaXN0Mik7CgogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QyTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDJbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICByZXN1bHRMaXN0Owp9CgoKLy8gVGVzdGluZyBjb2RlLgpbCiAgICBjb21iaW5lUHJvY2VkdXJlKFsiYSIsImIiLCJjIl0sIFs2LDcsOF0pLAogICAgY29tYmluZVByb2NlZHVyZShbNiw3LDgsOSwwXSwgWyJhIiwiYiIsImMiLCJkIl0pCl07Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 1",sequence="10",timestamp="2018-10-11 16:33:04.214",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiY29tYmluZVByb2NlZHVyZSIsIFsibGlzdDEiLCAibGlzdDIiXSkKewogICAgTG9jYWwocmVzdWx0TGlzdCwgbGlzdDFMZW5ndGgsIGxpc3QyTGVuZ3RoLCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIAogICAgbGlzdDFMZW5ndGggOj0gTGVuZ3RoKGxpc3QxKTsKICAgIAogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QxTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDFbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gICAgCiAgICAKICAgIGxpc3QyTGVuZ3RoIDo9IExlbmd0aChsaXN0Mik7CgogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QyTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDJbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICByZXN1bHRMaXN0Owp9CgoKLy8gVGVzdGluZyBjb2RlLgpbCiAgICBjb21iaW5lUHJvY2VkdXJlKFsiYSIsImIiLCJjIl0sIFs2LDcsOF0pLAogICAgY29tYmluZVByb2NlZHVyZShbNiw3LDgsOSwwXSwgWyJhIiwiYiIsImMiLCJkIl0pCl07Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 1",sequence="11",timestamp="2018-10-11 16:33:15.399",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiY29tYmluZVByb2NlZHVyZSIsIFsibGlzdDEiLCAibGlzdDIiXSkKewogICAgTG9jYWwocmVzdWx0TGlzdCwgbGlzdDFMZW5ndGgsIGxpc3QyTGVuZ3RoLCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIAogICAgbGlzdDFMZW5ndGggOj0gTGVuZ3RoKGxpc3QxKTsKICAgIAogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QxTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDFbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gICAgCiAgICAKICAgIGxpc3QyTGVuZ3RoIDo9IExlbmd0aChsaXN0Mik7CgogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QyTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDJbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICByZXN1bHRMaXN0Owp9CgoKLy8gVGVzdGluZyBjb2RlLgpbCiAgICBjb21iaW5lUHJvY2VkdXJlKFsiYSIsImIiLCJjIl0sIFs2LDcsOF0pLAogICAgY29tYmluZVByb2NlZHVyZShbNiw3LDgsOSwwXSwgWyJhIiwiYiIsImMiLCJkIl0pCl07Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 1",sequence="12",timestamp="2018-10-11 16:33:48.964",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiY29tYmluZVByb2NlZHVyZSIsIFsibGlzdDEiLCAibGlzdDIiXSkKewogICAgTG9jYWwocmVzdWx0TGlzdCwgbGlzdDFMZW5ndGgsIGxpc3QyTGVuZ3RoLCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIAogICAgbGlzdDFMZW5ndGggOj0gTGVuZ3RoKGxpc3QxKTsKICAgIAogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QxTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDFbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gICAgCiAgICAKICAgIGxpc3QyTGVuZ3RoIDo9IExlbmd0aChsaXN0Mik7CgogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QyTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDJbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICByZXN1bHRMaXN0Owp9CgoKLy8gVGVzdGluZyBjb2RlLgpbCiAgICBjb21iaW5lUHJvY2VkdXJlKFsiYSIsImIiLCJjIl0sIFs2LDcsOF0pLAogICAgY29tYmluZVByb2NlZHVyZShbNiw3LDgsOSwwXSwgWyJhIiwiYiIsImMiLCJkIl0pCl07Cgo=");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:34:34.889",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:35:17.575",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+Length(list1)
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:35:36.085",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+index := 1;¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:36:07.941",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:36:11.339",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:36:11.623",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:36:40.77",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:37:15.924",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+While(index <=? list1Length)¶{¶    Append!(resultList, list1[index]);¶    ¶    index := (index + 1);¶}
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 1",sequence="13",timestamp="2018-10-11 16:38:04.295",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiY29tYmluZVByb2NlZHVyZSIsIFsibGlzdDEiLCAibGlzdDIiXSkKewogICAgTG9jYWwocmVzdWx0TGlzdCwgbGlzdDFMZW5ndGgsIGxpc3QyTGVuZ3RoLCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIAogICAgbGlzdDFMZW5ndGggOj0gTGVuZ3RoKGxpc3QxKTsKICAgIAogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QxTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDFbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gICAgCiAgICAKICAgIGxpc3QyTGVuZ3RoIDo9IExlbmd0aChsaXN0Mik7CgogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QyTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDJbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICByZXN1bHRMaXN0Owp9CgoKLy8gVGVzdGluZyBjb2RlLgpbCiAgICBjb21iaW5lUHJvY2VkdXJlKFsiYSIsImIiLCJjIl0sIFs2LDcsOF0pLAogICAgY29tYmluZVByb2NlZHVyZShbNiw3LDgsOSwwXSwgWyJhIiwiYiIsImMiLCJkIl0pCl07Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 1",sequence="14",timestamp="2018-10-11 16:38:27.541",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiY29tYmluZVByb2NlZHVyZSIsIFsibGlzdDEiLCAibGlzdDIiXSkKewogICAgTG9jYWwocmVzdWx0TGlzdCwgbGlzdDFMZW5ndGgsIGxpc3QyTGVuZ3RoLCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIAogICAgbGlzdDFMZW5ndGggOj0gTGVuZ3RoKGxpc3QxKTsKICAgIAogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QxTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDFbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gICAgCiAgICAKICAgIGxpc3QyTGVuZ3RoIDo9IExlbmd0aChsaXN0Mik7CgogICAgaW5kZXggOj0gMTsKICAgIAogICAgV2hpbGUoaW5kZXggPD0/IGxpc3QyTGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgbGlzdDJbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIC8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICByZXN1bHRMaXN0Owp9CgoKLy8gVGVzdGluZyBjb2RlLgpbCiAgICBjb21iaW5lUHJvY2VkdXJlKFsiYSIsImIiLCJjIl0sIFs2LDcsOF0pLAogICAgY29tYmluZVByb2NlZHVyZShbNiw3LDgsOSwwXSwgWyJhIiwiYiIsImMiLCJkIl0pCl07Cgo=");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:38:41.874",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="15",timestamp="2018-10-11 16:38:46.503",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+¶Procedure("combineProcedure", ["list1", "list2"])¶{¶    Local(resultList, list1Length, list2Length, index);¶¶    resultList := [];¶¶//---------------------¶list1Length := Length(list1);¶¶index := 1;¶¶While(index <=? list1Length)¶{¶    Append!(resultList, list1[index]);¶    ¶    index := (index + 1);¶}¶¶//----------------------¶list2Length := Length(list2);¶¶index := 1;¶¶While(index <=? list2Length)¶{¶    Append!(resultList, list2[index]);¶    ¶    index := (index + 1);¶}¶¶¶//----------------------¶¶    resultList;¶[¶    combineProcedure(["a","b","c"], [6,7,8]),¶    combineProcedure([6,7,8,9,0], ["a","b","c","d"])¶];
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:38:49.219",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    %error,parent="Problem 1",mpversion=".259",preserve="false"¶      Result: Error encountered during parsing: Expression must end with a semi-colon ***( ; )*** or a closing brace  ***( } )***  Error on or before line 225 starting at index 2.¶.   %/error
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:38:55.14",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="16",timestamp="2018-10-11 16:39:02.506",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+¶Procedure("combineProcedure", ["list1", "list2"])¶{¶    Local(resultList, list1Length, list2Length, index);¶¶    resultList := [];¶¶//---------------------¶list1Length := Length(list1);¶¶index := 1;¶¶While(index <=? list1Length)¶{¶    Append!(resultList, list1[index]);¶    ¶    index := (index + 1);¶}¶¶//----------------------¶list2Length := Length(list2);¶¶index := 1;¶¶While(index <=? list2Length)¶{¶    Append!(resultList, list2[index]);¶    ¶    index := (index + 1);¶}¶¶¶//----------------------¶¶    resultList;¶}¶¶[¶    combineProcedure(["a","b","c"], [6,7,8]),¶    combineProcedure([6,7,8,9,0], ["a","b","c","d"])¶];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 1",sequence="17",timestamp="2018-10-11 16:39:22.339",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:40:50.515",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+timesTwoProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 2",sequence="18",timestamp="2018-10-11 16:41:54.403",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Hint("ClByb2NlZHVyZSgidGltZXNUd29Qcm9jZWR1cmUiLCBbXSkKewogICAgTG9jYWwocmVzdWx0TGlzdCwgaW5kZXgpOwogICAgCiAgICByZXN1bHRMaXN0IDo9IFtdOwogICAgCiAgICBpbmRleCA6PSAxOwogICAgCiAgICBXaGlsZShpbmRleCA8PT8gNjQpCiAgICB7CiAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBpbmRleCk7CiAgICAgICAgCiAgICAgICAgaW5kZXggOj0gaW5kZXggKiAyOwogICAgfQogICAgCiAgICByZXN1bHRMaXN0Owp9CgoKClByb2NlZHVyZSgiZGl2aWRlVHdvUHJvY2VkdXJlIiwgW10pCnsKICAgIExvY2FsKHJlc3VsdExpc3QsIGluZGV4KTsKICAgIAogICAgcmVzdWx0TGlzdCA6PSBbXTsKICAgIAogICAgaW5kZXggOj0gMzI7CiAgICAKICAgIFdoaWxlKGluZGV4ID49PyAxKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgaW5kZXgpOwogICAgICAgIAogICAgICAgIGluZGV4IDo9IGluZGV4IC8gMjsKICAgIH0KICAgIAogICAgcmVzdWx0TGlzdDsKfQoKCgpQcm9jZWR1cmUoIm1haW5Qcm9jZWR1cmUiLCBbXSkKewogICAgQ29uY2F0KHRpbWVzVHdvUHJvY2VkdXJlKCksIGRpdmlkZVR3b1Byb2NlZHVyZSgpKTsKfQoKCm1haW5Qcm9jZWR1cmUoKTsKCg==");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 2",sequence="19",timestamp="2018-10-11 16:42:06.293",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Hint("ClByb2NlZHVyZSgidGltZXNUd29Qcm9jZWR1cmUiLCBbXSkKewogICAgTG9jYWwocmVzdWx0TGlzdCwgaW5kZXgpOwogICAgCiAgICByZXN1bHRMaXN0IDo9IFtdOwogICAgCiAgICBpbmRleCA6PSAxOwogICAgCiAgICBXaGlsZShpbmRleCA8PT8gNjQpCiAgICB7CiAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBpbmRleCk7CiAgICAgICAgCiAgICAgICAgaW5kZXggOj0gaW5kZXggKiAyOwogICAgfQogICAgCiAgICByZXN1bHRMaXN0Owp9CgoKClByb2NlZHVyZSgiZGl2aWRlVHdvUHJvY2VkdXJlIiwgW10pCnsKICAgIExvY2FsKHJlc3VsdExpc3QsIGluZGV4KTsKICAgIAogICAgcmVzdWx0TGlzdCA6PSBbXTsKICAgIAogICAgaW5kZXggOj0gMzI7CiAgICAKICAgIFdoaWxlKGluZGV4ID49PyAxKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgaW5kZXgpOwogICAgICAgIAogICAgICAgIGluZGV4IDo9IGluZGV4IC8gMjsKICAgIH0KICAgIAogICAgcmVzdWx0TGlzdDsKfQoKCgpQcm9jZWR1cmUoIm1haW5Qcm9jZWR1cmUiLCBbXSkKewogICAgQ29uY2F0KHRpbWVzVHdvUHJvY2VkdXJlKCksIGRpdmlkZVR3b1Byb2NlZHVyZSgpKTsKfQoKCm1haW5Qcm9jZWR1cmUoKTsKCg==");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:42:35.638",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+timesTwoProcedure
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:42:44.304",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:43:08.678",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:43:09.147",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:43:20.195",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:43:22.834",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:43:30.654",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:43:31.441",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:44:05.704",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:44:06.362",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:44:34.184",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:44:34.849",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:44:38.859",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:44:46.364",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:45:01.56",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:45:01.711",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:45:23.031",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:45:27.576",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="20",timestamp="2018-10-11 16:45:42.579",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+¶Procedure(timesTwoProcedure, [])¶{¶    Local(resultList, index);¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    While(index <=? 64)¶    {¶        Append!(resultList, index);¶        ¶        index := (index * 2);¶    }¶}¶¶timeTwoProcedure;¶¶¶¶¶timesTwoProcedure();
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:45:44.389",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    %error,parent="Problem 2",mpversion=".259",preserve="false"¶      Result:  Error: The name of the procedure must be specified using a string.  Error on or before line 488 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="21",timestamp="2018-10-11 16:45:56.572",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+¶Procedure(timesTwoProcedure, [])¶{¶    Local(resultList, index);¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    While(index <=? 64)¶    {¶        Append!(resultList, index);¶        ¶        index := (index * 2);¶    }¶}¶¶timesTwoProcedure();
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:45:58.358",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    %error,parent="Problem 2",mpversion=".259",preserve="false"¶      Result:  Error: The name of the procedure must be specified using a string.  Error on or before line 488 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="22",timestamp="2018-10-11 16:46:23.546",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+¶Procedure("timesTwoProcedure", [])¶{¶    Local(resultList, index);¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    While(index <=? 64)¶    {¶        Append!(resultList, index);¶        ¶        index := (index * 2);¶    }¶}¶¶timesTwoProcedure();
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:46:45.186",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:46:45.186",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="23",timestamp="2018-10-11 16:46:51.838",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+¶Procedure("timesTwoProcedure", [])¶{¶    Local(resultList, index);¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    While(index <=? 64)¶    {¶        Append!(resultList, index);¶        ¶        index := (index * 2);¶    }¶    ¶    resultList;¶}¶¶timesTwoProcedure();
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:47:37.723",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+Procedure("timesTwoProcedure", [])¶{¶    Local(resultList, index);¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    While(index <=? 64)¶    {¶        Append!(resultList, index);¶        ¶        index := (index * 2);¶    }¶    ¶    resultList;¶}¶
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="24",timestamp="2018-10-11 16:48:48.595",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+¶Procedure("timesTwoProcedure", [])¶{¶    Local(resultList, index);¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    While(index <=? 64)¶    {¶        Append!(resultList, index);¶        ¶        index := (index * 2);¶    }¶    ¶    resultList;¶}¶¶Procedure("divideTwoProcedure", [])¶{¶    Local(resultList, index);¶    ¶    resultList := [];¶    ¶    index := 32;¶    ¶    While(index <=? 1)¶    {¶        Append!(resultList, index);¶        ¶        index := (index / 2);¶    }¶    ¶    resultList;¶}¶¶divideTwoProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="25",timestamp="2018-10-11 16:49:09.926",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+¶Procedure("timesTwoProcedure", [])¶{¶    Local(resultList, index);¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    While(index <=? 64)¶    {¶        Append!(resultList, index);¶        ¶        index := (index * 2);¶    }¶    ¶    resultList;¶}¶¶Procedure("divideTwoProcedure", [])¶{¶    Local(resultList, index);¶    ¶    resultList := [];¶    ¶    index := 32;¶    ¶    While(index >=? 1)¶    {¶        Append!(resultList, index);¶        ¶        index := (index / 2);¶    }¶    ¶    resultList;¶}¶¶divideTwoProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 2",sequence="26",timestamp="2018-10-11 16:49:39.708",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Hint("ClByb2NlZHVyZSgidGltZXNUd29Qcm9jZWR1cmUiLCBbXSkKewogICAgTG9jYWwocmVzdWx0TGlzdCwgaW5kZXgpOwogICAgCiAgICByZXN1bHRMaXN0IDo9IFtdOwogICAgCiAgICBpbmRleCA6PSAxOwogICAgCiAgICBXaGlsZShpbmRleCA8PT8gNjQpCiAgICB7CiAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBpbmRleCk7CiAgICAgICAgCiAgICAgICAgaW5kZXggOj0gaW5kZXggKiAyOwogICAgfQogICAgCiAgICByZXN1bHRMaXN0Owp9CgoKClByb2NlZHVyZSgiZGl2aWRlVHdvUHJvY2VkdXJlIiwgW10pCnsKICAgIExvY2FsKHJlc3VsdExpc3QsIGluZGV4KTsKICAgIAogICAgcmVzdWx0TGlzdCA6PSBbXTsKICAgIAogICAgaW5kZXggOj0gMzI7CiAgICAKICAgIFdoaWxlKGluZGV4ID49PyAxKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgaW5kZXgpOwogICAgICAgIAogICAgICAgIGluZGV4IDo9IGluZGV4IC8gMjsKICAgIH0KICAgIAogICAgcmVzdWx0TGlzdDsKfQoKCgpQcm9jZWR1cmUoIm1haW5Qcm9jZWR1cmUiLCBbXSkKewogICAgQ29uY2F0KHRpbWVzVHdvUHJvY2VkdXJlKCksIGRpdmlkZVR3b1Byb2NlZHVyZSgpKTsKfQoKCm1haW5Qcm9jZWR1cmUoKTsKCg==");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:50:56.065",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:51:23.043",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="27",timestamp="2018-10-11 16:52:01.118",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+¶Procedure("timesTwoProcedure", [])¶{¶    Local(resultList, index);¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    While(index <=? 64)¶    {¶        Append!(resultList, index);¶        ¶        index := (index * 2);¶    }¶    ¶    resultList;¶}¶¶Procedure("divideTwoProcedure", [])¶{¶    Local(resultList, index);¶    ¶    resultList := [];¶    ¶    index := 32;¶    ¶    While(index >=? 1)¶    {¶        Append!(resultList, index);¶        ¶        index := (index / 2);¶    }¶    ¶    resultList;¶}¶¶Procedure("mainProcedure",[])¶{¶    Concat(timesTwoProcedure(), divideTwoProcedure());¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 2",sequence="28",timestamp="2018-10-11 16:52:21.3",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:53:23.08",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+a) Create a no parameter procedure named¶"increaseIntegersProcedure" that uses a variable named¶"index", one loop, and one Append! procedure to¶build the following list and return it as a result:¶¶[1,2,3,4,5]
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:54:03.297",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:54:21.614",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:54:26.309",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:54:54.844",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:55:10.303",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:55:10.491",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:55:20.162",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:55:20.362",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:55:33.154",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:55:35.271",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:55:38.259",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:55:48.267",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:55:48.417",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:55:48.496",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:56:02.79",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:56:06.105",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:56:10.039",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:56:18.269",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:56:22.976",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="29",timestamp="2018-10-11 16:56:50.017",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+¶//a) Create a no parameter procedure named¶//"increaseIntegersProcedure" that uses a variable named¶//"index", one loop, and one Append! procedure to¶//build the following list and return it as a result:¶¶//[1,2,3,4,5]¶¶Procedure("increaseIntegersProcedure",[])¶{¶    Local(index, resultList);¶    ¶    index := (index + 1);¶    ¶    resultList := [];¶¶    While(index <=? 5)¶    {¶        Append!(resultList, index);¶        ¶        index := (index + 1);¶        ¶    }¶    ¶    resultList;¶}¶¶increaseIntegersProcedure;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:56:52.415",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    %error,parent="Problem 3",mpversion=".259",preserve="false"¶      Result: The name <increaseIntegersProcedure> is a procedure that cannot be evaluated without arguments.  Error on or before line 1082 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 3",sequence="30",timestamp="2018-10-11 16:57:06.274",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiaW5jcmVhc2VJbnRlZ2Vyc1Byb2NlZHVyZSIsIFtdKQp7CiAgICBMb2NhbChyZXN1bHRMaXN0LCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CiAgICAKICAgIGluZGV4IDo9IDE7CiAgICAKICAgIFdoaWxlKGluZGV4IDw9PyA1KQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgaW5kZXgpOwogICAgICAgIAogICAgICAgIGluZGV4IDo9IGluZGV4ICsgMTsKICAgIH0KICAgIAogICAgcmVzdWx0TGlzdDsKfQoKCgpQcm9jZWR1cmUoImRlY3JlYXNlSW50ZWdlcnNQcm9jZWR1cmUiLCBbXSkKewogICAgTG9jYWwocmVzdWx0TGlzdCwgaW5kZXgpOwogICAgCiAgICByZXN1bHRMaXN0IDo9IFtdOwogICAgCiAgICBpbmRleCA6PSAxMDsKICAgIAogICAgV2hpbGUoaW5kZXggPj0/IDYpCiAgICB7CiAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBpbmRleCk7CiAgICAgICAgCiAgICAgICAgaW5kZXggOj0gaW5kZXggLSAxOwogICAgfQogICAgCiAgICByZXN1bHRMaXN0Owp9CgoKClByb2NlZHVyZSgibWFpblByb2NlZHVyZSIsIFtdKQp7CiAgICBMb2NhbChpbmNyZWFzZUxpc3QsIGluY3JlYXNlTGlzdExlbmd0aCwgZGVjcmVhc2VMaXN0LCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CgogICAgaW5jcmVhc2VMaXN0IDo9IGluY3JlYXNlSW50ZWdlcnNQcm9jZWR1cmUoKTsKICAgIAogICAgaW5jcmVhc2VMaXN0TGVuZ3RoIDo9IExlbmd0aChpbmNyZWFzZUxpc3QpOwogICAgCiAgICBkZWNyZWFzZUxpc3QgOj0gZGVjcmVhc2VJbnRlZ2Vyc1Byb2NlZHVyZSgpOwogICAgCiAgICBpbmRleCA6PSAxOwogICAgCiAgICBXaGlsZShpbmRleCA8PT8gaW5jcmVhc2VMaXN0TGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgaW5jcmVhc2VMaXN0W2luZGV4XSk7CiAgICAgICAgCiAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBkZWNyZWFzZUxpc3RbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIHJlc3VsdExpc3Q7Cn0KCgptYWluUHJvY2VkdXJlKCk7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="31",timestamp="2018-10-11 16:58:07.7",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+¶//a) Create a no parameter procedure named¶//"increaseIntegersProcedure" that uses a variable named¶//"index", one loop, and one Append! procedure to¶//build the following list and return it as a result:¶¶//[1,2,3,4,5]¶¶Procedure("increaseIntegersProcedure",[])¶{¶    Local(index, resultList);¶    ¶    index := (index + 1);¶    ¶    resultList := [];¶¶    While(index <=? 5)¶    {¶        Append!(resultList, index);¶        ¶        index := (index + 1);¶        ¶    }¶    ¶    resultList;¶}¶¶increaseIntegersProcedure();
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:58:10.286",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    %error,parent="Problem 3",mpversion=".259",preserve="false"¶      Result: The variable <index> does not have a value assigned to it.  Error on or before line 1071 starting at index 14.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="32",timestamp="2018-10-11 16:58:31.052",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+¶//a) Create a no parameter procedure named¶//"increaseIntegersProcedure" that uses a variable named¶//"index", one loop, and one Append! procedure to¶//build the following list and return it as a result:¶¶//[1,2,3,4,5]¶¶Procedure("increaseIntegersProcedure",[])¶{¶    Local(index, resultList);¶    ¶    index := 1;¶    ¶    resultList := [];¶¶    While(index <=? 5)¶    {¶        Append!(resultList, index);¶        ¶        index := (index + 1);¶        ¶    }¶    ¶    resultList;¶}¶¶increaseIntegersProcedure();
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 16:58:44.619",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+Procedure("increaseIntegersProcedure",[])¶{¶    Local(index, resultList);¶    ¶    index := 1;¶    ¶    resultList := [];¶¶    While(index <=? 5)¶    {¶        Append!(resultList, index);¶        ¶        index := (index + 1);¶        ¶    }¶    ¶    resultList;¶}¶
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="33",timestamp="2018-10-11 16:59:49.895",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+¶Procedure("increaseIntegersProcedure",[])¶{¶    Local(index, resultList);¶    ¶    index := 1;¶    ¶    resultList := [];¶¶    While(index <=? 5)¶    {¶        Append!(resultList, index);¶        ¶        index := (index + 1);¶        ¶    }¶    ¶    resultList;¶}¶¶Procedure("decreaseIntegersProcedure",[])¶{¶    Local(index, resultList);¶    ¶    index := 10;¶    ¶    resultList := [];¶¶    While(index >=? 6)¶    {¶        Append!(resultList, index);¶        ¶        index := (index - 1);¶        ¶    }¶    ¶    resultList;¶}¶¶decreaseIntegersProcedure();
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:00:17.949",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+c) Create a no parameter procedure named "mainProcedure"¶that uses one loop, the "increaseIntegersProcedure" and the¶"decreaseIntegersProcedure" procedure to build the following ¶list and return it as a result:¶¶[1,10,2,9,3,8,4,7,5,6]¶¶¶Place the following line of code at the end of your fold:¶¶mainProcedure();
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:01:29.861",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:01:36.181",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:01:36.445",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:01:43.83",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:01:46.156",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 3",sequence="34",timestamp="2018-10-11 17:01:58.386",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiaW5jcmVhc2VJbnRlZ2Vyc1Byb2NlZHVyZSIsIFtdKQp7CiAgICBMb2NhbChyZXN1bHRMaXN0LCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CiAgICAKICAgIGluZGV4IDo9IDE7CiAgICAKICAgIFdoaWxlKGluZGV4IDw9PyA1KQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgaW5kZXgpOwogICAgICAgIAogICAgICAgIGluZGV4IDo9IGluZGV4ICsgMTsKICAgIH0KICAgIAogICAgcmVzdWx0TGlzdDsKfQoKCgpQcm9jZWR1cmUoImRlY3JlYXNlSW50ZWdlcnNQcm9jZWR1cmUiLCBbXSkKewogICAgTG9jYWwocmVzdWx0TGlzdCwgaW5kZXgpOwogICAgCiAgICByZXN1bHRMaXN0IDo9IFtdOwogICAgCiAgICBpbmRleCA6PSAxMDsKICAgIAogICAgV2hpbGUoaW5kZXggPj0/IDYpCiAgICB7CiAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBpbmRleCk7CiAgICAgICAgCiAgICAgICAgaW5kZXggOj0gaW5kZXggLSAxOwogICAgfQogICAgCiAgICByZXN1bHRMaXN0Owp9CgoKClByb2NlZHVyZSgibWFpblByb2NlZHVyZSIsIFtdKQp7CiAgICBMb2NhbChpbmNyZWFzZUxpc3QsIGluY3JlYXNlTGlzdExlbmd0aCwgZGVjcmVhc2VMaXN0LCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CgogICAgaW5jcmVhc2VMaXN0IDo9IGluY3JlYXNlSW50ZWdlcnNQcm9jZWR1cmUoKTsKICAgIAogICAgaW5jcmVhc2VMaXN0TGVuZ3RoIDo9IExlbmd0aChpbmNyZWFzZUxpc3QpOwogICAgCiAgICBkZWNyZWFzZUxpc3QgOj0gZGVjcmVhc2VJbnRlZ2Vyc1Byb2NlZHVyZSgpOwogICAgCiAgICBpbmRleCA6PSAxOwogICAgCiAgICBXaGlsZShpbmRleCA8PT8gaW5jcmVhc2VMaXN0TGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgaW5jcmVhc2VMaXN0W2luZGV4XSk7CiAgICAgICAgCiAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBkZWNyZWFzZUxpc3RbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIHJlc3VsdExpc3Q7Cn0KCgptYWluUHJvY2VkdXJlKCk7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 3",sequence="35",timestamp="2018-10-11 17:02:10.742",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiaW5jcmVhc2VJbnRlZ2Vyc1Byb2NlZHVyZSIsIFtdKQp7CiAgICBMb2NhbChyZXN1bHRMaXN0LCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CiAgICAKICAgIGluZGV4IDo9IDE7CiAgICAKICAgIFdoaWxlKGluZGV4IDw9PyA1KQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgaW5kZXgpOwogICAgICAgIAogICAgICAgIGluZGV4IDo9IGluZGV4ICsgMTsKICAgIH0KICAgIAogICAgcmVzdWx0TGlzdDsKfQoKCgpQcm9jZWR1cmUoImRlY3JlYXNlSW50ZWdlcnNQcm9jZWR1cmUiLCBbXSkKewogICAgTG9jYWwocmVzdWx0TGlzdCwgaW5kZXgpOwogICAgCiAgICByZXN1bHRMaXN0IDo9IFtdOwogICAgCiAgICBpbmRleCA6PSAxMDsKICAgIAogICAgV2hpbGUoaW5kZXggPj0/IDYpCiAgICB7CiAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBpbmRleCk7CiAgICAgICAgCiAgICAgICAgaW5kZXggOj0gaW5kZXggLSAxOwogICAgfQogICAgCiAgICByZXN1bHRMaXN0Owp9CgoKClByb2NlZHVyZSgibWFpblByb2NlZHVyZSIsIFtdKQp7CiAgICBMb2NhbChpbmNyZWFzZUxpc3QsIGluY3JlYXNlTGlzdExlbmd0aCwgZGVjcmVhc2VMaXN0LCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CgogICAgaW5jcmVhc2VMaXN0IDo9IGluY3JlYXNlSW50ZWdlcnNQcm9jZWR1cmUoKTsKICAgIAogICAgaW5jcmVhc2VMaXN0TGVuZ3RoIDo9IExlbmd0aChpbmNyZWFzZUxpc3QpOwogICAgCiAgICBkZWNyZWFzZUxpc3QgOj0gZGVjcmVhc2VJbnRlZ2Vyc1Byb2NlZHVyZSgpOwogICAgCiAgICBpbmRleCA6PSAxOwogICAgCiAgICBXaGlsZShpbmRleCA8PT8gaW5jcmVhc2VMaXN0TGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgaW5jcmVhc2VMaXN0W2luZGV4XSk7CiAgICAgICAgCiAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBkZWNyZWFzZUxpc3RbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIHJlc3VsdExpc3Q7Cn0KCgptYWluUHJvY2VkdXJlKCk7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 3",sequence="36",timestamp="2018-10-11 17:02:26.182",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiaW5jcmVhc2VJbnRlZ2Vyc1Byb2NlZHVyZSIsIFtdKQp7CiAgICBMb2NhbChyZXN1bHRMaXN0LCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CiAgICAKICAgIGluZGV4IDo9IDE7CiAgICAKICAgIFdoaWxlKGluZGV4IDw9PyA1KQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgaW5kZXgpOwogICAgICAgIAogICAgICAgIGluZGV4IDo9IGluZGV4ICsgMTsKICAgIH0KICAgIAogICAgcmVzdWx0TGlzdDsKfQoKCgpQcm9jZWR1cmUoImRlY3JlYXNlSW50ZWdlcnNQcm9jZWR1cmUiLCBbXSkKewogICAgTG9jYWwocmVzdWx0TGlzdCwgaW5kZXgpOwogICAgCiAgICByZXN1bHRMaXN0IDo9IFtdOwogICAgCiAgICBpbmRleCA6PSAxMDsKICAgIAogICAgV2hpbGUoaW5kZXggPj0/IDYpCiAgICB7CiAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBpbmRleCk7CiAgICAgICAgCiAgICAgICAgaW5kZXggOj0gaW5kZXggLSAxOwogICAgfQogICAgCiAgICByZXN1bHRMaXN0Owp9CgoKClByb2NlZHVyZSgibWFpblByb2NlZHVyZSIsIFtdKQp7CiAgICBMb2NhbChpbmNyZWFzZUxpc3QsIGluY3JlYXNlTGlzdExlbmd0aCwgZGVjcmVhc2VMaXN0LCBpbmRleCk7CiAgICAKICAgIHJlc3VsdExpc3QgOj0gW107CgogICAgaW5jcmVhc2VMaXN0IDo9IGluY3JlYXNlSW50ZWdlcnNQcm9jZWR1cmUoKTsKICAgIAogICAgaW5jcmVhc2VMaXN0TGVuZ3RoIDo9IExlbmd0aChpbmNyZWFzZUxpc3QpOwogICAgCiAgICBkZWNyZWFzZUxpc3QgOj0gZGVjcmVhc2VJbnRlZ2Vyc1Byb2NlZHVyZSgpOwogICAgCiAgICBpbmRleCA6PSAxOwogICAgCiAgICBXaGlsZShpbmRleCA8PT8gaW5jcmVhc2VMaXN0TGVuZ3RoKQogICAgewogICAgICAgIEFwcGVuZCEocmVzdWx0TGlzdCwgaW5jcmVhc2VMaXN0W2luZGV4XSk7CiAgICAgICAgCiAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBkZWNyZWFzZUxpc3RbaW5kZXhdKTsKICAgICAgICAKICAgICAgICBpbmRleCA6PSBpbmRleCArIDE7CiAgICB9CiAgICAKICAgIHJlc3VsdExpc3Q7Cn0KCgptYWluUHJvY2VkdXJlKCk7Cgo=");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:03:01.938",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:04:00.009",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:04:00.516",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:04:37.68",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:04:37.887",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:04:50.997",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+increaseIntegersProcedure()
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:04:53.499",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:04:53.881",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:06:35.705",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:06:36.638",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:06:37.368",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:07:08.272",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:07:08.633",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:07:22.028",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:07:22.239",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:07:39.545",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:07:41.806",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:07:48.277",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:07:49.324",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:07:57.173",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-11 17:07:59.838",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".259"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="37",timestamp="2018-10-11 17:08:17.123",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+¶Procedure("increaseIntegersProcedure",[])¶{¶    Local(index, resultList);¶    ¶    index := 1;¶    ¶    resultList := [];¶¶    While(index <=? 5)¶    {¶        Append!(resultList, index);¶        ¶        index := (index + 1);¶        ¶    }¶    ¶    resultList;¶}¶¶Procedure("decreaseIntegersProcedure",[])¶{¶    Local(index, resultList);¶    ¶    index := 10;¶    ¶    resultList := [];¶¶    While(index >=? 6)¶    {¶        Append!(resultList, index);¶        ¶        index := (index - 1);¶        ¶    }¶    ¶    resultList;¶}¶¶//c) Create a no parameter procedure named "mainProcedure"¶//that uses one loop, the "increaseIntegersProcedure" and the¶//"decreaseIntegersProcedure" procedure to build the following ¶//list and return it as a result:¶¶//[1,10,2,9,3,8,4,7,5,6]¶¶¶//Place the following line of code at the end of your fold:¶¶//mainProcedure();¶¶Procedure("mainProcedure",[])¶{¶    Local(increaseList, IncreaseListLength, decreaseList, index);¶¶    resultList := [];¶    ¶    increaseList := increaseIntegersProcedure();¶    ¶    increaseListLength := Length(increaseList);¶    ¶    decreaseList := decreaseIntegersProcedure();¶    ¶    index := 1;¶    ¶    While(index <=? increaseListLength)¶    {¶        Append!(resultList,increaseList[index]);¶        ¶        Append!(resultList,decreaseList[index]);¶        ¶        index := (index + 1);¶    ¶    }¶    ¶    resultList;¶¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 3",sequence="38",timestamp="2018-10-11 17:08:32.63",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="39",timestamp="2018-10-11 17:10:12.81",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+¶Procedure("increaseIntegersProcedure",[])¶{¶    Local(index, resultList);¶    ¶    index := 1;¶    ¶    resultList := [];¶¶    While(index <=? 5)¶    {¶        Append!(resultList, index);¶        ¶        index := (index + 1);¶        ¶    }¶    ¶    resultList;¶}¶¶Procedure("decreaseIntegersProcedure",[])¶{¶    Local(index, resultList);¶    ¶    index := 10;¶    ¶    resultList := [];¶¶    While(index >=? 6)¶    {¶        Append!(resultList, index);¶        ¶        index := (index - 1);¶        ¶    }¶    ¶    resultList;¶}¶¶Procedure("mainProcedure",[])¶{¶    Local(increaseList, increaseListLength, decreaseList, index);¶¶    resultList := [];¶    ¶    increaseList := increaseIntegersProcedure();¶    ¶    increaseListLength := Length(increaseList);¶    ¶    decreaseList := decreaseIntegersProcedure();¶    ¶    index := 1;¶    ¶    While(index <=? increaseListLength)¶    {¶        Append!(resultList,increaseList[index]);¶        ¶        Append!(resultList,decreaseList[index]);¶        ¶        index := (index + 1);¶    ¶    }¶    ¶    resultList;¶¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 3",sequence="40",timestamp="2018-10-11 17:10:26.239",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.133",mpversion=".259"
+Not logged.
+
+%/info
+

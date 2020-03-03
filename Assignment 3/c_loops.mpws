@@ -1,0 +1,503 @@
+v.03
+
+LOOPS
+
+THE While() LOOPING PROCEDURE
+
+Many kinds of machines, including computers,
+derive much of their power from the principle of
+repeated cycling. REPEATED CYCLING in a MathPiper
+program means to execute one or more expressions
+over and over again, and this process is called
+LOOPING. MathPiper provides a number of ways to
+implement LOOPS in a program, and these ways range
+from straight-forward to subtle.
+
+We will begin discussing looping in MathPiper by
+starting with the straight-forward While()
+procedure. The calling format for the While()
+procedure is as follows:
+
+--------- Calling Format --------------
+
+While(predicate)                                            
+{                                                    
+    body_expressions                                        
+}
+
+---------------------------------------
+
+The While() procedure is similar to the If()
+procedure, except it will repeatedly execute the
+expressions in its body as long as its "predicate"
+expression is True. As soon as the predicate
+expression returns a False, the While() procedure
+skips the expressions it contains and execution
+continues with the expression that immediately
+follows the While() procedure (if there is one).
+
+
+
+INCREASING OR DECREASING THE VALUE OF A VARIABLE
+
+In> count := 1;
+
+
+This code increases 'count' by one each time it is
+evaluated.
+
+In> count := (count + 1)
+
+
+%mathpiper,treeview="true"
+
+'(count := (count + 1));
+
+%/mathpiper
+
+todo:tk:the := operator only has one "eye";
+
+This code decreases 'count' by one each time it is
+evaluated.
+
+In> count := (count - 1)
+
+
+This code increases 'count' by two each time it is
+evaluated.
+
+In> count := (count + 2)
+
+
+
+PRINTING THE INTEGERS FROM 1 TO 10
+
+The following program uses a While() procedure to
+print the integers from 1 to 10:
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false"
+
+// This program prints the integers from 1 to 10.
+
+
+/*
+    Initialize the variable count to 1
+    outside of the While "loop".
+*/
+count := 1;
+
+While(count <=? 10)
+{
+    Echo(count);
+    
+    count := (count + 1);  //Increment count by 1.
+}
+
+%/mathpiper
+
+In this program, a single variable called 'count' is
+created. It is used to tell the Echo() procedure
+which integer to print, and it is also used in the
+predicate expression that determines if the
+While() procedure should continue to loop or not.
+
+When the program is executed, 1 is assigned to
+'count', and then the While() procedure is called.
+Notice that 1 is assigned to the variable 'count'
+above the While() loop. Assigning an initial value
+to a variable is called INITIALIZING the variable
+and in this case, count needs to be initialized
+before it is used in the While() procedure. The
+predicate expression 'count <=? 10' becomes '1 <=? 10'
+and, since 1 is indeed less than or equal to 10, a
+value of True is returned by the predicate
+expression.
+
+The While() procedure sees that the predicate
+expression returned a True and therefore it
+executes all of the expressions inside of its body
+from top to bottom.
+
+The Echo() procedure prints the current contents
+of count (which is 1) and then the expression
+count := (count + 1) is executed.
+
+The expression 'count := (count + 1)' is a standard
+expression form that is used in many programming
+languages. Each time an expression in this form is
+evaluated, it INCREASES THE VARIABLE IT CONTAINS
+BY 1. Another way to describe the effect this
+expression has on 'count' is to say that it
+INCREMENTS COUNT BY 1.
+
+In this case 'count' contains 1 and, after the
+expression is evaluated, 'count' contains 2.
+
+After the last expression inside the body of the
+While() procedure is executed, the While()
+procedure reevaluates its predicate expression to
+determine whether it should continue looping or
+not. Since 'count' is 2 at this point, the predicate
+expression returns True and the code inside the
+body of the While() procedure is executed again.
+This loop will be repeated until count is
+incremented to 11 and the predicate expression
+returns False.
+
+
+
+REVIEW: APPENDING VALUES TO A LIST
+In> list := []
+
+
+In> Append!(list, RandomInteger(9))
+
+
+
+PLACING THE INTEGERS FROM 1 TO 50 IN A LIST
+
+The previous program can be adjusted in a number
+of ways to achieve different results. For example,
+the following program places the integers from 1
+to 50 into a list by changing the 10 in the
+predicate expression to 50 and changing the Write
+procedure to a Append!() procedure.
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false"
+
+// Place the integers from 1-50 in a list.
+
+integersList := [];
+
+count := 1;
+
+While(count <=? 50)
+{
+    Append!(integersList, count);
+    
+    count := (count + 1);  //Increment count by 1.
+}
+
+integersList;
+
+%/mathpiper
+
+todo:tk:speed 50, 500, etc. & Quicksilver from X-Men
+
+
+Appending THE ODD INTEGERS FROM 1 TO 99
+
+The following program appends the odd integers
+from 1 to 99 to a list by changing the INCREMENT
+VALUE in the increment expression from 1 to 2:
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false"
+
+//Place the odd integers from 1 to 99 into a list.
+
+integersList := [];
+
+count := 1; 
+
+While(count <=? 100)
+{
+    Append!(integersList, count);
+
+    count := (count + 2);  //Increment count by 2.
+}
+
+integersList;
+
+%/mathpiper
+
+
+
+PLACING THE INTEGERS FROM 1 TO 100 IN REVERSE ORDER INTO A LIST
+
+Finally, the following program prints the integers
+from 1 to 100 in reverse order:
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false"
+
+// Place the integers from 1 to 100 in reverse order into a list.
+
+resultList := [];
+
+count := 100; 
+
+While(count >=? 1)
+{
+    Append!(resultList, count);
+
+    count := (count - 1);  //Decrement count by 1.
+}
+
+resultList;
+
+%/mathpiper
+
+
+In order to achieve the reverse ordering, this
+program had to initialize (which means to assign
+an initial value to a variable) 'count' to 100,
+check to see if 'count' was GREATER THAN OR EQUAL
+TO 1 (count >=? 1), and DECREMENT 'count' by
+SUBTRACTING 1 FROM IT instead of adding 1 to it.
+
+
+THE Until() LOOPING PROCEDURE
+
+The While() procedure evaluates the predicate
+expression that is passed to it. It will evaluate
+its body if the predicate is True, and it will not
+evaluate its body if its predicate is False. The
+Until() procedure is similar to the While()
+procedure, except it evaluates its body before it
+evaluates the predicate expression that is passed
+to it, and it continues looping UNTIL THE
+PREDICATE EXPRESSION BECOMES TRUE INSTEAD OF
+FALSE. Since Until() evaluates its body before it
+evaluates the predicate expression, ITS BODY IS
+ALWAYS EVALUATED AT LEAST ONCE.
+
+The calling format for the Until procedure is as
+follows:
+--------- Calling Format --------------
+
+Until(predicate)                                            
+{                                                    
+    body_expressions                                        
+}
+
+---------------------------------------
+
+
+
+PRINTING THE INTEGERS FROM 1 TO 10
+
+The following program uses a Until() procedure to
+print the integers from 1 to 10:
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false"
+
+// This program prints the integers from 1 to 10.
+
+
+/*
+    Initialize the variable count to 1
+    outside of the Until "loop".
+*/
+count := 1;
+
+Until(count =? 11)
+{
+    Echo(count);
+    
+    count := (count + 1);  //Increment count by 1.
+}
+
+%/mathpiper
+
+
+
+EXPRESSIONS INSIDE OF CODE SEQUENCES ARE INDENTED
+
+In the programs in the previous sections that use
+While loops, notice that the expressions that are
+inside of the While() procedure's code sequence
+are INDENTED. These expressions do not need to be
+indented to execute properly, but doing so makes
+the program easier to read.
+
+
+
+LONG-RUNNING LOOPS, INFINITE LOOPS, & INTERRUPTING EXECUTION
+
+It is easy to create a loop that will execute a
+LARGE NUMBER OF TIMES, or even AN INFINITE NUMBER
+OF TIMES, either on purpose or by mistake. When
+you execute a program that contains an INFINITE
+LOOP, it will run until you tell MathPiper to
+interrupt its execution. This is done by pressing
+the "Halt Evaluation" "stop sign" button that is
+at the top of MathPiperIDE, or opening the
+MathPiper CONSOLE and then pressing the "Halt
+Evaluation" button, which in the upper left corner
+of the console.
+
+Let's experiment with the "Halt Evaluation" button
+by executing a program that contains an infinite
+loop and then stopping it:
+
+%mathpiper,flowchart="false",image_scale="2.0",treeview="false"
+
+//Infinite loop example program.
+
+x := 1;
+
+While(x <? 10)
+{
+    x := 3; //Oops, x is not being incremented!. 
+}
+
+%/mathpiper
+
+
+Since the contents of x is never changed inside
+the loop, the expression 'x <? 10' always evaluates
+to True, which causes the loop to continue
+looping. Notice that the output fold contains the
+word "Processing..." to indicate that the program
+is still running the code.
+
+Execute this program now and then interrupt it
+using the "Halt Evaluation" button. When the
+program is interrupted, the output fold will
+display the message "User halted evaluation" to
+indicate that the program was interrupted. After a
+program has been interrupted, the program can be
+edited and then rerun.
+
+
+
+A PROGRAM THAT SIMULATES ROLLING TWO DICE 50 TIMES
+
+The following program is larger than the previous
+programs that have been discussed in this book,
+but it is also more interesting and more useful.
+It uses a While() loop to simulate the rolling of
+two dice 50 times, and it records how many times
+each possible sum has been rolled so that this
+data can be printed. The comments in the code
+explain what each part of the program does.
+
+%mathpiper,treeview="false"
+/*
+  This program simulates rolling two dice 50 times.
+*/
+
+
+/*
+  These variables are used to record how many times
+  a possible sum of two dice has been rolled.  They are
+  all initialized to 0 before the simulation begins.
+*/
+numberOfTwosRolled := 0;
+numberOfThreesRolled := 0;
+numberOfFoursRolled := 0;
+numberOfFivesRolled := 0;
+numberOfSixesRolled := 0;
+numberOfSevensRolled := 0;
+numberOfEightsRolled := 0;
+numberOfNinesRolled := 0;
+numberOfTensRolled := 0;
+numberOfElevensRolled := 0;
+numberOfTwelvesRolled := 0;
+
+
+
+Echo("These are the rolls:");
+
+
+//This variable keeps track of the number of the current roll.
+roll := 1;
+
+
+/*
+ The simulation is performed inside of this While loop.  The number of
+ times the dice will be rolled can be changed by changing the number 50,
+ which is in the While procedure's predicate expression.
+*/
+While(roll <=? 500)
+{
+    //Roll the dice.
+    die1 := RandomInteger(6);
+    die2 := RandomInteger(6);
+    
+    
+    //Calculate the sum of the two dice.
+    rollSum := (die1 + die2);
+    
+    
+    /*
+     Print the sum that was rolled.  Note: if a large number of rolls 
+     is going to be performed (say >? 1000), it would be best to comment
+     out this Write() procedure so that it does not put too much text
+     into the output fold.
+    */
+    //Write(rollSum,',);
+    
+    
+    /*
+     These If() procedures determine which sum was rolled and then add
+     1 to the variable that is keeping track of the number of times
+     that sum was rolled.              
+    */
+    If(rollSum =? 2)
+    {
+        numberOfTwosRolled := (numberOfTwosRolled + 1);
+    }
+    Else If(rollSum =? 3)
+    {
+        numberOfThreesRolled := (numberOfThreesRolled + 1);
+    }
+    Else If(rollSum =? 4)
+    {
+        numberOfFoursRolled := (numberOfFoursRolled + 1);
+    }
+    Else If(rollSum =? 5)
+    {
+        numberOfFivesRolled := (numberOfFivesRolled + 1);
+    }
+    Else If(rollSum =? 6)
+    {
+        numberOfSixesRolled := (numberOfSixesRolled + 1);
+    }
+    Else If(rollSum =? 7)
+    {
+        numberOfSevensRolled := (numberOfSevensRolled + 1);
+    }
+    Else If(rollSum =? 8)
+    {
+        numberOfEightsRolled := (numberOfEightsRolled + 1);
+    }
+    Else If(rollSum =? 9)
+    {
+        numberOfNinesRolled := (numberOfNinesRolled + 1);
+    }
+    Else If(rollSum =? 10)
+    {
+        numberOfTensRolled := (numberOfTensRolled + 1);
+    }
+    Else If(rollSum =? 11)
+    {
+        numberOfElevensRolled := (numberOfElevensRolled+1);
+    }
+    Else If(rollSum =? 12)
+    {
+        numberOfTwelvesRolled := (numberOfTwelvesRolled+1);
+    }
+    
+    
+    //Increment the roll variable to the next roll number.
+    roll := (roll + 1);
+}
+
+
+//Print the contents of the sum count variables for visual analysis.
+NewLine();
+NewLine();
+Echo("Number of Twos rolled: ", numberOfTwosRolled);
+Echo("Number of Threes rolled: ", numberOfThreesRolled);
+Echo("Number of Fours rolled: ", numberOfFoursRolled);
+Echo("Number of Fives rolled: ", numberOfFivesRolled);
+Echo("Number of Sixes rolled: ", numberOfSixesRolled);
+Echo("Number of Sevens rolled: ", numberOfSevensRolled);
+Echo("Number of Eights rolled: ", numberOfEightsRolled);
+Echo("Number of Nines rolled: ", numberOfNinesRolled);
+Echo("Number of Tens rolled: ", numberOfTensRolled);
+Echo("Number of Elevens rolled: ", numberOfElevensRolled);
+Echo("Number of Twelves rolled: ", numberOfTwelvesRolled);
+
+%/mathpiper
+

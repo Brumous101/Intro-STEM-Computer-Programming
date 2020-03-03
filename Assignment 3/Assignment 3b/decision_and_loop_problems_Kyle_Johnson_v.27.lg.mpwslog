@@ -1,0 +1,380 @@
+%info,parentFoldType="mathpiper",parent="Problem 0",sequence="1",timestamp="2018-09-13 17:07:03.682",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶[¶["firstName", "Kyle"],¶["lastName", "Johnson"],¶["ssuIDNumber", "264694"],¶];
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="2",timestamp="2018-09-13 17:09:18.551",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶rolls := [];¶¶Append!(rolls, RandomInteger(6) + RandomInteger(6));¶¶Append!(rolls, RandomInteger(6) + RandomInteger(6));¶¶Append!(rolls, RandomInteger(6) + RandomInteger(6));¶¶Append!(rolls, RandomInteger(6) + RandomInteger(6));¶¶Append!(rolls, RandomInteger(6) + RandomInteger(6));¶¶rolls;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="3",timestamp="2018-09-13 17:12:25.7",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶flip := RandomInteger(2);¶¶If(flip =? 1)¶{¶    result := "HEADS";¶}¶¶If(flip =? 2)¶{¶    result := "TAILS";¶}¶¶result;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="4",timestamp="2018-09-13 17:12:32.679",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶flip := RandomInteger(2);¶¶If(flip =? 1)¶{¶    result := "HEADS";¶}¶¶If(flip =? 2)¶{¶    result := "TAILS";¶}¶¶result;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="5",timestamp="2018-09-13 17:12:37.057",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶flip := RandomInteger(2);¶¶If(flip =? 1)¶{¶    result := "HEADS";¶}¶¶If(flip =? 2)¶{¶    result := "TAILS";¶}¶¶result;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="6",timestamp="2018-09-13 17:18:52.616",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶coin1 := RandomInteger(2);¶coin2 := RandomInteger(2);¶¶Append!(resultList, coin1);¶Append!(resultList, coin2);¶¶If(coin1 =? 1 &? coin2 =? 1)¶{¶    Append!(resultList, "BOTH COINS CAME UP HEADS");¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="7",timestamp="2018-09-13 17:19:35.659",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶coin1 := RandomInteger(2);¶coin2 := RandomInteger(2);¶¶Append!(resultList, coin1);¶Append!(resultList, coin2);¶¶If(coin1 =? 1 &? coin2 =? 1)¶{¶    Append!(resultList, "BOTH COINS CAME UP HEADS");¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="8",timestamp="2018-09-13 17:20:35.669",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶coin1 := RandomInteger(2);¶coin2 := RandomInteger(2);¶¶Append!(resultList, coin1);¶Append!(resultList, coin2);¶¶If(coin1 =? 1 &? coin2 =? 1)¶{¶    Append!(resultList, "BOTH COINS CAME UP HEADS");¶}¶Else¶{¶    Append! (resultList, "BOTH COINS WERE NOT HEADS");¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="9",timestamp="2018-09-13 17:21:14.991",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶coin1 := RandomInteger(2);¶coin2 := RandomInteger(2);¶¶Append!(resultList, coin1);¶Append!(resultList, coin2);¶¶If(coin1 =? 1 &? coin2 =? 1)¶{¶    Append!(resultList, "BOTH COINS CAME UP HEADS");¶}¶Else¶{¶    Append!(resultList, "BOTH COINS WERE NOT HEADS");¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="10",timestamp="2018-09-13 17:21:20.052",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶coin1 := RandomInteger(2);¶coin2 := RandomInteger(2);¶¶Append!(resultList, coin1);¶Append!(resultList, coin2);¶¶If(coin1 =? 1 &? coin2 =? 1)¶{¶    Append!(resultList, "BOTH COINS CAME UP HEADS");¶}¶Else¶{¶    Append!(resultList, "BOTH COINS WERE NOT HEADS");¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="11",timestamp="2018-09-13 17:22:38.507",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶coin1 := RandomInteger(2);¶coin2 := RandomInteger(2);¶¶Append!(resultList, coin1);¶Append!(resultList, coin2);¶¶If(coin1 =? 1 &? coin2 =? 1)¶{¶    Append!(resultList, "BOTH COINS CAME UP HEADS");¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="12",timestamp="2018-09-13 17:26:36.924",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶coin1 := RandomInteger(2);¶coin2 := RandomInteger(2);¶¶Append!(resultList, coin1);¶Append!(resultList, coin2);¶¶If(coin1 =? 1 |? coin2 =? 1)¶{¶    Append!(resultList, "AT LEAST ONE COIN CAME UP HEADS");¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="13",timestamp="2018-09-13 17:26:43.004",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶coin1 := RandomInteger(2);¶coin2 := RandomInteger(2);¶¶Append!(resultList, coin1);¶Append!(resultList, coin2);¶¶If(coin1 =? 1 |? coin2 =? 1)¶{¶    Append!(resultList, "AT LEAST ONE COIN CAME UP HEADS");¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="14",timestamp="2018-09-13 17:26:45.748",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶coin1 := RandomInteger(2);¶coin2 := RandomInteger(2);¶¶Append!(resultList, coin1);¶Append!(resultList, coin2);¶¶If(coin1 =? 1 |? coin2 =? 1)¶{¶    Append!(resultList, "AT LEAST ONE COIN CAME UP HEADS");¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="15",timestamp="2018-09-13 17:26:48.945",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶coin1 := RandomInteger(2);¶coin2 := RandomInteger(2);¶¶Append!(resultList, coin1);¶Append!(resultList, coin2);¶¶If(coin1 =? 1 |? coin2 =? 1)¶{¶    Append!(resultList, "AT LEAST ONE COIN CAME UP HEADS");¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="16",timestamp="2018-09-13 17:26:53.351",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶coin1 := RandomInteger(2);¶coin2 := RandomInteger(2);¶¶Append!(resultList, coin1);¶Append!(resultList, coin2);¶¶If(coin1 =? 1 |? coin2 =? 1)¶{¶    Append!(resultList, "AT LEAST ONE COIN CAME UP HEADS");¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="17",timestamp="2018-09-13 17:31:27.592",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgppbmRleCA6PSAyOwoKV2hpbGUoaW5kZXggPD0/IDUwKQp7CiAgICBBcHBlbmQhKHJlc3VsdExpc3QsIGluZGV4KTsKICAgIAogICAgaW5kZXggOj0gaW5kZXggKyAyOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="18",timestamp="2018-09-13 17:33:27.856",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgppbmRleCA6PSAyOwoKV2hpbGUoaW5kZXggPD0/IDUwKQp7CiAgICBBcHBlbmQhKHJlc3VsdExpc3QsIGluZGV4KTsKICAgIAogICAgaW5kZXggOj0gaW5kZXggKyAyOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="19",timestamp="2018-09-13 17:34:52.997",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶index := 2;¶¶While(index <=? 50);¶¶{¶    Append := (resultList)¶    index := index + 2¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="20",timestamp="2018-09-13 17:35:03.26",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgppbmRleCA6PSAyOwoKV2hpbGUoaW5kZXggPD0/IDUwKQp7CiAgICBBcHBlbmQhKHJlc3VsdExpc3QsIGluZGV4KTsKICAgIAogICAgaW5kZXggOj0gaW5kZXggKyAyOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="21",timestamp="2018-09-13 17:35:26.456",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶index := 2;¶¶While(index <=? 50);¶¶{¶    Append := (resultList);¶    index := index + 2;¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="22",timestamp="2018-09-13 17:35:32.827",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶index := 2;¶¶While(index <=? 50);¶¶{¶    Append := (resultList);¶    index := index + 2;¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="23",timestamp="2018-09-13 17:35:57.46",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgppbmRleCA6PSAyOwoKV2hpbGUoaW5kZXggPD0/IDUwKQp7CiAgICBBcHBlbmQhKHJlc3VsdExpc3QsIGluZGV4KTsKICAgIAogICAgaW5kZXggOj0gaW5kZXggKyAyOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="24",timestamp="2018-09-13 17:36:11.123",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶index := 2;¶¶While(index <=? 50);¶¶{¶    Append := (resultList, index);¶    index := index + 2;¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="25",timestamp="2018-09-13 17:36:24.661",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgppbmRleCA6PSAyOwoKV2hpbGUoaW5kZXggPD0/IDUwKQp7CiAgICBBcHBlbmQhKHJlc3VsdExpc3QsIGluZGV4KTsKICAgIAogICAgaW5kZXggOj0gaW5kZXggKyAyOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="26",timestamp="2018-09-13 17:36:56.5",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶index := 2;¶¶While(index <=? 50);¶¶{¶    Append := (resultList, index);¶    index := index + 2;¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="27",timestamp="2018-09-13 17:37:55.58",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgppbmRleCA6PSAyOwoKV2hpbGUoaW5kZXggPD0/IDUwKQp7CiAgICBBcHBlbmQhKHJlc3VsdExpc3QsIGluZGV4KTsKICAgIAogICAgaW5kZXggOj0gaW5kZXggKyAyOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="28",timestamp="2018-09-13 17:38:16.615",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶index := 2;¶¶While(index <=? 50);¶¶{¶    Append := (resultList, index);¶    index := index + 2;¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="29",timestamp="2018-09-13 17:39:19.326",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgppbmRleCA6PSAyOwoKV2hpbGUoaW5kZXggPD0/IDUwKQp7CiAgICBBcHBlbmQhKHJlc3VsdExpc3QsIGluZGV4KTsKICAgIAogICAgaW5kZXggOj0gaW5kZXggKyAyOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="30",timestamp="2018-09-13 17:39:35.904",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgppbmRleCA6PSAyOwoKV2hpbGUoaW5kZXggPD0/IDUwKQp7CiAgICBBcHBlbmQhKHJlc3VsdExpc3QsIGluZGV4KTsKICAgIAogICAgaW5kZXggOj0gaW5kZXggKyAyOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="31",timestamp="2018-09-13 17:39:57.019",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶index := 2;¶¶While(index <=? 50);¶¶{¶    Append! := (resultList, index);¶    index := index + 2;¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="32",timestamp="2018-09-13 17:40:12.945",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgppbmRleCA6PSAyOwoKV2hpbGUoaW5kZXggPD0/IDUwKQp7CiAgICBBcHBlbmQhKHJlc3VsdExpc3QsIGluZGV4KTsKICAgIAogICAgaW5kZXggOj0gaW5kZXggKyAyOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="33",timestamp="2018-09-13 17:40:33.027",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶index := 2;¶¶While(index <=? 50);¶¶{¶    Append!:= (resultList, index);¶    index := index + 2;¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="34",timestamp="2018-09-13 17:40:39.636",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶index := 2;¶¶While(index <=? 50);¶¶{¶    Append!(resultList, index);¶    index := index + 2;¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="35",timestamp="2018-09-13 17:40:47.148",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶index := 2;¶¶While(index <=? 50);¶¶{¶    Append!(resultList, index);¶    index := index + 2;¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="36",timestamp="2018-09-13 17:40:58.359",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgppbmRleCA6PSAyOwoKV2hpbGUoaW5kZXggPD0/IDUwKQp7CiAgICBBcHBlbmQhKHJlc3VsdExpc3QsIGluZGV4KTsKICAgIAogICAgaW5kZXggOj0gaW5kZXggKyAyOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="37",timestamp="2018-09-13 17:42:06.4",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶index := 2;¶¶While(index <=? 50);¶¶{¶    Append!(resultList, index);¶    index := index + 2;¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="38",timestamp="2018-09-13 17:42:49.641",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶index := 2;¶¶While(index <=? 50);¶{¶    Append!(resultList, index);¶    index := index + 2;¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="39",timestamp="2018-09-13 17:43:05.764",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶index := 0;¶¶While(index <=? 50);¶{¶    Append!(resultList, index);¶    index := index + 2;¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="40",timestamp="2018-09-13 17:43:48.678",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶index := 2;¶¶While(index <=? 50);¶¶{¶    Append!(resultList, index);¶    index := index + 2;¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="41",timestamp="2018-09-13 17:44:32.756",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgppbmRleCA6PSAyOwoKV2hpbGUoaW5kZXggPD0/IDUwKQp7CiAgICBBcHBlbmQhKHJlc3VsdExpc3QsIGluZGV4KTsKICAgIAogICAgaW5kZXggOj0gaW5kZXggKyAyOwp9CgpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="42",timestamp="2018-09-13 17:44:46.469",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶index := 2;¶¶While(index <=? 50)¶¶{¶    Append!(resultList, index);¶    index := index + 2;¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="43",timestamp="2018-09-13 17:46:57.412",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶resultList := [];¶¶index := 1;¶¶While(index <=? 49)¶¶{¶    Append!(resultList, index);¶    index := index + 2;¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="44",timestamp="2018-09-13 17:51:50.524",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CmhlYWRzQ291bnQgOj0gMDsKCnRhaWxzQ291bnQgOj0gMDsKCmZsaXBzQ291bnQgOj0gMDsKClVudGlsKGZsaXBzQ291bnQgPT8gNTApCnsKICAgIGZsaXAgOj0gUmFuZG9tSW50ZWdlcigyKTsKICAgIAogICAgSWYoZmxpcCA9PyAxKQogICAgewogICAgICAgIGhlYWRzQ291bnQgOj0gKGhlYWRzQ291bnQgKyAxKTsKICAgIH0KICAgIAogICAgSWYoZmxpcCA9PyAyKSAKICAgIHsKICAgICAgICB0YWlsc0NvdW50IDo9ICh0YWlsc0NvdW50ICsgMSk7CiAgICB9CiAgICAKICAgIGZsaXBzQ291bnQgOj0gKGZsaXBzQ291bnQgKyAxKTsKfQoKW2hlYWRzQ291bnQsIHRhaWxzQ291bnRdOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="45",timestamp="2018-09-13 17:53:55.723",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CmhlYWRzQ291bnQgOj0gMDsKCnRhaWxzQ291bnQgOj0gMDsKCmZsaXBzQ291bnQgOj0gMDsKClVudGlsKGZsaXBzQ291bnQgPT8gNTApCnsKICAgIGZsaXAgOj0gUmFuZG9tSW50ZWdlcigyKTsKICAgIAogICAgSWYoZmxpcCA9PyAxKQogICAgewogICAgICAgIGhlYWRzQ291bnQgOj0gKGhlYWRzQ291bnQgKyAxKTsKICAgIH0KICAgIAogICAgSWYoZmxpcCA9PyAyKSAKICAgIHsKICAgICAgICB0YWlsc0NvdW50IDo9ICh0YWlsc0NvdW50ICsgMSk7CiAgICB9CiAgICAKICAgIGZsaXBzQ291bnQgOj0gKGZsaXBzQ291bnQgKyAxKTsKfQoKW2hlYWRzQ291bnQsIHRhaWxzQ291bnRdOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="46",timestamp="2018-09-13 17:55:07.027",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CmhlYWRzQ291bnQgOj0gMDsKCnRhaWxzQ291bnQgOj0gMDsKCmZsaXBzQ291bnQgOj0gMDsKClVudGlsKGZsaXBzQ291bnQgPT8gNTApCnsKICAgIGZsaXAgOj0gUmFuZG9tSW50ZWdlcigyKTsKICAgIAogICAgSWYoZmxpcCA9PyAxKQogICAgewogICAgICAgIGhlYWRzQ291bnQgOj0gKGhlYWRzQ291bnQgKyAxKTsKICAgIH0KICAgIAogICAgSWYoZmxpcCA9PyAyKSAKICAgIHsKICAgICAgICB0YWlsc0NvdW50IDo9ICh0YWlsc0NvdW50ICsgMSk7CiAgICB9CiAgICAKICAgIGZsaXBzQ291bnQgOj0gKGZsaXBzQ291bnQgKyAxKTsKfQoKW2hlYWRzQ291bnQsIHRhaWxzQ291bnRdOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="47",timestamp="2018-09-13 17:57:33.304",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CmhlYWRzQ291bnQgOj0gMDsKCnRhaWxzQ291bnQgOj0gMDsKCmZsaXBzQ291bnQgOj0gMDsKClVudGlsKGZsaXBzQ291bnQgPT8gNTApCnsKICAgIGZsaXAgOj0gUmFuZG9tSW50ZWdlcigyKTsKICAgIAogICAgSWYoZmxpcCA9PyAxKQogICAgewogICAgICAgIGhlYWRzQ291bnQgOj0gKGhlYWRzQ291bnQgKyAxKTsKICAgIH0KICAgIAogICAgSWYoZmxpcCA9PyAyKSAKICAgIHsKICAgICAgICB0YWlsc0NvdW50IDo9ICh0YWlsc0NvdW50ICsgMSk7CiAgICB9CiAgICAKICAgIGZsaXBzQ291bnQgOj0gKGZsaXBzQ291bnQgKyAxKTsKfQoKW2hlYWRzQ291bnQsIHRhaWxzQ291bnRdOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="48",timestamp="2018-09-13 17:58:56.556",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CmhlYWRzQ291bnQgOj0gMDsKCnRhaWxzQ291bnQgOj0gMDsKCmZsaXBzQ291bnQgOj0gMDsKClVudGlsKGZsaXBzQ291bnQgPT8gNTApCnsKICAgIGZsaXAgOj0gUmFuZG9tSW50ZWdlcigyKTsKICAgIAogICAgSWYoZmxpcCA9PyAxKQogICAgewogICAgICAgIGhlYWRzQ291bnQgOj0gKGhlYWRzQ291bnQgKyAxKTsKICAgIH0KICAgIAogICAgSWYoZmxpcCA9PyAyKSAKICAgIHsKICAgICAgICB0YWlsc0NvdW50IDo9ICh0YWlsc0NvdW50ICsgMSk7CiAgICB9CiAgICAKICAgIGZsaXBzQ291bnQgOj0gKGZsaXBzQ291bnQgKyAxKTsKfQoKW2hlYWRzQ291bnQsIHRhaWxzQ291bnRdOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="49",timestamp="2018-09-13 17:59:08.075",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CmhlYWRzQ291bnQgOj0gMDsKCnRhaWxzQ291bnQgOj0gMDsKCmZsaXBzQ291bnQgOj0gMDsKClVudGlsKGZsaXBzQ291bnQgPT8gNTApCnsKICAgIGZsaXAgOj0gUmFuZG9tSW50ZWdlcigyKTsKICAgIAogICAgSWYoZmxpcCA9PyAxKQogICAgewogICAgICAgIGhlYWRzQ291bnQgOj0gKGhlYWRzQ291bnQgKyAxKTsKICAgIH0KICAgIAogICAgSWYoZmxpcCA9PyAyKSAKICAgIHsKICAgICAgICB0YWlsc0NvdW50IDo9ICh0YWlsc0NvdW50ICsgMSk7CiAgICB9CiAgICAKICAgIGZsaXBzQ291bnQgOj0gKGZsaXBzQ291bnQgKyAxKTsKfQoKW2hlYWRzQ291bnQsIHRhaWxzQ291bnRdOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="50",timestamp="2018-09-13 18:01:48.972",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶flipsCount := 0;¶¶headsCount := 0;¶¶tailsCount := 0;¶¶Until(flipsCount =? 50);¶¶{¶    Flip := RandomInteger(2)¶¶If(Flip = 1)¶{    ¶    headsCount := headsCount + 1¶}¶If(Flip = 2)¶{¶    tailsCount := tailsCount + 1¶}¶¶flipsCount := flipsCount + 1¶}¶[headsCount, tailsCount];
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="51",timestamp="2018-09-13 18:02:07.304",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶flipsCount := 0;¶¶headsCount := 0;¶¶tailsCount := 0;¶¶Until(flipsCount =? 50)¶¶{¶    Flip := RandomInteger(2)¶¶If(Flip = 1)¶{    ¶    headsCount := headsCount + 1¶}¶If(Flip = 2)¶{¶    tailsCount := tailsCount + 1¶}¶¶flipsCount := flipsCount + 1¶}¶[headsCount, tailsCount];
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="52",timestamp="2018-09-13 18:02:35.255",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶flipsCount := 0;¶¶headsCount := 0;¶¶tailsCount := 0;¶¶Until(flipsCount =? 50)¶¶{¶    Flip := RandomInteger(2)¶¶If(Flip = 1);¶{    ¶    headsCount := headsCount + 1;¶}¶If(Flip = 2);¶{¶    tailsCount := tailsCount + 1;¶}¶¶flipsCount := flipsCount + 1;¶}¶¶[headsCount, tailsCount];
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="53",timestamp="2018-09-13 18:02:58.08",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CmhlYWRzQ291bnQgOj0gMDsKCnRhaWxzQ291bnQgOj0gMDsKCmZsaXBzQ291bnQgOj0gMDsKClVudGlsKGZsaXBzQ291bnQgPT8gNTApCnsKICAgIGZsaXAgOj0gUmFuZG9tSW50ZWdlcigyKTsKICAgIAogICAgSWYoZmxpcCA9PyAxKQogICAgewogICAgICAgIGhlYWRzQ291bnQgOj0gKGhlYWRzQ291bnQgKyAxKTsKICAgIH0KICAgIAogICAgSWYoZmxpcCA9PyAyKSAKICAgIHsKICAgICAgICB0YWlsc0NvdW50IDo9ICh0YWlsc0NvdW50ICsgMSk7CiAgICB9CiAgICAKICAgIGZsaXBzQ291bnQgOj0gKGZsaXBzQ291bnQgKyAxKTsKfQoKW2hlYWRzQ291bnQsIHRhaWxzQ291bnRdOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="54",timestamp="2018-09-13 18:03:17.099",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶flipsCount := 0;¶¶headsCount := 0;¶¶tailsCount := 0;¶¶Until(flipsCount =? 50)¶¶{¶    Flip := RandomInteger(2)¶¶If(Flip =? 1);¶{    ¶    headsCount := headsCount + 1;¶}¶If(Flip =? 2);¶{¶    tailsCount := tailsCount + 1;¶}¶¶flipsCount := flipsCount + 1;¶}¶¶[headsCount, tailsCount];
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="55",timestamp="2018-09-13 18:03:48.756",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CmhlYWRzQ291bnQgOj0gMDsKCnRhaWxzQ291bnQgOj0gMDsKCmZsaXBzQ291bnQgOj0gMDsKClVudGlsKGZsaXBzQ291bnQgPT8gNTApCnsKICAgIGZsaXAgOj0gUmFuZG9tSW50ZWdlcigyKTsKICAgIAogICAgSWYoZmxpcCA9PyAxKQogICAgewogICAgICAgIGhlYWRzQ291bnQgOj0gKGhlYWRzQ291bnQgKyAxKTsKICAgIH0KICAgIAogICAgSWYoZmxpcCA9PyAyKSAKICAgIHsKICAgICAgICB0YWlsc0NvdW50IDo9ICh0YWlsc0NvdW50ICsgMSk7CiAgICB9CiAgICAKICAgIGZsaXBzQ291bnQgOj0gKGZsaXBzQ291bnQgKyAxKTsKfQoKW2hlYWRzQ291bnQsIHRhaWxzQ291bnRdOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="56",timestamp="2018-09-13 18:04:19.321",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶flipsCount := 0;¶¶headsCount := 0;¶¶tailsCount := 0;¶¶Until(flipsCount =? 50)¶¶{¶    Flip := RandomInteger(2)¶¶If(Flip =? 1)¶{    ¶    headsCount := headsCount + 1;¶}¶If(Flip =? 2)¶{¶    tailsCount := tailsCount + 1;¶}¶¶flipsCount := flipsCount + 1;¶}¶¶[headsCount, tailsCount];
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="57",timestamp="2018-09-13 18:04:40.956",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CmhlYWRzQ291bnQgOj0gMDsKCnRhaWxzQ291bnQgOj0gMDsKCmZsaXBzQ291bnQgOj0gMDsKClVudGlsKGZsaXBzQ291bnQgPT8gNTApCnsKICAgIGZsaXAgOj0gUmFuZG9tSW50ZWdlcigyKTsKICAgIAogICAgSWYoZmxpcCA9PyAxKQogICAgewogICAgICAgIGhlYWRzQ291bnQgOj0gKGhlYWRzQ291bnQgKyAxKTsKICAgIH0KICAgIAogICAgSWYoZmxpcCA9PyAyKSAKICAgIHsKICAgICAgICB0YWlsc0NvdW50IDo9ICh0YWlsc0NvdW50ICsgMSk7CiAgICB9CiAgICAKICAgIGZsaXBzQ291bnQgOj0gKGZsaXBzQ291bnQgKyAxKTsKfQoKW2hlYWRzQ291bnQsIHRhaWxzQ291bnRdOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="58",timestamp="2018-09-13 18:05:17.534",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶flipsCount := 0;¶¶headsCount := 0;¶¶tailsCount := 0;¶¶Until(flipsCount =? 50)¶¶{¶    Flip := RandomInteger(2)¶¶    If(Flip =? 1)¶{    ¶        headsCount := headsCount + 1;¶}¶    If(Flip =? 2)¶{¶        tailsCount := tailsCount + 1;¶}¶¶    flipsCount := flipsCount + 1;¶}¶¶[headsCount, tailsCount];
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="59",timestamp="2018-09-13 18:05:47.861",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+Hint("CmhlYWRzQ291bnQgOj0gMDsKCnRhaWxzQ291bnQgOj0gMDsKCmZsaXBzQ291bnQgOj0gMDsKClVudGlsKGZsaXBzQ291bnQgPT8gNTApCnsKICAgIGZsaXAgOj0gUmFuZG9tSW50ZWdlcigyKTsKICAgIAogICAgSWYoZmxpcCA9PyAxKQogICAgewogICAgICAgIGhlYWRzQ291bnQgOj0gKGhlYWRzQ291bnQgKyAxKTsKICAgIH0KICAgIAogICAgSWYoZmxpcCA9PyAyKSAKICAgIHsKICAgICAgICB0YWlsc0NvdW50IDo9ICh0YWlsc0NvdW50ICsgMSk7CiAgICB9CiAgICAKICAgIGZsaXBzQ291bnQgOj0gKGZsaXBzQ291bnQgKyAxKTsKfQoKW2hlYWRzQ291bnQsIHRhaWxzQ291bnRdOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="60",timestamp="2018-09-13 18:06:12.09",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶flipsCount := 0;¶¶headsCount := 0;¶¶tailsCount := 0;¶¶Until(flipsCount =? 50)¶¶{¶    Flip := RandomInteger(2)¶¶    If(Flip =? 1)¶{    ¶        headsCount := headsCount + 1;¶}¶    If(Flip =? 2)¶{¶        tailsCount := tailsCount + 1;¶}¶¶    flipsCount := flipsCount + 1;¶}¶¶[headsCount, tailsCount];
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="61",timestamp="2018-09-13 18:07:14.386",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶flipsCount := 0;¶¶headsCount := 0;¶¶tailsCount := 0;¶¶Until(flipsCount =? 50)¶¶{¶    Flip := RandomInteger(2);¶¶    If(Flip =? 1)¶    {    ¶        headsCount := headsCount + 1;¶    }¶     ¶    If(Flip =? 2)¶    {¶        tailsCount := tailsCount + 1;¶    }¶¶    flipsCount := flipsCount + 1;¶}¶¶[headsCount, tailsCount];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 0",sequence="1",timestamp="2018-10-02 13:55:20.867",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 1",sequence="2",timestamp="2018-10-02 13:55:31.208",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 2",sequence="3",timestamp="2018-10-02 13:55:37.242",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 3",sequence="4",timestamp="2018-10-02 13:55:47.748",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 4",sequence="5",timestamp="2018-10-02 13:55:58.336",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 5",sequence="6",timestamp="2018-10-02 13:56:04.302",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 6",sequence="7",timestamp="2018-10-02 13:56:30.556",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 7",sequence="8",timestamp="2018-10-02 13:56:48.638",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="9",timestamp="2018-10-02 13:57:38.568",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgppbmRleCA6PSA0OTsKCldoaWxlKGluZGV4ID49PyAxKQp7CiAgICBBcHBlbmQhKHJlc3VsdExpc3QsIGluZGV4KTsKCiAgICBpbmRleCA6PSBpbmRleCAtIDI7Cn0KCnJlc3VsdExpc3Q7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="10",timestamp="2018-10-02 13:58:00.59",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶resultList := [];¶¶index := 1;¶¶While(index >? 49)¶¶{¶    Append!(resultList, index);¶    index := index - 2;¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="11",timestamp="2018-10-02 13:58:11.568",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgppbmRleCA6PSA0OTsKCldoaWxlKGluZGV4ID49PyAxKQp7CiAgICBBcHBlbmQhKHJlc3VsdExpc3QsIGluZGV4KTsKCiAgICBpbmRleCA6PSBpbmRleCAtIDI7Cn0KCnJlc3VsdExpc3Q7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="12",timestamp="2018-10-02 13:58:28.84",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶resultList := [];¶¶index := 49;¶¶While(index >=? 1)¶¶{¶    Append!(resultList, index);¶    index := index - 2;¶}¶¶resultList;
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 6",sequence="13",timestamp="2018-10-02 13:58:35.325",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="14",timestamp="2018-10-02 14:00:04.681",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+¶flipsCount := 0;¶¶headsCount := 0;¶¶tailsCount := 0;¶¶Until(flipsCount =? 50)¶¶{¶    flip := RandomInteger(2);¶¶    If(flip =? 1)¶    {    ¶        headsCount := headsCount + 1;¶    }¶     ¶    If(flip =? 2)¶    {¶        tailsCount := tailsCount + 1;¶    }¶¶    flipsCount := flipsCount + 1;¶}¶¶[headsCount, tailsCount];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 7",sequence="15",timestamp="2018-10-02 14:00:07.513",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".257"
+Not logged.
+
+%/info
+

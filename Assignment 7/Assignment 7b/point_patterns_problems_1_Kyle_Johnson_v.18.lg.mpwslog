@@ -1,0 +1,805 @@
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 0",sequence="18",timestamp="2018-10-21 21:31:17.583",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶[¶["firstName", "Kyle"],¶["lastName", "Johnson"],¶["ssuIDNumber", "264694"],¶];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 0",sequence="19",timestamp="2018-10-21 21:31:20.986",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 1",sequence="20",timestamp="2018-10-21 21:32:51.853",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiaG9yaXpvbnRhbExpbmUiLCBbInN0YXJ0WCIsICJlbmRYIiwgInlDb29yZGluYXRlIiwgInBvaW50Q291bnQiXSkKeyAgIAogICAgTG9jYWwoeEluZGV4KTsKICAgIAogICAgRm9yKHhJbmRleCA6PSBzdGFydFgsIHhJbmRleCA8PT8gZW5kWCwgeEluZGV4KyspCiAgICB7CiAgICAgICAgUGxvdHRlclBvaW50KCJBIiArIFRvU3RyaW5nKHBvaW50Q291bnQrKyksIHhJbmRleCwgeUNvb3JkaW5hdGUpOwogICAgfQogICAgCiAgICBwb2ludENvdW50Owp9CgoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIiwgW10pCnsKICAgIFBsb3R0ZXJDbGVhcigpOwogICAgaG9yaXpvbnRhbExpbmUoMSwgMTAsIDIsIDEpOwp9CgoKbWFpblByb2NlZHVyZSgpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="21",timestamp="2018-10-21 21:41:01.975",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("horizontalLine", ["startX", "endX", "yCoordinate", "pointCount"])¶{¶    Local(xIndex);¶    ¶    For(xIndex := startX, xIndex <=? endX, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointcount++), xindex, yCoordinate);¶    }¶    ¶    pointCount;¶}¶    ¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    horizontalLine(1,10,2,1);¶}¶    ¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="22",timestamp="2018-10-21 21:41:40.252",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶pointCount := 1;¶¶Procedure("horizontalLine", ["startX", "endX", "yCoordinate", "pointCount"])¶{¶    Local(xIndex);¶    ¶    For(xIndex := startX, xIndex <=? endX, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointcount++), xindex, yCoordinate);¶    }¶    ¶    pointCount;¶}¶    ¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    horizontalLine(1,10,2,1);¶}¶    ¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="23",timestamp="2018-10-21 21:41:49.501",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶pointCount := 1;¶¶Procedure("horizontalLine", ["startX", "endX", "yCoordinate", "pointCount"])¶{¶    Local(xIndex);¶    ¶    For(xIndex := startX, xIndex <=? endX, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xindex, yCoordinate);¶    }¶    ¶    pointCount;¶}¶    ¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    horizontalLine(1,10,2,1);¶}¶    ¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="24",timestamp="2018-10-21 21:42:05.702",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶xIndex := 1;¶¶pointCount := 1;¶¶Procedure("horizontalLine", ["startX", "endX", "yCoordinate", "pointCount"])¶{¶    Local(xIndex);¶    ¶    For(xIndex := startX, xIndex <=? endX, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xindex, yCoordinate);¶    }¶    ¶    pointCount;¶}¶    ¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    horizontalLine(1,10,2,1);¶}¶    ¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="25",timestamp="2018-10-21 21:42:14.925",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶xIndex := 1;¶¶pointCount := 1;¶¶Procedure("horizontalLine", ["startX", "endX", "yCoordinate", "pointCount"])¶{¶    Local(xIndex);¶    ¶    For(xIndex := startX, xIndex <=? endX, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, yCoordinate);¶    }¶    ¶    pointCount;¶}¶    ¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    horizontalLine(1,10,2,1);¶}¶    ¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 1",sequence="26",timestamp="2018-10-21 21:42:35.349",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 1",sequence="27",timestamp="2018-10-21 21:42:59.653",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiaG9yaXpvbnRhbExpbmUiLCBbInN0YXJ0WCIsICJlbmRYIiwgInlDb29yZGluYXRlIiwgInBvaW50Q291bnQiXSkKeyAgIAogICAgTG9jYWwoeEluZGV4KTsKICAgIAogICAgRm9yKHhJbmRleCA6PSBzdGFydFgsIHhJbmRleCA8PT8gZW5kWCwgeEluZGV4KyspCiAgICB7CiAgICAgICAgUGxvdHRlclBvaW50KCJBIiArIFRvU3RyaW5nKHBvaW50Q291bnQrKyksIHhJbmRleCwgeUNvb3JkaW5hdGUpOwogICAgfQogICAgCiAgICBwb2ludENvdW50Owp9CgoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIiwgW10pCnsKICAgIFBsb3R0ZXJDbGVhcigpOwogICAgaG9yaXpvbnRhbExpbmUoMSwgMTAsIDIsIDEpOwp9CgoKbWFpblByb2NlZHVyZSgpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 1",sequence="28",timestamp="2018-10-21 21:43:11.085",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiaG9yaXpvbnRhbExpbmUiLCBbInN0YXJ0WCIsICJlbmRYIiwgInlDb29yZGluYXRlIiwgInBvaW50Q291bnQiXSkKeyAgIAogICAgTG9jYWwoeEluZGV4KTsKICAgIAogICAgRm9yKHhJbmRleCA6PSBzdGFydFgsIHhJbmRleCA8PT8gZW5kWCwgeEluZGV4KyspCiAgICB7CiAgICAgICAgUGxvdHRlclBvaW50KCJBIiArIFRvU3RyaW5nKHBvaW50Q291bnQrKyksIHhJbmRleCwgeUNvb3JkaW5hdGUpOwogICAgfQogICAgCiAgICBwb2ludENvdW50Owp9CgoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIiwgW10pCnsKICAgIFBsb3R0ZXJDbGVhcigpOwogICAgaG9yaXpvbnRhbExpbmUoMSwgMTAsIDIsIDEpOwp9CgoKbWFpblByb2NlZHVyZSgpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="29",timestamp="2018-10-21 21:43:26.6",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶¶Procedure("horizontalLine", ["startX", "endX", "yCoordinate", "pointCount"])¶{¶    Local(xIndex);¶    ¶    For(xIndex := startX, xIndex <=? endX, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, yCoordinate);¶    }¶    ¶    pointCount;¶}¶    ¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    horizontalLine(1,10,2,1);¶}¶    ¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 1",sequence="30",timestamp="2018-10-21 21:44:21.704",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="31",timestamp="2018-10-21 21:55:23.164",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("verticalLine", ["startY", "endY", "xCoordinate", "pointCount"])¶{¶    Local(yIndex);¶    ¶    For(yIndex := startY, yIndex <=? endY, yIndex++)¶    {¶        PlotterPoint("B" + ToString(pointCount++), yIndex, xCoordinate);¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    verticalLine(1,6,1,3);¶}¶¶mainProcedure;
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="32",timestamp="2018-10-21 21:55:46.97",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("verticalLine", ["startY", "endY", "xCoordinate", "pointCount"])¶{¶    Local(yIndex);¶    ¶    For(yIndex := startY, yIndex <=? endY, yIndex++)¶    {¶        PlotterPoint("B" + ToString(pointCount++), yIndex, xCoordinate);¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    verticalLine(1,6,1,3);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="33",timestamp="2018-10-21 21:56:07.733",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("verticalLine", ["startY", "endY", "xCoordinate", "pointCount"])¶{¶    Local(yIndex);¶    ¶    For(yIndex := startY, yIndex <=? endY, yIndex++)¶    {¶        PlotterPoint("B" + ToString(pointCount++), yIndex, xCoordinate);¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    verticalLine(1,6,1,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="34",timestamp="2018-10-21 21:56:13.361",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("verticalLine", ["startY", "endY", "xCoordinate", "pointCount"])¶{¶    Local(yIndex);¶    ¶    For(yIndex := startY, yIndex <=? endY, yIndex++)¶    {¶        PlotterPoint("B" + ToString(pointCount++), yIndex, xCoordinate);¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    verticalLine(1,6,1,3);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="35",timestamp="2018-10-21 21:56:26.422",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("verticalLine", ["startY", "endY", "xCoordinate", "pointCount"])¶{¶    Local(yIndex);¶    ¶    For(yIndex := startY, yIndex <=? endY, yIndex++)¶    {¶        PlotterPoint("B" + ToString(pointCount++), yIndex, xCoordinate);¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    verticalLine(1,6,3,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 2",sequence="36",timestamp="2018-10-21 21:56:52.039",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("ClByb2NlZHVyZSgidmVydGljYWxMaW5lIiwgWyJzdGFydFkiLCAiZW5kWSIsICJ4Q29vcmRpbmF0ZSIsICJwb2ludENvdW50Il0pCnsgICAgCiAgICBMb2NhbCh5SW5kZXgpOwogICAgCiAgICBGb3IoeUluZGV4IDo9IHN0YXJ0WSwgeUluZGV4IDw9PyBlbmRZLCB5SW5kZXgrKykKICAgIHsKICAgICAgICBQbG90dGVyUG9pbnQoIkIiICsgVG9TdHJpbmcocG9pbnRDb3VudCsrKSwgeENvb3JkaW5hdGUsIHlJbmRleCk7CiAgICB9CiAgICAKICAgIHBvaW50Q291bnQ7Cn0KCgpQcm9jZWR1cmUoIm1haW5Qcm9jZWR1cmUiLCBbXSkKewogICAgUGxvdHRlckNsZWFyKCk7CiAgICB2ZXJ0aWNhbExpbmUoMSwgNiwgMywgMSk7Cn0KCgptYWluUHJvY2VkdXJlKCk7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 2",sequence="37",timestamp="2018-10-21 21:57:02.607",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("ClByb2NlZHVyZSgidmVydGljYWxMaW5lIiwgWyJzdGFydFkiLCAiZW5kWSIsICJ4Q29vcmRpbmF0ZSIsICJwb2ludENvdW50Il0pCnsgICAgCiAgICBMb2NhbCh5SW5kZXgpOwogICAgCiAgICBGb3IoeUluZGV4IDo9IHN0YXJ0WSwgeUluZGV4IDw9PyBlbmRZLCB5SW5kZXgrKykKICAgIHsKICAgICAgICBQbG90dGVyUG9pbnQoIkIiICsgVG9TdHJpbmcocG9pbnRDb3VudCsrKSwgeENvb3JkaW5hdGUsIHlJbmRleCk7CiAgICB9CiAgICAKICAgIHBvaW50Q291bnQ7Cn0KCgpQcm9jZWR1cmUoIm1haW5Qcm9jZWR1cmUiLCBbXSkKewogICAgUGxvdHRlckNsZWFyKCk7CiAgICB2ZXJ0aWNhbExpbmUoMSwgNiwgMywgMSk7Cn0KCgptYWluUHJvY2VkdXJlKCk7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="38",timestamp="2018-10-21 21:57:21.08",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("verticalLine", ["startY", "endY", "xCoordinate", "pointCount"])¶{¶    Local(yIndex);¶    ¶    For(yIndex := startY, yIndex <=? endY, yIndex++)¶    {¶        PlotterPoint("B" + ToString(pointCount++), xCoordinate,yIndex);¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    verticalLine(1,6,3,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 2",sequence="39",timestamp="2018-10-21 21:57:27.832",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 3",sequence="40",timestamp="2018-10-21 22:00:47.617",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("ClByb2NlZHVyZSgic29saWRSZWN0YW5nbGUiLCBbImxvd2VyTGVmdFgiLCAibG93ZXJMZWZ0WSIsICJ3aWR0aCIsICJoZWlnaHQiLCAicG9pbnRDb3VudCJdKQp7CiAgICBMb2NhbCh4SW5kZXgsIHlJbmRleCk7CiAgICAKICAgIEZvcih5SW5kZXggOj0gbG93ZXJMZWZ0WSwgeUluZGV4IDw9PyBsb3dlckxlZnRZICsgaGVpZ2h0LCB5SW5kZXgrKykKICAgIHsgICAgCiAgICAgICAgRm9yKHhJbmRleCA6PSBsb3dlckxlZnRYLCB4SW5kZXggPD0/IGxvd2VyTGVmdFggKyB3aWR0aCwgeEluZGV4KyspCiAgICAgICAgewogICAgICAgICAgICBQbG90dGVyUG9pbnQoIkMiICsgVG9TdHJpbmcocG9pbnRDb3VudCsrKSwgeEluZGV4LCB5SW5kZXgpOwogICAgICAgIH0KICAgIH0KICAgIAogICAgcG9pbnRDb3VudDsKfQoKClByb2NlZHVyZSgibWFpblByb2NlZHVyZSIsIFtdKQp7CiAgICBQbG90dGVyQ2xlYXIoKTsKICAgIHNvbGlkUmVjdGFuZ2xlKDEsIDIsIDUsIDUsIDEpOwp9CgoKbWFpblByb2NlZHVyZSgpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="41",timestamp="2018-10-21 22:10:14.461",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangle", ["lowerLeftX", "LowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xindex, yIndex);¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + height, xIndex++)¶        {¶            PlotterPoint("C" + ToString(pointCount++), xIndex, yIndex);¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    soildRectangle(1,2,5,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="42",timestamp="2018-10-21 22:10:35.177",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangle", ["lowerLeftX", "LowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xindex, yIndex);¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + height, xIndex++)¶        {¶            PlotterPoint("C" + ToString(pointCount++), xIndex, yIndex);¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangle(1,2,5,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="43",timestamp="2018-10-21 22:11:18.574",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangle", ["lowerLeftX", "LowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + height, xIndex++)¶        {¶            PlotterPoint("C" + ToString(pointCount++), xIndex, yIndex);¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangle(1,2,5,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="44",timestamp="2018-10-21 22:12:25.205",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangle", ["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + height, xIndex++)¶        {¶            PlotterPoint("C" + ToString(pointCount++), xIndex, yIndex);¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangle(1,2,5,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 3",sequence="45",timestamp="2018-10-21 22:19:06.317",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 3",sequence="46",timestamp="2018-10-21 22:19:51.168",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="47",timestamp="2018-10-21 22:21:12.586",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangle2", ["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xIndex, yIndex);¶     ¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + height, xIndex++)¶    {¶        For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶        {¶            PlotterPoint("D" + ToString(pointCount++), xIndex, yIndex);¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangle2(1,2,5,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 4",sequence="48",timestamp="2018-10-21 22:21:29.812",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 5",sequence="49",timestamp="2018-10-21 22:26:48.91",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("ClByb2NlZHVyZSgic29saWRSZWN0YW5nbGVIb2xlcyIsIFsibG93ZXJMZWZ0WCIsICJsb3dlckxlZnRZIiwgIndpZHRoIiwgImhlaWdodCIsICJwb2ludENvdW50Il0pCnsKICAgIExvY2FsKHhJbmRleCwgeUluZGV4KTsKICAgIAogICAgRm9yKHlJbmRleCA6PSBsb3dlckxlZnRZLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBoZWlnaHQsIHlJbmRleCsrKQogICAgeyAgICAKICAgICAgICBGb3IoeEluZGV4IDo9IGxvd2VyTGVmdFgsIHhJbmRleCA8PT8gbG93ZXJMZWZ0WCArIHdpZHRoLCB4SW5kZXgrKykKICAgICAgICB7CiAgICAgICAgICAgIElmKHBvaW50Q291bnQgIT0/IDggJj8gcG9pbnRDb3VudCAhPT8gMTEgJj8gcG9pbnRDb3VudCAhPT8gMjkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIFBsb3R0ZXJQb2ludCgiRSIgKyBUb1N0cmluZyhwb2ludENvdW50KSwgeEluZGV4LCB5SW5kZXgpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICBwb2ludENvdW50Kys7CiAgICAgICAgfQogICAgfQogICAgCiAgICBwb2ludENvdW50Owp9CgoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIiwgW10pCnsKICAgIFBsb3R0ZXJDbGVhcigpOwogICAgc29saWRSZWN0YW5nbGVIb2xlcygxLCAyLCA1LCA1LCAxKTsKfQoKCgoKbWFpblByb2NlZHVyZSgpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 5",sequence="50",timestamp="2018-10-21 22:27:02.36",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("ClByb2NlZHVyZSgic29saWRSZWN0YW5nbGVIb2xlcyIsIFsibG93ZXJMZWZ0WCIsICJsb3dlckxlZnRZIiwgIndpZHRoIiwgImhlaWdodCIsICJwb2ludENvdW50Il0pCnsKICAgIExvY2FsKHhJbmRleCwgeUluZGV4KTsKICAgIAogICAgRm9yKHlJbmRleCA6PSBsb3dlckxlZnRZLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBoZWlnaHQsIHlJbmRleCsrKQogICAgeyAgICAKICAgICAgICBGb3IoeEluZGV4IDo9IGxvd2VyTGVmdFgsIHhJbmRleCA8PT8gbG93ZXJMZWZ0WCArIHdpZHRoLCB4SW5kZXgrKykKICAgICAgICB7CiAgICAgICAgICAgIElmKHBvaW50Q291bnQgIT0/IDggJj8gcG9pbnRDb3VudCAhPT8gMTEgJj8gcG9pbnRDb3VudCAhPT8gMjkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIFBsb3R0ZXJQb2ludCgiRSIgKyBUb1N0cmluZyhwb2ludENvdW50KSwgeEluZGV4LCB5SW5kZXgpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICBwb2ludENvdW50Kys7CiAgICAgICAgfQogICAgfQogICAgCiAgICBwb2ludENvdW50Owp9CgoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIiwgW10pCnsKICAgIFBsb3R0ZXJDbGVhcigpOwogICAgc29saWRSZWN0YW5nbGVIb2xlcygxLCAyLCA1LCA1LCAxKTsKfQoKCgoKbWFpblByb2NlZHVyZSgpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 5",sequence="51",timestamp="2018-10-21 22:27:35.381",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("ClByb2NlZHVyZSgic29saWRSZWN0YW5nbGVIb2xlcyIsIFsibG93ZXJMZWZ0WCIsICJsb3dlckxlZnRZIiwgIndpZHRoIiwgImhlaWdodCIsICJwb2ludENvdW50Il0pCnsKICAgIExvY2FsKHhJbmRleCwgeUluZGV4KTsKICAgIAogICAgRm9yKHlJbmRleCA6PSBsb3dlckxlZnRZLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBoZWlnaHQsIHlJbmRleCsrKQogICAgeyAgICAKICAgICAgICBGb3IoeEluZGV4IDo9IGxvd2VyTGVmdFgsIHhJbmRleCA8PT8gbG93ZXJMZWZ0WCArIHdpZHRoLCB4SW5kZXgrKykKICAgICAgICB7CiAgICAgICAgICAgIElmKHBvaW50Q291bnQgIT0/IDggJj8gcG9pbnRDb3VudCAhPT8gMTEgJj8gcG9pbnRDb3VudCAhPT8gMjkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIFBsb3R0ZXJQb2ludCgiRSIgKyBUb1N0cmluZyhwb2ludENvdW50KSwgeEluZGV4LCB5SW5kZXgpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICBwb2ludENvdW50Kys7CiAgICAgICAgfQogICAgfQogICAgCiAgICBwb2ludENvdW50Owp9CgoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIiwgW10pCnsKICAgIFBsb3R0ZXJDbGVhcigpOwogICAgc29saWRSZWN0YW5nbGVIb2xlcygxLCAyLCA1LCA1LCAxKTsKfQoKCgoKbWFpblByb2NlZHVyZSgpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 5",sequence="52",timestamp="2018-10-21 22:28:07.747",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("ClByb2NlZHVyZSgic29saWRSZWN0YW5nbGVIb2xlcyIsIFsibG93ZXJMZWZ0WCIsICJsb3dlckxlZnRZIiwgIndpZHRoIiwgImhlaWdodCIsICJwb2ludENvdW50Il0pCnsKICAgIExvY2FsKHhJbmRleCwgeUluZGV4KTsKICAgIAogICAgRm9yKHlJbmRleCA6PSBsb3dlckxlZnRZLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBoZWlnaHQsIHlJbmRleCsrKQogICAgeyAgICAKICAgICAgICBGb3IoeEluZGV4IDo9IGxvd2VyTGVmdFgsIHhJbmRleCA8PT8gbG93ZXJMZWZ0WCArIHdpZHRoLCB4SW5kZXgrKykKICAgICAgICB7CiAgICAgICAgICAgIElmKHBvaW50Q291bnQgIT0/IDggJj8gcG9pbnRDb3VudCAhPT8gMTEgJj8gcG9pbnRDb3VudCAhPT8gMjkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIFBsb3R0ZXJQb2ludCgiRSIgKyBUb1N0cmluZyhwb2ludENvdW50KSwgeEluZGV4LCB5SW5kZXgpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICBwb2ludENvdW50Kys7CiAgICAgICAgfQogICAgfQogICAgCiAgICBwb2ludENvdW50Owp9CgoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIiwgW10pCnsKICAgIFBsb3R0ZXJDbGVhcigpOwogICAgc29saWRSZWN0YW5nbGVIb2xlcygxLCAyLCA1LCA1LCAxKTsKfQoKCgoKbWFpblByb2NlZHVyZSgpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 5",sequence="53",timestamp="2018-10-21 22:29:03.014",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("ClByb2NlZHVyZSgic29saWRSZWN0YW5nbGVIb2xlcyIsIFsibG93ZXJMZWZ0WCIsICJsb3dlckxlZnRZIiwgIndpZHRoIiwgImhlaWdodCIsICJwb2ludENvdW50Il0pCnsKICAgIExvY2FsKHhJbmRleCwgeUluZGV4KTsKICAgIAogICAgRm9yKHlJbmRleCA6PSBsb3dlckxlZnRZLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBoZWlnaHQsIHlJbmRleCsrKQogICAgeyAgICAKICAgICAgICBGb3IoeEluZGV4IDo9IGxvd2VyTGVmdFgsIHhJbmRleCA8PT8gbG93ZXJMZWZ0WCArIHdpZHRoLCB4SW5kZXgrKykKICAgICAgICB7CiAgICAgICAgICAgIElmKHBvaW50Q291bnQgIT0/IDggJj8gcG9pbnRDb3VudCAhPT8gMTEgJj8gcG9pbnRDb3VudCAhPT8gMjkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIFBsb3R0ZXJQb2ludCgiRSIgKyBUb1N0cmluZyhwb2ludENvdW50KSwgeEluZGV4LCB5SW5kZXgpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICBwb2ludENvdW50Kys7CiAgICAgICAgfQogICAgfQogICAgCiAgICBwb2ludENvdW50Owp9CgoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIiwgW10pCnsKICAgIFBsb3R0ZXJDbGVhcigpOwogICAgc29saWRSZWN0YW5nbGVIb2xlcygxLCAyLCA1LCA1LCAxKTsKfQoKCgoKbWFpblByb2NlZHVyZSgpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 5",sequence="54",timestamp="2018-10-21 22:29:25.593",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangleHoles", ["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + height, xIndex++)¶        {¶            If(pointCount !=? 8 &? pointCount !=? 11 &? pointCount !=? 29)¶            {¶            PlotterPoint("E" + ToString(pointCount++), xIndex, yIndex);¶            }¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangleHoles(1,2,5,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 5",sequence="55",timestamp="2018-10-21 22:29:54.351",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("ClByb2NlZHVyZSgic29saWRSZWN0YW5nbGVIb2xlcyIsIFsibG93ZXJMZWZ0WCIsICJsb3dlckxlZnRZIiwgIndpZHRoIiwgImhlaWdodCIsICJwb2ludENvdW50Il0pCnsKICAgIExvY2FsKHhJbmRleCwgeUluZGV4KTsKICAgIAogICAgRm9yKHlJbmRleCA6PSBsb3dlckxlZnRZLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBoZWlnaHQsIHlJbmRleCsrKQogICAgeyAgICAKICAgICAgICBGb3IoeEluZGV4IDo9IGxvd2VyTGVmdFgsIHhJbmRleCA8PT8gbG93ZXJMZWZ0WCArIHdpZHRoLCB4SW5kZXgrKykKICAgICAgICB7CiAgICAgICAgICAgIElmKHBvaW50Q291bnQgIT0/IDggJj8gcG9pbnRDb3VudCAhPT8gMTEgJj8gcG9pbnRDb3VudCAhPT8gMjkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIFBsb3R0ZXJQb2ludCgiRSIgKyBUb1N0cmluZyhwb2ludENvdW50KSwgeEluZGV4LCB5SW5kZXgpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICBwb2ludENvdW50Kys7CiAgICAgICAgfQogICAgfQogICAgCiAgICBwb2ludENvdW50Owp9CgoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIiwgW10pCnsKICAgIFBsb3R0ZXJDbGVhcigpOwogICAgc29saWRSZWN0YW5nbGVIb2xlcygxLCAyLCA1LCA1LCAxKTsKfQoKCgoKbWFpblByb2NlZHVyZSgpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 5",sequence="56",timestamp="2018-10-21 22:30:25.979",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangleHoles", ["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + height, xIndex++)¶        {¶            If(pointCount !=? 8 &? pointCount !=? 11 &? pointCount !=? 29)¶            {¶            PlotterPoint("E" + ToString(pointCount++), xIndex, yIndex);¶            }¶            ¶            pointCount++¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangleHoles(1,2,5,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 5",sequence="57",timestamp="2018-10-21 22:30:29.725",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("ClByb2NlZHVyZSgic29saWRSZWN0YW5nbGVIb2xlcyIsIFsibG93ZXJMZWZ0WCIsICJsb3dlckxlZnRZIiwgIndpZHRoIiwgImhlaWdodCIsICJwb2ludENvdW50Il0pCnsKICAgIExvY2FsKHhJbmRleCwgeUluZGV4KTsKICAgIAogICAgRm9yKHlJbmRleCA6PSBsb3dlckxlZnRZLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBoZWlnaHQsIHlJbmRleCsrKQogICAgeyAgICAKICAgICAgICBGb3IoeEluZGV4IDo9IGxvd2VyTGVmdFgsIHhJbmRleCA8PT8gbG93ZXJMZWZ0WCArIHdpZHRoLCB4SW5kZXgrKykKICAgICAgICB7CiAgICAgICAgICAgIElmKHBvaW50Q291bnQgIT0/IDggJj8gcG9pbnRDb3VudCAhPT8gMTEgJj8gcG9pbnRDb3VudCAhPT8gMjkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIFBsb3R0ZXJQb2ludCgiRSIgKyBUb1N0cmluZyhwb2ludENvdW50KSwgeEluZGV4LCB5SW5kZXgpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICBwb2ludENvdW50Kys7CiAgICAgICAgfQogICAgfQogICAgCiAgICBwb2ludENvdW50Owp9CgoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIiwgW10pCnsKICAgIFBsb3R0ZXJDbGVhcigpOwogICAgc29saWRSZWN0YW5nbGVIb2xlcygxLCAyLCA1LCA1LCAxKTsKfQoKCgoKbWFpblByb2NlZHVyZSgpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 5",sequence="58",timestamp="2018-10-21 22:30:44.636",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("ClByb2NlZHVyZSgic29saWRSZWN0YW5nbGVIb2xlcyIsIFsibG93ZXJMZWZ0WCIsICJsb3dlckxlZnRZIiwgIndpZHRoIiwgImhlaWdodCIsICJwb2ludENvdW50Il0pCnsKICAgIExvY2FsKHhJbmRleCwgeUluZGV4KTsKICAgIAogICAgRm9yKHlJbmRleCA6PSBsb3dlckxlZnRZLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBoZWlnaHQsIHlJbmRleCsrKQogICAgeyAgICAKICAgICAgICBGb3IoeEluZGV4IDo9IGxvd2VyTGVmdFgsIHhJbmRleCA8PT8gbG93ZXJMZWZ0WCArIHdpZHRoLCB4SW5kZXgrKykKICAgICAgICB7CiAgICAgICAgICAgIElmKHBvaW50Q291bnQgIT0/IDggJj8gcG9pbnRDb3VudCAhPT8gMTEgJj8gcG9pbnRDb3VudCAhPT8gMjkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIFBsb3R0ZXJQb2ludCgiRSIgKyBUb1N0cmluZyhwb2ludENvdW50KSwgeEluZGV4LCB5SW5kZXgpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICBwb2ludENvdW50Kys7CiAgICAgICAgfQogICAgfQogICAgCiAgICBwb2ludENvdW50Owp9CgoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIiwgW10pCnsKICAgIFBsb3R0ZXJDbGVhcigpOwogICAgc29saWRSZWN0YW5nbGVIb2xlcygxLCAyLCA1LCA1LCAxKTsKfQoKCgoKbWFpblByb2NlZHVyZSgpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 5",sequence="59",timestamp="2018-10-21 22:31:30.017",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangleHoles", ["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶        {¶            If(pointCount !=? 8 &? pointCount !=? 11 &? pointCount !=? 29)¶            {¶            PlotterPoint("E" + ToString(pointCount++), xIndex, yIndex);¶            }¶            ¶            pointCount++;¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangleHoles(1,2,5,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 5",sequence="60",timestamp="2018-10-21 22:33:29.996",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangleHoles", ["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶        {¶            If(pointCount !=? 8 &? pointCount !=? 11 &? pointCount !=? 29)¶            {¶            PlotterPoint("E" + ToString(pointCount++), xIndex, yIndex);¶            }¶            ¶            pointCount++;¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangleHoles(1,2,5,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 5",sequence="61",timestamp="2018-10-21 22:33:33.756",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("ClByb2NlZHVyZSgic29saWRSZWN0YW5nbGVIb2xlcyIsIFsibG93ZXJMZWZ0WCIsICJsb3dlckxlZnRZIiwgIndpZHRoIiwgImhlaWdodCIsICJwb2ludENvdW50Il0pCnsKICAgIExvY2FsKHhJbmRleCwgeUluZGV4KTsKICAgIAogICAgRm9yKHlJbmRleCA6PSBsb3dlckxlZnRZLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBoZWlnaHQsIHlJbmRleCsrKQogICAgeyAgICAKICAgICAgICBGb3IoeEluZGV4IDo9IGxvd2VyTGVmdFgsIHhJbmRleCA8PT8gbG93ZXJMZWZ0WCArIHdpZHRoLCB4SW5kZXgrKykKICAgICAgICB7CiAgICAgICAgICAgIElmKHBvaW50Q291bnQgIT0/IDggJj8gcG9pbnRDb3VudCAhPT8gMTEgJj8gcG9pbnRDb3VudCAhPT8gMjkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIFBsb3R0ZXJQb2ludCgiRSIgKyBUb1N0cmluZyhwb2ludENvdW50KSwgeEluZGV4LCB5SW5kZXgpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICBwb2ludENvdW50Kys7CiAgICAgICAgfQogICAgfQogICAgCiAgICBwb2ludENvdW50Owp9CgoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIiwgW10pCnsKICAgIFBsb3R0ZXJDbGVhcigpOwogICAgc29saWRSZWN0YW5nbGVIb2xlcygxLCAyLCA1LCA1LCAxKTsKfQoKCgoKbWFpblByb2NlZHVyZSgpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 5",sequence="62",timestamp="2018-10-21 22:34:57.114",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangleHoles", ["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶        {¶            If(pointCount !=? 8 &? pointCount !=? 11 &? pointCount !=? 29)¶            {¶                PlotterPoint("E" + ToString(pointCount++), xIndex, yIndex);¶            }¶            ¶            pointCount++;¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangleHoles(1,2,5,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 5",sequence="63",timestamp="2018-10-21 22:35:22.315",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangleHoles", ["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶        {¶            If(pointCount !=? 8 &? pointCount !=? 11 &? pointCount !=? 29)¶            {¶                PlotterPoint("E" + ToString(pointCount++), xIndex, yIndex);¶            }¶                       ¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangleHoles(1,2,5,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 5",sequence="64",timestamp="2018-10-21 22:35:59.637",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangleHoles", ["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶        {¶            If(pointCount =? 8 &? pointCount =? 11 &? pointCount =? 29)¶            {¶                pointCount++;¶            }¶            If(pointCount !=? 8 &? pointCount !=? 11 &? pointCount !=? 29)¶            {¶                PlotterPoint("E" + ToString(pointCount++), xIndex, yIndex);¶            }¶                       ¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangleHoles(1,2,5,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 5",sequence="65",timestamp="2018-10-21 22:37:07.606",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangleHoles", ["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶        {          ¶            If(pointCount !=? 8 &? pointCount !=? 11 &? pointCount !=? 29)¶            {¶                PlotterPoint("E" + ToString(pointCount++), xIndex, yIndex);¶            }¶            Else¶            {¶                pointCount++;¶            }¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangleHoles(1,2,5,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 5",sequence="66",timestamp="2018-10-21 22:37:23.854",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("ClByb2NlZHVyZSgic29saWRSZWN0YW5nbGVIb2xlcyIsIFsibG93ZXJMZWZ0WCIsICJsb3dlckxlZnRZIiwgIndpZHRoIiwgImhlaWdodCIsICJwb2ludENvdW50Il0pCnsKICAgIExvY2FsKHhJbmRleCwgeUluZGV4KTsKICAgIAogICAgRm9yKHlJbmRleCA6PSBsb3dlckxlZnRZLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBoZWlnaHQsIHlJbmRleCsrKQogICAgeyAgICAKICAgICAgICBGb3IoeEluZGV4IDo9IGxvd2VyTGVmdFgsIHhJbmRleCA8PT8gbG93ZXJMZWZ0WCArIHdpZHRoLCB4SW5kZXgrKykKICAgICAgICB7CiAgICAgICAgICAgIElmKHBvaW50Q291bnQgIT0/IDggJj8gcG9pbnRDb3VudCAhPT8gMTEgJj8gcG9pbnRDb3VudCAhPT8gMjkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIFBsb3R0ZXJQb2ludCgiRSIgKyBUb1N0cmluZyhwb2ludENvdW50KSwgeEluZGV4LCB5SW5kZXgpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICBwb2ludENvdW50Kys7CiAgICAgICAgfQogICAgfQogICAgCiAgICBwb2ludENvdW50Owp9CgoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIiwgW10pCnsKICAgIFBsb3R0ZXJDbGVhcigpOwogICAgc29saWRSZWN0YW5nbGVIb2xlcygxLCAyLCA1LCA1LCAxKTsKfQoKCgoKbWFpblByb2NlZHVyZSgpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 5",sequence="67",timestamp="2018-10-21 22:37:40.354",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 0",sequence="68",timestamp="2018-10-21 22:38:03.225",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 1",sequence="69",timestamp="2018-10-21 22:38:12.725",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 2",sequence="70",timestamp="2018-10-21 22:38:22.927",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 3",sequence="71",timestamp="2018-10-21 22:38:34.76",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 4",sequence="72",timestamp="2018-10-21 22:38:43.806",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 5",sequence="73",timestamp="2018-10-21 22:39:00.995",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="1",timestamp="2018-10-21 23:03:17.524",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("horizontalLine", ["startX", "endX", "yCoordinate", "pointCount"])¶{¶    Local(xIndex);¶    ¶    For(xIndex := startX, xIndex <=? endX, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++),xIndex, yCoordinate);¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    horizontalLine(1,10,2,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 1",sequence="2",timestamp="2018-10-21 23:03:36.812",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:03:49.451",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+Procedure("verticalLine", ["startY", "endY", "xCoordinate", "pointCount"])¶{¶    Local(yIndex);¶    ¶    For(yIndex := startY, yIndex <=? endY, yIndex++)¶    {¶        PlotterPoint("B" + ToString(pointCount++), xCoordinate,yIndex);¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    verticalLine(1,6,3,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:04:55.47",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:05:01.758",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:05:02.642",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:05:38.723",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:05:39.769",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:05:40.134",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:06:07.864",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:06:11.563",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:06:11.698",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:06:15.172",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:06:36.045",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:06:41.82",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:06:53.13",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="3",timestamp="2018-10-21 23:07:00.556",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("verticalLine", ["startY","endY","xCoordinate","pointCount"])¶{¶    Local(yIndex);¶    ¶    For(yIndex := startY, yIndex <=? endY, yIndex++)¶    {¶        PlotterPoint("B" + ToString(pointCount++), xCoordinate,yIndex);¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    verticalLine(1,6,3,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 2",sequence="4",timestamp="2018-10-21 23:07:07.812",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:09:08.854",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:09:17.859",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:09:19.088",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:10:01.656",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:10:02.924",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:10:04.77",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:10:31.126",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:10:33.732",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:10:57.688",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:10:57.963",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:10:59.447",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:11:00.561",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:11:01.281",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:11:01.632",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:11:41.548",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:11:49.46",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:11:49.664",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:11:55.659",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:17:48.62",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:17:52.88",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:18:07.55",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="5",timestamp="2018-10-21 23:18:17.862",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangle",["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶        {    ¶            PlotterPoint("C"+ToString(pointCount++),xIndex,yIndex);¶        }¶    }¶¶    pointCount;¶}¶¶Procedure("mainProcedure"),[])¶{¶    PlotterClear();¶    solidRectangle(1,2,5,5,1);¶}¶¶mainProcedure()
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:18:18.518",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Problem 3",mpversion=".259",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ] )*** close bracket token for program block but found ***( ) )*** instead. Error on or before line 984 starting at index 29.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="6",timestamp="2018-10-21 23:18:34.615",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangle",["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶        {    ¶            PlotterPoint("C"+ToString(pointCount++),xIndex,yIndex);¶        }¶    }¶¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangle(1,2,5,5,1);¶}¶¶mainProcedure()
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:18:35.215",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Problem 3",mpversion=".259",preserve="false"¶      Result: Error encountered during parsing: Expression must end with a semi-colon ***( ; )*** or a closing brace  ***( } )***  Error on or before line 990 starting at index 15.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="7",timestamp="2018-10-21 23:18:39.317",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangle",["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶        {    ¶            PlotterPoint("C"+ToString(pointCount++),xIndex,yIndex);¶        }¶    }¶¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangle(1,2,5,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 3",sequence="8",timestamp="2018-10-21 23:18:48.405",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:20:04.54",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:20:18.705",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:20:19.087",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:21:11.129",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:21:13.735",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:21:13.834",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:21:42.227",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:21:43.39",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:21:43.896",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:22:14.852",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:22:17.293",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:22:20.126",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:22:21.263",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:22:25.308",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:22:43.324",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:22:47.18",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="9",timestamp="2018-10-21 23:23:18.046",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangle2", ["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + height, xIndex++)¶    {¶        For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶        {¶            PlotterPoint("D" + ToString(pointCount++),xIndex,yIndex);¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangle2(1, 2, 2, 5, 5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:23:18.63",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Problem 4",mpversion=".259",preserve="false"¶      Result: The 6 parameter version of procedure <solidRectangle2> is not defined (MAKE SURE THE PROCEDURE'S NAME IS SPELLED CORRECTLY and the correct number of arguments are being passed to it.)  Error on or before line 1382 starting at index 4.¶.   %/error
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:23:52.745",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+solidRectangle2
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="10",timestamp="2018-10-21 23:23:54.646",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangle2", ["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + height, xIndex++)¶    {¶        For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶        {¶            PlotterPoint("D" + ToString(pointCount++),xIndex,yIndex);¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangle2(1, 2, 2, 5, 5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:23:55.22",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Problem 4",mpversion=".259",preserve="false"¶      Result: The 6 parameter version of procedure <solidRectangle2> is not defined (MAKE SURE THE PROCEDURE'S NAME IS SPELLED CORRECTLY and the correct number of arguments are being passed to it.)  Error on or before line 1382 starting at index 4.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="11",timestamp="2018-10-21 23:24:43.318",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangle2", ["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶    {¶        For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶        {¶            PlotterPoint("D" + ToString(pointCount++),xIndex,yIndex);¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangle2(1, 2, 2, 5, 5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:24:43.898",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Problem 4",mpversion=".259",preserve="false"¶      Result: The 6 parameter version of procedure <solidRectangle2> is not defined (MAKE SURE THE PROCEDURE'S NAME IS SPELLED CORRECTLY and the correct number of arguments are being passed to it.)  Error on or before line 1382 starting at index 4.¶.   %/error
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:25:09.206",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+"solidRectangle2"
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:25:12.5",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+"solidRectangle2"
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="12",timestamp="2018-10-21 23:25:18.108",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangle2", ["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶    {¶        For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶        {¶            PlotterPoint("D" + ToString(pointCount++),xIndex,yIndex);¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangle2(1, 2, 2, 5, 5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:25:18.685",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Problem 4",mpversion=".259",preserve="false"¶      Result: The 6 parameter version of procedure <solidRectangle2> is not defined (MAKE SURE THE PROCEDURE'S NAME IS SPELLED CORRECTLY and the correct number of arguments are being passed to it.)  Error on or before line 1382 starting at index 4.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="13",timestamp="2018-10-21 23:25:35.974",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangle2", ["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])¶{¶    Local(xIndex, yIndex);¶    ¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶    {¶        For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶        {¶            PlotterPoint("D" + ToString(pointCount++),xIndex,yIndex);¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangle2(1,2,5,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 4",sequence="14",timestamp="2018-10-21 23:25:42.167",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:27:03.682",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:27:10.936",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:27:11.683",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:27:55.431",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:27:56.498",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:27:57.702",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:28:32.588",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:28:34.853",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:28:35.104",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:29:48.205",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:29:50.586",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:29:50.76",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:30:18.987",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+                
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:30:23.222",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:30:25.847",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:30:27.11",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:30:28.443",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:30:32.213",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+                
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:30:36.594",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:30:41.64",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:30:50.16",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:30:51.142",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:30:55.919",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:31:00.529",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:31:16.386",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:31:20.45",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:31:35.781",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 5",sequence="15",timestamp="2018-10-21 23:31:43.907",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangleHoles",["lowerLeftX","lowerLeftY","width","height","pointCount"])¶{¶    Local(xIndex,yIndex)¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex<=? lowerLeftX + width, xIndex++)¶        {¶            If(pointCount !=? 8 &? pointCount !=? 11 &? pointCount !=? 29)¶            {¶                PlotterPoint("E" + ToString(pointCount++), xIndex, yIndex);¶            }¶            Else¶            {¶                pointCount++;¶            }¶        }¶    }¶    ¶    pointCount;¶    ¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangleHoles(1,2,5,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,subtype="paste",timestamp="2018-10-21 23:31:44.488",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Problem 5",mpversion=".259",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ; )*** end of statement token in program block but found ***( For )*** instead. Error on or before line 1764 starting at index 4.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 5",sequence="16",timestamp="2018-10-21 23:32:02.94",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶Procedure("solidRectangleHoles",["lowerLeftX","lowerLeftY","width","height","pointCount"])¶{¶    Local(xIndex,yIndex);¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex<=? lowerLeftX + width, xIndex++)¶        {¶            If(pointCount !=? 8 &? pointCount !=? 11 &? pointCount !=? 29)¶            {¶                PlotterPoint("E" + ToString(pointCount++), xIndex, yIndex);¶            }¶            Else¶            {¶                pointCount++;¶            }¶        }¶    }¶    ¶    pointCount;¶    ¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    solidRectangleHoles(1,2,5,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 5",sequence="17",timestamp="2018-10-21 23:32:12.121",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+

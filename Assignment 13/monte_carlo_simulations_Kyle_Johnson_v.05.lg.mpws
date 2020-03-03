@@ -1,0 +1,809 @@
+v.05
+
+monte_carlo_simulations.mpws
+
+Complete all of the exercises in this worksheet by placing
+the code you write for each exercise into the empty foldf
+which is provided in each exercise section.
+
+Further information:
+
+- ADDITIONAL VARIABLES CAN BE USED IN YOUR PROGRAMS BEYOND
+THE VARIABLES THAT ARE SPECIFIED IN EACH PROBLEM.
+
+- All variables that are used in procedures must be make
+local to that procedure.
+
+- Do not use the "Echo" or "Write" procedures in your
+programs unless you are using them for debugging. Remove all
+procedures from your code that produce side effects output
+before submitting your worksheet.
+
+- The string "Head" is not equal to the string "HEAD".
+
+- The "truncate" attribute in a fold header limits the
+amount of output that a program will insert into the
+worksheet. This reduces the chances of crashing
+MathPiperIDE.
+
+- The "timeout" attribute in a fold header stops a running
+program after the specified number of milliseconds. This
+prevents programs that contain infinite loops from locking
+up MathPiperIDE.
+
+
+
+
+%group,name="Problem 0",description="Programmer's information."
+========================================================================================================
+Problem 0
+
+In the following fold, replace "xxx" with your
+first name, replace "yyy" with your last name, and
+replace "000000" with your SSU ID number:
+
+%mathpiper,name="Problem 0",subtype="problem",unassign_all="true",truncate="6000",timeout="5000"
+
+[
+["firstName", "Kyle"],
+["lastName", "Johnson"],
+["ssuIDNumber", "264694"],
+];
+
+%/mathpiper
+
+    %output,parent="Problem 0",mpversion=".259",preserve="false"
+      Result: [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]]
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 0"
+
+LocalSymbols(foldResult)
+{    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .259", 1, True)
+    {
+        StringToNumber(Version()) >=? .259;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+    FoldGrade("The code does not produce side effect output", 1, False)
+    {
+        Local(procedureNames);
+        
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'firstName' a string that is not 'xxx'", 1, True)
+    {
+        String?(foldResult["firstName"]) &? foldResult["firstName"] !=? "xxx";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'lastName' is a string that is not 'yyy'", 1, True)
+    {
+        String?(foldResult["lastName"]) &? foldResult["lastName"] !=? "yyy";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'ssuIDNumber' is not '000000'", 1, True)
+    {
+        foldResult["ssuIDNumber"] !=? "000000" &? foldResult["ssuIDNumber"] !=? 0;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 0",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]];
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .259. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The variable 'firstName' a string that is not 'xxx'. (1/1)
+        PASS: The variable 'lastName' is a string that is not 'yyy'. (1/1)
+        PASS: The variable 'ssuIDNumber' is not '000000'. (1/1)
+      
+        13/13 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Program 1",description="Birthday."
+========================================================================================================
+Program 1 (25 points)
+
+Write a Monte Carlo simulation to solve the
+following problem:
+
+In a room full of 5 people, what is the
+probability that at least two of them will have
+been born in the same month?
+
+%mathpiper,name="Program 1",subtype="problem",unassign_all="true",truncate="6000",timeout="30000"
+
+birthMonthMatchCounter := 0;
+
+numberOfPeople := 5;
+
+numberOfTrials := 100;
+
+Repeat(numberOfTrials)
+{
+     //Create a random birthday for each simulated person in the room.
+     birthMonthList := RandomIntegerList(numberOfPeople, 1, 12);
+    
+     //Print the birthdays for this room of simulated people (comment
+     //this line out for a large number of trials).
+     Write(birthMonthList);
+    
+     /*
+     Index through all of the days in a year and for each day scan
+     the birthdays list to see if two people in the list have this
+     day as their birthday. If there is a match, increment
+     birthdayMathCounter.
+     */
+     ForEach(month, 1 .. 12)
+     {
+     If(Count(birthMonthList,month) >=? 2)
+     {
+     birthMonthMatchCounter++;
+    
+     WriteString(" - Match on ");
+     Write(month);
+     }
+     }
+    
+     NewLine();
+}
+
+ NewLine();
+ Echo("The number of trials is: ", numberOfTrials);
+ Echo("The number of people in the room is: ", numberOfPeople);
+ Echo("The number of matches is: ",
+ birthMonthMatchCounter, "/ ", numberOfTrials);
+ Echo("The probability of having a birthday match: ",
+ NM(birthMonthMatchCounter/numberOfTrials) );
+ 
+%/mathpiper
+
+    %output,parent="Program 1",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      [1,7,9,11,1] - Match on 1
+      [1,10,8,11,11] - Match on 11
+      [4,5,8,4,3] - Match on 4
+      [11,8,11,12,9] - Match on 11
+      [4,6,5,5,10] - Match on 5
+      [9,2,10,3,6]
+      [9,6,8,12,11]
+      [9,1,7,11,11] - Match on 11
+      [1,8,7,6,5]
+      [11,12,4,1,8]
+      [4,11,1,2,10]
+      [12,9,2,3,4]
+      [9,6,8,10,2]
+      [4,9,12,3,2]
+      [10,6,5,4,7]
+      [7,6,2,4,12]
+      [9,11,2,2,11] - Match on 2 - Match on 11
+      [12,8,3,8,6] - Match on 8
+      [2,7,8,1,8] - Match on 8
+      [1,1,4,12,6] - Match on 1
+      [11,7,6,6,11] - Match on 6 - Match on 11
+      [2,11,2,4,11] - Match on 2 - Match on 11
+      [9,2,6,10,6] - Match on 6
+      [10,1,11,4,11] - Match on 11
+      [11,6,8,2,7]
+      [2,11,2,6,9] - Match on 2
+      [10,12,1,9,1] - Match on 1
+      [5,2,4,8,3]
+      [2,5,10,5,1] - Match on 5
+      [7,7,7,4,7] - Match on 7
+      [8,6,8,10,10] - Match on 8 - Match on 10
+      [5,5,1,9,7] - Match on 5
+      [8,4,8,7,7] - Match on 7 - Match on 8
+      [5,11,6,8,2]
+      [1,3,12,7,8]
+      [3,11,7,1,1] - Match on 1
+      [7,1,10,11,9]
+      [5,3,1,4,9]
+      [9,6,4,12,5]
+      [12,1,7,9,5]
+      [10,1,9,5,8]
+      [9,6,4,3,3] - Match on 3
+      [11,2,4,4,1] - Match on 4
+      [7,11,2,7,8] - Match on 7
+      [11,7,1,7,3] - Match on 7
+      [8,1,7,1,2] - Match on 1
+      [10,6,10,6,7] - Match on 6 - Match on 10
+      [4,12,1,2,3]
+      [2,12,4,6,12] - Match on 12
+      [3,4,8,8,12] - Match on 8
+      [10,1,10,9,11] - Match on 10
+      [12,10,3,12,1] - Match on 12
+      [9,4,4,7,5] - Match on 4
+      [11,11,3,3,12] - Match on 3 - Match on 11
+      [5,11,7,3,11] - Match on 11
+      [2,8,11,5,9]
+      [5,11,7,10,6]
+      [7,10,6,5,9]
+      [12,12,4,1,12] - Match on 12
+      [1,6,10,1,11] - Match on 1
+      [11,10,8,12,3]
+      [9,6,11,6,8] - Match on 6
+      [10,12,4,2,5]
+      [12,12,8,10,5] - Match on 12
+      [1,5,1,3,8] - Match on 1
+      [7,11,12,7,11] - Match on 7 - Match on 11
+      [1,10,12,1,5] - Match on 1
+      [5,7,12,3,11]
+      [1,6,2,3,4]
+      [8,4,3,6,3] - Match on 3
+      [2,9,10,5,7]
+      [4,5,3,4,10] - Match on 4
+      [1,11,1,10,5] - Match on 1
+      [1,7,12,1,10] - Match on 1
+      [9,12,3,10,5]
+      [10,3,10,8,9] - Match on 10
+      [9,12,5,10,5] - Match on 5
+      [10,1,5,2,2] - Match on 2
+      [10,9,2,6,7]
+      [5,12,7,5,12] - Match on 5 - Match on 12
+      [8,10,8,7,4] - Match on 8
+      [11,10,7,8,11] - Match on 11
+      [12,3,4,6,4] - Match on 4
+      [9,3,1,8,1] - Match on 1
+      [3,10,5,4,11]
+      [5,3,7,2,2] - Match on 2
+      [4,2,6,12,3]
+      [7,7,2,1,12] - Match on 7
+      [12,2,5,2,9] - Match on 2
+      [5,1,1,10,5] - Match on 1 - Match on 5
+      [6,8,10,8,5] - Match on 8
+      [10,12,8,4,1]
+      [4,6,3,11,4] - Match on 4
+      [1,11,6,1,12] - Match on 1
+      [12,12,6,12,2] - Match on 12
+      [4,4,6,3,1] - Match on 4
+      [4,5,3,10,11]
+      [1,3,2,3,2] - Match on 2 - Match on 3
+      [2,11,8,4,3]
+      [1,7,2,4,5]
+      
+      The number of trials is: 100 
+      The number of people in the room is: 5 
+      The number of matches is: 75 / 100 
+      The probability of having a birthday match: 0.75 
+      
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Program 2",description="Children."
+========================================================================================================
+Program 2 (25 points)
+
+Write a Monte Carlo simulation to solve the
+following problem:
+
+What is the probability that a family with 6
+children will have exactly 2 girls?
+
+%mathpiper,name="Program 2",subtype="problem",unassign_all="true",truncate="6000",timeout="30000"
+
+numberOfTrials := 100;
+
+numberOfChildren := 6;
+
+numberOfGirls := 2;
+
+twoGirlsCounter := 0;
+
+girlProbability := 49/100;
+
+boyProbability := 51/100;
+
+Repeat(numberOfTrials)
+    {
+     //Create a random list of simulated children.
+     
+     childrenList := BuildList(RandomPickWeighted(
+     [[_GIRL,girlProbability], [_BOY,boyProbability]]),
+     var,1,numberOfChildren,1);
+     
+     //Print the list of simulated children (comment
+     //this line out for a large number of trials).
+     
+     Write(childrenList);
+    
+     /*
+     If the list contains 3 boys, increment the three
+     boys counter.
+     */
+     
+     If(Count(childrenList, _GIRL) =? numberOfGirls)
+     {
+         twoGirlsCounter++;
+         
+         WriteString(" - ");
+         
+         Write(numberOfGirls);
+         
+         WriteString(" girls.");
+     }
+    
+     NewLine();
+}
+NewLine();
+
+Echo("The number of trials is: ", numberOfTrials);
+
+Echo("The number of children is: ", numberOfChildren);
+
+Echo("The number of trials that have 2 girls: ",
+ twoGirlsCounter, "/ ", numberOfTrials);
+ 
+Echo("The probability of having 2 girls: ",
+ NM(twoGirlsCounter/numberOfTrials) );
+ 
+%/mathpiper
+
+    %output,parent="Program 2",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      [_GIRL,_BOY,_GIRL,_GIRL,_BOY,_GIRL]
+      [_GIRL,_GIRL,_GIRL,_GIRL,_BOY,_BOY]
+      [_BOY,_BOY,_GIRL,_BOY,_BOY,_BOY]
+      [_BOY,_GIRL,_BOY,_BOY,_GIRL,_GIRL]
+      [_GIRL,_GIRL,_BOY,_BOY,_BOY,_BOY] - 2 girls.
+      [_GIRL,_BOY,_GIRL,_GIRL,_BOY,_GIRL]
+      [_GIRL,_GIRL,_GIRL,_BOY,_GIRL,_GIRL]
+      [_BOY,_BOY,_BOY,_BOY,_BOY,_GIRL]
+      [_BOY,_GIRL,_BOY,_BOY,_BOY,_BOY]
+      [_GIRL,_GIRL,_BOY,_BOY,_BOY,_GIRL]
+      [_GIRL,_GIRL,_GIRL,_BOY,_GIRL,_GIRL]
+      [_BOY,_BOY,_GIRL,_GIRL,_BOY,_BOY] - 2 girls.
+      [_BOY,_GIRL,_GIRL,_GIRL,_GIRL,_BOY]
+      [_GIRL,_BOY,_GIRL,_BOY,_BOY,_GIRL]
+      [_GIRL,_GIRL,_GIRL,_BOY,_BOY,_GIRL]
+      [_BOY,_BOY,_BOY,_BOY,_BOY,_BOY]
+      [_GIRL,_GIRL,_BOY,_GIRL,_GIRL,_BOY]
+      [_GIRL,_BOY,_BOY,_GIRL,_GIRL,_BOY]
+      [_GIRL,_BOY,_BOY,_BOY,_BOY,_GIRL] - 2 girls.
+      [_GIRL,_GIRL,_BOY,_BOY,_GIRL,_GIRL]
+      [_BOY,_GIRL,_BOY,_BOY,_GIRL,_BOY] - 2 girls.
+      [_BOY,_BOY,_GIRL,_BOY,_GIRL,_BOY] - 2 girls.
+      [_BOY,_BOY,_GIRL,_BOY,_GIRL,_GIRL]
+      [_GIRL,_GIRL,_GIRL,_BOY,_BOY,_BOY]
+      [_GIRL,_BOY,_GIRL,_GIRL,_BOY,_GIRL]
+      [_GIRL,_BOY,_BOY,_BOY,_GIRL,_BOY] - 2 girls.
+      [_BOY,_BOY,_GIRL,_GIRL,_BOY,_GIRL]
+      [_BOY,_GIRL,_BOY,_GIRL,_GIRL,_BOY]
+      [_BOY,_BOY,_BOY,_GIRL,_BOY,_BOY]
+      [_BOY,_GIRL,_BOY,_GIRL,_BOY,_GIRL]
+      [_GIRL,_GIRL,_GIRL,_GIRL,_BOY,_BOY]
+      [_BOY,_GIRL,_BOY,_BOY,_BOY,_BOY]
+      [_BOY,_BOY,_BOY,_BOY,_GIRL,_BOY]
+      [_BOY,_BOY,_BOY,_BOY,_GIRL,_BOY]
+      [_GIRL,_BOY,_BOY,_BOY,_BOY,_GIRL] - 2 girls.
+      [_BOY,_BOY,_BOY,_BOY,_GIRL,_BOY]
+      [_GIRL,_BOY,_BOY,_GIRL,_GIRL,_BOY]
+      [_BOY,_BOY,_BOY,_BOY,_BOY,_GIRL]
+      [_BOY,_GIRL,_BOY,_BOY,_GIRL,_BOY] - 2 girls.
+      [_BOY,_BOY,_BOY,_GIRL,_GIRL,_BOY] - 2 girls.
+      [_BOY,_GIRL,_GIRL,_BOY,_GIRL,_BOY]
+      [_BOY,_BOY,_BOY,_BOY,_BOY,_GIRL]
+      [_BOY,_BOY,_GIRL,_GIRL,_BOY,_GIRL]
+      [_GIRL,_BOY,_BOY,_GIRL,_BOY,_BOY] - 2 girls.
+      [_GIRL,_GIRL,_GIRL,_GIRL,_GIRL,_GIRL]
+      [_GIRL,_GIRL,_GIRL,_GIRL,_GIRL,_GIRL]
+      [_BOY,_BOY,_BOY,_GIRL,_BOY,_BOY]
+      [_GIRL,_BOY,_BOY,_BOY,_GIRL,_GIRL]
+      [_GIRL,_BOY,_GIRL,_BOY,_GIRL,_GIRL]
+      [_GIRL,_BOY,_BOY,_GIRL,_BOY,_BOY] - 2 girls.
+      [_BOY,_BOY,_GIRL,_GIRL,_BOY,_GIRL]
+      [_BOY,_BOY,_GIRL,_GIRL,_GIRL,_BOY]
+      [_BOY,_GIRL,_BOY,_GIRL,_GIRL,_GIRL]
+      [_BOY,_BOY,_GIRL,_GIRL,_BOY,_GIRL]
+      [_GIRL,_GIRL,_BOY,_BOY,_BOY,_BOY] - 2 girls.
+      [_GIRL,_BOY,_BOY,_GIRL,_GIRL,_GIRL]
+      [_GIRL,_BOY,_BOY,_BOY,_GIRL,_BOY] - 2 girls.
+      [_GIRL,_BOY,_BOY,_BOY,_GIRL,_BOY] - 2 girls.
+      [_BOY,_BOY,_BOY,_BOY,_GIRL,_GIRL] - 2 girls.
+      [_BOY,_GIRL,_BOY,_BOY,_BOY,_GIRL] - 2 girls.
+      [_BOY,_BOY,_GIRL,_GIRL,_BOY,_BOY] - 2 girls.
+      [_GIRL,_BOY,_BOY,_GIRL,_GIRL,_GIRL]
+      [_BOY,_BOY,_BOY,_BOY,_BOY,_GIRL]
+      [_GIRL,_GIRL,_GIRL,_BOY,_GIRL,_GIRL]
+      [_GIRL,_BOY,_GIRL,_GIRL,_BOY,_BOY]
+      [_GIRL,_GIRL,_BOY,_BOY,_GIRL,_GIRL]
+      [_GIRL,_GIRL,_GIRL,_GIRL,_BOY,_BOY]
+      [_BOY,_GIRL,_BOY,_GIRL,_GIRL,_GIRL]
+      [_GIRL,_BOY,_BOY,_GIRL,_GIRL,_BOY]
+      [_BOY,_GIRL,_GIRL,_BOY,_BOY,_GIRL]
+      [_GIRL,_BOY,_GIRL,_BOY,_BOY,_BOY] - 2 girls.
+      [_GIRL,_GIRL,_BOY,_BOY,_BOY,_GIRL]
+      [_BOY,_GIRL,_GIRL,_GIRL,_BOY,_BOY]
+      [_BOY,_GIRL,_GIRL,_BOY,_GIRL,_BOY]
+      [_BOY,_BOY,_BOY,_GIRL,_GIRL,_GIRL]
+      [_GIRL,_BOY,_BOY,_BOY,_BOY,_BOY]
+      [_BOY,_BOY,_BOY,_GIRL,_BOY,_GIRL] - 2 girls.
+      [_GIRL,_BOY,_GIRL,_GIRL,_GIRL,_BOY]
+      [_BOY,_BOY,_BOY,_GIRL,_GIRL,_GIRL]
+      [_BOY,_GIRL,_BOY,_GIRL,_BOY,_BOY] - 2 girls.
+      [_BOY,_GIRL,_BOY,_BOY,_BOY,_GIRL] - 2 girls.
+      [_BOY,_BOY,_BOY,_BOY,_BOY,_GIRL]
+      [_BOY,_BOY,_GIRL,_GIRL,_GIRL,_GIRL]
+      [_GIRL,_GIRL,_GIRL,_BOY,_BOY,_BOY]
+      [_GIRL,_GIRL,_GIRL,_GIRL,_GIRL,_GIRL]
+      [_GIRL,_BOY,_BOY,_GIRL,_GIRL,_BOY]
+      [_GIRL,_GIRL,_BOY,_GIRL,_BOY,_GIRL]
+      [_GIRL,_BOY,_BOY,_BOY,_BOY,_BOY]
+      [_GIRL,_GIRL,_GIRL,_GIRL,_BOY,_GIRL]
+      [_BOY,_BOY,_BOY,_BOY,_GIRL,_BOY]
+      [_GIRL,_BOY,_BOY,_BOY,_GIRL,_BOY] - 2 girls.
+      [_GIRL,_GIRL,_BOY,_BOY,_GIRL,_BOY]
+      [_GIRL,_GIRL,_BOY,_BOY,_GIRL,_GIRL]
+      [_GIRL,_GIRL,_GIRL,_BOY,_GIRL,_BOY]
+      [_BOY,_BOY,_BOY,_GIRL,_BOY,_GIRL] - 2 girls.
+      [_GIRL,_GIRL,_GIRL,_BOY,_BOY,_BOY]
+      [_BOY,_GIRL,_BOY,_GIRL,_BOY,_BOY] - 2 girls.
+      [_GIRL,_BOY,_BOY,_GIRL,_GIRL,_BOY]
+      [_BOY,_BOY,_BOY,_GIRL,_GIRL,_BOY] - 2 girls.
+      [_BOY,_BOY,_BOY,_BOY,_GIRL,_BOY]
+      
+      The number of trials is: 100 
+      The number of children is: 6 
+      The number of trials that have 2 girls: 25 / 100 
+      The probability of having 2 girls: 0.25 
+      
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Program 3",description="Cars."
+========================================================================================================
+Program 3  (25 points)
+
+Write a Monte Carlo simulation to solve the
+following problem:
+
+Bill is an amateur mechanic, and he is extremely
+cheap. Bill has never purchased a new car in his
+life and instead he owns 3 old cars that he
+maintains himself. On any given day car A has a
+15% chance of being broken, car B has a 25% chance
+of being broken, and car C has a 35% chance of
+being broken.
+
+1) What is the probability that on any given day
+all of Bill's cars are broken? (Hint: You can
+either write a program to determine the
+probability or you can calculate it.)
+
+2) What is the average number of days in a year
+that Bill is without a functioning car? (Hint:
+Have each trial simulate 365 days and during each
+day determine if each car is BROKEN or RUNNING
+like this:
+
+carA := RandomPickWeighted([["BROKEN",20/100],["RUNNING",80/100]]);
+carB := RandomPickWeighted([["BROKEN",25/100],["RUNNING",75/100]]);
+carC := RandomPickWeighted([["BROKEN",35/100],["RUNNING",65/100]]);
+
+
+%mathpiper,name="Problem 3",subtype="hint"
+Hint("Ci8vIFNvbHV0aW9uIHRvIHBhcnQgMS4KCm51bWJlck9mVHJpYWxzIDo9IDEwMDA7CgpkYXlzQnJva2VuIDo9IDA7CgpSZXBlYXQobnVtYmVyT2ZUcmlhbHMpCnsKCiAgICBjYXJBIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDIwLzEwMF0sWyJSVU5OSU5HIiw4MC8xMDBdXSk7CiAgICBjYXJCIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDI1LzEwMF0sWyJSVU5OSU5HIiw3NS8xMDBdXSk7CiAgICBjYXJDIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDM1LzEwMF0sWyJSVU5OSU5HIiw2NS8xMDBdXSk7CgogICAgSWYoY2FyQSA9PyAiQlJPS0VOIiAmPyBjYXJCID0/ICJCUk9LRU4iICY/IGNhckMgPT8gIkJST0tFTiIpCiAgICB7CiAgICAgICAgZGF5c0Jyb2tlbisrOwogICAgfQp9CgpFY2hvKCJQcm9iYWJpbGl0eSBvZiBoYXZpbmcgYWxsIHRocmVlIGNhcnMgYnJva2VuIG9uIGFueSBnaXZlbiBkYXkgIiwgTk0oZGF5c0Jyb2tlbiAvIG51bWJlck9mVHJpYWxzKSk7CgoKLy89PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCi8vIFNvbHV0aW9uIHRvIHBhcnQgMi4KCm51bWJlck9mVHJpYWxzIDo9IDEwOwoKZGF5c0Jyb2tlbkxpc3QgOj0gW107CgpSZXBlYXQobnVtYmVyT2ZUcmlhbHMpCnsKICAgIGRheXNCcm9rZW4gOj0gMDsKICAgIAogICAgLy9TaW11bGF0ZSBvbmUgeWVhci4KICAgIFJlcGVhdCgzNjUpCiAgICB7CiAgICAgICAgY2FyQSA6PSBSYW5kb21QaWNrV2VpZ2h0ZWQoW1siQlJPS0VOIiwyMC8xMDBdLFsiUlVOTklORyIsODAvMTAwXV0pOwogICAgICAgIGNhckIgOj0gUmFuZG9tUGlja1dlaWdodGVkKFtbIkJST0tFTiIsMjUvMTAwXSxbIlJVTk5JTkciLDc1LzEwMF1dKTsKICAgICAgICBjYXJDIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDM1LzEwMF0sWyJSVU5OSU5HIiw2NS8xMDBdXSk7CiAgICAKICAgICAgICBJZihjYXJBID0/ICJCUk9LRU4iICY/IGNhckIgPT8gIkJST0tFTiIgJj8gY2FyQyA9PyAiQlJPS0VOIikKICAgICAgICB7CiAgICAgICAgICAgIGRheXNCcm9rZW4rKzsKICAgICAgICB9CiAgICB9CiAgICAKICAgIEFwcGVuZCEoZGF5c0Jyb2tlbkxpc3QsIGRheXNCcm9rZW4pOwp9CgpFY2hvKCJUaGUgYXZlcmFnZSBudW1iZXIgb2YgZGF5cyBpbiBhIHllYXIgdGhhdCBCaWxsIGlzIHdpdGhvdXQgYSBjYXI6ICIsIE5NKE1lYW4oZGF5c0Jyb2tlbkxpc3QpKSk7Cgo=");
+%/mathpiper
+
+    %output,parent="Problem 3",mpversion=".259",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Program 3",subtype="problem",unassign_all="true",truncate="6000",timeout="30000"
+
+numberOfTrials := 500;
+
+daysBroken := 0;
+
+Repeat(numberOfTrials)
+{
+    carA := RandomPickWeighted([["BROKEN", 20/100], ["RUNNING", 80/100]]);
+ 
+    carB := RandomPickWeighted([["BROKEN", 25/100], ["RUNNING", 75/100]]);
+    
+    carC := RandomPickWeighted([["BROKEN", 35/100], ["RUNNING", 65/100]]);
+    
+    If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")
+    {
+        daysBroken++;
+    }
+}
+
+Echo("Probability of having all three cars broken at once on any given day ", NM(daysBroken/ numberOfTrials));
+
+//Part 2
+
+numberOfTrials := 10;
+
+daysBrokenList := [];
+
+Repeat(numberOfTrials)
+{
+    daysBroken := 0;
+    
+    Repeat(365)
+    {
+        carA := RandomPickWeighted([["BROKEN", 20/100],["RUNNING", 80/100]]);
+        
+        carB := RandomPickWeighted([["BROKEN", 25/100],["RUNNING", 75/100]]);
+        
+        carC := RandomPickWeighted([["BROKEN", 35/100],["RUNNING", 65/100]]);
+
+        If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")
+        {
+            daysBroken++;
+        }
+    }
+    
+    Append!(daysBrokenList, daysBroken);
+
+}
+
+Echo("The average days that Bill is without a car is:", NM(Mean(daysBrokenList)));
+
+%/mathpiper
+
+    %output,parent="Program 3",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      Probability of having all three cars broken at once on any given day 0.014 
+      The average days that Bill is without a car is:6.8 
+      
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Program 4",description="Your own problem."
+========================================================================================================
+Program 4 (25 points)
+
+Come up with a problem in an area you are
+interested in that can be solved with a Monte
+Carlo simulation, and then create a simulation to
+solve it.
+
+%mathpiper,name="Program 4",subtype="problem",unassign_all="true",truncate="6000",timeout="30000"
+//What is the probability when flipping 4 coins and having them all come up as heads?
+numberOfTrials := 100;
+
+numberOfFlips := 4;
+
+numberOfHeads := 4;
+
+fourHeadsCounter := 0;
+
+headsProbability := 50/100;
+
+tailsProbability := 50/100;
+
+Repeat(numberOfTrials)
+    {
+     //Create a random list of simulated children.
+     
+     flipsList := BuildList(RandomPickWeighted(
+     [[_HEADS,headsProbability], [_TAILS,tailsProbability]]),
+     var,1,numberOfFlips,1);
+     
+     //Print the list of simulated children (comment
+     //this line out for a large number of trials).
+     
+     Write(flipsList);
+    
+     /*
+     If the list contains 3 boys, increment the three
+     boys counter.
+     */
+     
+     If(Count(flipsList, _HEADS) =? numberOfHeads)
+     {
+         fourHeadsCounter++;
+         
+         WriteString(" - ");
+         
+         Write(numberOfHeads);
+         
+         WriteString(" heads.");
+     }
+    
+     NewLine();
+}
+NewLine();
+
+Echo("The number of trials is: ", numberOfTrials);
+
+Echo("The number of flips is: ", numberOfFlips);
+
+Echo("The number of trials that have 4 heads: ", fourHeadsCounter, "/ ", numberOfTrials);
+ 
+Echo("The probability of having 4 heads: ", NM(fourHeadsCounter/numberOfTrials) );
+ 
+%/mathpiper
+
+    %output,parent="Program 4",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      [_TAILS,_TAILS,_TAILS,_HEADS]
+      [_TAILS,_HEADS,_HEADS,_TAILS]
+      [_HEADS,_TAILS,_HEADS,_HEADS]
+      [_TAILS,_HEADS,_TAILS,_HEADS]
+      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.
+      [_HEADS,_TAILS,_HEADS,_TAILS]
+      [_HEADS,_TAILS,_TAILS,_TAILS]
+      [_TAILS,_HEADS,_TAILS,_TAILS]
+      [_TAILS,_HEADS,_TAILS,_HEADS]
+      [_TAILS,_HEADS,_TAILS,_TAILS]
+      [_HEADS,_HEADS,_HEADS,_TAILS]
+      [_TAILS,_TAILS,_TAILS,_TAILS]
+      [_TAILS,_TAILS,_TAILS,_TAILS]
+      [_HEADS,_TAILS,_HEADS,_HEADS]
+      [_TAILS,_HEADS,_HEADS,_TAILS]
+      [_TAILS,_TAILS,_HEADS,_TAILS]
+      [_TAILS,_TAILS,_HEADS,_TAILS]
+      [_HEADS,_HEADS,_TAILS,_HEADS]
+      [_HEADS,_TAILS,_TAILS,_TAILS]
+      [_TAILS,_TAILS,_HEADS,_HEADS]
+      [_HEADS,_TAILS,_HEADS,_HEADS]
+      [_TAILS,_HEADS,_TAILS,_TAILS]
+      [_HEADS,_HEADS,_HEADS,_TAILS]
+      [_TAILS,_TAILS,_TAILS,_HEADS]
+      [_HEADS,_HEADS,_HEADS,_TAILS]
+      [_HEADS,_TAILS,_HEADS,_TAILS]
+      [_TAILS,_HEADS,_TAILS,_HEADS]
+      [_HEADS,_TAILS,_HEADS,_TAILS]
+      [_HEADS,_HEADS,_HEADS,_TAILS]
+      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.
+      [_TAILS,_TAILS,_TAILS,_TAILS]
+      [_HEADS,_TAILS,_TAILS,_TAILS]
+      [_TAILS,_HEADS,_HEADS,_TAILS]
+      [_HEADS,_HEADS,_TAILS,_TAILS]
+      [_TAILS,_HEADS,_HEADS,_TAILS]
+      [_HEADS,_HEADS,_HEADS,_TAILS]
+      [_TAILS,_TAILS,_TAILS,_TAILS]
+      [_TAILS,_TAILS,_HEADS,_HEADS]
+      [_HEADS,_HEADS,_HEADS,_TAILS]
+      [_TAILS,_HEADS,_TAILS,_HEADS]
+      [_HEADS,_HEADS,_HEADS,_TAILS]
+      [_TAILS,_TAILS,_HEADS,_TAILS]
+      [_TAILS,_HEADS,_HEADS,_HEADS]
+      [_HEADS,_TAILS,_HEADS,_HEADS]
+      [_TAILS,_TAILS,_TAILS,_HEADS]
+      [_HEADS,_TAILS,_HEADS,_TAILS]
+      [_HEADS,_HEADS,_HEADS,_TAILS]
+      [_TAILS,_TAILS,_TAILS,_HEADS]
+      [_HEADS,_HEADS,_HEADS,_TAILS]
+      [_HEADS,_HEADS,_TAILS,_HEADS]
+      [_HEADS,_HEADS,_TAILS,_HEADS]
+      [_TAILS,_TAILS,_TAILS,_HEADS]
+      [_HEADS,_TAILS,_HEADS,_HEADS]
+      [_TAILS,_TAILS,_HEADS,_HEADS]
+      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.
+      [_HEADS,_TAILS,_TAILS,_TAILS]
+      [_HEADS,_TAILS,_TAILS,_TAILS]
+      [_TAILS,_HEADS,_HEADS,_TAILS]
+      [_TAILS,_TAILS,_HEADS,_HEADS]
+      [_TAILS,_TAILS,_TAILS,_TAILS]
+      [_HEADS,_TAILS,_TAILS,_TAILS]
+      [_TAILS,_TAILS,_TAILS,_HEADS]
+      [_HEADS,_HEADS,_TAILS,_TAILS]
+      [_HEADS,_HEADS,_HEADS,_TAILS]
+      [_TAILS,_HEADS,_HEADS,_HEADS]
+      [_TAILS,_TAILS,_TAILS,_HEADS]
+      [_TAILS,_TAILS,_HEADS,_HEADS]
+      [_HEADS,_HEADS,_TAILS,_TAILS]
+      [_HEADS,_HEADS,_TAILS,_TAILS]
+      [_HEADS,_HEADS,_HEADS,_TAILS]
+      [_HEADS,_TAILS,_HEADS,_TAILS]
+      [_HEADS,_TAILS,_TAILS,_TAILS]
+      [_TAILS,_TAILS,_HEADS,_TAILS]
+      [_TAILS,_TAILS,_TAILS,_HEADS]
+      [_HEADS,_TAILS,_HEADS,_TAILS]
+      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.
+      [_HEADS,_TAILS,_TAILS,_HEADS]
+      [_TAILS,_HEADS,_HEADS,_TAILS]
+      [_HEADS,_TAILS,_TAILS,_HEADS]
+      [_HEADS,_HEADS,_TAILS,_TAILS]
+      [_TAILS,_TAILS,_TAILS,_TAILS]
+      [_HEADS,_HEADS,_TAILS,_TAILS]
+      [_HEADS,_HEADS,_TAILS,_HEADS]
+      [_HEADS,_TAILS,_HEADS,_TAILS]
+      [_HEADS,_TAILS,_HEADS,_TAILS]
+      [_TAILS,_TAILS,_HEADS,_TAILS]
+      [_HEADS,_HEADS,_HEADS,_TAILS]
+      [_HEADS,_TAILS,_TAILS,_HEADS]
+      [_TAILS,_HEADS,_TAILS,_TAILS]
+      [_HEADS,_TAILS,_TAILS,_HEADS]
+      [_HEADS,_TAILS,_HEADS,_HEADS]
+      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.
+      [_TAILS,_TAILS,_TAILS,_TAILS]
+      [_TAILS,_HEADS,_TAILS,_HEADS]
+      [_HEADS,_HEADS,_TAILS,_HEADS]
+      [_TAILS,_TAILS,_TAILS,_HEADS]
+      [_HEADS,_HEADS,_TAILS,_HEADS]
+      [_TAILS,_HEADS,_HEADS,_TAILS]
+      [_TAILS,_HEADS,_HEADS,_TAILS]
+      [_TAILS,_TAILS,_TAILS,_HEADS]
+      
+      The number of trials is: 100 
+      The number of flips is: 4 
+      The number of trials that have 4 heads: 5 / 100 
+      The probability of having 4 heads: 0.05 
+      
+.   %/output
+
+%/group
+

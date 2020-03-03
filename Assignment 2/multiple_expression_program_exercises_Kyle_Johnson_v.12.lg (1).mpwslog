@@ -1,0 +1,425 @@
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="1",timestamp="2018-09-06 16:42:54.049",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶result := 5 + 6*21/7 - 2^3 ;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="2",timestamp="2018-09-06 16:44:55.876",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶result := ((5 + 6)*21)/7 - 2^3 ;
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 1",sequence="3",timestamp="2018-09-06 16:45:02.974",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+Hint("CnJlc3VsdCA6PSAoNSArIDYpKjIxLzcgLSAyXjM7Cgo=");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 16:46:08.843",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+var1 := (1+2+3+4+5);¶Echo("var1: ", var1);¶var2 := (1-2-3-4-5);¶var3 := (1*2*3*4*5);¶var4 := (1/2/3/4/5);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 16:46:40.685",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo("var2: ", var2)¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 16:46:41.988",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo("var2: ", var2)¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 16:46:44.586",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+var4 := (1/2/3/4/5);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 16:46:46.194",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo("var2: ", var2)¶
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="4",timestamp="2018-09-06 16:47:09.088",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶var1 := (1+2+3+4+5);¶Echo("var1: ", var1);¶var2 := (1-2-3-4-5);¶Echo("var2: ", var2);¶var3 := (1*2*3*4*5);¶Echo("var3: ", var3);¶var4 := (1/2/3/4/5);¶Echo("var4: ", var4);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="5",timestamp="2018-09-06 16:48:08.208",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+Hint("CnZhcjEgOj0gKDErMiszKzQrNSk7CkVjaG8oInZhcjE6ICIsIHZhcjEpOwoKdmFyMiA6PSAoMS0yLTMtNC01KTsKRWNobygidmFyMjogIiwgdmFyMik7Cgp2YXIzIDo9ICgxKjIqMyo0KjUpOwpFY2hvKCJ2YXIzOiAiLCB2YXIzKTsKCnZhcjQgOj0gKDEvMi8zLzQvNSk7CkVjaG8oInZhcjQ6ICIsIHZhcjQpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="6",timestamp="2018-09-06 16:48:10.204",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+Hint("CnZhcjEgOj0gKDErMiszKzQrNSk7CkVjaG8oInZhcjE6ICIsIHZhcjEpOwoKdmFyMiA6PSAoMS0yLTMtNC01KTsKRWNobygidmFyMjogIiwgdmFyMik7Cgp2YXIzIDo9ICgxKjIqMyo0KjUpOwpFY2hvKCJ2YXIzOiAiLCB2YXIzKTsKCnZhcjQgOj0gKDEvMi8zLzQvNSk7CkVjaG8oInZhcjQ6ICIsIHZhcjQpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 2",sequence="7",timestamp="2018-09-06 16:48:24.328",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+Hint("CnZhcjEgOj0gKDErMiszKzQrNSk7CkVjaG8oInZhcjE6ICIsIHZhcjEpOwoKdmFyMiA6PSAoMS0yLTMtNC01KTsKRWNobygidmFyMjogIiwgdmFyMik7Cgp2YXIzIDo9ICgxKjIqMyo0KjUpOwpFY2hvKCJ2YXIzOiAiLCB2YXIzKTsKCnZhcjQgOj0gKDEvMi8zLzQvNSk7CkVjaG8oInZhcjQ6ICIsIHZhcjQpOwoK");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 16:50:01.119",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+var1 := (2*2*2*2*2);¶var2 := 1/2;¶var3 := (_x^2 * _x^3);¶var4 := "Hello";¶
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="8",timestamp="2018-09-06 16:50:31.241",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶var1 := (2*2*2*2*2);¶var2 := 1/2;¶var3 := (_x^2 * _x^3);¶var4 := "Hello";¶Echo(var1, var2, var3, var 4);.
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 16:50:33.654",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 3",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ) )*** close parentheses token for sub-expression but found ***( 4 )*** instead.  Error on or before line 423 starting at index 27.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="9",timestamp="2018-09-06 16:51:46.95",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+Hint("CnZhcjEgOj0gKDIqMioyKjIqMik7CnZhcjIgOj0gMS8yOwp2YXIzIDo9IChfeF4yICogX3heMyk7CnZhcjQgOj0gIkhlbGxvIjsKCkVjaG8odmFyMSwgdmFyMiwgdmFyMywgdmFyNCk7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 3",sequence="10",timestamp="2018-09-06 16:52:10.558",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶var1 := (2*2*2*2*2);¶var2 := 1/2;¶var3 := (_x^2 * _x^3);¶var4 := "Hello";¶Echo(var1, var2, var3, var4);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 16:55:39.153",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+upper := "ABCDEFGHIJKLMNOPQRSTUVWXYZ";¶¶Echo(1,upper[1]);¶Echo(2,upper[2]);¶Echo(3,upper[3]);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 16:56:03.564",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(1,upper[1]);¶Echo(2,upper[2]);¶Echo(3,upper[3]);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 16:56:04.739",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(1,upper[1]);¶Echo(2,upper[2]);¶Echo(3,upper[3]);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 16:56:05.661",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(1,upper[1]);¶Echo(2,upper[2]);¶Echo(3,upper[3]);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 16:56:06.314",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(1,upper[1]);¶Echo(2,upper[2]);¶Echo(3,upper[3]);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 16:57:29.583",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(10,upper[10]);¶Echo(11,upper[11]);¶Echo(12,upper[12]);¶Echo(13,upper[13]);¶Echo(14,upper[14]);¶Echo(15,upper[15]);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 16:57:58.865",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+¶Echo(21,upper[21]);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 16:58:06.025",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(20,upper[20]);¶Echo(21,upper[21]);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 16:58:07.745",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(20,upper[20]);¶Echo(21,upper[21]);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 16:58:26.912",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(25,upper[25]);¶
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 4",sequence="11",timestamp="2018-09-06 16:58:42.427",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶upper := "ABCDEFGHIJKLMNOPQRSTUVWXYZ";¶¶Echo(1,upper[1]);¶Echo(2,upper[2]);¶Echo(3,upper[3]);¶Echo(4,upper[4]);¶Echo(5,upper[5]);¶Echo(6,upper[6]);¶Echo(7,upper[7]);¶Echo(8,upper[8]);¶Echo(9,upper[9]);¶Echo(10,upper[10]);¶Echo(11,upper[11]);¶Echo(12,upper[12]);¶Echo(13,upper[13]);¶Echo(14,upper[14]);¶Echo(15,upper[15]);¶Echo(16,upper[16]);¶Echo(17,upper[17]);¶Echo(18,upper[18]);¶Echo(19,upper[19]);¶Echo(20,upper[20]);¶Echo(21,upper[21]);¶Echo(22,upper[22]);¶Echo(23,upper[23]);¶Echo(24,upper[24]);¶Echo(25,upper[25]);¶Echo(26,upper[26]);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 16:59:48.659",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+extra := ".!@#$%^&*() _+<>,?/{}[]|-=;";¶¶Echo(1,extra[1]);¶Echo(2,extra[2]);¶Echo(3,extra[3]);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 16:59:52.62",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+extra := ".!@#$%^&*() _+<>,?/{}[]|-=;";¶¶Echo(1,extra[1]);¶Echo(2,extra[2]);¶Echo(3,extra[3]);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:00:17.153",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(1,extra[1]);¶Echo(2,extra[2]);¶Echo(3,extra[3]);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:00:18.541",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(1,extra[1]);¶Echo(2,extra[2]);¶Echo(3,extra[3]);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:00:19.758",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(1,extra[1]);¶Echo(2,extra[2]);¶Echo(3,extra[3]);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:00:47.295",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(1,extra[1]);¶Echo(2,extra[2]);¶Echo(3,extra[3]);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:00:58.345",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+(2
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:01:19.635",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(10,extra[10]);¶Echo(11,extra[11]);¶Echo(12,extra[12]);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:01:20.294",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(10,extra[10]);¶Echo(11,extra[11]);¶Echo(12,extra[12]);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:01:24.461",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(10,extra[10]);¶Echo(11,extra[11]);¶Echo(12,extra[12]);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:01:28.015",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(10,extra[10]);¶Echo(11,extra[11]);¶Echo(12,extra[12]);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:02:03.257",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(17,extra[17]);¶Echo(18,extra[18]);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:02:17.556",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(20,extra[20]);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:02:18.466",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(20,extra[20]);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:02:21.325",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(20,extra[20]);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:02:24.53",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(20,extra[20]);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:02:24.938",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(20,extra[20]);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:02:25.35",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(20,extra[20]);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:02:26.7",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Echo(20,extra[20]);¶
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="12",timestamp="2018-09-06 17:02:59.764",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶extra := ".!@#$%^&*() _+<>,?/{}[]|-=;";¶¶Echo(1,extra[1]);¶Echo(2,extra[2]);¶Echo(3,extra[3]);¶Echo(4,extra[4]);¶Echo(5,extra[5]);¶Echo(6,extra[6]);¶Echo(7,extra[7]);¶Echo(8,extra[8]);¶Echo(9,extra[9]);¶Echo(10,extra[10]);¶Echo(11,extra[11]);¶Echo(12,extra[12]);¶Echo(13,extra[13]);¶Echo(14,extra[14]);¶Echo(15,extra[15]);¶Echo(16,extra[16]);¶Echo(17,extra[17]);¶Echo(18,extra[18]);¶Echo(19,extra[19]);¶Echo(20,extra[20]);¶Echo(21,extra[21]);¶Echo(22,extra[22]);¶Echo(23,extra[23]);¶Echo(24,extra[24]);¶Echo(25,extra[25]);¶Echo(26,extra[26]);¶Echo(27,extra[27]);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 5",sequence="13",timestamp="2018-09-06 17:03:18.369",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+Hint("CmV4dHJhIDo9ICIuIUAjJCVeJiooKSBfKzw+LD8ve31bXXwtPTsiOwoKRWNobygxLGV4dHJhWzFdKTsKRWNobygyLGV4dHJhWzJdKTsKRWNobygzLGV4dHJhWzNdKTsKRWNobyg0LGV4dHJhWzRdKTsKRWNobyg1LGV4dHJhWzVdKTsKRWNobyg2LGV4dHJhWzZdKTsKRWNobyg3LGV4dHJhWzddKTsKRWNobyg4LGV4dHJhWzhdKTsKRWNobyg5LGV4dHJhWzldKTsKRWNobygxMCxleHRyYVsxMF0pOwpFY2hvKDExLGV4dHJhWzExXSk7CkVjaG8oMTIsZXh0cmFbMTJdKTsKRWNobygxMyxleHRyYVsxM10pOwpFY2hvKDE0LGV4dHJhWzE0XSk7CkVjaG8oMTUsZXh0cmFbMTVdKTsKRWNobygxNixleHRyYVsxNl0pOwpFY2hvKDE3LGV4dHJhWzE3XSk7CkVjaG8oMTgsZXh0cmFbMThdKTsKRWNobygxOSxleHRyYVsxOV0pOwpFY2hvKDIwLGV4dHJhWzIwXSk7CkVjaG8oMjEsZXh0cmFbMjFdKTsKRWNobygyMixleHRyYVsyMl0pOwpFY2hvKDIzLGV4dHJhWzIzXSk7CkVjaG8oMjQsZXh0cmFbMjRdKTsKRWNobygyNSxleHRyYVsyNV0pOwpFY2hvKDI2LGV4dHJhWzI2XSk7CkVjaG8oMjcsZXh0cmFbMjddKTsKCg==");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:04:27.782",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+upper := "ABCDEFGHIJKLMNOPQRSTUVWXYZ";¶lower := "abcdefghijklmnopqrstuvwxyz";¶extra := ".!@#$%^&*() _+<>,?/{}[]|\-=";
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="14",timestamp="2018-09-06 17:05:01.578",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+Hint("CnVwcGVyIDo9ICJBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWiI7Cmxvd2VyIDo9ICJhYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3h5eiI7CmV4dHJhIDo9ICIuIUAjJCVeJiooKSBfKzw+LD8ve31bXXxcLT0iOwoKCi8vUHJpbnQgIk1hcnkgU21pdGguIi4KRWNobyh1cHBlclsxM10sbG93ZXJbMV0sbG93ZXJbMThdLGxvd2VyWzI1XSxleHRyYVsxMl0sCnVwcGVyWzE5XSxsb3dlclsxM10sbG93ZXJbOV0sbG93ZXJbMjBdLGxvd2VyWzhdLGV4dHJhWzFdKTsKCg==");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="15",timestamp="2018-09-06 17:15:24.01",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶upper := "ABCDEFGHIJKLMNOPQRSTUVWXYZ";¶lower := "abcdefghijklmnopqrstuvwxyz";¶extra := ".!@#$%^&*() _+<>,?/{}[]|\-=";¶//Print "Kanye West".¶Echo(upper[11],lower[1],lower[14],lower[25],lower[5],extra[12],upper[23],lower[5],lower[19],[20]);¶//Print "Kendrick Lamar".¶Echo(upper[11],lower[5],lower[14],lower[4],lower[18],lower[9],lower[3],lower[11],extra[12],upper[12],lower[1],lower[13],lower[1],lower[18];¶//Print "Brockhampton".¶Echo(upper[2],lower[18],lower[15],lower[3],lower[11],lower[8],lower[1],lower[13],lower[16],lower[20],lower[15],lower[14];
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:15:25.579",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 6",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ) )*** close parentheses token for sub-expression but found ***( ; )*** instead.  Error on or before line 955 starting at index 138.¶      ¶      Side Effects:¶      Kanye Wes[20] ¶      ¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="16",timestamp="2018-09-06 17:15:48.106",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶upper := "ABCDEFGHIJKLMNOPQRSTUVWXYZ";¶lower := "abcdefghijklmnopqrstuvwxyz";¶extra := ".!@#$%^&*() _+<>,?/{}[]|\-=";¶//Print "Kanye West".¶Echo(upper[11],lower[1],lower[14],lower[25],lower[5],extra[12],upper[23],lower[5],lower[19],lower[20]);¶//Print "Kendrick Lamar".¶Echo(upper[11],lower[5],lower[14],lower[4],lower[18],lower[9],lower[3],lower[11],extra[12],upper[12],lower[1],lower[13],lower[1],lower[18];¶//Print "Brockhampton".¶Echo(upper[2],lower[18],lower[15],lower[3],lower[11],lower[8],lower[1],lower[13],lower[16],lower[20],lower[15],lower[14];
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:15:49.616",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 6",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ) )*** close parentheses token for sub-expression but found ***( ; )*** instead.  Error on or before line 955 starting at index 138.¶      ¶      Side Effects:¶      Kanye West¶      ¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="17",timestamp="2018-09-06 17:16:12.616",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶upper := "ABCDEFGHIJKLMNOPQRSTUVWXYZ";¶lower := "abcdefghijklmnopqrstuvwxyz";¶extra := ".!@#$%^&*() _+<>,?/{}[]|\-=";¶¶Echo(upper[11],lower[1],lower[14],lower[25],lower[5],extra[12],upper[23],lower[5],lower[19],lower[20]);¶¶Echo(upper[11],lower[5],lower[14],lower[4],lower[18],lower[9],lower[3],lower[11],extra[12],upper[12],lower[1],lower[13],lower[1],lower[18];¶¶Echo(upper[2],lower[18],lower[15],lower[3],lower[11],lower[8],lower[1],lower[13],lower[16],lower[20],lower[15],lower[14];
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:16:14.297",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 6",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ) )*** close parentheses token for sub-expression but found ***( ; )*** instead.  Error on or before line 955 starting at index 138.¶      ¶      Side Effects:¶      Kanye West¶      ¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="18",timestamp="2018-09-06 17:17:09.023",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+Hint("CnVwcGVyIDo9ICJBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWiI7Cmxvd2VyIDo9ICJhYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3h5eiI7CmV4dHJhIDo9ICIuIUAjJCVeJiooKSBfKzw+LD8ve31bXXxcLT0iOwoKCi8vUHJpbnQgIk1hcnkgU21pdGguIi4KRWNobyh1cHBlclsxM10sbG93ZXJbMV0sbG93ZXJbMThdLGxvd2VyWzI1XSxleHRyYVsxMl0sCnVwcGVyWzE5XSxsb3dlclsxM10sbG93ZXJbOV0sbG93ZXJbMjBdLGxvd2VyWzhdLGV4dHJhWzFdKTsKCg==");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="19",timestamp="2018-09-06 17:17:41.242",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶upper := "ABCDEFGHIJKLMNOPQRSTUVWXYZ";¶lower := "abcdefghijklmnopqrstuvwxyz";¶extra := ".!@#$%^&*() _+<>,?/{}[]|\-=";¶Echo(upper[11],lower[1],lower[14],lower[25],lower[5],extra[12],upper[23],lower[5],lower[19],lower[20]);¶Echo(upper[11],lower[5],lower[14],lower[4],lower[18],lower[9],lower[3],lower[11],extra[12],upper[12],lower[1],lower[13],lower[1],lower[18];¶Echo(upper[2],lower[18],lower[15],lower[3],lower[11],lower[8],lower[1],lower[13],lower[16],lower[20],lower[15],lower[14];
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:17:42.913",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 6",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ) )*** close parentheses token for sub-expression but found ***( ; )*** instead.  Error on or before line 953 starting at index 138.¶      ¶      Side Effects:¶      Kanye West¶      ¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 6",sequence="20",timestamp="2018-09-06 17:18:06.973",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶upper := "ABCDEFGHIJKLMNOPQRSTUVWXYZ";¶lower := "abcdefghijklmnopqrstuvwxyz";¶extra := ".!@#$%^&*() _+<>,?/{}[]|\-=";¶Echo(upper[11],lower[1],lower[14],lower[25],lower[5],extra[12],upper[23],lower[5],lower[19],lower[20]);¶Echo(upper[11],lower[5],lower[14],lower[4],lower[18],lower[9],lower[3],lower[11],extra[12],upper[12],lower[1],lower[13],lower[1],lower[18]);¶Echo(upper[2],lower[18],lower[15],lower[3],lower[11],lower[8],lower[1],lower[13],lower[16],lower[20],lower[15],lower[14]);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:21:03.421",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+[43,99,34,93,6,8,25,76,54,88,98,45,62,94,73]¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:21:35.502",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Append!(exampleList, 5);¶Append!(exampleList, 8);¶Append!(exampleList, 3);¶exampleList;¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:22:53.959",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Append!(resultList, 43);¶Append!(resultList, 99);¶Append!(resultList, 34);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:22:54.619",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Append!(resultList, 43);¶Append!(resultList, 99);¶Append!(resultList, 34);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:22:54.997",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Append!(resultList, 43);¶Append!(resultList, 99);¶Append!(resultList, 34);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:22:55.342",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Append!(resultList, 43);¶Append!(resultList, 99);¶Append!(resultList, 34);¶
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:22:55.709",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+Append!(resultList, 43);¶Append!(resultList, 99);¶Append!(resultList, 34);¶
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="21",timestamp="2018-09-06 17:23:56.178",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶resultList := []¶Append!(resultList, 43);¶Append!(resultList, 99);¶Append!(resultList, 34);¶Append!(resultList, 93);¶Append!(resultList, 6);¶Append!(resultList, 8);¶Append!(resultList, 25);¶Append!(resultList, 76);¶Append!(resultList, 54);¶Append!(resultList, 88);¶Append!(resultList, 98);¶Append!(resultList, 45);¶Append!(resultList, 62);¶Append!(resultList, 94);¶Append!(resultList, 73);¶resultList;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:23:57.699",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 7",mpversion=".257",preserve="false"¶      Result: Error encountered during parsing: Error parsing expression near token ***( Append! )***. Error on or before line 1068 starting at index 0.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="22",timestamp="2018-09-06 17:24:40.985",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+Hint("CnJlc3VsdExpc3QgOj0gW107CkFwcGVuZCEocmVzdWx0TGlzdCwgNDMpOwpBcHBlbmQhKHJlc3VsdExpc3QsIDk5KTsKQXBwZW5kIShyZXN1bHRMaXN0LCAzNCk7CkFwcGVuZCEocmVzdWx0TGlzdCwgOTMpOwpBcHBlbmQhKHJlc3VsdExpc3QsIDYpOwpBcHBlbmQhKHJlc3VsdExpc3QsIDgpOwpBcHBlbmQhKHJlc3VsdExpc3QsIDI1KTsKQXBwZW5kIShyZXN1bHRMaXN0LCA3Nik7CkFwcGVuZCEocmVzdWx0TGlzdCwgNTQpOwpBcHBlbmQhKHJlc3VsdExpc3QsIDg4KTsKQXBwZW5kIShyZXN1bHRMaXN0LCA5OCk7CkFwcGVuZCEocmVzdWx0TGlzdCwgNDUpOwpBcHBlbmQhKHJlc3VsdExpc3QsIDYyKTsKQXBwZW5kIShyZXN1bHRMaXN0LCA5NCk7CkFwcGVuZCEocmVzdWx0TGlzdCwgNzMpOwpyZXN1bHRMaXN0OwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 7",sequence="23",timestamp="2018-09-06 17:24:58.592",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶resultList := [];¶Append!(resultList, 43);¶Append!(resultList, 99);¶Append!(resultList, 34);¶Append!(resultList, 93);¶Append!(resultList, 6);¶Append!(resultList, 8);¶Append!(resultList, 25);¶Append!(resultList, 76);¶Append!(resultList, 54);¶Append!(resultList, 88);¶Append!(resultList, 98);¶Append!(resultList, 45);¶Append!(resultList, 62);¶Append!(resultList, 94);¶Append!(resultList, 73);¶resultList;
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:25:51.163",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+nouns := ["dog", "cat", "man", "stick"];¶¶verbs := ["poked", "hit", "tickled", "lifted"];¶¶"The " + nouns[RandomInteger(Length(nouns))] + " " +¶verbs[RandomInteger(Length(verbs))] + " the " +¶nouns[RandomInteger(Length(nouns))] + " with the " +¶nouns[RandomInteger(Length(nouns))] + ".";
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 8",sequence="24",timestamp="2018-09-06 17:26:08.947",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶nouns := ["dog", "cat", "man", "stick"];¶¶verbs := ["poked", "hit", "tickled", "lifted"];¶¶"The " + nouns[RandomInteger(Length(nouns))] + " " +¶verbs[RandomInteger(Length(verbs))] + " the " +¶nouns[RandomInteger(Length(nouns))] + " with the " +¶nouns[RandomInteger(Length(nouns))] + ".";
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 8",sequence="25",timestamp="2018-09-06 17:26:14.673",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶nouns := ["dog", "cat", "man", "stick"];¶¶verbs := ["poked", "hit", "tickled", "lifted"];¶¶"The " + nouns[RandomInteger(Length(nouns))] + " " +¶verbs[RandomInteger(Length(verbs))] + " the " +¶nouns[RandomInteger(Length(nouns))] + " with the " +¶nouns[RandomInteger(Length(nouns))] + ".";
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 8",sequence="26",timestamp="2018-09-06 17:26:19.062",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶nouns := ["dog", "cat", "man", "stick"];¶¶verbs := ["poked", "hit", "tickled", "lifted"];¶¶"The " + nouns[RandomInteger(Length(nouns))] + " " +¶verbs[RandomInteger(Length(verbs))] + " the " +¶nouns[RandomInteger(Length(nouns))] + " with the " +¶nouns[RandomInteger(Length(nouns))] + ".";
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 8",sequence="27",timestamp="2018-09-06 17:29:34.42",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶nouns := ["dog", "cat", "man", "stick"];¶¶verbs := ["poked", "hit", "tickled", "lifted"];¶¶adjectives := ["big", "intelligent", "kind", "arrogant"];¶¶"The " + nouns[RandomInteger(Length(nouns))] + " " +¶verbs[RandomInteger(Length(verbs))] + " the " +¶adjectives[RandomInteger(Length(adjectives))] + " " +¶nouns[RandomInteger(Length(nouns))] + " with the " +¶adjectives[RandomInteger(LengthO(adjectives))] + " " +¶nouns[RandomInteger(Length(nouns))] + ".";
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:29:36.129",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+    %error,parent="Problem 8",mpversion=".257",preserve="false"¶      Result: The 1 parameter version of procedure <LengthO> is not defined (MAKE SURE THE PROCEDURE'S NAME IS SPELLED CORRECTLY and the correct number of arguments are being passed to it.)  Error on or before line 1209 starting at index 25.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 8",sequence="28",timestamp="2018-09-06 17:30:01.264",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶nouns := ["dog", "cat", "man", "stick"];¶¶verbs := ["poked", "hit", "tickled", "lifted"];¶¶adjectives := ["big", "intelligent", "kind", "arrogant"];¶¶"The " + nouns[RandomInteger(Length(nouns))] + " " +¶verbs[RandomInteger(Length(verbs))] + " the " +¶adjectives[RandomInteger(Length(adjectives))] + " " +¶nouns[RandomInteger(Length(nouns))] + " with the " +¶adjectives[RandomInteger(Length(adjectives))] + " " +¶nouns[RandomInteger(Length(nouns))] + ".";
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 8",sequence="29",timestamp="2018-09-06 17:30:07.603",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶nouns := ["dog", "cat", "man", "stick"];¶¶verbs := ["poked", "hit", "tickled", "lifted"];¶¶adjectives := ["big", "intelligent", "kind", "arrogant"];¶¶"The " + nouns[RandomInteger(Length(nouns))] + " " +¶verbs[RandomInteger(Length(verbs))] + " the " +¶adjectives[RandomInteger(Length(adjectives))] + " " +¶nouns[RandomInteger(Length(nouns))] + " with the " +¶adjectives[RandomInteger(Length(adjectives))] + " " +¶nouns[RandomInteger(Length(nouns))] + ".";
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 8",sequence="30",timestamp="2018-09-06 17:30:15.21",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶nouns := ["dog", "cat", "man", "stick"];¶¶verbs := ["poked", "hit", "tickled", "lifted"];¶¶adjectives := ["big", "intelligent", "kind", "arrogant"];¶¶"The " + nouns[RandomInteger(Length(nouns))] + " " +¶verbs[RandomInteger(Length(verbs))] + " the " +¶adjectives[RandomInteger(Length(adjectives))] + " " +¶nouns[RandomInteger(Length(nouns))] + " with the " +¶adjectives[RandomInteger(Length(adjectives))] + " " +¶nouns[RandomInteger(Length(nouns))] + ".";
+
+%/info
+
+%info,subtype="paste",timestamp="2018-09-06 17:30:39.673",username="Brumo",hostname="DESKTOP-P10IL3Q",mpversion=".257"
+adjectives[RandomInteger(Length(adjectives))] + " " +¶
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 8",sequence="31",timestamp="2018-09-06 17:30:47.669",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶nouns := ["dog", "cat", "man", "stick"];¶¶verbs := ["poked", "hit", "tickled", "lifted"];¶¶adjectives := ["big", "intelligent", "kind", "arrogant"];¶¶"The " + ¶¶adjectives[RandomInteger(Length(adjectives))] + " " +¶nouns[RandomInteger(Length(nouns))] + " " +¶verbs[RandomInteger(Length(verbs))] + " the " +¶adjectives[RandomInteger(Length(adjectives))] + " " +¶nouns[RandomInteger(Length(nouns))] + " with the " +¶adjectives[RandomInteger(Length(adjectives))] + " " +¶nouns[RandomInteger(Length(nouns))] + ".";
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 8",sequence="32",timestamp="2018-09-06 17:30:52.766",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶nouns := ["dog", "cat", "man", "stick"];¶¶verbs := ["poked", "hit", "tickled", "lifted"];¶¶adjectives := ["big", "intelligent", "kind", "arrogant"];¶¶"The " + ¶¶adjectives[RandomInteger(Length(adjectives))] + " " +¶nouns[RandomInteger(Length(nouns))] + " " +¶verbs[RandomInteger(Length(verbs))] + " the " +¶adjectives[RandomInteger(Length(adjectives))] + " " +¶nouns[RandomInteger(Length(nouns))] + " with the " +¶adjectives[RandomInteger(Length(adjectives))] + " " +¶nouns[RandomInteger(Length(nouns))] + ".";
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="Problem 8",sequence="33",timestamp="2018-09-06 17:30:57.83",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.112",mpversion=".257"
+¶nouns := ["dog", "cat", "man", "stick"];¶¶verbs := ["poked", "hit", "tickled", "lifted"];¶¶adjectives := ["big", "intelligent", "kind", "arrogant"];¶¶"The " + ¶¶adjectives[RandomInteger(Length(adjectives))] + " " +¶nouns[RandomInteger(Length(nouns))] + " " +¶verbs[RandomInteger(Length(verbs))] + " the " +¶adjectives[RandomInteger(Length(adjectives))] + " " +¶nouns[RandomInteger(Length(nouns))] + " with the " +¶adjectives[RandomInteger(Length(adjectives))] + " " +¶nouns[RandomInteger(Length(nouns))] + ".";
+
+%/info
+

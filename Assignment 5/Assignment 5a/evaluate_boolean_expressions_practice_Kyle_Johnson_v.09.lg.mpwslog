@@ -1,0 +1,40 @@
+%info,parentFoldType="mathpiper",parent="Problem 0",sequence="15",timestamp="2018-09-27 16:15:33.36",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.79",mpversion=".257"
+¶[¶["firstName", "Kyle"],¶["lastName", "Johnson"],¶["ssuIDNumber", "264694"],¶];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 0",sequence="16",timestamp="2018-09-27 16:15:44.152",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.79",mpversion=".257"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice1",sequence="17",timestamp="2018-09-27 16:17:03.746",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.79",mpversion=".257"
+¶Practice(NumberOfVariables:1, NumberOfReassignments:0, CorrectInARow:5, Hint?:True, VariableRange:[¶¶    {¶        'MetaToObject(RandomBooleanExpression(3, True));¶    }¶¶]);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice2",sequence="18",timestamp="2018-09-27 16:21:17.767",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.79",mpversion=".257"
+¶Practice(NumberOfVariables:1, NumberOfReassignments:0, CorrectInARow:5, Hint?:True, VariableRange:[¶¶    {¶        'MetaToObject(RandomBooleanExpression(3, True));¶    }¶¶]);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice3",sequence="19",timestamp="2018-09-27 16:23:17.054",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.79",mpversion=".257"
+¶Practice(NumberOfVariables:1, NumberOfReassignments:0, CorrectInARow:5, Hint?:True, VariableRange:[¶¶    {¶        'MetaToObject(RandomBooleanExpression(3, True));¶    }¶¶]);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice4",sequence="20",timestamp="2018-09-27 16:24:40.043",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.79",mpversion=".257"
+¶Practice(NumberOfVariables:1, NumberOfReassignments:0, CorrectInARow:5, Hint?:True, VariableRange:[¶¶    {¶        'MetaToObject(RandomBooleanExpression(3, False));¶    }¶¶]);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice5",sequence="21",timestamp="2018-09-27 16:29:25.821",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.79",mpversion=".257"
+¶Practice(NumberOfVariables:1, NumberOfReassignments:0, CorrectInARow:5, Hint?:True, VariableRange:[¶¶    {¶        'MetaToObject(RandomBooleanExpression(3, False));¶    }¶¶]);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice6",sequence="22",timestamp="2018-09-27 16:33:15.723",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.79",mpversion=".257"
+¶Practice(NumberOfVariables:1, NumberOfReassignments:0, CorrectInARow:5, Hint?:True, VariableRange:[¶¶    {¶        'MetaToObject(RandomBooleanExpression(3, False));¶    }¶¶]);
+
+%/info
+

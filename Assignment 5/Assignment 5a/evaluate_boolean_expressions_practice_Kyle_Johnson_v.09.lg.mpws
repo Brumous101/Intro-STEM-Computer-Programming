@@ -1,0 +1,411 @@
+v.09
+
+evaluate_boolean_expressions_practice.mpws
+
+INSTRUCTIONS
+
+1) Evaluate each of the following folds once. Each
+fold (except Problem 0) will launch a GUI-based
+application that will have you practice variable
+assignment skills.
+
+2) Do not delete ANY of the output folds that are
+created during the evaluation of these folds. 
+
+
+
+
+
+%group,name="Problem 0",description="Programmer's information."
+========================================================================================================
+Problem 0
+
+In the following fold, replace "xxx" with your
+first name, replace "yyy" with your last name, and
+replace "000000" with your SSU ID number:
+
+%mathpiper,name="Problem 0",subtype="problem",unassign_all="true",truncate="6000",timeout="5000"
+
+[
+["firstName", "Kyle"],
+["lastName", "Johnson"],
+["ssuIDNumber", "264694"],
+];
+
+%/mathpiper
+
+    %output,parent="Problem 0",mpversion=".257",preserve="false"
+            Result: [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]]
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 0"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+    FoldGrade("The code does not produce side effect output", 1, False)
+    {
+        Local(procedureNames);
+        
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'firstName' a string that is not 'xxx'", 1, True)
+    {
+        String?(foldResult["firstName"]) &? foldResult["firstName"] !=? "xxx";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'lastName' is a string that is not 'yyy'", 1, True)
+    {
+        String?(foldResult["lastName"]) &? foldResult["lastName"] !=? "yyy";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'ssuIDNumber' is not '000000'", 1, True)
+    {
+        foldResult["ssuIDNumber"] !=? "000000" &? foldResult["ssuIDNumber"] !=? 0;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 0",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]];
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .257. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The variable 'firstName' a string that is not 'xxx'. (1/1)
+        PASS: The variable 'lastName' is a string that is not 'yyy'. (1/1)
+        PASS: The variable 'ssuIDNumber' is not '000000'. (1/1)
+      
+        13/13 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+========================================================
+Practice 1
+
+%mathpiper,name="practice1",preserve_output="true"
+
+Practice(NumberOfVariables:1, NumberOfReassignments:0, CorrectInARow:5, Hint?:True, VariableRange:[
+
+    {
+        'MetaToObject(RandomBooleanExpression(3, True));
+    }
+
+]);
+
+%/mathpiper
+
+    %output,parent="practice1",mpversion=".257",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",2],["TotalTime",226.815892017],["CorrectInARow",5],["GeneratedCode","a := False &? False |? !? !? True;"],["CorrectInARowNeeded",5],["VariablesRange",[MetaToObject(RandomBooleanExpression(3,True))]],["NumberOfReassignments",0],["NumberOfVariables",1],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := !? True &? (False |? True) |? False &? (False |? True);",[["a",False,True],["a",False,False],101.625048382],
+      "a := False &? True |? !? !? True;",[["a",True,True],52.144536726],
+      "a := !? !? False &? !? !? False;",[["a",False,True],["a",False,False],17.175489296],
+      "a := True |? (False |? True) &? (True |? True);",[["a",True,True],13.241033664],
+      "a := True |? (True |? False) &? (True |? False);",[["a",True,True],12.241736421],
+      "a := False &? (True |? True) |? True;",[["a",True,True],7.962231569],
+      "a := False &? False |? !? !? True;",[["a",True,True],10.436463176],
+      ]
+      Number Of Variables: 1 
+      Number Of Reassignments: 0 
+      Variables Range: MetaToObject(RandomBooleanExpression(3,True)) 
+      Correct In A Row: 5 
+      Correct In A Row Needed: 5 
+      Total Time: 226.815892017 
+      Wrong Count: 2 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+
+
+
+
+
+
+
+
+
+
+========================================================
+Practice 2
+
+%mathpiper,name="practice2",preserve_output="true"
+
+Practice(NumberOfVariables:1, NumberOfReassignments:0, CorrectInARow:5, Hint?:True, VariableRange:[
+
+    {
+        'MetaToObject(RandomBooleanExpression(3, True));
+    }
+
+]);
+
+
+%/mathpiper
+
+    %output,parent="practice2",mpversion=".257",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",0],["TotalTime",109.909602641],["CorrectInARow",5],["GeneratedCode","a := True &? (False |? True) |? (False |? True) &? (True |? False);"],["CorrectInARowNeeded",5],["VariablesRange",[MetaToObject(RandomBooleanExpression(3,True))]],["NumberOfReassignments",0],["NumberOfVariables",1],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := False &? (True |? False) |? !? True;",[["a",False,False],16.961243419],
+      "a := True &? False |? False &? (False |? True);",[["a",False,False],45.747499778],
+      "a := False |? False |? !? False &? True;",[["a",True,True],8.941423515],
+      "a := True &? (False |? False) |? True &? False;",[["a",False,False],20.762918006],
+      "a := True &? (False |? True) |? (False |? True) &? (True |? False);",[["a",True,True],7.834222467],
+      ]
+      Number Of Variables: 1 
+      Number Of Reassignments: 0 
+      Variables Range: MetaToObject(RandomBooleanExpression(3,True)) 
+      Correct In A Row: 5 
+      Correct In A Row Needed: 5 
+      Total Time: 109.909602641 
+      Wrong Count: 0 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+
+
+
+
+
+
+
+
+
+
+========================================================
+Practice 3
+
+%mathpiper,name="practice3",preserve_output="true"
+
+Practice(NumberOfVariables:1, NumberOfReassignments:0, CorrectInARow:5, Hint?:True, VariableRange:[
+
+    {
+        'MetaToObject(RandomBooleanExpression(3, True));
+    }
+
+]);
+
+%/mathpiper
+
+    %output,parent="practice3",mpversion=".257",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",0],["TotalTime",71.479474541],["CorrectInARow",5],["GeneratedCode","a := (False |? False) &? !? False |? False |? False;"],["CorrectInARowNeeded",5],["VariablesRange",[MetaToObject(RandomBooleanExpression(3,True))]],["NumberOfReassignments",0],["NumberOfVariables",1],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := False &? !? True |? False |? False;",[["a",False,False],24.969868636],
+      "a := False &? !? !? False;",[["a",False,False],8.043560234],
+      "a := False &? True |? !? !? False;",[["a",False,False],9.746939251],
+      "a := !? !? True |? False;",[["a",True,True],5.024633349],
+      "a := (False |? False) &? !? False |? False |? False;",[["a",False,False],16.850504335],
+      ]
+      Number Of Variables: 1 
+      Number Of Reassignments: 0 
+      Variables Range: MetaToObject(RandomBooleanExpression(3,True)) 
+      Correct In A Row: 5 
+      Correct In A Row Needed: 5 
+      Total Time: 71.479474541 
+      Wrong Count: 0 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+
+
+
+
+
+
+
+
+
+========================================================
+Practice 4
+
+%mathpiper,name="practice4",preserve_output="true"
+
+Practice(NumberOfVariables:1, NumberOfReassignments:0, CorrectInARow:5, Hint?:True, VariableRange:[
+
+    {
+        'MetaToObject(RandomBooleanExpression(3, False));
+    }
+
+]);
+
+%/mathpiper
+
+    %output,parent="practice4",mpversion=".257",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",1],["TotalTime",265.694267421],["CorrectInARow",5],["GeneratedCode","a := 7 >? 4 &? 1 =? 5 |? 1 =? 4 &? 8 =? 5;"],["CorrectInARowNeeded",5],["VariablesRange",[MetaToObject(RandomBooleanExpression(3,False))]],["NumberOfReassignments",0],["NumberOfVariables",1],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := (6 <=? 3 |? 3 >? 5) &? !? 2 >? 5;",[["a",False,False],41.092887088],
+      "a := (3 =? 3 |? 5 <? 2) &? 5 <? 5;",[["a",False,False],16.253310234],
+      "a := 1 >=? 4 |? 2 <=? 8 &? 5 <=? 8;",[["a",True,True],27.275795673],
+      "a := 3 <? 4 &? !? 4 <=? 1;",[["a",True,True],15.915233094],
+      "a := !? 3 !=? 4 &? 4 >=? 2;",[["a",False,True],["a",False,False],35.633254369],
+      "a := 3 !=? 9 &? 1 >? 6 |? 4 <? 2 &? 3 <? 8;",[["a",False,False],30.516752860],
+      "a := 8 >=? 3 |? 1 =? 4 |? 2 !=? 2 &? 3 !=? 4;",[["a",True,True],35.695652884],
+      "a := 5 =? 8 |? 5 <=? 5 |? 4 <? 2;",[["a",True,True],27.956374481],
+      "a := 7 >? 4 &? 1 =? 5 |? 1 =? 4 &? 8 =? 5;",[["a",False,False],19.344428538],
+      ]
+      Number Of Variables: 1 
+      Number Of Reassignments: 0 
+      Variables Range: MetaToObject(RandomBooleanExpression(3,False)) 
+      Correct In A Row: 5 
+      Correct In A Row Needed: 5 
+      Total Time: 265.694267421 
+      Wrong Count: 1 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+
+
+
+
+
+
+
+
+
+
+========================================================
+Practice 5
+
+%mathpiper,name="practice5",preserve_output="true"
+
+Practice(NumberOfVariables:1, NumberOfReassignments:0, CorrectInARow:5, Hint?:True, VariableRange:[
+
+    {
+        'MetaToObject(RandomBooleanExpression(3, False));
+    }
+
+]);
+
+%/mathpiper
+
+    %output,parent="practice5",mpversion=".257",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",2],["TotalTime",214.893861715],["CorrectInARow",5],["GeneratedCode","a := 8 !=? 2 |? !? 8 >? 3;"],["CorrectInARowNeeded",5],["VariablesRange",[MetaToObject(RandomBooleanExpression(3,False))]],["NumberOfReassignments",0],["NumberOfVariables",1],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := 9 >=? 7 |? 9 <? 5 &? 6 <=? 2;",[["a",True,False],["a",True,False],["a",True,True],73.962062759],
+      "a := 3 <=? 8 &? (5 <=? 4 |? 2 >=? 9);",[["a",False,False],30.363297130],
+      "a := 6 <=? 1 |? 6 =? 3 &? 7 !=? 2;",[["a",False,False],47.484469855],
+      "a := (5 >? 8 |? 6 =? 6) &? !? 1 =? 1;",[["a",False,False],34.566197229],
+      "a := 8 !=? 2 |? !? 8 >? 3;",[["a",True,True],19.042492806],
+      ]
+      Number Of Variables: 1 
+      Number Of Reassignments: 0 
+      Variables Range: MetaToObject(RandomBooleanExpression(3,False)) 
+      Correct In A Row: 5 
+      Correct In A Row Needed: 5 
+      Total Time: 214.893861715 
+      Wrong Count: 2 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+
+
+
+
+
+
+
+
+
+
+========================================================
+Practice 6
+
+%mathpiper,name="practice6",preserve_output="true"
+
+Practice(NumberOfVariables:1, NumberOfReassignments:0, CorrectInARow:5, Hint?:True, VariableRange:[
+
+    {
+        'MetaToObject(RandomBooleanExpression(3, False));
+    }
+
+]);
+
+%/mathpiper
+
+    %output,parent="practice6",mpversion=".257",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",0],["TotalTime",141.665978988],["CorrectInARow",5],["GeneratedCode","a := 8 <? 3 |? 6 >? 3 |? 5 <? 7;"],["CorrectInARowNeeded",5],["VariablesRange",[MetaToObject(RandomBooleanExpression(3,False))]],["NumberOfReassignments",0],["NumberOfVariables",1],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := 8 >=? 7 |? !? 3 >? 3;",[["a",True,True],41.406696947],
+      "a := !? 7 =? 4 |? 4 <? 4 &? 1 !=? 9;",[["a",True,True],19.249566082],
+      "a := !? 7 >=? 4 |? 3 <=? 3 &? 5 >=? 3;",[["a",True,True],38.312277970],
+      "a := 3 =? 6 &? !? 3 >? 2;",[["a",False,False],23.158612858],
+      "a := 8 <? 3 |? 6 >? 3 |? 5 <? 7;",[["a",True,True],11.343246394],
+      ]
+      Number Of Variables: 1 
+      Number Of Reassignments: 0 
+      Variables Range: MetaToObject(RandomBooleanExpression(3,False)) 
+      Correct In A Row: 5 
+      Correct In A Row Needed: 5 
+      Total Time: 141.665978988 
+      Wrong Count: 0 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+

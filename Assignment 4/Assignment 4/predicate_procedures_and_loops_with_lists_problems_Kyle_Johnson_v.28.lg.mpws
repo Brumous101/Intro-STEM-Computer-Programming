@@ -1,0 +1,1760 @@
+v.28
+
+predicate_procedures_and_loops_with_lists_problems.mpws
+
+Complete all of the problems in this worksheet by
+placing the code you write for each exercise into
+the empty fold which is provided in each exercise
+section. Each empty fold has a subtype attribute
+named "exercise". Immediately below each empty
+fold is a mathpiper_grade fold that contains code
+which will automatically grade the code you place
+into the fold above it.
+
+Periodically, when you are writing your program
+and it runs without throwing an exception,
+evaluate its mathpiper_grade fold to see how many
+assessment units your program has gained so far.
+You can run the mathpiper_grade fold for each
+exercise as many times as you would like.
+
+Further information:
+
+- Do not use the "Echo" or "Write" procedures in
+your programs unless you are using them for
+debugging. Remove all procedures from your code
+that produce side effects output before submitting
+your worksheet.
+
+- The string "Head" is not equal to the string
+"HEAD".
+
+- The "truncate" attribute in a fold header limits
+the amount of output that a program will insert
+into the worksheet. This reduces the chances of
+crashing MathPiperIDE.
+
+- The "timeout" attribute in a fold header stops a
+running program after the specified number of
+milliseconds. This prevents programs that contain
+infinite loops from locking up MathPiperIDE.
+
+
+%group,name="Problem 0",description="Programmer's information."
+========================================================================================================
+Problem 0
+
+In the following fold, replace "xxx" with your
+first name, replace "yyy" with your last name, and
+replace "000000" with your SSU ID number:
+
+%mathpiper,name="Problem 0",subtype="problem",unassign_all="true",truncate="6000",timeout="5000"
+
+[
+["firstName", "Kyle"],
+["lastName", "Johnson"],
+["ssuIDNumber", "264694"],
+];
+
+%/mathpiper
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 0"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+
+    FoldGrade("The code does not produce side effect output", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'firstName' a string that is not 'xxx'", 1, True)
+    {
+        String?(foldResult["firstName"]) &? foldResult["firstName"] !=? "xxx";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'lastName' is a string that is not 'yyy'", 1, True)
+    {
+        String?(foldResult["lastName"]) &? foldResult["lastName"] !=? "yyy";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'ssuIDNumber' is not '000000'", 1, True)
+    {
+        foldResult["ssuIDNumber"] !=? "000000" &? foldResult["ssuIDNumber"] !=? 0;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 0",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]];
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .257. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The variable 'firstName' a string that is not 'xxx'. (1/1)
+        PASS: The variable 'lastName' is a string that is not 'yyy'. (1/1)
+        PASS: The variable 'ssuIDNumber' is not '000000'. (1/1)
+      
+        13/13 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 1",description="Count prime numbers."
+========================================================================================================
+
+Problem 1
+
+Write a program that uses a While() loop to
+determine how many prime numbers there are between
+1 and 1000. Return the amount of prime numbers as
+an INTEGER not a list. Use a variable named
+"primesCount" to hold the count of the primes that
+are found, and place it at the bottom of your program
+so it is the last expression to be evaluated.
+
+
+%mathpiper,name="Problem 1",subtype="hint"
+Hint("CnByaW1lc0NvdW50IDo9IDA7CgpudW1iZXIgOj0gMTsKCldoaWxlKG51bWJlciA8PT8gMTAwMCkKewogICAgSWYoUHJpbWU/KG51bWJlcikpCiAgICB7CiAgICAgICAgcHJpbWVzQ291bnQgOj0gKHByaW1lc0NvdW50ICsgMSk7CiAgICB9CgogICAgbnVtYmVyIDo9IG51bWJlciArIDE7Cn0KCnByaW1lc0NvdW50OwoK");
+%/mathpiper
+
+    %output,parent="Problem 1",mpversion=".257",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 1",subtype="problem",unassign_all="true",globalStateShow="true",truncate="1500",timeout="5000"
+
+number := 1;
+
+primesCount := 0;
+
+While(number <=? 1000)
+
+{
+    If(Prime?(number))
+        
+        {
+        
+        (primesCount := primesCount + 1);
+        
+        }
+        
+        number := number + 1;
+
+}
+
+primesCount;
+         
+         
+
+
+
+
+%/mathpiper
+
+    %output,parent="Problem 1",mpversion=".257",preserve="false"
+      Result: 168
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 1"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+    FoldGrade("The code does not produce side effect output", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is an integer", 1, True)
+    {
+        Integer?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable named 'primesCount' is used as the primes counter", 1, False)
+    {
+        PositionsPattern2(?foldCode, '(primesCount := primesCount + 1)) !=? [];
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The expression 'primesCount;' is the last expression in the fold", 1, False)
+    LocalSymbols(mainPosition)
+    {
+        ?foldCode[1][Length(?foldCode[1])] =? 'primesCount;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 1, True)
+    LocalSymbols(values)
+    {
+        values := SubtreesPattern(?foldCode, a_::(Rational?(a) |? Decimal?(a)) );
+
+        !? Contains?(values, 168);
+    }
+
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 1, True)
+    {
+        foldResult =? 168;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The procedure While() is used in the code", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        Contains?(procedureNames,"While") &? !? Contains?(procedureNames,"Until");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The Append!() procedure is not used", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureListAll(?foldCode);
+        Count(procedureNames,"Append!") =? 0;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 1",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        number := 1;
+      
+        primesCount := 0;
+      
+        While(number <=? 1000)
+        {
+          If(Prime?(number))
+          {
+            primesCount := primesCount + 1;
+          }
+      
+          number := number + 1;
+        }
+      
+        primesCount;
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .257. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The result is an integer. (1/1)
+        PASS: The variable named 'primesCount' is used as the primes counter. (1/1)
+        PASS: The expression 'primesCount;' is the last expression in the fold. (1/1)
+        PASS: The result is not in the code as a literal. (1/1)
+        PASS: The correct value is returned. (1/1)
+        PASS: The procedure While() is used in the code. (1/1)
+        PASS: The Append!() procedure is not used. (1/1)
+      
+        17/17 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 2",description="Count odd numbers."
+========================================================================================================
+
+Problem 2
+
+Create a program that uses a While() loop and the
+Odd?() predicate procedure to analyze the following
+list and then return the number of odd numbers it
+contains. Use a variable named "oddsCount" to
+count the odd numbers.
+
+[73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25]
+
+
+%mathpiper,name="Problem 2",subtype="hint"
+Hint("Cmxpc3QgOj0gWzczLDk0LDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobGlzdCk7CgpvZGRzQ291bnQgOj0gMDsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoT2RkPyhsaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgb2Rkc0NvdW50IDo9IChvZGRzQ291bnQgKyAxKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKb2Rkc0NvdW50OwoK");
+%/mathpiper
+
+    %output,parent="Problem 2",mpversion=".257",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 2",subtype="problem",unassign_all="true",globalStateShow="true",truncate="1500",timeout="5000"
+
+list := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];
+
+oddsCount := 0;
+
+listLength := Length(list);
+
+index := 1;
+
+While(index <=? listLength)
+
+{
+
+    If(Odd?(list[index]))
+    
+    {
+    
+    oddsCount := (oddsCount + 1);
+    
+    }
+    
+    index := (index + 1);
+    
+}
+
+oddsCount;
+
+%/mathpiper
+
+    %output,parent="Problem 2",mpversion=".257",preserve="false"
+      Result: 10
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 2"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+    FoldGrade("The code does not produce side effect output", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is an integer", 1, True)
+    {
+        Integer?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable named 'oddsCount' is used as the primes counter", 1, False)
+    {
+        PositionsPattern2(?foldCode, '(oddsCount := oddsCount + 1)) !=? [];
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The expression 'oddsCount;' is the last expression in the fold", 1, False)
+    LocalSymbols(mainPosition)
+    {
+        ?foldCode[1][Length(?foldCode[1])] =? 'oddsCount;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 1, True)
+    LocalSymbols(values)
+    {      
+        values := SubtreesPattern(?foldCode, a_::(Rational?(a) |? Decimal?(a)) );
+
+        !? Contains?(values, 10);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 1, True)
+    {
+        foldResult =? 10;
+    }
+    
+    // --------------------------------------------------------
+
+    FoldGrade("The procedure While() is used in the code", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        Contains?(procedureNames,"While") &? !? Contains?(procedureNames,"Until");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The Append!() procedure is not used", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureListAll(?foldCode);
+        Count(procedureNames,"Append!") =? 0;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 2",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        list := [73,94,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];
+      
+        oddsCount := 0;
+      
+        listLength := Length(list);
+      
+        index := 1;
+      
+        While(index <=? listLength)
+        {
+          If(Odd?(list[index]))
+          {
+            oddsCount := oddsCount + 1;
+          }
+      
+          index := index + 1;
+        }
+      
+        oddsCount;
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .257. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The result is an integer. (1/1)
+        PASS: The variable named 'oddsCount' is used as the primes counter. (1/1)
+        PASS: The expression 'oddsCount;' is the last expression in the fold. (1/1)
+        PASS: The result is not in the code as a literal. (1/1)
+        PASS: The correct value is returned. (1/1)
+        PASS: The procedure While() is used in the code. (1/1)
+        PASS: The Append!() procedure is not used. (1/1)
+      
+        17/17 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 3",description="Copy negative numbers."
+========================================================================================================
+
+Problem 3
+
+Create a program that uses a While() loop and a
+NegativeNumber?() procedure to copy all of the
+negative numbers in the following list into a new
+list in the order which they appear in the
+original list. Use the variable
+"negativeNumbersList" to hold the new list. Return
+the contents of the list after it has been
+created.
+
+[36,-29,-33,-6,14,7,-16,-3,-14,37,-38,-8,-45,-21,-26,6,6,38,-20,33,41,-4,24,37,40,29]
+
+
+%mathpiper,name="Problem 3",subtype="hint"
+Hint("Cmxpc3QgOj0gWzM2LC0yOSwtMzMsLTYsMTQsNywtMTYsLTMsLTE0LDM3LC0zOCwtOCwtNDUsLTIxLC0yNiw2LDYsMzgsLTIwLDMzLDQxLC00LDI0LDM3LDQwLDI5XTsKCm5lZ2F0aXZlTnVtYmVyc0xpc3QgOj0gW107CgpsaXN0TGVuZ3RoIDo9IExlbmd0aChsaXN0KTsKCmluZGV4IDo9IDE7CgpXaGlsZShpbmRleCA8PT8gbGlzdExlbmd0aCkKewogICAgSWYoTmVnYXRpdmVOdW1iZXI/KGxpc3RbaW5kZXhdKSkKICAgIHsKICAgICAgICBBcHBlbmQhKG5lZ2F0aXZlTnVtYmVyc0xpc3QsIGxpc3RbaW5kZXhdKTsKICAgIH0KCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKbmVnYXRpdmVOdW1iZXJzTGlzdDsKCg==");
+%/mathpiper
+
+    %output,parent="Problem 3",mpversion=".257",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 3",subtype="problem",unassign_all="true",globalStateShow="true",truncate="1500",timeout="5000"
+
+list := [36,-29,-33,-6,14,7,-16,-3,-14,37,-38,-8,-45,-21,-26,6,6,38,-20,33,41,-4,24,37,40,29];
+
+listLength := Length(list);
+
+negativeNumbersList := [];
+
+index := 1;
+
+While(index <=? listLength)
+
+{
+
+    If(NegativeNumber?(list[index]))
+        
+        {
+            
+            Append!(negativeNumbersList, list[index]);
+            
+        }
+        
+    index := (index + 1);
+    
+}
+
+negativeNumbersList;
+
+
+%/mathpiper
+
+    %output,parent="Problem 3",mpversion=".257",preserve="false"
+      Result: [-29,-33,-6,-16,-3,-14,-38,-8,-45,-21,-26,-20,-4]
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 3"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+    FoldGrade("The code does not produce side effect output", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The Append!() procedure is used", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        Contains?(procedureNames,"Append!");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The Append!() procedure's first argument is 'negativeNumbersList'", 1, False)
+    {
+        PositionsPattern2(?foldCode, '( Append!(a_, b_)::(a =? 'negativeNumbersList))) !=? [];
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The Append!() procedure's second argument accesses an element in the input list. The second argument is not the whole list, and it is not just an index", 1, False)
+    {
+        PositionsPattern2(?foldCode, '( Append!(a_, b_)::(Type(b) =? "Nth"))) !=? [];
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a list", 1, True)
+    {
+        List?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The expression 'negativeNumbersList;' is the last expression in the fold", 1, False)
+    LocalSymbols(mainPosition)
+    {
+        ?foldCode[1][Length(?foldCode[1])] =? 'negativeNumbersList;
+    }
+    
+    // --------------------------------------------------------
+    
+
+    FoldGrade("The result is not in the code as a literal", 1, True)
+    LocalSymbols(values)
+    {  
+        values := SubtreesPattern(?foldCode, a_List? );
+
+        !? Contains?(values, [-29,-33,-6,-16,-3,-14,-38,-8,-45,-21,-26,-20,-4]);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 1, True)
+    {
+        foldResult =? [-29,-33,-6,-16,-3,-14,-38,-8,-45,-21,-26,-20,-4];
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The procedure While() is used in the code", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        Contains?(procedureNames,"While") &? !? Contains?(procedureNames,"Until");
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 3",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        list := [36, -29, -33, -6,14,7, -16, -3, -14,37, -38, -8, -45, -21, -26,6,6,38, -20,33,41, -4,24,37,40,29];
+      
+        listLength := Length(list);
+      
+        negativeNumbersList := [];
+      
+        index := 1;
+      
+        While(index <=? listLength)
+        {
+          If(NegativeNumber?(list[index]))
+          {
+            Append!(negativeNumbersList,list[index]);
+          }
+      
+          index := index + 1;
+        }
+      
+        negativeNumbersList;
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .257. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The Append!() procedure is used. (1/1)
+        PASS: The Append!() procedure's first argument is 'negativeNumbersList'. (1/1)
+        PASS: The Append!() procedure's second argument accesses an element in the input list. The second argument is not the whole list, and it is not just an index. (1/1)
+        PASS: The result is a list. (1/1)
+        PASS: The expression 'negativeNumbersList;' is the last expression in the fold. (1/1)
+        PASS: The result is not in the code as a literal. (1/1)
+        PASS: The correct value is returned. (1/1)
+        PASS: The procedure While() is used in the code. (1/1)
+      
+        18/18 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 4",description="Largest smallest sum."
+========================================================================================================
+
+Problem 4
+
+Create one program that uses a single While() loop
+to analyze this list:
+
+[73,12,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25]
+
+and then return the following information about it
+in a list:
+
+1) The largest number in the list in position 1
+(use the variable "largest" for this value).
+
+2) The smallest number in the list in position 2
+(use the variable "smallest" for this value).
+
+3) The sum of all the numbers in the list (do not
+use the Sum() procedure) in position 3 (use the
+variable "sum" for this value).
+
+
+Hint: the following program finds the largest
+number in a list and it can be used as a starting
+point for this exercise.
+
+-----------------------------------------------------
+/*
+ The variable "largest" that keeps track of the
+ largest number encountered so far needs to be
+ initialized to the lowest possible value it may
+ hold. Why?
+*/
+
+largest := 0;
+
+numbersList := [4,6,2,9,7,1,3];
+
+listLength := Length(numbersList);
+
+index := 1;
+
+While(index <=? listLength)
+{
+    // Echo("Largest so far: ", largest);
+    
+    If(numbersList[index] >? largest)
+    {
+        largest := numbersList[index];
+    }
+    
+    index := index + 1;
+}
+
+largest;
+-----------------------------------------------------
+
+
+%mathpiper,name="Problem 4",subtype="hint"
+Hint("Cmxhcmdlc3QgOj0gMDsKCnNtYWxsZXN0IDo9IDEwMDsKCnN1bSA6PSAwOwoKbnVtYmVyc0xpc3QgOj0gWzczLDEyLDgwLDM3LDU2LDk0LDQwLDIxLDcsMjQsMTUsMTQsODIsOTMsMzIsNzQsMjIsNjgsNjUsNTIsODUsNjEsNDYsODYsMjVdOwoKbGlzdExlbmd0aCA6PSBMZW5ndGgobnVtYmVyc0xpc3QpOwoKaW5kZXggOj0gMTsKCldoaWxlKGluZGV4IDw9PyBsaXN0TGVuZ3RoKQp7ICAgIAogICAgSWYobnVtYmVyc0xpc3RbaW5kZXhdID4/IGxhcmdlc3QpCiAgICB7CiAgICAgICAgbGFyZ2VzdCA6PSBudW1iZXJzTGlzdFtpbmRleF07CiAgICB9CiAgICAKICAgIElmKG51bWJlcnNMaXN0W2luZGV4XSA8PyBzbWFsbGVzdCkKICAgIHsKICAgICAgICBzbWFsbGVzdCA6PSBudW1iZXJzTGlzdFtpbmRleF07CiAgICB9CgogICAgc3VtIDo9IChzdW0gKyBudW1iZXJzTGlzdFtpbmRleF0pOwogICAgCiAgICBpbmRleCA6PSBpbmRleCArIDE7Cn0KCltsYXJnZXN0LCBzbWFsbGVzdCwgc3VtXTsKCg==");
+%/mathpiper
+
+    %output,parent="Problem 4",mpversion=".257",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 4",subtype="problem",unassign_all="true",globalStateShow="true",truncate="1500",timeout="5000"
+
+largest := 0;
+
+smallest := Infinity;
+
+sum := 0;
+
+numbersList := [73,12,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];
+
+listLength := Length(numbersList);
+
+index := 1;
+
+While(index <=? listLength)
+{
+    
+    If(numbersList[index] >? largest)
+    {
+        largest := numbersList[index];
+    }
+    
+    If(numbersList[index] <? smallest)
+    {
+        smallest := numbersList[index];
+    }
+    
+    sum := (sum + numbersList[index]);
+    
+    index := (index + 1);
+}
+
+[largest, smallest, sum];
+
+%/mathpiper
+
+    %output,parent="Problem 4",mpversion=".257",preserve="false"
+      Result: [94,7,1264]
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 4"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+    FoldGrade("The code does not produce side effect output", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a list that has three members", 1, True)
+    {
+        List?(foldResult) &? Length(foldResult) =? 3;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("No more than two \"+\" operators are used", 1, True)
+    {
+        Count(ProcedureListAll(?foldCode), "+") <=? 2;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable names 'largest', 'smallest', and 'sum' are used", 1, False)
+    {
+        Contains?(VarList(?foldCode), 'largest) &?
+        Contains?(VarList(?foldCode), 'smallest) &?
+        Contains?(VarList(?foldCode), 'sum);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 1, True)
+    LocalSymbols(values)
+    {
+        values := SubtreesPattern(?foldCode, a_List? );
+
+        !? Contains?(values, [94, 7, 1264]);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 1, True)
+    {
+        foldResult =? [94, 7, 1264];
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The procedure While() is used in the code", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        Contains?(procedureNames,"While") &? !? Contains?(procedureNames,"Until");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The procedure Append() is not used in the code", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        !? Contains?(procedureNames,"Append!");
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 4",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        largest := 0;
+      
+        smallest := Infinity;
+      
+        sum := 0;
+      
+        numbersList := [73,12,80,37,56,94,40,21,7,24,15,14,82,93,32,74,22,68,65,52,85,61,46,86,25];
+      
+        listLength := Length(numbersList);
+      
+        index := 1;
+      
+        While(index <=? listLength)
+        {
+          If(numbersList[index] >? largest)
+          {
+            largest := numbersList[index];
+          }
+      
+          If(numbersList[index] <? smallest)
+          {
+            smallest := numbersList[index];
+          }
+      
+          sum := sum + numbersList[index];
+      
+          index := index + 1;
+        }
+      
+        [largest,smallest,sum];
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .257. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The result is a list that has three members. (1/1)
+        PASS: No more than two "+" operators are used. (1/1)
+        PASS: The variable names 'largest', 'smallest', and 'sum' are used. (1/1)
+        PASS: The result is not in the code as a literal. (1/1)
+        PASS: The correct value is returned. (1/1)
+        PASS: The procedure While() is used in the code. (1/1)
+        PASS: The procedure Append() is not used in the code. (1/1)
+      
+        17/17 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 5",description="Filter a list of numbers."
+========================================================================================================
+
+Problem 5
+
+Write a program that uses a While() loop to place
+only the prime numbers between 10 and 99 that
+contain the digit 3 in either their ones place or
+their tens place into a list. Assign the list to a
+variable named "resultList". 
+
+Hint: The "FINDING PRIME NUMBERS THAT END WITH 7"
+example in the "a_predicate_procedures.mpws"
+worksheet can be used as a starting point for
+this problem.
+
+
+%mathpiper,name="Problem 5",subtype="hint"
+Hint("CnJlc3VsdExpc3QgOj0gW107CgpudW1iZXIgOj0gMTA7CgpXaGlsZShudW1iZXIgPD0/IDk5KQp7CiAgICBJZihQcmltZT8obnVtYmVyKSkKICAgIHsKICAgICAgICBzdHJpbmdOdW1iZXIgOj0gVG9TdHJpbmcobnVtYmVyKTsKICAgICAgICAKICAgICAgICBJZihzdHJpbmdOdW1iZXJbMV0gPT8gIjMiIHw/IHN0cmluZ051bWJlcltMZW5ndGgoc3RyaW5nTnVtYmVyKV0gPT8gIjMiKQogICAgICAgIHsKICAgICAgICAgICAgQXBwZW5kIShyZXN1bHRMaXN0LCBudW1iZXIpOwogICAgICAgIH0KICAgIH0KCiAgICBudW1iZXIgOj0gKG51bWJlciArIDEpOwp9CgpyZXN1bHRMaXN0OwoK");
+%/mathpiper
+
+    %output,parent="Problem 5",mpversion=".257",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 5",subtype="problem",unassign_all="true",globalStateShow="true",truncate="1500",timeout="5000"
+
+resultList := [];
+
+number := 10;
+
+While(number <=? 99)
+{
+    If(Prime?(number))
+    {
+        stringVersionOfNumber := ToString(number);
+                        
+        If(stringVersionOfNumber[1] =? "3" |? stringVersionOfNumber[Length(stringVersionOfNumber)] =? "3")
+        {
+            Append!(resultList, number);
+        }
+        
+    }
+    
+    number := (number + 1);
+}
+
+resultList;
+
+
+%/mathpiper
+
+    %output,parent="Problem 5",mpversion=".257",preserve="false"
+      Result: [13,23,31,37,43,53,73,83]
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 5"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+    FoldGrade("The code does not produce side effect output", 1, False)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The Append!() procedure is used", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        Contains?(procedureNames,"Append!");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The Append!() procedure's first argument is 'resultList'", 1, False)
+    {
+        PositionsPattern2(?foldCode, '( Append!(a_, b_)::(a =? 'resultList))) !=? [];
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a list", 1, True)
+    {
+        List?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The expression 'resultList;' is the last expression in the fold", 1, False)
+    LocalSymbols(mainPosition)
+    {
+        ?foldCode[1][Length(?foldCode[1])] =? 'resultList;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 1, True)
+    LocalSymbols(values)    
+    {
+        values := SubtreesPattern(?foldCode, a_List? );
+
+        !? Contains?(values, [13,23,31,37,43,53,73,83]);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 1, True)
+    {
+        foldResult =? [13,23,31,37,43,53,73,83];
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The procedure While() is used in the code", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        Contains?(procedureNames,"While") &? !? Contains?(procedureNames,"Until");
+    }
+    
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The procedure Sum() is not used in the code", 1, True)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        !? Contains?(procedureNames,"Sum");
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 5",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        resultList := [];
+      
+        number := 10;
+      
+        While(number <=? 99)
+        {
+          If(Prime?(number))
+          {
+            stringVersionOfNumber := ToString(number);
+      
+            If(stringVersionOfNumber[1] =? "3" |? stringVersionOfNumber[Length(stringVersionOfNumber)] =? "3")
+            {
+              Append!(resultList,number);
+            }
+          }
+      
+          number := number + 1;
+        }
+      
+        resultList;
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .257. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The Append!() procedure is used. (1/1)
+        PASS: The Append!() procedure's first argument is 'resultList'. (1/1)
+        PASS: The result is a list. (1/1)
+        PASS: The expression 'resultList;' is the last expression in the fold. (1/1)
+        PASS: The result is not in the code as a literal. (1/1)
+        PASS: The correct value is returned. (1/1)
+        PASS: The procedure While() is used in the code. (1/1)
+        PASS: The procedure Sum() is not used in the code. (1/1)
+      
+        18/18 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 6",description="Copy even and odd numbers."
+========================================================================================================
+
+Problem 6
+
+Create a program that uses a While() loop and the
+Even?() and Odd?() procedures to copy all of the
+even numbers in the following list into a new list
+which is assigned to the variable
+'evenNumbersList', and copy all of the odd numbers
+into a new list which is assigned to the variable
+'oddNumbersList'.
+
+[79,34,"A", 30,82,75,"R",11,23,52,"M",64,89,19,21,83,"F",2,87,65,54,"V",17,92,4]
+
+Return the even numbers list and the odd numbers list
+inside of a list using the following code:
+
+[evenNumbersList, oddNumbersList];
+
+
+%mathpiper,name="Problem 6",subtype="hint"
+Hint("CmlucHV0TGlzdCA6PSBbNzksMzQsIkEiLCAzMCw4Miw3NSwiUiIsMTEsMjMsNTIsIk0iLDY0LDg5LDE5LDIxLDgzLCJGIiwyLDg3LDY1LDU0LCJWIiwxNyw5Miw0XTsKCmV2ZW5OdW1iZXJzTGlzdCA6PSBbXTsKCm9kZE51bWJlcnNMaXN0IDo9IFtdOwoKaW5kZXggOj0gMTsKCldoaWxlKGluZGV4IDw9PyBMZW5ndGgoaW5wdXRMaXN0KSkKewogICAgSWYoRXZlbj8oaW5wdXRMaXN0W2luZGV4XSkpCiAgICB7CiAgICAgICAgQXBwZW5kIShldmVuTnVtYmVyc0xpc3QsIGlucHV0TGlzdFtpbmRleF0pOwogICAgfQogICAgCiAgICBJZihPZGQ/KGlucHV0TGlzdFtpbmRleF0pKQogICAgewogICAgICAgIEFwcGVuZCEob2RkTnVtYmVyc0xpc3QsIGlucHV0TGlzdFtpbmRleF0pOwogICAgfQogICAgCiAgICBpbmRleCA6PSAoaW5kZXggKyAxKTsKfQoKW2V2ZW5OdW1iZXJzTGlzdCwgb2RkTnVtYmVyc0xpc3RdOwoK");
+%/mathpiper
+
+    %output,parent="Problem 6",mpversion=".257",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 6",subtype="problem",unassign_all="true",globalStateShow="true",truncate="1500",timeout="5000"
+
+inputList := [79,34,"A", 30,82,75,"R",11,23,52,"M",64,89,19,21,83,"F",2,87,65,54,"V",17,92,4];
+
+evenNumbersList := [];
+
+oddNumbersList := [];
+
+number := 1;
+
+While(number <=? Length(inputList))
+{
+
+    If(Even?(inputList[number]))
+    {    
+        Append!(evenNumbersList, inputList[number]);
+    }
+    
+    If(Odd?(inputList[number]))
+    {
+        Append!(oddNumbersList, inputList[number]);
+    }
+    
+    number := (number + 1);
+}
+
+[evenNumbersList, oddNumbersList];
+        
+            
+
+%/mathpiper
+
+    %output,parent="Problem 6",mpversion=".257",preserve="false"
+      Result: [[34,30,82,52,64,2,54,92,4],[79,75,11,23,89,19,21,83,87,65,17]]
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 6"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+    FoldGrade("The code does not produce side effect output", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The Append!() procedure is used", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        Contains?(procedureNames,"Append!");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("An Append!() procedure's first argument is 'evenNumbersList'", 1, False)
+    {
+        PositionsPattern2(?foldCode, '( Append!(a_, b_)::(a =? 'evenNumbersList))) !=? [];
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("An Append!() procedure's first argument is 'oddNumbersList'", 1, False)
+    {
+        PositionsPattern2(?foldCode, '( Append!(a_, b_)::(a =? 'oddNumbersList))) !=? [];
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("Both Append!() procedure's second arguments accesses an element in the input list. The second argument is not the whole list, and it is not just an index", 1, False)
+    {
+        Length(PositionsPattern(?foldCode, '( Append!(a_, b_)::(Type(b) =? "Nth")))) =? 2;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a list that contains two lists", 1, True)
+    {
+        List?(foldResult) &? 
+        Length(foldResult) =? 2  &?
+        List?(foldResult[1]) &?
+        List?(foldResult[2]);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The expression '[evenNumbersList, oddNumbersList];' is the last expression in the fold", 1, False)
+    LocalSymbols(mainPosition)
+    {
+        ?foldCode[1][Length(?foldCode[1])] =? '[evenNumbersList, oddNumbersList];
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 1, True)
+    LocalSymbols(values)
+    {    
+        values := SubtreesPattern(?foldCode, a_List? );
+
+        !? Contains?(values, [[34,30,82,52,64,2,54,92,4],[79,75,11,23,89,19,21,83,87,65,17]]);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 1, True)
+    {
+        foldResult =? [[34,30,82,52,64,2,54,92,4],[79,75,11,23,89,19,21,83,87,65,17]];
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The procedures Even?() and Odd?() are used in the code", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        Contains?(procedureNames,"Even?") &? Contains?(procedureNames,"Odd?");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The procedure While() is used in the code", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        Contains?(procedureNames,"While") &? !? Contains?(procedureNames,"Until");
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 6",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        inputList := [79,34,"A",30,82,75,"R",11,23,52,"M",64,89,19,21,83,"F",2,87,65,54,"V",17,92,4];
+      
+        evenNumbersList := [];
+      
+        oddNumbersList := [];
+      
+        number := 1;
+      
+        While(number <=? Length(inputList))
+        {
+          If(Even?(inputList[number]))
+          {
+            Append!(evenNumbersList,inputList[number]);
+          }
+      
+          If(Odd?(inputList[number]))
+          {
+            Append!(oddNumbersList,inputList[number]);
+          }
+      
+          number := number + 1;
+        }
+      
+        [evenNumbersList,oddNumbersList];
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .257. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The Append!() procedure is used. (1/1)
+        PASS: An Append!() procedure's first argument is 'evenNumbersList'. (1/1)
+        PASS: An Append!() procedure's first argument is 'oddNumbersList'. (1/1)
+        PASS: Both Append!() procedure's second arguments accesses an element in the input list. The second argument is not the whole list, and it is not just an index. (1/1)
+        PASS: The result is a list that contains two lists. (1/1)
+        PASS: The expression '[evenNumbersList, oddNumbersList];' is the last expression in the fold. (1/1)
+        PASS: The result is not in the code as a literal. (1/1)
+        PASS: The correct value is returned. (1/1)
+        PASS: The procedures Even?() and Odd?() are used in the code. (1/1)
+        PASS: The procedure While() is used in the code. (1/1)
+      
+        20/20 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 7",description="Convert flowchart to program."
+========================================================================================================
+
+Problem 7
+
+Evaluate the following fold, and it will show the
+flowchart of a program. Convert the flowchart into
+a program using the provided problem fold.
+
+
+%mathpiper,name="Problem 7",subtype="hint"
+Hint("Cmxpc3QgOj0gWzgsMywyLDUsNF07CgpsaXN0TGVuZ3RoIDo9IExlbmd0aChsaXN0KTsKCmluZGV4MSA6PSAyOwoKV2hpbGUoaW5kZXgxIDw9PyBsaXN0TGVuZ3RoKQp7CiAgICBlbGVtZW50IDo9IGxpc3RbaW5kZXgxXTsKICAgIAogICAgaW5kZXgyIDo9IGluZGV4MSAtIDE7CiAgICAKICAgIFdoaWxlKGluZGV4MiA+PyAwICY/IGxpc3RbaW5kZXgyXSA+PyBlbGVtZW50KQogICAgewogICAgICAgIGxpc3RbaW5kZXgyICsgMV0gOj0gbGlzdFtpbmRleDJdOwogICAgICAgIAogICAgICAgIGluZGV4MiA6PSBpbmRleDIgLSAxOwogICAgfQogICAgCiAgICBsaXN0W2luZGV4MiArIDFdIDo9IGVsZW1lbnQ7CiAgICAKICAgIGluZGV4MSA6PSAoaW5kZXgxICsgMSk7Cn0KCmxpc3Q7Cgo=");
+%/mathpiper
+
+    %output,parent="Problem 7",mpversion=".257",preserve="false"
+      Result: True
+.   %/output
+
+
+%plantuml,output="none",preserve="true" 
+      "@startuml
+      start
+      scale 1.5
+      skinparam shadowing false
+      
+      
+       :list := [8,3,2,5,4];
+       :listLength := Length(list);
+       :index1 := 2;
+       while(index1 <=? listLength) is (True)
+        
+         :element := list[index1];
+         :index2 := index1 - 1;
+         while(index2 >? 0 &? list[index2] >? element) is (True)
+          
+           :list[index2 + 1] := list[index2];
+           :index2 := index2 - 1;
+           
+          
+          endwhile (False)
+         :list[index2 + 1] := element;
+         :index1 := index1 + 1;
+         
+        
+        endwhile (False)
+       :list;
+
+      stop
+      @enduml"
+.   %/plantuml
+
+    %output,mpversion=".257",preserve="false"
+      
+.   %/output
+
+
+
+%mathpiper,name="Problem 7",subtype="problem",unassign_all="true",globalStateShow="true",truncate="1500",timeout="5000"
+
+list := [8,3,2,5,4];
+
+listLength := Length(list);
+
+index1 := 2;
+
+While(index1 <=? listLength)
+{
+
+    element := list[index1];
+    
+    index2 := (index1 - 1);
+    
+    While(index2 >? 0 &? list[index2] >? element)
+    {
+        
+        list[index2 + 1] := list[index2];
+        
+        index2 := (index2 - 1);
+        
+    }
+  
+    list[index2 + 1] := element;
+        
+    index1 := (index1 + 1);
+
+}
+
+list;
+
+
+    
+    
+
+%/mathpiper
+
+    %output,parent="Problem 7",mpversion=".257",preserve="false"
+      Result: [2,3,4,5,8]
+.   %/output
+
+
+
+
+
+%mathpiper_grade,name="Problem 7"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .257", 1, True)
+    {
+        StringToNumber(Version()) >=? .257;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+    FoldGrade("The code does not produce side effect output", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a list", 1, True)
+    {
+        List?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The expression 'list;' is the last expression in the fold", 1, False)
+    LocalSymbols(mainPosition)
+    {
+        ?foldCode[1][Length(?foldCode[1])] =? 'list;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable names 'index1' and 'index2' are used", 1, False)
+    {
+        Contains?(VarList(?foldCode), 'index1) &?
+        Contains?(VarList(?foldCode), 'index2);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 1, True)
+    LocalSymbols(values)
+    {
+        values := SubtreesPattern(?foldCode, a_List? );
+
+        !? Contains?(values, [2,3,4,5,8]);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("Two While() procedures are used in the code", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureListAll(?foldCode);
+        Count(procedureNames,"While") =? 2;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 1, True)
+    {
+        foldResult =? [2,3,4,5,8];
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 7",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        list := [8,3,2,5,4];
+      
+        listLength := Length(list);
+      
+        index1 := 2;
+      
+        While(index1 <=? listLength)
+        {
+          element := list[index1];
+      
+          index2 := index1 - 1;
+      
+          While(index2 >? 0 &? list[index2] >? element)
+          {
+            list[index2 + 1] := list[index2];
+      
+            index2 := index2 - 1;
+          }
+      
+          list[index2 + 1] := element;
+      
+          index1 := index1 + 1;
+        }
+      
+        list;
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .257. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The result is a list. (1/1)
+        PASS: The expression 'list;' is the last expression in the fold. (1/1)
+        PASS: The variable names 'index1' and 'index2' are used. (1/1)
+        PASS: The result is not in the code as a literal. (1/1)
+        PASS: Two While() procedures are used in the code. (1/1)
+        PASS: The correct value is returned. (1/1)
+      
+        16/16 passes
+.   %/output
+
+%/group
+

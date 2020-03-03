@@ -1,0 +1,594 @@
+v.08
+
+Flip a coin. If it comes up heads, print "HEADS".
+If it comes up tails, print "TAILS"
+
+%mathpiper,name="Problem 2",subtype="problem",unassign_all="true",truncate="1000",timeout="5000"
+
+flip := RandomInteger(2);
+
+If(flip =? 1)
+{
+    result := "HEADS";
+}
+
+If(flip =? 2)
+{
+    result := "TAILS";
+}
+
+result;
+
+%/mathpiper
+
+
+
+
+
+
+
+Convert previous program to use only one "If".
+
+%mathpiper,title=""
+
+flip := RandomInteger(2);
+
+If(flip =? 1)
+{
+    result := "HEADS";
+}
+Else
+{
+    result := "TAILS";
+}
+
+result;
+
+%/mathpiper
+
+
+
+
+=========================
+Write a program that prints "BOTH COINS CAME UP HEADS" if
+two simulated coins come up heads.
+
+
+In> ViewMath(TruthTable(_a &? _b))
+
+
+%mathpiper,name="Problem 3",subtype="problem",unassign_all="true",truncate="1000",timeout="5000"
+
+resultList := [];
+
+coin1 := RandomInteger(2);
+coin2 := RandomInteger(2);
+
+Append!(resultList, coin1);
+Append!(resultList, coin2);
+
+If(coin1 =? 1 &? coin2 =? 1)
+{
+    Append!(resultList, "BOTH COINS CAME UP HEADS");
+}
+
+resultList;
+
+%/mathpiper
+
+
+
+
+
+
+
+=============================
+
+Write a program that prints "AT LEAST ONE COIN
+CAME UP HEADS" if two simulated coins come up
+heads.
+
+In> ViewMath(TruthTable(_a |? _b))
+
+
+%mathpiper,name="Problem 4",subtype="problem",unassign_all="true",truncate="1000",timeout="5000"
+
+resultList := [];
+
+coin1 := RandomInteger(2);
+coin2 := RandomInteger(2);
+
+Append!(resultList, coin1);
+Append!(resultList, coin2);
+
+If(coin1 =? 1 |? coin2 =? 1)
+{
+    Append!(resultList, "AT LEAST ONE COIN CAME UP HEADS");
+}
+
+resultList;
+
+%/mathpiper
+
+
+
+
+========== Boolean operators
+
+%mathpiper
+Show(TreeView('(_a |? _b &? _c)));
+%/mathpiper
+
+In> ViewMath(TruthTable(_a |? _b &? _c))
+
+
+=========== Append!
+
+In> list := [1,2]
+
+In> Append!(list, 4)
+
+In> list
+
+
+=============================
+%mathpiper,name="Problem 5",subtype="problem",unassign_all="true",truncate="1000",timeout="5000"
+
+resultList := [];
+
+index := 50;
+
+While(index >=? 2)
+{
+    Append!(resultList, index);
+    
+    index := index - 2;
+}
+
+resultList;
+
+%/mathpiper
+
+
+
+==================
+
+Count the number of head and the number of tails
+that come up when one coin is flipped 100
+times using an Until loop. A While loop checks
+its predicate expression at the top of the loop,
+and an Until loop checks its predicate expression
+at the bottom of the loop. Also, While loops
+while the predicate expression is true, and Until
+loops until the predicate expression is true.
+
+%mathpiper,name="Problem 7",subtype="problem",unassign_all="true",truncate="1000",timeout="5000"
+
+headsCount := 0;
+
+tailsCount := 0;
+
+flips := 0;
+
+Until(flips =? 50)
+{
+    coin := RandomInteger(2);
+    
+    If(coin =? 1)
+    {
+        headsCount := (headsCount + 1);
+    }
+    
+    If(coin =? 2) 
+    {
+        tailsCount := (tailsCount + 1);
+    }
+    
+    flips := (flips + 1);
+}
+
+[headsCount, tailsCount];
+
+%/mathpiper
+
+=======================
+
+Write a program that returns all of the prime
+number between 1 and 500 that end with a 9.
+
+%mathpiper,name="Problem 1",subtype="problem",unassign_all="true",truncate="1500",timeout="5000"
+
+primesCount := 0;
+
+number := 1;
+
+primesList := [];
+
+While(number <=? 100)
+{
+    stringNumber := ToString(number);
+    
+    If(Prime?(number) &? 
+        stringNumber[Length(stringNumber)] =? "9")
+    {
+        Append!(primesList, number);
+    }
+
+    number := number + 1;
+}
+
+primesList;
+
+%/mathpiper
+
+
+=============== Fizz Buzz
+
+Players generally sit in a circle. The player
+designated to go first says the number "1", and
+each player counts one number in turn. However,
+any number divisible by three is replaced by the
+word FIZZ and any divisible by five by the word
+BUZZ. Numbers divisible by both become FIZZBUZZ.
+
+In> Quotient(5,3)
+
+
+In> Modulo(5,3)
+
+
+In> 5 % 3
+
+
+In> 3 % 3
+
+
+In> 6 % 3
+
+
+
+
+
+
+%mathpiper,flowchart="false"
+
+index := 1;
+
+While(index <=? 100)
+{
+    //Echo(index + ", " + index % 3);
+    
+    If(index % 3 =? 0 &? index % 5 =? 0)
+    {
+        Echo("FIZZBUZZ");
+    }
+    Else If(index % 3 =? 0)
+    {
+        Echo("FIZZ");
+    }
+    Else If(index % 5 =? 0)
+    {
+        Echo("BUZZ");
+    }
+    Else
+    {
+        Echo(index);
+    }
+    
+    index++;
+}
+
+
+%/mathpiper
+
+
+
+
+====================== Student requests
+
+%mathpiper,name="Problem 7",subtype="problem",unassign_all="true",truncate="1000",timeout="5000"
+
+Procedure("circle", ["centerX", "centerY", "radius", "pointCount"])
+{
+    Local(degrees, radians);
+    
+    degrees := 1;
+    
+    While(degrees <=? 360)
+    {
+        radians := degrees * NM(Pi/180);
+        
+        PlotterPoint("A"+ToString(pointsCount++), 
+                        centerX + radius * CosD(radians), 
+                        centerY + radius * SinD(radians));
+        
+        degrees +:= 20;
+    }
+    
+    pointsCount;
+}
+
+Procedure("mainProcedure", [])
+{
+    
+    PlotterClear();
+    
+    pointsCount := 1;
+    
+    circle(5, 5, 4, pointsCount);
+}
+
+
+mainProcedure();
+
+%/mathpiper
+
+
+%mathpiper,name="Problem 1",subtype="problem",unassign_all="true",truncate="2000",timeout="5000"
+
+Procedure("arc", ["centerX", "centerY", "radius", "startAngle", "endAngle", "angleStep","pointCount"])
+{
+    Local(angle, radians);
+    
+    angle := startAngle;
+    
+    While(angle <=? endAngle)
+    {
+        radians := angle * NM(Pi/180);
+        
+        PlotterPoint("A"+ToString(pointCount++), 
+                        centerX + radius * CosD(radians), 
+                        centerY + radius * SinD(radians));
+        
+        angle +:= angleStep;
+    }
+    
+    pointCount;
+}
+
+Procedure("mainProcedure", [])
+{
+    Local(pointCount, radius);
+    PlotterClear();
+    
+    pointCount := 1;
+    
+    For(radius := 1, radius <=? 4, radius++)
+    {
+        pointCount := arc(5, 5, radius, 0, 359, 20, pointCount);
+    }
+}
+
+
+PlotterClear();
+
+//mainProcedure();
+
+arc(5, 5, 5, 90, 150, 10, 1);
+
+%/mathpiper
+
+
+
+%mathpiper,name="Problem 5",subtype="problem",unassign_all="true",truncate="1000",timeout="5000"
+
+Procedure("solidRectangleHoles", ["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])
+{
+    Local(xIndex, yIndex);
+    
+    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)
+    {    
+        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)
+        {
+            If(pointCount !=? 8 &? pointCount !=? 11 &? pointCount !=? 29)
+            {
+                PlotterPoint("E" + ToString(pointCount), xIndex, yIndex);
+            }
+            
+            pointCount++;
+        }
+    }
+}
+
+
+Procedure("mainProcedure", [])
+{
+    solidRectangleHoles(1, 2, 5, 5, 1);
+}
+
+
+PlotterClear();
+
+mainProcedure();
+
+%/mathpiper
+
+%mathpiper,name="Problem 7",subtype="problem",unassign_all="true",truncate="1000",timeout="5000"
+
+Procedure("hollowRectangle1", ["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])
+{    
+    Local(xIndex, yIndex);
+    
+    // Bottom.
+    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)
+    {
+        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftY);
+    }
+    
+    
+    // Right.
+    For(yIndex := lowerLeftY + 1, yIndex <=? lowerLeftY + height, yIndex++)
+    {
+        PlotterPoint("A" + ToString(pointCount++), lowerLeftX + width, yIndex);
+    }
+    
+
+    // Top.
+    For(xIndex := lowerLeftX + width -1, xIndex >=? lowerLeftX, xIndex--)
+    {
+        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftY + height);
+    }
+    
+    
+    // Left.
+    For(yIndex := lowerLeftY + height -1, yIndex >=? lowerLeftY + 1, yIndex--)
+    {
+        PlotterPoint("A" + ToString(pointCount++), lowerLeftX, yIndex);
+    }
+    
+    pointCount;
+}
+
+
+Procedure("mainProcedure", [])
+{
+    pointCount := 1;
+    PlotterClear();
+
+    lowerLeftX := 3;
+    lowerLeftY := 3;
+    
+    lengthOfSide := 1;
+    
+    index := 1;
+    While(index <=? 3)
+    {
+        pointCount := hollowRectangle1(lowerLeftX--, lowerLeftY--, lengthOfSide, lengthOfSide, pointCount);
+        
+        lengthOfSide +:= 2;
+        
+        index++;
+    }
+}
+
+
+mainProcedure();
+
+%/mathpiper
+
+
+
+
+
+
+
+Tuesday section.
+=================================================================
+
+todo:tk talk about it being okay to list arguments on their own line.
+%mathpiper,name="Problem 1",subtype="problem",unassign_all="true",truncate="1000",timeout="5000"
+
+Procedure("sevens", [])
+{
+    Local(resultList, index, stringNumber);
+    
+    resultList := [];
+    
+    index := 1;
+    
+    While(index <=? 200)
+    {
+        stringNumber := ToString(index);
+        
+        If(stringNumber[Length(stringNumber)] =? "7"
+            &? index !=? 57
+            &? index !=? 117
+            &? index !=? 187
+            &? index !=? 77
+            &? index <? 137
+            &? stringNumber[1] !=? "1")
+        {
+            Append!(resultList, index);
+        }
+        
+        index := index + 1;
+    }
+    
+    resultList;
+}
+
+sevens();
+
+%/mathpiper
+
+
+
+
+=== Convert While loop into a For loop
+
+%mathpiper,title=""
+
+index := 1;
+
+While(index <=? 10)
+{
+    Echo(index);
+    
+    index++;
+}
+
+%/mathpiper
+
+
+
+%mathpiper,title=""
+
+For(index := 1, index <=? 10, index++)
+{
+    Echo(index);
+}
+
+%/mathpiper
+
+
+
+
+
+todo:tk using a code sequence with a For.
+%mathpiper,title=""
+
+For({index1 := 1; index2 := 10;}, index1 <=? 10, {index1++; index2--;})
+{
+    Echo(index1, index2);
+}
+
+%/mathpiper
+
+
+============ Bouncing ball
+%mathpiper,title="Bouncing Ball"
+
+x := 27;
+
+y := 9;
+
+xDirection := .5;
+
+yDirection := .5;
+
+PlotterClear();
+
+Repeat()
+{
+    PlotterPoint("A",x,y);
+    
+    x := x + xDirection;
+    
+    y := y + yDirection;
+    
+    If(x =? 85 |? x =? 0) 
+    {
+        xDirection := xDirection * -1;
+    }
+    
+    If(y =? 50 |? y =? 0) 
+    {
+        yDirection := yDirection * -1;
+    }
+    
+    Delay(10);
+}
+
+%/mathpiper
+
+

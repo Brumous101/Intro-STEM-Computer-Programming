@@ -1,0 +1,354 @@
+PARSING AND THE LANGUAGE OF EXPRESSION TREES 
+v.03
+
+
+PARSING SOURCE CODE INTO TREES
+
+The first step that almost all programming
+languages do when running source code is to PARSE
+the source code into a TREE data structure.
+Programming languages can only work with code that
+is in a completely unambiguous form, and expression trees
+provide such a form. For example, in the following
+line an expression is parsed into a tree
+structure, the ' operator (which is discussed
+below) holds this expression from being evaluated,
+and the held tree is assigned to the variable
+named "expressionTree".
+
+%mathpiper
+
+expressionTree := '((a+b)==(c*(d - e / f)));
+
+%/mathpiper
+
+
+
+
+THE LANGUAGE OF TREES
+
+A parsed expression tree can be viewed if desired.
+
+%mathpiper
+
+ViewTreeParts(expressionTree, Scale:4, FontSize:20);
+
+%/mathpiper
+
+
+
+
+Expression trees consist of NODES connected by
+ARCS. In the following diagram, all of the tree's
+nodes are highlighted.
+
+%mathpiper
+
+ViewTreeParts(expressionTree, NodesHighlight:True, Scale:4, FontSize:20, Resize:True, Width:650, Height:750, Center:True);
+
+%/mathpiper
+
+
+
+
+In the following diagram, all of the tree's arcs
+are highlighted.
+
+%mathpiper
+
+ViewTreeParts(expressionTree, ArcsHighlight:True, Scale:4, FontSize:20, Width:650, Height:750, Center:True);
+
+%/mathpiper
+
+
+
+
+The node at the top of a tree is called its ROOT
+node.
+
+%mathpiper
+
+ViewTreeParts(expressionTree, RootNodeHighlight:True, Scale:4, FontSize:20, Width:650, Height:750, Center:True);
+
+%/mathpiper
+
+
+
+
+The nodes that are connected immediately below a
+given node by arcs are its CHILD nodes. In the
+following diagram, the root node has two CHILDREN,
+and it is the PARENT node of these children.
+Children nodes of the same parent node are called
+SIBLING nodes.
+
+%mathpiper
+
+ViewTreeParts(expressionTree, NodeHighlight:["1", "2"], Scale:4, FontSize:20, Width:650, Height:750, Center:True);
+
+%/mathpiper
+
+
+Nodes that don't have any children are called LEAF
+nodes.
+
+Todo:tk:make the 2D output larger.
+Todo:tk:check removed manipulate.
+
+%mathpiper
+
+ViewTreeParts(expressionTree, LeafNodesHighlight:True, Scale:4, FontSize:20, Resize:True, Width:650, Height:750, Center:True);
+
+%/mathpiper
+
+
+
+
+Each node below the root node in a tree is located
+at a specific POSITION in the tree which is
+determined by the arcs that need to be followed
+from the root node to arrive at it. Each arc that
+connects a parent node with is children is labeled
+with a number. The leftmost child is labeled 1,
+the sibling to its immediate right is labeled 2,
+and so on. The following diagram shows the tree
+with all of its positions indicated.
+
+%mathpiper
+
+ViewTreeParts(expressionTree, ShowPositions:True, Scale:4, FontSize:20, Width:650, Height:750, Center:True);
+
+%/mathpiper
+
+
+
+
+The set of all children, children of children,
+etc. of a given node are called its DESCENDANTS. A
+node along with all of its descendants and the
+arcs between them form a SUBTREE. The topmost node
+in a subtree is the DOMINANT node, and all of its
+descendants and arcs between them are said to be
+DOMINATED by the dominant node. In the following
+diagram, the subtree that has the node "-" as its
+dominant node is highlighted.
+
+todo:tk:check why manipulate won't select subtrees.
+
+%mathpiper
+
+ViewTreeParts(expressionTree, Pattern:(x_ - y_), Scale:4, FontSize:20, Width:650, Height:750, Center:True);
+
+%/mathpiper
+
+
+
+
+In the previous example, the position of node "b"
+is "1,2". A sequence of arcs and nodes is called a
+PATH, and a path that goes from the root node to a
+leaf node is called a BRANCH. The following
+diagram shows the branch from the root node to
+node "b".
+
+%mathpiper
+
+ViewTreeParts(expressionTree, Path:["", "1,2"], PathNumbers:True, Scale:4, FontSize:20, Width:650, Height:750, Center:True);
+
+%/mathpiper
+
+
+
+
+The position of node "-" is "2,2". The following
+diagram shows the path from the root node to node
+"-".
+
+%mathpiper
+
+ViewTreeParts(expressionTree, Path:["", "2,2"], PathNumbers:True, Scale:4, FontSize:20);
+
+%/mathpiper
+
+
+
+
+The LENGTH of a path is the number of arcs it
+contains. For example, the length of the path
+between node "a" and node "d" is 5.
+
+todo:tk:path or ? (The path needs to be shown.)
+%mathpiper
+
+ViewTreeParts(expressionTree, ShowPositions:True, Path:["1,1", "2,2,1"], Scale:4, FontSize:20);
+
+%/mathpiper
+
+
+
+
+The length of a path from the root node to a given
+node is called the DEPTH of the node, and the
+length of the path from a node to the farthest
+leaf it dominates is called its HEIGHT. The follow
+diagram shows the depths of all the nodes in the
+tree.
+
+%mathpiper
+
+ViewTreeParts(expressionTree, ShowDepths:True, Scale:4, FontSize:20);
+
+%/mathpiper
+
+
+
+
+PREVENTING EVALUATION OF A TREE
+
+Sometimes instead of evaluating a tree, one wants
+to prevent its evaluation and work with the tree
+itself as data. The most common ways to achieve
+this are to use the ' "hold" operator, the "Hold"
+procedure, or underscore constants.
+
+THE ' "HOLD" OPERATOR AND THE "Hold" PROCEDURE
+
+The ' operator prevents the expression to its
+immediate right from being evaluated. For example,
+when an unassigned variable is evaluated an
+exception is thrown. However, an unassigned
+variable to the immediate right of an ' operator
+will be returned unevaluated.
+
+In> Unassign(x)
+
+
+
+In> x
+
+
+
+In> 'x
+
+
+
+
+The ' operator has a very high precedence, so its
+operand is normally the smallest subexpression to
+its immediate right. For example, in the following
+expression, the operand of ' is only the variable
+"x".
+
+%mathpiper
+
+Unassign(x);
+Unassign(y);
+
+'x + y;
+
+%/mathpiper
+
+
+
+
+The tree of the following expression shows that
+the only part of the expression that ' considers
+to be is operand is the variable "x". The "Hold"
+procedure has the same behavior as the ' operator,
+and it is used in this example to prevent the
+expression from being evaluated so its tree can be
+viewed.
+
+%mathpiper
+
+ViewTreeParts(Hold('x + y), Scale:4, FontSize:20);
+
+%/mathpiper
+
+
+
+
+Parentheses need to be used to enable the '
+operator to treat larger expressions as its
+operand.
+
+%mathpiper
+
+ViewTreeParts(Hold( '(x + y) ), Scale:4, FontSize:20);
+
+%/mathpiper
+
+
+
+
+UNDERSCORE CONSTANTS AND THE "ObjectoToMeta" AND
+"MetaToObject" PROCEDURES
+
+Any name in MathPiper code that contains an
+underscore (_) character is treated as a constant
+and is not evaluated.
+
+%mathpiper
+
+[
+_x,
+x_,
+_hello,
+hello_,
+hello_there,
+_
+];
+
+%/mathpiper
+
+
+
+
+THE "MathParse" PROCEDURE
+
+MathPiper syntax is not the same as traditional
+mathematics syntax. For example, MathPiper's
+standard parser does not understand that 2x means
+2*x. The "MathParse" procedure accepts a string
+which contains code that is in traditional
+mathematics format, and it parses it into a
+MathPiper tree data structure.
+
+In> MathParse("2x")
+
+
+
+
+COMPUTER CODE IS ALSO PARSED INTO A TREE
+
+The MathPiper parser also parses MathPiper source
+code into a tree. In the following example the '
+operator is used to hold the code that is in a
+sequence expression so its tree form can be
+viewed. In this tree all of the positions of the
+nodes are shown along with the path from the root
+node to the "++" operator.
+
+todo:tk:use an If example.
+%mathpiper
+
+expression := 
+'{
+    result := [];
+    
+    index := 14;
+    
+    While(index <=? 33)
+    {
+        result := Append(result, index);
+        
+        index++;
+    }
+    
+    result;
+}
+
+ViewTreeParts(expression, Scale:4, ShowPositions:True, IncludeExpression:False, Path:["", "3,2,2"], PathNumbers:True, Code:False);
+
+%/mathpiper
+

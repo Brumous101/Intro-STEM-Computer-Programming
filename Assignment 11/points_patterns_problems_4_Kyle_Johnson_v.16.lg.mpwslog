@@ -1,0 +1,205 @@
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 0",sequence="2",timestamp="2018-11-17 13:35:44.295",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+¶[¶["firstName", "Kyle"],¶["lastName", "Johnson"],¶["ssuIDNumber", "264694"],¶];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 0",sequence="3",timestamp="2018-11-17 13:35:59.831",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 1",sequence="4",timestamp="2018-11-17 13:36:52.357",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Hint("ClByb2NlZHVyZSgicmlnaHRUcmlhbmdsZTEiLFsibG93ZXJMZWZ0WCIsICJsb3dlckxlZnRZIiwibGVuZ3RoT2ZTaWRlIiwgInBvaW50Q291bnQiXSkKewogICAgTG9jYWwoeEluZGV4LCB5SW5kZXgsIHhPZmZzZXQpOwogICAgCiAgICB4T2Zmc2V0IDo9IGxlbmd0aE9mU2lkZTsKICAgIAogICAgRm9yKHlJbmRleCA6PSBsb3dlckxlZnRZLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBsZW5ndGhPZlNpZGUsIHlJbmRleCsrKQogICAgewogICAgICAgIEZvcih4SW5kZXggOj0gbG93ZXJMZWZ0WCwgeEluZGV4IDw9PyBsb3dlckxlZnRYICsgeE9mZnNldCwgeEluZGV4KyspCiAgICAgICAgewogICAgICAgICAgICBQbG90dGVyUG9pbnQoIkEiICsgVG9TdHJpbmcocG9pbnRDb3VudCsrKSwgeEluZGV4LCB5SW5kZXgpOyAKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgeE9mZnNldC0tOwogICAgfQogICAgcG9pbnRDb3VudDsKfQoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIixbXSkKewogICAgUGxvdHRlckNsZWFyKCk7CiAgICAKICAgIHJpZ2h0VHJpYW5nbGUxKDEsMSw1LDEpOwogICAgCiAgICAKfQoKbWFpblByb2NlZHVyZSgpOwoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="5",timestamp="2018-11-17 13:44:12.904",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+¶Procedure("rightTriangle1", [lowerLeftX, lowerLeftY, lengthOfSide, pointCount])¶{¶    Local(xIndex, yIndex, xOffset);¶    ¶    xOffset := lengthOfSide;¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + lengthOfSide, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + xOffset, xIndex++)¶        {¶            PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        }¶        ¶        xOffset--;¶    }¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    ¶    rightTriangle1(1,1,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="6",timestamp="2018-11-17 13:45:12.998",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+¶Procedure("rightTriangle1", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{¶    Local(xIndex, yIndex, xOffset);¶    ¶    xOffset := lengthOfSide;¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + lengthOfSide, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + xOffset, xIndex++)¶        {¶            PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        }¶        ¶        xOffset--;¶    }¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    ¶    rightTriangle1(1,1,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 1",sequence="7",timestamp="2018-11-17 13:46:02.622",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 2",sequence="8",timestamp="2018-11-17 13:54:30.201",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Hint("ClByb2NlZHVyZSgicmlnaHRUcmlhbmdsZTIiLFsibG93ZXJMZWZ0WCIsICJsb3dlckxlZnRZIiwibGVuZ3RoT2ZTaWRlIiwgInBvaW50Q291bnQiXSkKewogICAgTG9jYWwoeEluZGV4LCB5SW5kZXgsIHhPZmZzZXQpOwogICAgCiAgICB4T2Zmc2V0IDo9IGxlbmd0aE9mU2lkZTsKICAgIAogICAgRm9yKHlJbmRleCA6PSBsb3dlckxlZnRZLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBsZW5ndGhPZlNpZGUsIHlJbmRleCsrKQogICAgewogICAgICAgIEZvcih4SW5kZXggOj0gbG93ZXJMZWZ0WCArIHhPZmZzZXQtLSwgeEluZGV4ID49PyBsb3dlckxlZnRYLCB4SW5kZXgtLSkKICAgICAgICB7CiAgICAgICAgICAgIFBsb3R0ZXJQb2ludCgiQSIgKyBUb1N0cmluZyhwb2ludENvdW50KyspLHhJbmRleCx5SW5kZXgpOwogICAgICAgIH0KICAgIH0KICAgIHBvaW50Q291bnQ7Cn0KClByb2NlZHVyZSgibWFpblByb2NlZHVyZSIsW10pCnsKICAgIAogICAgUGxvdHRlckNsZWFyKCk7CiAgICByaWdodFRyaWFuZ2xlMigxLDEsNSwxKTsKICAgIAogICAgCn0KCm1haW5Qcm9jZWR1cmUoKTsKICAgICAgICAKCg==");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 2",sequence="9",timestamp="2018-11-17 13:54:42.354",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Hint("ClByb2NlZHVyZSgicmlnaHRUcmlhbmdsZTIiLFsibG93ZXJMZWZ0WCIsICJsb3dlckxlZnRZIiwibGVuZ3RoT2ZTaWRlIiwgInBvaW50Q291bnQiXSkKewogICAgTG9jYWwoeEluZGV4LCB5SW5kZXgsIHhPZmZzZXQpOwogICAgCiAgICB4T2Zmc2V0IDo9IGxlbmd0aE9mU2lkZTsKICAgIAogICAgRm9yKHlJbmRleCA6PSBsb3dlckxlZnRZLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBsZW5ndGhPZlNpZGUsIHlJbmRleCsrKQogICAgewogICAgICAgIEZvcih4SW5kZXggOj0gbG93ZXJMZWZ0WCArIHhPZmZzZXQtLSwgeEluZGV4ID49PyBsb3dlckxlZnRYLCB4SW5kZXgtLSkKICAgICAgICB7CiAgICAgICAgICAgIFBsb3R0ZXJQb2ludCgiQSIgKyBUb1N0cmluZyhwb2ludENvdW50KyspLHhJbmRleCx5SW5kZXgpOwogICAgICAgIH0KICAgIH0KICAgIHBvaW50Q291bnQ7Cn0KClByb2NlZHVyZSgibWFpblByb2NlZHVyZSIsW10pCnsKICAgIAogICAgUGxvdHRlckNsZWFyKCk7CiAgICByaWdodFRyaWFuZ2xlMigxLDEsNSwxKTsKICAgIAogICAgCn0KCm1haW5Qcm9jZWR1cmUoKTsKICAgICAgICAKCg==");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 2",sequence="10",timestamp="2018-11-17 13:54:55.498",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Hint("ClByb2NlZHVyZSgicmlnaHRUcmlhbmdsZTIiLFsibG93ZXJMZWZ0WCIsICJsb3dlckxlZnRZIiwibGVuZ3RoT2ZTaWRlIiwgInBvaW50Q291bnQiXSkKewogICAgTG9jYWwoeEluZGV4LCB5SW5kZXgsIHhPZmZzZXQpOwogICAgCiAgICB4T2Zmc2V0IDo9IGxlbmd0aE9mU2lkZTsKICAgIAogICAgRm9yKHlJbmRleCA6PSBsb3dlckxlZnRZLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBsZW5ndGhPZlNpZGUsIHlJbmRleCsrKQogICAgewogICAgICAgIEZvcih4SW5kZXggOj0gbG93ZXJMZWZ0WCArIHhPZmZzZXQtLSwgeEluZGV4ID49PyBsb3dlckxlZnRYLCB4SW5kZXgtLSkKICAgICAgICB7CiAgICAgICAgICAgIFBsb3R0ZXJQb2ludCgiQSIgKyBUb1N0cmluZyhwb2ludENvdW50KyspLHhJbmRleCx5SW5kZXgpOwogICAgICAgIH0KICAgIH0KICAgIHBvaW50Q291bnQ7Cn0KClByb2NlZHVyZSgibWFpblByb2NlZHVyZSIsW10pCnsKICAgIAogICAgUGxvdHRlckNsZWFyKCk7CiAgICByaWdodFRyaWFuZ2xlMigxLDEsNSwxKTsKICAgIAogICAgCn0KCm1haW5Qcm9jZWR1cmUoKTsKICAgICAgICAKCg==");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="11",timestamp="2018-11-17 14:01:15.595",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+¶Procedure("rightTriangle2", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{                                  ¶    Local(xIndex, yIndex, xOffset);     ¶                                  ¶    xOffset := lengthOfSide;¶                                ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + lengthOfSide, yIndex++)¶    {                                ¶        For(xIndex := lowerLeftX + xOffset--, xIndex >=? lowerLeftX, xIndex--)¶        {¶            Plotterpoint("A" + ToString(pointCount++), xIndex, yIndex)¶        }¶    }¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear(); ¶    ¶    rightTriangle2(1, 1, 5, 1);¶}¶    ¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="12",timestamp="2018-11-17 14:01:27.624",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+¶Procedure("rightTriangle2", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{                                  ¶    Local(xIndex, yIndex, xOffset);     ¶                                  ¶    xOffset := lengthOfSide;¶                                ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + lengthOfSide, yIndex++)¶    {                                ¶        For(xIndex := lowerLeftX + xOffset--, xIndex >=? lowerLeftX, xIndex--)¶        {¶            Plotterpoint("A" + ToString(pointCount++), xIndex, yIndex);¶        }¶    }¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear(); ¶    ¶    rightTriangle2(1, 1, 5, 1);¶}¶    ¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="13",timestamp="2018-11-17 14:01:47.917",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+¶Procedure("rightTriangle2", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{                                  ¶    Local(xIndex, yIndex, xOffset);     ¶                                  ¶    xOffset := lengthOfSide;¶                                ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + lengthOfSide, yIndex++)¶    {                                ¶        For(xIndex := lowerLeftX + xOffset--, xIndex >=? lowerLeftX, xIndex--)¶        {¶            PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        }¶    }¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear(); ¶    ¶    rightTriangle2(1, 1, 5, 1);¶}¶    ¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 2",sequence="14",timestamp="2018-11-17 14:02:09.31",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 3",sequence="15",timestamp="2018-11-17 14:03:41.029",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Hint("ClByb2NlZHVyZSgicmlnaHRUcmlhbmdsZTMiLFsibG93ZXJMZWZ0WCIsICJsb3dlckxlZnRZIiwibGVuZ3RoT2ZTaWRlIiwgInBvaW50Q291bnQiXSkKewogICAgTG9jYWwoeEluZGV4LCB5SW5kZXgsIHhPZmZzZXQpOwogICAgCiAgICB4T2Zmc2V0Oj0wOwogICAgCiAgICBGb3IoeUluZGV4IDo9IGxvd2VyTGVmdFksIHlJbmRleCA8PT8gbG93ZXJMZWZ0WSArIGxlbmd0aE9mU2lkZSwgeUluZGV4KyspCiAgICB7CiAgICAgICAgRm9yKHhJbmRleCA6PSBsb3dlckxlZnRYLCB4SW5kZXggPD0/IGxvd2VyTGVmdFggKyB4T2Zmc2V0LHhJbmRleCsrKQogICAgICAgIHsKICAgICAgICAgICAgUGxvdHRlclBvaW50KCJBIiArIFRvU3RyaW5nKHBvaW50Q291bnQrKykseEluZGV4LHlJbmRleCk7CiAgICAgICAgICAgIAogICAgICAgIH0KICAgICAgICAKICAgICAgICB4T2Zmc2V0Kys7CiAgICB9CiAgICBwb2ludENvdW50Owp9CgpQcm9jZWR1cmUoIm1haW5Qcm9jZWR1cmUiLFtdKQp7CiAgICBQbG90dGVyQ2xlYXIoKTsKICAgIAogICAgcmlnaHRUcmlhbmdsZTMoMSwxLDUsMSk7CiAgICAKICAgIAp9CgptYWluUHJvY2VkdXJlKCk7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="16",timestamp="2018-11-17 14:08:58.904",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+¶Procedure("rightTriangle3", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{                                  ¶    Local(xIndex, yIndex, xOffset);     ¶                                  ¶    xOffset := 0;      ¶                   ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + lengthOfSide, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + xOffset, xIndex++)¶        {¶            PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        }¶        ¶        xOffset++;¶    }¶    ¶    pointCount;¶    ¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    ¶    rightTriangle3(1, 1, 5, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="17",timestamp="2018-11-17 14:10:50.326",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+¶Procedure("rightTriangle3", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{                                  ¶    Local(xIndex, yIndex, xOffset);     ¶                                  ¶    xOffset := 0;      ¶                   ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + lengthOfSide, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + xOffset, xIndex++)¶        {¶            PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        }¶        ¶        xOffset++;¶    }¶    ¶    pointCount;¶    ¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    ¶    rightTriangle3(1, 1, 5, 1);¶}¶                    ¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="18",timestamp="2018-11-17 14:12:53.077",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+¶Procedure("rightTriangle3", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{                                  ¶    Local(xIndex, yIndex, xOffset);     ¶                                  ¶    xOffset := 0;      ¶                   ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + lengthOfSide, yIndex++)¶    {¶        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + xOffset, xIndex++)¶        {¶            PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        }¶        ¶        xOffset++;¶    }¶    ¶    pointCount;¶}¶    ¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    ¶    rightTriangle3(1, 1, 5, 1);¶}¶                    ¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 3",sequence="19",timestamp="2018-11-17 14:13:18.623",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 4",sequence="20",timestamp="2018-11-17 14:13:44.076",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Hint("ClByb2NlZHVyZSgicmlnaHRUcmlhbmdsZTQiLFsibG93ZXJMZWZ0WCIsICJsb3dlckxlZnRZIiwibGVuZ3RoT2ZTaWRlIiwgInBvaW50Q291bnQiXSkKewogICAgTG9jYWwoeEluZGV4LCB5SW5kZXgsIHhPZmZzZXQpOwogICAgCiAgICB4T2Zmc2V0IDo9IGxlbmd0aE9mU2lkZTsKICAgIAogICAgRm9yKHlJbmRleCA6PSBsb3dlckxlZnRZLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBsZW5ndGhPZlNpZGUsIHlJbmRleCsrKQogICAgewogICAgICAgIEZvcih4SW5kZXggOj0gbG93ZXJMZWZ0WCArIGxlbmd0aE9mU2lkZSwgeEluZGV4ID49PyBsb3dlckxlZnRYICsgeE9mZnNldCwgeEluZGV4LS0pCiAgICAgICAgewogICAgICAgICAgICBQbG90dGVyUG9pbnQoIkEiICsgVG9TdHJpbmcocG9pbnRDb3VudCsrKSx4SW5kZXgseUluZGV4KTsKICAgICAgICB9CiAgICAgICAgeE9mZnNldC0tOwogICAgfQogICAgcG9pbnRDb3VudDsKfQoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIixbXSkKewogICAgUGxvdHRlckNsZWFyKCk7CiAgICAKICAgIHJpZ2h0VHJpYW5nbGU0KDEsMSw1LDEpOyAKfQoKbWFpblByb2NlZHVyZSgpOwoKCgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="21",timestamp="2018-11-17 14:18:31.499",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+¶Procedure("rightTriangle4", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{                                  ¶    Local(xIndex, yIndex, xOffset);     ¶                                  ¶    xOffset := lengthOfSide;      ¶                   ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + lengthOfSide, yIndex++)¶    {¶        For(xIndex := lowerLeftX + lengthOfSide, xIndex >=? lowerLeftX + xOffset, xIndex--)¶        {¶            PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶            ¶        }¶        xOffset;¶    }¶    ¶    pointCount;¶}                                                                                ¶¶Procedure("mainProcedure" [])¶{¶    PlotterClear();¶    ¶    rightTriangle4(1,1,5,1);¶}¶                           ¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="22",timestamp="2018-11-17 14:18:48.764",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+¶Procedure("rightTriangle4", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{                                  ¶    Local(xIndex, yIndex, xOffset);     ¶                                  ¶    xOffset := lengthOfSide;      ¶                   ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + lengthOfSide, yIndex++)¶    {¶        For(xIndex := lowerLeftX + lengthOfSide, xIndex >=? lowerLeftX + xOffset, xIndex--)¶        {¶            PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶            ¶        }¶        xOffset;¶    }¶    ¶    pointCount;¶}                                                                                ¶¶Procedure("mainProcedure", [])¶{                          ¶    PlotterClear();¶    ¶    rightTriangle4(1,1,5,1);¶}¶                           ¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="23",timestamp="2018-11-17 14:20:22.889",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+¶Procedure("rightTriangle4", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{                                  ¶    Local(xIndex, yIndex, xOffset);     ¶                                  ¶    xOffset := lengthOfSide;      ¶                   ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + lengthOfSide, yIndex++)¶    {¶        For(xIndex := lowerLeftX + lengthOfSide, xIndex >=? lowerLeftX + xOffset, xIndex--)¶        {¶            PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶            ¶        }¶        xOffset--;¶    }¶    ¶    pointCount;¶}                                                                                ¶¶Procedure("mainProcedure", [])¶{                          ¶    PlotterClear();¶                                                    ¶    rightTriangle4(1,1,5,1);¶}                                           ¶                           ¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 4",sequence="24",timestamp="2018-11-17 14:20:41.404",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 5",sequence="25",timestamp="2018-11-17 14:21:18.718",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Hint("ClByb2NlZHVyZSgicmlnaHRUcmlhbmdsZTUiLFsibG93ZXJMZWZ0WCIsICJsb3dlckxlZnRZIiwibGVuZ3RoT2ZTaWRlIiwgInBvaW50Q291bnQiXSkKewogICAgTG9jYWwoeEluZGV4LCB5SW5kZXgsIHlJbmRleDIpOwoKICAgIEZvcih5SW5kZXggOj0gbG93ZXJMZWZ0WSwgeUluZGV4IDw9PyBsb3dlckxlZnRZICsgbGVuZ3RoT2ZTaWRlLCB5SW5kZXgrKykKICAgIHsKICAgICAgICB5SW5kZXgyIDo9IHlJbmRleDsKICAgIAogICAgICAgIEZvcih4SW5kZXggOj0gbG93ZXJMZWZ0WCwgeUluZGV4MiA+PT8gbG93ZXJMZWZ0WSwge3hJbmRleCsrOyB5SW5kZXgyLS07fSkKICAgICAgICB7CiAgICAgICAgICAgIFBsb3R0ZXJQb2ludCgiQSIgKyBUb1N0cmluZyhwb2ludENvdW50KyspLHhJbmRleCx5SW5kZXgyKTsKICAgICAgICB9CiAgICB9CiAgICBwb2ludENvdW50Owp9CgpQcm9jZWR1cmUoIm1haW5Qcm9jZWR1cmUiLFtdKQp7CiAgICBQbG90dGVyQ2xlYXIoKTsKICAgIAogICAgcmlnaHRUcmlhbmdsZTUoMSwxLDUsMSk7Cn0KCm1haW5Qcm9jZWR1cmUoKTsKCgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 5",sequence="26",timestamp="2018-11-17 14:22:13.045",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+¶Procedure("rightTriangle5", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{                                  ¶    Local(xIndex, yIndex, yIndex2);     ¶                                  ¶    For(y
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 5",sequence="27",timestamp="2018-11-17 14:27:11.436",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+¶Procedure("rightTriangle5", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{                                  ¶    Local(xIndex, yIndex, yIndex2);     ¶                                  ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + lengthOfSide, yIndex++)¶    {        ¶        yIndex2 := yIndex¶        ¶        For(xIndex := lowerLeftX, yIndex2 >=? lowerLeftY, {xIndex++; yIndex2--;})¶        {¶            PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex2);¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    ¶    rightTriangle5(1,1,5,1);¶}                   ¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 5",sequence="28",timestamp="2018-11-17 14:27:21.592",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+¶Procedure("rightTriangle5", ["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{                                  ¶    Local(xIndex, yIndex, yIndex2);     ¶                                  ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + lengthOfSide, yIndex++)¶    {        ¶        yIndex2 := yIndex;¶        ¶        For(xIndex := lowerLeftX, yIndex2 >=? lowerLeftY, {xIndex++; yIndex2--;})¶        {        ¶            PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex2);¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure",[])¶{¶    PlotterClear();¶    ¶    rightTriangle5(1,1,5,1);¶}                   ¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 5",sequence="29",timestamp="2018-11-17 14:27:43.92",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 6",sequence="30",timestamp="2018-11-17 14:29:20.155",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiaG9sbG93UmVjdGFuZ2xlMSIsWyJsb3dlckxlZnRYIiwgImxvd2VyTGVmdFkiLCJ3aWR0aCIsICJoZWlnaHQiLCAicG9pbnRDb3VudCJdKQp7CiAgICBMb2NhbCh4SW5kZXgseUluZGV4KTsKCiAgICBGb3IoeEluZGV4IDo9IGxvd2VyTGVmdFgsIHhJbmRleCA8PT8gbG93ZXJMZWZ0WCArIHdpZHRoLCB4SW5kZXgrKykKICAgIHsKICAgICAgICBQbG90dGVyUG9pbnQoIkEiICsgVG9TdHJpbmcocG9pbnRDb3VudCsrKSx4SW5kZXgsIGxvd2VyTGVmdFkpOwogICAgfQogICAgCiAgICBGb3IoeUluZGV4IDo9IGxvd2VyTGVmdFkgKyAxLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBoZWlnaHQsIHlJbmRleCsrKQogICAgewogICAgICAgIFBsb3R0ZXJQb2ludCgiQSIgKyBUb1N0cmluZyhwb2ludENvdW50KyspLGxvd2VyTGVmdFggKyB3aWR0aCwgeUluZGV4KTsKICAgIH0KICAgIAogICAgRm9yKHhJbmRleCA6PSBsb3dlckxlZnRYICsgd2lkdGggLTEsIHhJbmRleCA+PT8gbG93ZXJMZWZ0WCAsIHhJbmRleC0tKQogICAgeyAKICAgICAgICBQbG90dGVyUG9pbnQoIkEiICsgVG9TdHJpbmcocG9pbnRDb3VudCsrKSx4SW5kZXgsIGxvd2VyTGVmdFkgKyBoZWlnaHQpOwogICAgfQogICAgCiAgICBGb3IoeUluZGV4IDo9IGxvd2VyTGVmdFkgKyBoZWlnaHQgLTEsIHlJbmRleCA+PT8gbG93ZXJMZWZ0WSArIDEsIHlJbmRleC0tKQogICAgewogICAgICAgIFBsb3R0ZXJQb2ludCgiQSIgKyBUb1N0cmluZyhwb2ludENvdW50KyspLGxvd2VyTGVmdFgsIHlJbmRleCk7CiAgICB9CiAgICBwb2ludENvdW50Owp9ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCgpQcm9jZWR1cmUoIm1haW5Qcm9jZWR1cmUiLCBbXSkKeyAKICAgIHBvaW50Q291bnQ6PTE7CiAgICBQbG90dGVyQ2xlYXIoKTsKICAgIAogICAgCiAgICBsb3dlckxlZnRYIDo9IDM7CiAgICBsb3dlckxlZnRZIDo9IDM7CiAgICAKICAgIGxlbmd0aE9mU2lkZTo9IDE7CiAgICAKICAgIGluZGV4Oj0xOwogICAgCiAgICBXaGlsZShpbmRleCA8PT8gMykKICAgIHsKICAgICAgICBwb2ludENvdW50IDo9IGhvbGxvd1JlY3RhbmdsZTEobG93ZXJMZWZ0WC0tLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBsb3dlckxlZnRZLS0sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxlbmd0aE9mU2lkZSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbGVuZ3RoT2ZTaWRlLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBwb2ludENvdW50KTsKICAgICAgICAKICAgICAgICBsZW5ndGhPZlNpZGUgOj0gbGVuZ3RoT2ZTaWRlICsgMjsKICAgICAgICAKICAgICAgICBpbmRleCsrOwogICAgfSAgICAKfQptYWluUHJvY2VkdXJlKCk7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 6",sequence="31",timestamp="2018-11-17 14:37:39.747",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiaG9sbG93UmVjdGFuZ2xlMSIsWyJsb3dlckxlZnRYIiwgImxvd2VyTGVmdFkiLCJ3aWR0aCIsICJoZWlnaHQiLCAicG9pbnRDb3VudCJdKQp7CiAgICBMb2NhbCh4SW5kZXgseUluZGV4KTsKCiAgICBGb3IoeEluZGV4IDo9IGxvd2VyTGVmdFgsIHhJbmRleCA8PT8gbG93ZXJMZWZ0WCArIHdpZHRoLCB4SW5kZXgrKykKICAgIHsKICAgICAgICBQbG90dGVyUG9pbnQoIkEiICsgVG9TdHJpbmcocG9pbnRDb3VudCsrKSx4SW5kZXgsIGxvd2VyTGVmdFkpOwogICAgfQogICAgCiAgICBGb3IoeUluZGV4IDo9IGxvd2VyTGVmdFkgKyAxLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBoZWlnaHQsIHlJbmRleCsrKQogICAgewogICAgICAgIFBsb3R0ZXJQb2ludCgiQSIgKyBUb1N0cmluZyhwb2ludENvdW50KyspLGxvd2VyTGVmdFggKyB3aWR0aCwgeUluZGV4KTsKICAgIH0KICAgIAogICAgRm9yKHhJbmRleCA6PSBsb3dlckxlZnRYICsgd2lkdGggLTEsIHhJbmRleCA+PT8gbG93ZXJMZWZ0WCAsIHhJbmRleC0tKQogICAgeyAKICAgICAgICBQbG90dGVyUG9pbnQoIkEiICsgVG9TdHJpbmcocG9pbnRDb3VudCsrKSx4SW5kZXgsIGxvd2VyTGVmdFkgKyBoZWlnaHQpOwogICAgfQogICAgCiAgICBGb3IoeUluZGV4IDo9IGxvd2VyTGVmdFkgKyBoZWlnaHQgLTEsIHlJbmRleCA+PT8gbG93ZXJMZWZ0WSArIDEsIHlJbmRleC0tKQogICAgewogICAgICAgIFBsb3R0ZXJQb2ludCgiQSIgKyBUb1N0cmluZyhwb2ludENvdW50KyspLGxvd2VyTGVmdFgsIHlJbmRleCk7CiAgICB9CiAgICBwb2ludENvdW50Owp9ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCgpQcm9jZWR1cmUoIm1haW5Qcm9jZWR1cmUiLCBbXSkKeyAKICAgIHBvaW50Q291bnQ6PTE7CiAgICBQbG90dGVyQ2xlYXIoKTsKICAgIAogICAgCiAgICBsb3dlckxlZnRYIDo9IDM7CiAgICBsb3dlckxlZnRZIDo9IDM7CiAgICAKICAgIGxlbmd0aE9mU2lkZTo9IDE7CiAgICAKICAgIGluZGV4Oj0xOwogICAgCiAgICBXaGlsZShpbmRleCA8PT8gMykKICAgIHsKICAgICAgICBwb2ludENvdW50IDo9IGhvbGxvd1JlY3RhbmdsZTEobG93ZXJMZWZ0WC0tLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBsb3dlckxlZnRZLS0sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxlbmd0aE9mU2lkZSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbGVuZ3RoT2ZTaWRlLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBwb2ludENvdW50KTsKICAgICAgICAKICAgICAgICBsZW5ndGhPZlNpZGUgOj0gbGVuZ3RoT2ZTaWRlICsgMjsKICAgICAgICAKICAgICAgICBpbmRleCsrOwogICAgfSAgICAKfQptYWluUHJvY2VkdXJlKCk7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 6",sequence="32",timestamp="2018-11-17 14:37:53.071",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiaG9sbG93UmVjdGFuZ2xlMSIsWyJsb3dlckxlZnRYIiwgImxvd2VyTGVmdFkiLCJ3aWR0aCIsICJoZWlnaHQiLCAicG9pbnRDb3VudCJdKQp7CiAgICBMb2NhbCh4SW5kZXgseUluZGV4KTsKCiAgICBGb3IoeEluZGV4IDo9IGxvd2VyTGVmdFgsIHhJbmRleCA8PT8gbG93ZXJMZWZ0WCArIHdpZHRoLCB4SW5kZXgrKykKICAgIHsKICAgICAgICBQbG90dGVyUG9pbnQoIkEiICsgVG9TdHJpbmcocG9pbnRDb3VudCsrKSx4SW5kZXgsIGxvd2VyTGVmdFkpOwogICAgfQogICAgCiAgICBGb3IoeUluZGV4IDo9IGxvd2VyTGVmdFkgKyAxLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBoZWlnaHQsIHlJbmRleCsrKQogICAgewogICAgICAgIFBsb3R0ZXJQb2ludCgiQSIgKyBUb1N0cmluZyhwb2ludENvdW50KyspLGxvd2VyTGVmdFggKyB3aWR0aCwgeUluZGV4KTsKICAgIH0KICAgIAogICAgRm9yKHhJbmRleCA6PSBsb3dlckxlZnRYICsgd2lkdGggLTEsIHhJbmRleCA+PT8gbG93ZXJMZWZ0WCAsIHhJbmRleC0tKQogICAgeyAKICAgICAgICBQbG90dGVyUG9pbnQoIkEiICsgVG9TdHJpbmcocG9pbnRDb3VudCsrKSx4SW5kZXgsIGxvd2VyTGVmdFkgKyBoZWlnaHQpOwogICAgfQogICAgCiAgICBGb3IoeUluZGV4IDo9IGxvd2VyTGVmdFkgKyBoZWlnaHQgLTEsIHlJbmRleCA+PT8gbG93ZXJMZWZ0WSArIDEsIHlJbmRleC0tKQogICAgewogICAgICAgIFBsb3R0ZXJQb2ludCgiQSIgKyBUb1N0cmluZyhwb2ludENvdW50KyspLGxvd2VyTGVmdFgsIHlJbmRleCk7CiAgICB9CiAgICBwb2ludENvdW50Owp9ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCgpQcm9jZWR1cmUoIm1haW5Qcm9jZWR1cmUiLCBbXSkKeyAKICAgIHBvaW50Q291bnQ6PTE7CiAgICBQbG90dGVyQ2xlYXIoKTsKICAgIAogICAgCiAgICBsb3dlckxlZnRYIDo9IDM7CiAgICBsb3dlckxlZnRZIDo9IDM7CiAgICAKICAgIGxlbmd0aE9mU2lkZTo9IDE7CiAgICAKICAgIGluZGV4Oj0xOwogICAgCiAgICBXaGlsZShpbmRleCA8PT8gMykKICAgIHsKICAgICAgICBwb2ludENvdW50IDo9IGhvbGxvd1JlY3RhbmdsZTEobG93ZXJMZWZ0WC0tLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBsb3dlckxlZnRZLS0sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxlbmd0aE9mU2lkZSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbGVuZ3RoT2ZTaWRlLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBwb2ludENvdW50KTsKICAgICAgICAKICAgICAgICBsZW5ndGhPZlNpZGUgOj0gbGVuZ3RoT2ZTaWRlICsgMjsKICAgICAgICAKICAgICAgICBpbmRleCsrOwogICAgfSAgICAKfQptYWluUHJvY2VkdXJlKCk7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 6",sequence="33",timestamp="2018-11-17 14:41:19.857",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+¶Procedure("hollowRectangle1",["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])¶{              ¶    Local(xIndex, yIndex);¶    ¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftY);¶    }¶    ¶    For(yIndex := lowerLeftY + 1, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX + width, yIndex);¶    }¶    ¶    For(xIndex := lowerLeftX + width -1, xIndex >=? lowerLeftX, xIndex--)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, lowerLeftY + height);¶    }¶    ¶    For(yIndex := lowerLeftY + height -1, yIndex >=? lowerLeftY + 1, yIndex--)   ¶    {¶        PlotterPoint("A" + ToString(pointCount++), lowerLeftX, yIndex);¶    }¶    ¶    pointCount;¶    ¶}¶¶Procedure("mainProcedure", [])¶{¶    pointCount := 1;¶    ¶    PlotterClear();¶    ¶    ¶    lowerLeftX := 3;¶    lowerLeftY := 3;¶    ¶    lengthOfSide := 1;¶    ¶    index := 1;¶    ¶    While(index <=? 3)¶    {¶        pointCount := hollowRectangle1(lowerLeftX--, lowerLeftY--, lengthOfSide, lengthOfSide, pointCount);¶        ¶        lengthOfSide := lengthOfSide + 2;¶        ¶        index++;¶        ¶    }¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 6",sequence="34",timestamp="2018-11-17 14:41:57.045",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 7",sequence="35",timestamp="2018-11-17 14:42:11.419",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiZGlhbW9uZCIsWyJsb3dlckxlZnRYIiwgImxvd2VyTGVmdFkiLCJsZW5ndGhPZlNpZGUiLCAicG9pbnRDb3VudCJdKQp7CiAgICBMb2NhbCh4SW5kZXgsIHlJbmRleCwgY2VudGVyWCxjZW50ZXJZLHhPZmZzZXQpOwogICAgCiAgICBDaGVjayhQb3NpdGl2ZUludGVnZXI/KGxlbmd0aE9mU2lkZSkgJj8gT2RkPyhsZW5ndGhPZlNpZGUpLCgiVGhpcyBhcmd1bWVudCBtdXN0IGJlIGFuIGludGVnZXIuIikpOwogICAgCiAgICBjZW50ZXJYOj0gTk0obG93ZXJMZWZ0WCArIEZsb29yKGxlbmd0aE9mU2lkZS8yKSk7CiAgICAKICAgIGNlbnRlclk6PSBOTShsb3dlckxlZnRZICsgRmxvb3IobGVuZ3RoT2ZTaWRlLzIpKTsKICAgIAogICAgeE9mZnNldDo9IDA7CiAgICAKICAgIEZvcih5SW5kZXggOj0gbG93ZXJMZWZ0WSwgeUluZGV4IDw9PyBsb3dlckxlZnRZICsgbGVuZ3RoT2ZTaWRlLCB5SW5kZXgrKykKICAgIHsKICAgICAgICBGb3IoeEluZGV4IDo9IGNlbnRlclggLSB4T2Zmc2V0LCB4SW5kZXggPD0/IGNlbnRlclggKyB4T2Zmc2V0LCB4SW5kZXgrKykKICAgICAgICB7CiAgICAgICAgICAgIFBsb3R0ZXJQb2ludCgiQSIgKyBUb1N0cmluZyhwb2ludENvdW50KyspLHhJbmRleCx5SW5kZXgpOwogICAgICAgIH0KICAgICAgICAKICAgICAgICBJZih5SW5kZXggPD8gY2VudGVyWSkKICAgICAgICB7CiAgICAgICAgICAgIHhPZmZzZXQrKzsKICAgICAgICB9CiAgICAgICAgRWxzZQogICAgICAgIHsKICAgICAgICAgICAgeE9mZnNldC0tOwogICAgICAgIH0KICAgIH0KICAgIAogICAgcG9pbnRDb3VudDsKfQoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIixbXSkKewogICAgCiAgICBQbG90dGVyQ2xlYXIoKTsKICAgIGRpYW1vbmQoMSwxLDUsMSk7CiAgICAKICAgIAp9CgptYWluUHJvY2VkdXJlKCk7CgoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 7",sequence="36",timestamp="2018-11-17 14:49:27.373",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiZGlhbW9uZCIsWyJsb3dlckxlZnRYIiwgImxvd2VyTGVmdFkiLCJsZW5ndGhPZlNpZGUiLCAicG9pbnRDb3VudCJdKQp7CiAgICBMb2NhbCh4SW5kZXgsIHlJbmRleCwgY2VudGVyWCxjZW50ZXJZLHhPZmZzZXQpOwogICAgCiAgICBDaGVjayhQb3NpdGl2ZUludGVnZXI/KGxlbmd0aE9mU2lkZSkgJj8gT2RkPyhsZW5ndGhPZlNpZGUpLCgiVGhpcyBhcmd1bWVudCBtdXN0IGJlIGFuIGludGVnZXIuIikpOwogICAgCiAgICBjZW50ZXJYOj0gTk0obG93ZXJMZWZ0WCArIEZsb29yKGxlbmd0aE9mU2lkZS8yKSk7CiAgICAKICAgIGNlbnRlclk6PSBOTShsb3dlckxlZnRZICsgRmxvb3IobGVuZ3RoT2ZTaWRlLzIpKTsKICAgIAogICAgeE9mZnNldDo9IDA7CiAgICAKICAgIEZvcih5SW5kZXggOj0gbG93ZXJMZWZ0WSwgeUluZGV4IDw9PyBsb3dlckxlZnRZICsgbGVuZ3RoT2ZTaWRlLCB5SW5kZXgrKykKICAgIHsKICAgICAgICBGb3IoeEluZGV4IDo9IGNlbnRlclggLSB4T2Zmc2V0LCB4SW5kZXggPD0/IGNlbnRlclggKyB4T2Zmc2V0LCB4SW5kZXgrKykKICAgICAgICB7CiAgICAgICAgICAgIFBsb3R0ZXJQb2ludCgiQSIgKyBUb1N0cmluZyhwb2ludENvdW50KyspLHhJbmRleCx5SW5kZXgpOwogICAgICAgIH0KICAgICAgICAKICAgICAgICBJZih5SW5kZXggPD8gY2VudGVyWSkKICAgICAgICB7CiAgICAgICAgICAgIHhPZmZzZXQrKzsKICAgICAgICB9CiAgICAgICAgRWxzZQogICAgICAgIHsKICAgICAgICAgICAgeE9mZnNldC0tOwogICAgICAgIH0KICAgIH0KICAgIAogICAgcG9pbnRDb3VudDsKfQoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIixbXSkKewogICAgCiAgICBQbG90dGVyQ2xlYXIoKTsKICAgIGRpYW1vbmQoMSwxLDUsMSk7CiAgICAKICAgIAp9CgptYWluUHJvY2VkdXJlKCk7CgoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 7",sequence="37",timestamp="2018-11-17 14:49:48.248",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiZGlhbW9uZCIsWyJsb3dlckxlZnRYIiwgImxvd2VyTGVmdFkiLCJsZW5ndGhPZlNpZGUiLCAicG9pbnRDb3VudCJdKQp7CiAgICBMb2NhbCh4SW5kZXgsIHlJbmRleCwgY2VudGVyWCxjZW50ZXJZLHhPZmZzZXQpOwogICAgCiAgICBDaGVjayhQb3NpdGl2ZUludGVnZXI/KGxlbmd0aE9mU2lkZSkgJj8gT2RkPyhsZW5ndGhPZlNpZGUpLCgiVGhpcyBhcmd1bWVudCBtdXN0IGJlIGFuIGludGVnZXIuIikpOwogICAgCiAgICBjZW50ZXJYOj0gTk0obG93ZXJMZWZ0WCArIEZsb29yKGxlbmd0aE9mU2lkZS8yKSk7CiAgICAKICAgIGNlbnRlclk6PSBOTShsb3dlckxlZnRZICsgRmxvb3IobGVuZ3RoT2ZTaWRlLzIpKTsKICAgIAogICAgeE9mZnNldDo9IDA7CiAgICAKICAgIEZvcih5SW5kZXggOj0gbG93ZXJMZWZ0WSwgeUluZGV4IDw9PyBsb3dlckxlZnRZICsgbGVuZ3RoT2ZTaWRlLCB5SW5kZXgrKykKICAgIHsKICAgICAgICBGb3IoeEluZGV4IDo9IGNlbnRlclggLSB4T2Zmc2V0LCB4SW5kZXggPD0/IGNlbnRlclggKyB4T2Zmc2V0LCB4SW5kZXgrKykKICAgICAgICB7CiAgICAgICAgICAgIFBsb3R0ZXJQb2ludCgiQSIgKyBUb1N0cmluZyhwb2ludENvdW50KyspLHhJbmRleCx5SW5kZXgpOwogICAgICAgIH0KICAgICAgICAKICAgICAgICBJZih5SW5kZXggPD8gY2VudGVyWSkKICAgICAgICB7CiAgICAgICAgICAgIHhPZmZzZXQrKzsKICAgICAgICB9CiAgICAgICAgRWxzZQogICAgICAgIHsKICAgICAgICAgICAgeE9mZnNldC0tOwogICAgICAgIH0KICAgIH0KICAgIAogICAgcG9pbnRDb3VudDsKfQoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIixbXSkKewogICAgCiAgICBQbG90dGVyQ2xlYXIoKTsKICAgIGRpYW1vbmQoMSwxLDUsMSk7CiAgICAKICAgIAp9CgptYWluUHJvY2VkdXJlKCk7CgoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 7",sequence="38",timestamp="2018-11-17 14:50:41.186",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+¶Procedure("diamond",["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{¶    Local(xIndex, yIndex, centerX, centerY, xOffset);¶    ¶    Check(PositiveInteger?(lengthOfSide) & Odd?(lengthOfSide), ("This argument must be an integer."));¶    ¶    //Floor rounds down!¶    ¶    centerX := NM(lowerLeftX + Floor(lengthOfSide/2));¶    ¶    centerY := NM(lowerLeftY + Floor(lengthOfSide/2));¶    ¶    xOffset := 0;¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + lengthOfSide, yIndex++)¶    {¶        For(xIndex := centerX - xOffset, xIndex <=? centerX + xOffset, xIndex++)¶        {¶            PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        }¶        ¶        If(yIndex <? centerY)¶        {¶            xOffset++;¶        }¶        Else¶        {¶            xOffset--;¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    diamond(1,1,5,1)¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 7",sequence="39",timestamp="2018-11-17 14:51:22.169",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Hint("ClByb2NlZHVyZSgiZGlhbW9uZCIsWyJsb3dlckxlZnRYIiwgImxvd2VyTGVmdFkiLCJsZW5ndGhPZlNpZGUiLCAicG9pbnRDb3VudCJdKQp7CiAgICBMb2NhbCh4SW5kZXgsIHlJbmRleCwgY2VudGVyWCxjZW50ZXJZLHhPZmZzZXQpOwogICAgCiAgICBDaGVjayhQb3NpdGl2ZUludGVnZXI/KGxlbmd0aE9mU2lkZSkgJj8gT2RkPyhsZW5ndGhPZlNpZGUpLCgiVGhpcyBhcmd1bWVudCBtdXN0IGJlIGFuIGludGVnZXIuIikpOwogICAgCiAgICBjZW50ZXJYOj0gTk0obG93ZXJMZWZ0WCArIEZsb29yKGxlbmd0aE9mU2lkZS8yKSk7CiAgICAKICAgIGNlbnRlclk6PSBOTShsb3dlckxlZnRZICsgRmxvb3IobGVuZ3RoT2ZTaWRlLzIpKTsKICAgIAogICAgeE9mZnNldDo9IDA7CiAgICAKICAgIEZvcih5SW5kZXggOj0gbG93ZXJMZWZ0WSwgeUluZGV4IDw9PyBsb3dlckxlZnRZICsgbGVuZ3RoT2ZTaWRlLCB5SW5kZXgrKykKICAgIHsKICAgICAgICBGb3IoeEluZGV4IDo9IGNlbnRlclggLSB4T2Zmc2V0LCB4SW5kZXggPD0/IGNlbnRlclggKyB4T2Zmc2V0LCB4SW5kZXgrKykKICAgICAgICB7CiAgICAgICAgICAgIFBsb3R0ZXJQb2ludCgiQSIgKyBUb1N0cmluZyhwb2ludENvdW50KyspLHhJbmRleCx5SW5kZXgpOwogICAgICAgIH0KICAgICAgICAKICAgICAgICBJZih5SW5kZXggPD8gY2VudGVyWSkKICAgICAgICB7CiAgICAgICAgICAgIHhPZmZzZXQrKzsKICAgICAgICB9CiAgICAgICAgRWxzZQogICAgICAgIHsKICAgICAgICAgICAgeE9mZnNldC0tOwogICAgICAgIH0KICAgIH0KICAgIAogICAgcG9pbnRDb3VudDsKfQoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIixbXSkKewogICAgCiAgICBQbG90dGVyQ2xlYXIoKTsKICAgIGRpYW1vbmQoMSwxLDUsMSk7CiAgICAKICAgIAp9CgptYWluUHJvY2VkdXJlKCk7CgoK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 7",sequence="40",timestamp="2018-11-17 14:51:30.529",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+¶Procedure("diamond",["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{¶    Local(xIndex, yIndex, centerX, centerY, xOffset);   ¶    ¶    Check(PositiveInteger?(lengthOfSide) &? Odd?(lengthOfSide), ("This argument must be an integer."));¶                           ¶    //Floor rounds down!¶    ¶    centerX := NM(lowerLeftX + Floor(lengthOfSide/2));¶    ¶    centerY := NM(lowerLeftY + Floor(lengthOfSide/2));¶    ¶    xOffset := 0;¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + lengthOfSide, yIndex++)¶    {¶        For(xIndex := centerX - xOffset, xIndex <=? centerX + xOffset, xIndex++)¶        {¶            PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        }¶        ¶        If(yIndex <? centerY)¶        {¶            xOffset++;¶        }¶        Else¶        {¶            xOffset--;¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    diamond(1,1,5,1)¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 7",sequence="41",timestamp="2018-11-17 14:51:40.499",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+¶Procedure("diamond",["lowerLeftX", "lowerLeftY", "lengthOfSide", "pointCount"])¶{¶    Local(xIndex, yIndex, centerX, centerY, xOffset);   ¶    ¶    Check(PositiveInteger?(lengthOfSide) &? Odd?(lengthOfSide), ("This argument must be an integer."));¶                           ¶    //Floor rounds down!¶    ¶    centerX := NM(lowerLeftX + Floor(lengthOfSide/2));¶    ¶    centerY := NM(lowerLeftY + Floor(lengthOfSide/2));¶    ¶    xOffset := 0;¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + lengthOfSide, yIndex++)¶    {¶        For(xIndex := centerX - xOffset, xIndex <=? centerX + xOffset, xIndex++)¶        {¶            PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        }¶        ¶        If(yIndex <? centerY)¶        {¶            xOffset++;¶        }¶        Else¶        {¶            xOffset--;¶        }¶    }¶    ¶    pointCount;¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    diamond(1,1,5,1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 7",sequence="42",timestamp="2018-11-17 14:52:00.857",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="192.168.254.45",mpversion=".259"
+Not logged.
+
+%/info
+

@@ -1,0 +1,1260 @@
+v.13
+
+module1_exercises.mpws
+
+
+
+%group,name="Problem 0",description="Programmer's information."
+========================================================================================================
+Problem 0
+
+In the following fold, replace "xxx" with your
+first name, replace "yyy" with your last name, and
+replace "000000" with your SSU ID number:
+
+%mathpiper,name="Problem 0",subtype="problem",unassign_all="true",unassign_all="true",truncate="6000",timeout="5000"
+
+[
+["firstName", "Kyle"],
+["lastName", "Johnson"],
+["ssuIDNumber", "264694"],
+];
+
+%/mathpiper
+
+    %output,parent="Problem 0",mpversion=".257",preserve="false"
+            Result: [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]]
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 0"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .254", 1, True)
+    {
+        StringToNumber(Version()) >=? .254;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable \"firstName\" a string that is not \"xxx\"", 1, True)
+    {
+        String?(foldResult["firstName"]) &? foldResult["firstName"] !=? "xxx";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable \"lastName\" is a string that is not \"yyy\"", 1, True)
+    {
+        String?(foldResult["lastName"]) &? foldResult["lastName"] !=? "yyy";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable \"ssuIDNumber\" is not \"000000\"", 1, True)
+    {
+        foldResult["ssuIDNumber"] !=? "000000" &? foldResult["ssuIDNumber"] !=? 0;
+    }
+}
+
+%/mathpiper_grade
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 1",description="Evaluate 1 + 2 + 3 + 4 + 5."
+========================================================================================================
+Problem 1
+
+Type the following expression into the fold below and evaluate it.
+
+sum := 1 + 2 + 3 + 4 + 5;
+
+
+%mathpiper,name="Problem 1",subtype="hint"
+Hint("CnN1bSA6PSAxICsgMiArIDMgKyA0ICsgNTsKCg==");
+%/mathpiper
+
+
+%mathpiper,name="Problem 1",subtype="problem",unassign_all="true",truncate="1500",timeout="5000"
+
+sum :=1 + 2 + 3 + 4 + 5;
+
+%/mathpiper
+
+    %output,parent="Problem 1",mpversion=".257",preserve="false"
+      Result: 15
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 1"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .254", 1, True)
+    {
+        StringToNumber(Version()) >=? .254;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a number", 1, True)
+    {
+        Rational?(foldResult) |? Decimal?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result of the evaluation is assigned to the variable named \"sum\"", 1, False)
+    {
+        Contains?(VarList(?foldCode), 'sum);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 1, True)
+    LocalSymbols(values)
+    {
+        values := SubtreesPattern(?foldCode, a_::(Rational?(a) |? Decimal?(a)) );
+
+        !? Contains?(values, 15);
+    }
+
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 1, True)
+    {
+        foldResult =? 15;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 1",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        sum := 1 + 2 + 3 + 4 + 5;
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .254. (1/1)
+        PASS: The result is a number. (1/1)
+        PASS: The result of the evaluation is assigned to the variable named "sum". (1/1)
+        PASS: The result is not in the code as a literal. (1/1)
+        PASS: The correct value is returned. (1/1)
+      
+        13/13 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 2",description="Evaluate 1 - 2 * 5 / 7."
+========================================================================================================
+Problem 2
+
+Type the following expression into the fold below and evaluate it.
+
+answer := 1 - 2 * 5 / 7;
+
+
+%mathpiper,name="Problem 2",subtype="hint"
+Hint("CmFuc3dlciA6PSAxIC0gMiAqIDUgLyA3OwoK");
+%/mathpiper
+
+    %output,parent="Problem 2",mpversion=".257",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 2",subtype="problem",unassign_all="true",truncate="1500",timeout="5000"
+
+answer := 1 - 2 * 5 / 7;
+
+%/mathpiper
+
+    %output,parent="Problem 2",mpversion=".257",preserve="false"
+            Result: (-3)/7
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 2"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .254", 1, True)
+    {
+        StringToNumber(Version()) >=? .254;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a number", 1, True)
+    {
+        Rational?(foldResult) |? Decimal?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result of the evaluation is assigned to the variable named \"answer\"", 1, False)
+    {
+        Contains?(VarList(?foldCode), 'answer);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 1, True)
+    LocalSymbols(values)
+    {
+        values := SubtreesPattern(?foldCode, a_::(Rational?(a) |? Decimal?(a)) );
+
+        !? Contains?(values, (-3)/7);
+    }
+
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 1, True)
+    {
+        foldResult =? (-3)/7;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 2",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        answer := 1 - 2*5/7;
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .254. (1/1)
+        PASS: The result is a number. (1/1)
+        PASS: The result of the evaluation is assigned to the variable named "answer". (1/1)
+        PASS: The result is not in the code as a literal. (1/1)
+        PASS: The correct value is returned. (1/1)
+      
+        13/13 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 3",description="Evaluate 1/4 + 3/8 - 7/16."
+========================================================================================================
+Problem 3
+
+Type the following expression into the fold below and evaluate it.
+
+result := 1/4 + 3/8 - 7/16;
+
+
+%mathpiper,name="Problem 3",subtype="hint"
+Hint("CnJlc3VsdCA6PSAxLzQgKyAzLzggLSA3LzE2OwoK");
+%/mathpiper
+
+
+%mathpiper,name="Problem 3",subtype="problem",unassign_all="true",truncate="1500",timeout="5000"
+
+result := 1/4 + 3/8 - 7/16;
+
+%/mathpiper
+
+    %output,parent="Problem 3",mpversion=".257",preserve="false"
+            Result: 3/16
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 3"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .254", 1, True)
+    {
+        StringToNumber(Version()) >=? .254;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a number", 1, True)
+    {
+        Rational?(foldResult) |? Decimal?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result of the evaluation is assigned to the variable named \"result\"", 1, False)
+    {
+        Contains?(VarList(?foldCode), 'result);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 1, True)
+    LocalSymbols(values)
+    {
+        values := SubtreesPattern(?foldCode, a_::(Rational?(a) |? Decimal?(a)) );
+
+        !? Contains?(values, 3/16);
+    }
+
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 1, True)
+    {
+        foldResult =? 3/16;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 3",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        result := 1/4 + 3/8 - 7/16;
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .254. (1/1)
+        PASS: The result is a number. (1/1)
+        PASS: The result of the evaluation is assigned to the variable named "result". (1/1)
+        PASS: The result is not in the code as a literal. (1/1)
+        PASS: The correct value is returned. (1/1)
+      
+        13/13 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 4",description="Evaluate 2^3."
+========================================================================================================
+Problem 4
+
+Type the following expression into the fold below and evaluate it.
+
+twoToTheThirdPower := 2^3;
+
+
+%mathpiper,name="Problem 4",subtype="hint"
+Hint("CnR3b1RvVGhlVGhpcmRQb3dlciA6PSAyXjM7Cgo=");
+%/mathpiper
+
+    %output,parent="Problem 4",mpversion=".257",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 4",subtype="problem",unassign_all="true",truncate="1500",timeout="5000"
+
+twoToTheThirdPower := 2^3;
+
+%/mathpiper
+
+    %output,parent="Problem 4",mpversion=".257",preserve="false"
+            Result: 8
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 4"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .254", 1, True)
+    {
+        StringToNumber(Version()) >=? .254;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a number", 1, True)
+    {
+        Rational?(foldResult) |? Decimal?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result of the evaluation is assigned to the variable named \"twoToTheThirdPower\"", 1, False)
+    {
+        Contains?(VarList(?foldCode), 'twoToTheThirdPower);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 1, True)
+    LocalSymbols(values)
+    {
+        values := SubtreesPattern(?foldCode, a_::(Rational?(a) |? Decimal?(a)) );
+
+        !? Contains?(values, 8);
+    }
+
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 1, True)
+    {
+        foldResult =? 8;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 4",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        twoToTheThirdPower := 2^3;
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .254. (1/1)
+        PASS: The result is a number. (1/1)
+        PASS: The result of the evaluation is assigned to the variable named "twoToTheThirdPower". (1/1)
+        PASS: The result is not in the code as a literal. (1/1)
+        PASS: The correct value is returned. (1/1)
+      
+        13/13 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 5",description="The Numerator() procedure."
+========================================================================================================
+Problem 5
+
+Type the following expression into the fold below:
+
+value := 7/16;
+
+Then, use the Numerator() procedure to calculate
+the numerator of the number that is assigned to
+the variable "value".
+
+
+%mathpiper,name="Problem 5",subtype="hint"
+Hint("CnZhbHVlIDo9IDcvMTY7CgpOdW1lcmF0b3IodmFsdWUpOwoK");
+%/mathpiper
+
+    %output,parent="Problem 5",mpversion=".257",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 5",subtype="problem",unassign_all="true",truncate="1500",timeout="5000"
+
+value := 7/16;
+
+Numerator(value);
+
+%/mathpiper
+
+    %output,parent="Problem 5",mpversion=".257",preserve="false"
+            Result: 7
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 5"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .254", 1, True)
+    {
+        StringToNumber(Version()) >=? .254;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a number", 1, True)
+    {
+        Rational?(foldResult) |? Decimal?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result of the evaluation is assigned to the variable named \"value\"", 1, False)
+    {
+        Contains?(VarList(?foldCode), 'value);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The \"Numerator\" procedure is used", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        Contains?(procedureNames,"Numerator");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 1, True)
+    LocalSymbols(values)
+    {
+        values := SubtreesPattern(?foldCode, a_::(Rational?(a) |? Decimal?(a)) );
+
+        !? Contains?(values, 7);
+    }
+
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 1, True)
+    {
+        foldResult =? 7;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 5",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        value := 7/16;
+      
+        Numerator(value);
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .254. (1/1)
+        PASS: The result is a number. (1/1)
+        PASS: The result of the evaluation is assigned to the variable named "value". (1/1)
+        PASS: The "Numerator" procedure is used. (1/1)
+        PASS: The result is not in the code as a literal. (1/1)
+        PASS: The correct value is returned. (1/1)
+      
+        14/14 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 6",description="The Denominator() procedure."
+========================================================================================================
+Problem 6
+
+Type the following expression into the fold below:
+
+value := 7/16;
+
+Then, use the Denominator() procedure to calculate
+the denominator of the number that is assigned to
+the variable "value".
+
+
+%mathpiper,name="Problem 6",subtype="hint"
+Hint("CnZhbHVlIDo9IDcvMTY7CgpEZW5vbWluYXRvcih2YWx1ZSk7Cgo=");
+%/mathpiper
+
+
+%mathpiper,name="Problem 6",subtype="problem",unassign_all="true",truncate="1500",timeout="5000"
+
+value := 7/16;
+Denominator(value);
+
+%/mathpiper
+
+    %output,parent="Problem 6",mpversion=".257",preserve="false"
+            Result: 16
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 6"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .254", 1, True)
+    {
+        StringToNumber(Version()) >=? .254;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a number", 1, True)
+    {
+        Rational?(foldResult) |? Decimal?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result of the evaluation is assigned to the variable named \"value\"", 1, False)
+    {
+        Contains?(VarList(?foldCode), 'value);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The \"Denominator\" procedure is used", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        Contains?(procedureNames,"Denominator");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 1, True)
+    LocalSymbols(values)
+    {
+        values := SubtreesPattern(?foldCode, a_::(Rational?(a) |? Decimal?(a)) );
+
+        !? Contains?(values, 16);
+    }
+
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 1, True)
+    {
+        foldResult =? 16;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 6",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        value := 7/16;
+      
+        Denominator(value);
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .254. (1/1)
+        PASS: The result is a number. (1/1)
+        PASS: The result of the evaluation is assigned to the variable named "value". (1/1)
+        PASS: The "Denominator" procedure is used. (1/1)
+        PASS: The result is not in the code as a literal. (1/1)
+        PASS: The correct value is returned. (1/1)
+      
+        14/14 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 7",description="The NM() procedure."
+========================================================================================================
+Problem 7
+
+Type the following expression into the fold below:
+
+value := 7/16;
+
+Then, use the NM() Numeric Mode procedure to
+calculate the decimal equivalent of the number
+that is assigned to the variable "value".
+
+
+%mathpiper,name="Problem 7",subtype="hint"
+Hint("CnZhbHVlIDo9IDcvMTY7CgpOTSh2YWx1ZSk7Cgo=");
+%/mathpiper
+
+
+%mathpiper,name="Problem 7",subtype="problem",unassign_all="true",truncate="1500",timeout="5000"
+
+value := 7/16;
+NM(value);
+
+%/mathpiper
+
+    %output,parent="Problem 7",mpversion=".257",preserve="false"
+            Result: 0.4375
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 7"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .254", 1, True)
+    {
+        StringToNumber(Version()) >=? .254;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a number", 1, True)
+    {
+        Rational?(foldResult) |? Decimal?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result of the evaluation is assigned to the variable named \"value\"", 1, False)
+    {
+        Contains?(VarList(?foldCode), 'value);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The \"NM\" procedure is used", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        Contains?(procedureNames,"NM");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 1, True)
+    LocalSymbols(values)
+    {
+        values := SubtreesPattern(?foldCode, a_::(Rational?(a) |? Decimal?(a)) );
+
+        !? Contains?(values, 0.4375);
+    }
+
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 1, True)
+    {
+        foldResult =? 0.4375;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 7",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        value := 7/16;
+      
+        NM(value);
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .254. (1/1)
+        PASS: The result is a number. (1/1)
+        PASS: The result of the evaluation is assigned to the variable named "value". (1/1)
+        PASS: The "NM" procedure is used. (1/1)
+        PASS: The result is not in the code as a literal. (1/1)
+        PASS: The correct value is returned. (1/1)
+      
+        14/14 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 8",description="Three variables."
+========================================================================================================
+Problem 8
+
+In the fold below type in code that does the
+following. Assign 1/4 to "variable1", assign 3/8
+to "variable2", and assign 7/16 to "variable3"
+using the := operator (remember, there is no space
+between the : and the =). Then perform the
+following calculation:
+
+answer := variable1 + variable2 + variable3;
+
+
+%mathpiper,name="Problem 8",subtype="hint"
+Hint("CnZhcmlhYmxlMSA6PSAxLzQ7Cgp2YXJpYWJsZTIgOj0gMy84OwoKdmFyaWFibGUzIDo9IDcvMTY7CgphbnN3ZXIgOj0gdmFyaWFibGUxICsgdmFyaWFibGUyICsgdmFyaWFibGUzOwoK");
+%/mathpiper
+
+
+%mathpiper,name="Problem 8",subtype="problem",unassign_all="true",truncate="1500",timeout="5000"
+
+variable1 := 1/4;
+variable2 := 3/8;
+variable3 := 7/16;
+answer := variable1 + variable2 + variable3;
+
+%/mathpiper
+
+    %output,parent="Problem 8",mpversion=".257",preserve="false"
+            Result: 17/16
+.   %/output
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 8"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .254", 1, True)
+    {
+        StringToNumber(Version()) >=? .254;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a number", 1, True)
+    {
+        Rational?(foldResult) |? Decimal?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result of the evaluation is assigned to the variable named \"answer\"", 1, False)
+    {
+        Contains?(VarList(?foldCode), 'answer);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variables \"variable1\", \"variable2\", and \"variable3\" are used", 1, False)
+    LocalSymbols(variableNames)
+    {
+        variableNames := VarList(?foldCode);
+        Contains?(variableNames, 'variable1) &? Contains?(variableNames, 'variable2) &? Contains?(variableNames, 'variable3);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 1, True)
+    LocalSymbols(values)
+    {
+        values := SubtreesPattern(?foldCode, a_::(Rational?(a) |? Decimal?(a)) );
+
+        !? Contains?(values, 17/16);
+    }
+
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 1, True)
+    {
+        foldResult =? 17/16;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 8",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        variable1 := 1/4;
+      
+        variable2 := 3/8;
+      
+        variable3 := 7/16;
+      
+        answer := variable1 + variable2 + variable3;
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .254. (1/1)
+        PASS: The result is a number. (1/1)
+        PASS: The result of the evaluation is assigned to the variable named "answer". (1/1)
+        PASS: The variables "variable1", "variable2", and "variable3" are used. (1/1)
+        PASS: The result is not in the code as a literal. (1/1)
+        PASS: The correct value is returned. (1/1)
+      
+        14/14 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 9",description="Cost to attend SSU."
+========================================================================================================
+Problem 9
+
+The following program estimates how much it costs per hour to
+attend a class at SSU.
+
+(Note: data obtained from http://college-tuition.startclass.com/l/3179/Shawnee-State-University)
+
+-----------
+
+ssuCostPerYear := 21818;
+
+ssuCostPerSemester := ssuCostPerYear / 2.;
+
+weeksInASemester := 17;
+
+costPerWeek := NM(ssuCostPerSemester / weeksInASemester);
+
+hoursInClassPerWeek := 20;
+
+costPerHour := NM(costPerWeek / hoursInClassPerWeek);
+
+-----------
+
+Copy this program into the fold below and add code
+to the end of it that calculates how much it costs
+per minute to attend a class at SSU, assignes this
+value to a variable named "costPerMinute", and
+returns this value as a result.
+
+
+%mathpiper,name="Problem 9",subtype="hint"
+Hint("CnNzdUNvc3RQZXJZZWFyIDo9IDIxODE4OwoKc3N1Q29zdFBlclNlbWVzdGVyIDo9IHNzdUNvc3RQZXJZZWFyIC8gMi47Cgp3ZWVrc0luQVNlbWVzdGVyIDo9IDE3OwoKY29zdFBlcldlZWsgOj0gTk0oc3N1Q29zdFBlclNlbWVzdGVyIC8gd2Vla3NJbkFTZW1lc3Rlcik7Cgpob3Vyc0luQ2xhc3NQZXJXZWVrIDo9IDIwOwoKY29zdFBlckhvdXIgOj0gTk0oY29zdFBlcldlZWsgLyBob3Vyc0luQ2xhc3NQZXJXZWVrKTsKCmNvc3RQZXJNaW51dGUgOj0gY29zdFBlckhvdXIvNjA7Cgo=");
+%/mathpiper
+
+
+%mathpiper,name="Problem 9",subtype="problem",unassign_all="true",truncate="1500",timeout="5000"
+
+ssuCostPerYear := 21818;
+
+ssuCostPerSemester := ssuCostPerYear / 2.;
+
+weeksInASemester := 17;
+
+costPerWeek := NM(ssuCostPerSemester / weeksInASemester);
+
+hoursInClassPerWeek := 20;
+
+costPerHour := NM(costPerWeek / hoursInClassPerWeek);
+
+costPerMinute := costPerHour / 60;
+
+result:= costPerMinute;
+
+%/mathpiper
+
+    %output,parent="Problem 9",mpversion=".257",preserve="false"
+            Result: 0.534754902
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 9"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .254", 1, True)
+    {
+        StringToNumber(Version()) >=? .254;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is a number", 1, True)
+    {
+        Rational?(foldResult) |? Decimal?(foldResult);
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result of the evaluation is assigned to the variable named \"costPerMinute\"", 1, False)
+    {
+        Contains?(VarList(?foldCode), 'costPerMinute);
+    } // todo:tk:needs a stronger check.
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The result is not in the code as a literal", 1, True)
+    LocalSymbols(values)
+    {
+        values := SubtreesPattern(?foldCode, a_::(Rational?(a) |? Decimal?(a)) );
+
+        !? Contains?(values, 0.534754902);
+    }
+
+    // --------------------------------------------------------
+    
+    FoldGrade("The correct value is returned", 1, True)
+    {
+        foldResult =? 0.534754902;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 9",mpversion=".257",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        ssuCostPerYear := 21818;
+      
+        ssuCostPerSemester := ssuCostPerYear/2.;
+      
+        weeksInASemester := 17;
+      
+        costPerWeek := NM(ssuCostPerSemester/weeksInASemester);
+      
+        hoursInClassPerWeek := 20;
+      
+        costPerHour := NM(costPerWeek/hoursInClassPerWeek);
+      
+        costPerMinute := costPerHour/60;
+      
+        result := costPerMinute;
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .254. (1/1)
+        PASS: The result is a number. (1/1)
+        PASS: The result of the evaluation is assigned to the variable named "costPerMinute". (1/1)
+        PASS: The result is not in the code as a literal. (1/1)
+        PASS: The correct value is returned. (1/1)
+      
+        13/13 passes
+.   %/output
+
+%/group
+

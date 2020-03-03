@@ -1,0 +1,35 @@
+%info,parentFoldType="mathpiper",parent="Problem 0",sequence="1",timestamp="2018-09-13 16:45:20.537",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶[¶["firstName", "Kyle"],¶["lastName", "Johnson"],¶["ssuIDNumber", "264694"],¶];
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice1",sequence="2",timestamp="2018-09-13 16:46:01.869",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+                    ¶Practice(NumberOfVariables:2, CorrectInARow:3, NumberOfReassignments:1, VariableRange:0 .. 9, IncludeIf?:True);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice2",sequence="3",timestamp="2018-09-13 16:47:20.676",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+                    ¶Practice(NumberOfVariables:3, CorrectInARow:3, NumberOfReassignments:2, VariableRange:0 .. 9, IncludeIf?:True);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice3",sequence="4",timestamp="2018-09-13 16:48:54.11",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶Practice(NumberOfVariables:3, CorrectInARow:3, NumberOfReassignments:3, VariableRange:0 .. 9, IncludeIf?:True);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice4",sequence="5",timestamp="2018-09-13 16:51:33.124",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶Practice(NumberOfVariables:2, CorrectInARow:3, NumberOfReassignments:2, VariableRange:0 .. 9, IncludeIf?:True, IncludeElse?:True);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice5",sequence="6",timestamp="2018-09-13 16:53:52.381",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶Practice(NumberOfVariables:3, CorrectInARow:3, NumberOfReassignments:3, VariableRange:0 .. 9, IncludeIf?:True, IncludeElse?:True);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice6",sequence="7",timestamp="2018-09-13 16:55:55.158",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="206.21.94.142",mpversion=".257"
+¶Practice(NumberOfVariables:4, CorrectInARow:3, NumberOfReassignments:3, VariableRange:0 .. 9, IncludeIf?:True, IncludeElse?:True);
+
+%/info
+

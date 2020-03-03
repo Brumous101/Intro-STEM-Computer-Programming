@@ -1,0 +1,885 @@
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 0",sequence="1",timestamp="2018-12-06 00:45:06.16",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶[¶["firstName", "Kyle"],¶["lastName", "Johnson"],¶["ssuIDNumber", "264694"],¶];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 0",sequence="2",timestamp="2018-12-06 00:45:20.589",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:54:27.914",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+birthdayMatchCounter := 0;¶numberOfPeople := 20;¶numberOfTrials := 40;¶Repeat(numberOfTrials)¶{¶ //Create a random birthday for each simulated person in the room.¶ birthdaysList := RandomIntegerList(numberOfPeople, 1, 365);¶¶ //Print the birthdays for this room of simulated people (comment¶ //this line out for a large number of trials).¶ Write(birthdaysList);¶¶ /*¶ Index through all of the days in a year and for each day scan¶ the birthdays list to see if two people in the list have this¶ day as their birthday. If there is a match, increment¶ birthdayMathCounter.¶ */¶ ForEach(day, 1 .. 365)¶ {¶ If(Count(birthdaysList,day) >=? 2)¶ {¶ birthdayMatchCounter++;¶¶ WriteString(" - Match on ");¶ Write(day);¶ }¶ }¶¶ NewLine();¶}¶¶ NewLine();¶ Echo("The number of trials is: ", numberOfTrials);¶ Echo("The number of people in the room is: ", numberOfPeople);¶ Echo("The number of matches is: ",¶ birthdayMatchCounter, "/ ", numberOfTrials);¶ Echo("The probability of having a birthday match: ",¶ NM(birthdayMatchCounter/numberOfTrials) );
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.239",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.239",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.254",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.254",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.254",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.254",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.254",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.254",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.27",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.27",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.27",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.27",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.27",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.27",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.27",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.27",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.27",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.286",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.286",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.286",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.286",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.286",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.286",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.301",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:55:39.301",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 1",sequence="3",timestamp="2018-12-06 00:58:34.757",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶birthMonthMatchCounter := 0;¶¶numberOfPeople := 5;¶¶numberOfTrials := 40;¶¶Repeat(numberOfTrials)¶{¶     //Create a random birthday for each simulated person in the room.¶     birthMonthList := RandomIntegerList(numberOfPeople, 1, 12);¶    ¶     //Print the birthdays for this room of simulated people (comment¶     //this line out for a large number of trials).¶     Write(birthMonthList);¶    ¶     /*¶     Index through all of the days in a year and for each day scan¶     the birthdays list to see if two people in the list have this¶     day as their birthday. If there is a match, increment¶     birthdayMathCounter.¶     */¶     ForEach(month, 1 .. 12)¶     {¶     If(Count(birthMonthList,month) >=? 2)¶     {¶     birthMonthMatchCounter++;¶    ¶     WriteString(" - Match on ");¶     Write(month);¶     }¶     }¶    ¶     NewLine();¶}¶¶ NewLine();¶ Echo("The number of trials is: ", numberOfTrials);¶ Echo("The number of people in the room is: ", numberOfPeople);¶ Echo("The number of matches is: ",¶ birthdayMatchCounter, "/ ", numberOfTrials);¶ Echo("The probability of having a birthday match: ",¶ NM(birthdayMatchCounter/numberOfTrials) );
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:58:35.514",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Program 1",mpversion=".259",preserve="false"¶      Result: The variable <birthdayMatchCounter> does not have a value assigned to it.  Error on or before line 204 starting at index 1.¶      ¶      Side Effects:¶      [8,1,7,4,8] - Match on 8¶      [4,8,9,6,9] - Match on 9¶      [1,4,6,6,8] - Match on 6¶      [8,8,12,4,3] - Match on 8¶      [3,6,7,5,6] - Match on 6¶      [8,6,6,11,2] - Match on 6¶      [4,6,5,3,1]¶      [5,2,7,11,9]¶      [7,4,4,7,7] - Match on 4 - Match on 7¶      [12,1,6,5,11]¶      [7,10,11,10,11] - Match on 10 - Match on 11¶      [7,12,12,9,8] - Match on 12¶      [3,1,12,5,3] - Match on 3¶      [7,3,1,5,7] - Match on 7¶      [9,5,5,8,4] - Match on 5¶      [7,4,2,3,4] - Match on 4¶      [11,11,12,3,6] - Match on 11¶      [1,6,5,4,11]¶      [2,2,9,1,12] - Match on 2¶      [3,12,5,12,5] - Match on 5 - Match on 12¶      [11,12,11,1,1] - Match on 1 - Match on 11¶      [4,6,6,4,7] - Match on 4 - Match on 6¶      [6,7,11,2,5]¶      [5,12,6,3,8]¶      [6,9,3,12,3] - Match on 3¶      [4,8,6,3,10]¶      [10,9,2,7,8]¶      [7,6,8,10,12]¶      [12,1,4,12,12] - Match on 12¶      [12,7,6,1,3]¶      [6,6,3,1,3] - Match on 3 - Match on 6¶      [7,8,12,10,3]¶      [9,3,2,5,3] - Match on 3¶      [11,6,6,6,3] - Match on 6¶      [6,3,4,3,5] - Match on 3¶      [11,9,9,12,5] - Match on 9¶      [6,7,11,8,4]¶      [6,3,11,4,7]¶      [4,2,8,12,1]¶      [11,2,12,1,10]¶      ¶      The number of trials is: 40 ¶      The number of people in the room is: 5 ¶      ¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 1",sequence="4",timestamp="2018-12-06 00:58:44.469",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶birthMonthMatchCounter := 0;¶¶numberOfPeople := 5;¶¶numberOfTrials := 40;¶¶Repeat(numberOfTrials)¶{¶     //Create a random birthday for each simulated person in the room.¶     birthMonthList := RandomIntegerList(numberOfPeople, 1, 12);¶    ¶     //Print the birthdays for this room of simulated people (comment¶     //this line out for a large number of trials).¶     Write(birthMonthList);¶    ¶     /*¶     Index through all of the days in a year and for each day scan¶     the birthdays list to see if two people in the list have this¶     day as their birthday. If there is a match, increment¶     birthdayMathCounter.¶     */¶     ForEach(month, 1 .. 12)¶     {¶     If(Count(birthMonthList,month) >=? 2)¶     {¶     birthMonthMatchCounter++;¶    ¶     WriteString(" - Match on ");¶     Write(month);¶     }¶     }¶    ¶     NewLine();¶}¶¶ NewLine();¶ Echo("The number of trials is: ", numberOfTrials);¶ Echo("The number of people in the room is: ", numberOfPeople);¶ Echo("The number of matches is: ",¶ birthMonthMatchCounter, "/ ", numberOfTrials);¶ Echo("The probability of having a birthday match: ",¶ NM(birthdayMatchCounter/numberOfTrials) );
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 00:58:45.023",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Program 1",mpversion=".259",preserve="false"¶      Result:  Error: The variable <birthdayMatchCounter> does not have a value assigned to it.   Error on or before line 206 starting at index 24.¶      ¶      Side Effects:¶      [5,10,12,2,4]¶      [1,12,3,4,9]¶      [2,8,7,11,5]¶      [6,2,9,5,7]¶      [10,3,6,6,3] - Match on 3 - Match on 6¶      [6,10,6,10,6] - Match on 6 - Match on 10¶      [8,3,10,12,2]¶      [12,11,4,5,8]¶      [10,5,11,3,8]¶      [7,3,11,12,6]¶      [1,9,2,5,10]¶      [12,6,3,11,1]¶      [11,7,7,11,9] - Match on 7 - Match on 11¶      [7,3,10,6,12]¶      [6,12,12,6,7] - Match on 6 - Match on 12¶      [8,7,1,1,4] - Match on 1¶      [12,5,2,2,6] - Match on 2¶      [9,3,1,1,9] - Match on 1 - Match on 9¶      [2,10,8,12,8] - Match on 8¶      [6,3,4,6,12] - Match on 6¶      [6,2,4,1,9]¶      [4,8,2,5,11]¶      [8,9,10,7,9] - Match on 9¶      [12,5,7,1,6]¶      [8,9,11,10,6]¶      [12,9,3,2,2] - Match on 2¶      [11,8,3,9,2]¶      [12,5,8,1,4]¶      [8,8,4,9,5] - Match on 8¶      [9,4,3,9,8] - Match on 9¶      [9,11,7,9,7] - Match on 7 - Match on 9¶      [5,5,8,5,3] - Match on 5¶      [11,1,5,5,7] - Match on 5¶      [1,9,6,4,3]¶      [10,6,10,1,6] - Match on 6 - Match on 10¶      [7,3,11,6,2]¶      [10,7,2,3,2] - Match on 2¶      [8,12,9,4,2]¶      [2,8,2,11,5] - Match on 2¶      [5,6,3,1,11]¶      ¶      The number of trials is: 40 ¶      The number of people in the room is: 5 ¶      The number of matches is: 26 / 40 ¶      ¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 1",sequence="5",timestamp="2018-12-06 00:58:57.619",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶birthMonthMatchCounter := 0;¶¶numberOfPeople := 5;¶¶numberOfTrials := 40;¶¶Repeat(numberOfTrials)¶{¶     //Create a random birthday for each simulated person in the room.¶     birthMonthList := RandomIntegerList(numberOfPeople, 1, 12);¶    ¶     //Print the birthdays for this room of simulated people (comment¶     //this line out for a large number of trials).¶     Write(birthMonthList);¶    ¶     /*¶     Index through all of the days in a year and for each day scan¶     the birthdays list to see if two people in the list have this¶     day as their birthday. If there is a match, increment¶     birthdayMathCounter.¶     */¶     ForEach(month, 1 .. 12)¶     {¶     If(Count(birthMonthList,month) >=? 2)¶     {¶     birthMonthMatchCounter++;¶    ¶     WriteString(" - Match on ");¶     Write(month);¶     }¶     }¶    ¶     NewLine();¶}¶¶ NewLine();¶ Echo("The number of trials is: ", numberOfTrials);¶ Echo("The number of people in the room is: ", numberOfPeople);¶ Echo("The number of matches is: ",¶ birthMonthMatchCounter, "/ ", numberOfTrials);¶ Echo("The probability of having a birthday match: ",¶ NM(birthMonthMatchCounter/numberOfTrials) );
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 1",sequence="6",timestamp="2018-12-06 00:59:12.566",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶birthMonthMatchCounter := 0;¶¶numberOfPeople := 5;¶¶numberOfTrials := 1000;¶¶Repeat(numberOfTrials)¶{¶     //Create a random birthday for each simulated person in the room.¶     birthMonthList := RandomIntegerList(numberOfPeople, 1, 12);¶    ¶     //Print the birthdays for this room of simulated people (comment¶     //this line out for a large number of trials).¶     Write(birthMonthList);¶    ¶     /*¶     Index through all of the days in a year and for each day scan¶     the birthdays list to see if two people in the list have this¶     day as their birthday. If there is a match, increment¶     birthdayMathCounter.¶     */¶     ForEach(month, 1 .. 12)¶     {¶     If(Count(birthMonthList,month) >=? 2)¶     {¶     birthMonthMatchCounter++;¶    ¶     WriteString(" - Match on ");¶     Write(month);¶     }¶     }¶    ¶     NewLine();¶}¶¶ NewLine();¶ Echo("The number of trials is: ", numberOfTrials);¶ Echo("The number of people in the room is: ", numberOfPeople);¶ Echo("The number of matches is: ",¶ birthMonthMatchCounter, "/ ", numberOfTrials);¶ Echo("The probability of having a birthday match: ",¶ NM(birthMonthMatchCounter/numberOfTrials) );
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 1",sequence="7",timestamp="2018-12-06 00:59:35.789",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶birthMonthMatchCounter := 0;¶¶numberOfPeople := 5;¶¶numberOfTrials := 100;¶¶Repeat(numberOfTrials)¶{¶     //Create a random birthday for each simulated person in the room.¶     birthMonthList := RandomIntegerList(numberOfPeople, 1, 12);¶    ¶     //Print the birthdays for this room of simulated people (comment¶     //this line out for a large number of trials).¶     Write(birthMonthList);¶    ¶     /*¶     Index through all of the days in a year and for each day scan¶     the birthdays list to see if two people in the list have this¶     day as their birthday. If there is a match, increment¶     birthdayMathCounter.¶     */¶     ForEach(month, 1 .. 12)¶     {¶     If(Count(birthMonthList,month) >=? 2)¶     {¶     birthMonthMatchCounter++;¶    ¶     WriteString(" - Match on ");¶     Write(month);¶     }¶     }¶    ¶     NewLine();¶}¶¶ NewLine();¶ Echo("The number of trials is: ", numberOfTrials);¶ Echo("The number of people in the room is: ", numberOfPeople);¶ Echo("The number of matches is: ",¶ birthMonthMatchCounter, "/ ", numberOfTrials);¶ Echo("The probability of having a birthday match: ",¶ NM(birthMonthMatchCounter/numberOfTrials) );
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 1",sequence="8",timestamp="2018-12-06 00:59:50.964",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶birthMonthMatchCounter := 0;¶¶numberOfPeople := 5;¶¶numberOfTrials := 100;¶¶Repeat(numberOfTrials)¶{¶     //Create a random birthday for each simulated person in the room.¶     birthMonthList := RandomIntegerList(numberOfPeople, 1, 12);¶    ¶     //Print the birthdays for this room of simulated people (comment¶     //this line out for a large number of trials).¶     Write(birthMonthList);¶    ¶     /*¶     Index through all of the days in a year and for each day scan¶     the birthdays list to see if two people in the list have this¶     day as their birthday. If there is a match, increment¶     birthdayMathCounter.¶     */¶     ForEach(month, 1 .. 12)¶     {¶     If(Count(birthMonthList,month) >=? 2)¶     {¶     birthMonthMatchCounter++;¶    ¶     WriteString(" - Match on ");¶     Write(month);¶     }¶     }¶    ¶     NewLine();¶}¶¶ NewLine();¶ Echo("The number of trials is: ", numberOfTrials);¶ Echo("The number of people in the room is: ", numberOfPeople);¶ Echo("The number of matches is: ",¶ birthMonthMatchCounter, "/ ", numberOfTrials);¶ Echo("The probability of having a birthday match: ",¶ NM(birthMonthMatchCounter/numberOfTrials) );
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 1",sequence="9",timestamp="2018-12-06 00:59:57.458",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶birthMonthMatchCounter := 0;¶¶numberOfPeople := 5;¶¶numberOfTrials := 100;¶¶Repeat(numberOfTrials)¶{¶     //Create a random birthday for each simulated person in the room.¶     birthMonthList := RandomIntegerList(numberOfPeople, 1, 12);¶    ¶     //Print the birthdays for this room of simulated people (comment¶     //this line out for a large number of trials).¶     Write(birthMonthList);¶    ¶     /*¶     Index through all of the days in a year and for each day scan¶     the birthdays list to see if two people in the list have this¶     day as their birthday. If there is a match, increment¶     birthdayMathCounter.¶     */¶     ForEach(month, 1 .. 12)¶     {¶     If(Count(birthMonthList,month) >=? 2)¶     {¶     birthMonthMatchCounter++;¶    ¶     WriteString(" - Match on ");¶     Write(month);¶     }¶     }¶    ¶     NewLine();¶}¶¶ NewLine();¶ Echo("The number of trials is: ", numberOfTrials);¶ Echo("The number of people in the room is: ", numberOfPeople);¶ Echo("The number of matches is: ",¶ birthMonthMatchCounter, "/ ", numberOfTrials);¶ Echo("The probability of having a birthday match: ",¶ NM(birthMonthMatchCounter/numberOfTrials) );
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 1",sequence="10",timestamp="2018-12-06 01:02:04.38",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶birthMonthMatchCounter := 0;¶¶numberOfPeople := 20;¶¶numberOfTrials := 100;¶¶Repeat(numberOfTrials)¶{¶     //Create a random birthday for each simulated person in the room.¶     birthMonthList := RandomIntegerList(numberOfPeople, 1, 12);¶    ¶     //Print the birthdays for this room of simulated people (comment¶     //this line out for a large number of trials).¶     Write(birthMonthList);¶    ¶     /*¶     Index through all of the days in a year and for each day scan¶     the birthdays list to see if two people in the list have this¶     day as their birthday. If there is a match, increment¶     birthdayMathCounter.¶     */¶     ForEach(month, 1 .. 12)¶     {¶     If(Count(birthMonthList,month) >=? 2)¶     {¶     birthMonthMatchCounter++;¶    ¶     WriteString(" - Match on ");¶     Write(month);¶     }¶     }¶    ¶     NewLine();¶}¶¶ NewLine();¶ Echo("The number of trials is: ", numberOfTrials);¶ Echo("The number of people in the room is: ", numberOfPeople);¶ Echo("The number of matches is: ",¶ birthMonthMatchCounter, "/ ", numberOfTrials);¶ Echo("The probability of having a birthday match: ",¶ NM(birthMonthMatchCounter/numberOfTrials) );
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 1",sequence="11",timestamp="2018-12-06 01:02:16.852",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶birthMonthMatchCounter := 0;¶¶numberOfPeople := 20;¶¶numberOfTrials := 20;¶¶Repeat(numberOfTrials)¶{¶     //Create a random birthday for each simulated person in the room.¶     birthMonthList := RandomIntegerList(numberOfPeople, 1, 12);¶    ¶     //Print the birthdays for this room of simulated people (comment¶     //this line out for a large number of trials).¶     Write(birthMonthList);¶    ¶     /*¶     Index through all of the days in a year and for each day scan¶     the birthdays list to see if two people in the list have this¶     day as their birthday. If there is a match, increment¶     birthdayMathCounter.¶     */¶     ForEach(month, 1 .. 12)¶     {¶     If(Count(birthMonthList,month) >=? 2)¶     {¶     birthMonthMatchCounter++;¶    ¶     WriteString(" - Match on ");¶     Write(month);¶     }¶     }¶    ¶     NewLine();¶}¶¶ NewLine();¶ Echo("The number of trials is: ", numberOfTrials);¶ Echo("The number of people in the room is: ", numberOfPeople);¶ Echo("The number of matches is: ",¶ birthMonthMatchCounter, "/ ", numberOfTrials);¶ Echo("The probability of having a birthday match: ",¶ NM(birthMonthMatchCounter/numberOfTrials) );
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 1",sequence="12",timestamp="2018-12-06 01:02:42.814",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶birthMonthMatchCounter := 0;¶¶numberOfPeople := 5;¶¶numberOfTrials := 100;¶¶Repeat(numberOfTrials)¶{¶     //Create a random birthday for each simulated person in the room.¶     birthMonthList := RandomIntegerList(numberOfPeople, 1, 12);¶    ¶     //Print the birthdays for this room of simulated people (comment¶     //this line out for a large number of trials).¶     Write(birthMonthList);¶    ¶     /*¶     Index through all of the days in a year and for each day scan¶     the birthdays list to see if two people in the list have this¶     day as their birthday. If there is a match, increment¶     birthdayMathCounter.¶     */¶     ForEach(month, 1 .. 12)¶     {¶     If(Count(birthMonthList,month) >=? 2)¶     {¶     birthMonthMatchCounter++;¶    ¶     WriteString(" - Match on ");¶     Write(month);¶     }¶     }¶    ¶     NewLine();¶}¶¶ NewLine();¶ Echo("The number of trials is: ", numberOfTrials);¶ Echo("The number of people in the room is: ", numberOfPeople);¶ Echo("The number of matches is: ",¶ birthMonthMatchCounter, "/ ", numberOfTrials);¶ Echo("The probability of having a birthday match: ",¶ NM(birthMonthMatchCounter/numberOfTrials) );
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:34:16.779",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+numberOfPeople := 5;¶¶numberOfTrials := 100;¶¶Repeat(numberOfTrials)¶{¶     //Create a random birthday for each simulated person in the room.¶     birthMonthList := RandomIntegerList(numberOfPeople, 1, 12);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:34:19.39",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:34:42.809",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+People
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:40.067",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+numberOfTrials := 40;¶numberOfChildren := 4;¶numberOfBoys := 3;¶threeBoysCounter := 0;¶girlProbability := 49/100;¶boyProbability := 51/100;¶Repeat(numberOfTrials)¶{¶ //Create a random list of simulated children.¶ childrenList := BuildList(RandomPickWeighted(¶ [[_GIRL,girlProbability], [_BOY,boyProbability]]),¶ var,1,numberOfChildren,1);¶ //Print the list of simulated children (comment¶ //this line out for a large number of trials).¶ Write(childrenList);¶¶ /*¶ If the list contains 3 boys, increment the three¶ boys counter.¶ */¶ If(Count(childrenList, _BOY) =? numberOfBoys)¶ {¶ threeBoysCounter++;¶ WriteString(" - ");¶ Write(numberOfBoys);¶ WriteString(" boys.");¶ }¶¶ NewLine();¶}¶NewLine();¶Echo("The number of trials is: ", numberOfTrials);¶Echo("The number of children is: ", numberOfChildren);¶Echo("The number of trials that have 3 boys: ",¶ threeBoysCounter, "/ ", numberOfTrials);¶Echo("The probability of having 3 boys: ",¶ NM(threeBoysCounter/numberOfTrials) );
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.147",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.147",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.147",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.162",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.162",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.162",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.162",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.162",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.162",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.162",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.162",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.162",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.178",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.178",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.178",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.178",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.178",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.178",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.178",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.178",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.193",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:47.193",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:51.354",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:54.015",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:55.061",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:35:58.135",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:36:06.649",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+         
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:36:06.649",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+         
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:36:06.649",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+         
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:36:06.649",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+         
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:36:08.258",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+     
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:36:09.727",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+threeBoysCounter++;¶         WriteString(" - ");¶         Write(numberOfBoys);¶         WriteString(" boys.")
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:36:11.851",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+         
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:36:12.46",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+         
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:36:13.445",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+         
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 2",sequence="13",timestamp="2018-12-06 01:36:29.921",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 40;¶numberOfChildren := 4;¶numberOfBoys := 3;¶threeBoysCounter := 0;¶girlProbability := 49/100;¶boyProbability := 51/100;¶Repeat(numberOfTrials)¶    {¶     //Create a random list of simulated children.¶     ¶     childrenList := BuildList(RandomPickWeighted(¶     [[_GIRL,girlProbability], [_BOY,boyProbability]]),¶     var,1,numberOfChildren,1);¶     ¶     //Print the list of simulated children (comment¶     //this line out for a large number of trials).¶     ¶     Write(childrenList);¶    ¶     /*¶     If the list contains 3 boys, increment the three¶     boys counter.¶     */¶     ¶     If(Count(childrenList, _BOY) =? numberOfBoys)¶     {¶         threeBoysCounter++;¶         ¶         WriteString(" - ");¶         ¶         Write(numberOfBoys);¶         ¶         WriteString(" boys.");¶     }¶    ¶     NewLine();¶}¶NewLine();¶¶Echo("The number of trials is: ", numberOfTrials);¶¶Echo("The number of children is: ", numberOfChildren);¶¶Echo("The number of trials that have 3 boys: ",¶ threeBoysCounter, "/ ", numberOfTrials);¶ ¶Echo("The probability of having 3 boys: ",¶ NM(threeBoysCounter/numberOfTrials) );
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:37:04.436",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+Girls
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:37:04.436",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+Girls
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:37:04.436",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+Girls
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:37:04.436",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+Girls
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:37:04.436",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+Girls
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:37:04.436",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+Girls
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 01:37:04.436",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+Girls
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 2",sequence="14",timestamp="2018-12-06 01:37:25.558",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 40;¶numberOfChildren := 6;¶numberOfGirls := 2;¶threeGirlsCounter := 0;¶girlProbability := 49/100;¶boyProbability := 51/100;¶Repeat(numberOfTrials)¶    {¶     //Create a random list of simulated children.¶     ¶     childrenList := BuildList(RandomPickWeighted(¶     [[_GIRL,girlProbability], [_BOY,boyProbability]]),¶     var,1,numberOfChildren,1);¶     ¶     //Print the list of simulated children (comment¶     //this line out for a large number of trials).¶     ¶     Write(childrenList);¶    ¶     /*¶     If the list contains 3 boys, increment the three¶     boys counter.¶     */¶     ¶     If(Count(childrenList, _BOY) =? numberOfGirls)¶     {¶         threeGirlsCounter++;¶         ¶         WriteString(" - ");¶         ¶         Write(numberOfGirls);¶         ¶         WriteString(" boys.");¶     }¶    ¶     NewLine();¶}¶NewLine();¶¶Echo("The number of trials is: ", numberOfTrials);¶¶Echo("The number of children is: ", numberOfChildren);¶¶Echo("The number of trials that have 3 boys: ",¶ threeGirlsCounter, "/ ", numberOfTrials);¶ ¶Echo("The probability of having 3 boys: ",¶ NM(threeGirlsCounter/numberOfTrials) );
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 2",sequence="15",timestamp="2018-12-06 01:39:09.256",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 40;¶¶numberOfChildren := 6;¶¶numberOfGirls := 2;¶¶threeGirlsCounter := 0;¶¶girlProbability := 49/100;¶¶boyProbability := 51/100;¶¶Repeat(numberOfTrials)¶    {¶     //Create a random list of simulated children.¶     ¶     childrenList := BuildList(RandomPickWeighted(¶     [[_GIRL,girlProbability], [_BOY,boyProbability]]),¶     var,1,numberOfChildren,1);¶     ¶     //Print the list of simulated children (comment¶     //this line out for a large number of trials).¶     ¶     Write(childrenList);¶    ¶     /*¶     If the list contains 3 boys, increment the three¶     boys counter.¶     */¶     ¶     If(Count(childrenList, _GIRL) =? numberOfGirls)¶     {¶         threeGirlsCounter++;¶         ¶         WriteString(" - ");¶         ¶         Write(numberOfGirls);¶         ¶         WriteString(" girls.");¶     }¶    ¶     NewLine();¶}¶NewLine();¶¶Echo("The number of trials is: ", numberOfTrials);¶¶Echo("The number of children is: ", numberOfChildren);¶¶Echo("The number of trials that have 2 girls: ",¶ threeGirlsCounter, "/ ", numberOfTrials);¶ ¶Echo("The probability of having 2 girls: ",¶ NM(threeGirlsCounter/numberOfTrials) );
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 2",sequence="16",timestamp="2018-12-06 01:41:01.777",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 40;¶¶numberOfChildren := 6;¶¶numberOfGirls := 2;¶¶twoGirlsCounter := 0;¶¶girlProbability := 49/100;¶¶boyProbability := 51/100;¶¶Repeat(numberOfTrials)¶    {¶     //Create a random list of simulated children.¶     ¶     childrenList := BuildList(RandomPickWeighted(¶     [[_GIRL,girlProbability], [_BOY,boyProbability]]),¶     var,1,numberOfChildren,1);¶     ¶     //Print the list of simulated children (comment¶     //this line out for a large number of trials).¶     ¶     Write(childrenList);¶    ¶     /*¶     If the list contains 3 boys, increment the three¶     boys counter.¶     */¶     ¶     If(Count(childrenList, _GIRL) =? numberOfGirls)¶     {¶         twoGirlsCounter++;¶         ¶         WriteString(" - ");¶         ¶         Write(numberOfGirls);¶         ¶         WriteString(" girls.");¶     }¶    ¶     NewLine();¶}¶NewLine();¶¶Echo("The number of trials is: ", numberOfTrials);¶¶Echo("The number of children is: ", numberOfChildren);¶¶Echo("The number of trials that have 2 girls: ",¶ twoGirlsCounter, "/ ", numberOfTrials);¶ ¶Echo("The probability of having 2 girls: ",¶ NM(twoGirlsCounter/numberOfTrials) );
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 2",sequence="17",timestamp="2018-12-06 01:41:25.931",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 1000;¶¶numberOfChildren := 6;¶¶numberOfGirls := 2;¶¶twoGirlsCounter := 0;¶¶girlProbability := 49/100;¶¶boyProbability := 51/100;¶¶Repeat(numberOfTrials)¶    {¶     //Create a random list of simulated children.¶     ¶     childrenList := BuildList(RandomPickWeighted(¶     [[_GIRL,girlProbability], [_BOY,boyProbability]]),¶     var,1,numberOfChildren,1);¶     ¶     //Print the list of simulated children (comment¶     //this line out for a large number of trials).¶     ¶     //Write(childrenList);¶    ¶     /*¶     If the list contains 3 boys, increment the three¶     boys counter.¶     */¶     ¶     If(Count(childrenList, _GIRL) =? numberOfGirls)¶     {¶         twoGirlsCounter++;¶         ¶         WriteString(" - ");¶         ¶         Write(numberOfGirls);¶         ¶         WriteString(" girls.");¶     }¶    ¶     NewLine();¶}¶NewLine();¶¶Echo("The number of trials is: ", numberOfTrials);¶¶Echo("The number of children is: ", numberOfChildren);¶¶Echo("The number of trials that have 2 girls: ",¶ twoGirlsCounter, "/ ", numberOfTrials);¶ ¶Echo("The probability of having 2 girls: ",¶ NM(twoGirlsCounter/numberOfTrials) );
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 2",sequence="18",timestamp="2018-12-06 01:42:06.831",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 100;¶¶numberOfChildren := 6;¶¶numberOfGirls := 2;¶¶twoGirlsCounter := 0;¶¶girlProbability := 49/100;¶¶boyProbability := 51/100;¶¶Repeat(numberOfTrials)¶    {¶     //Create a random list of simulated children.¶     ¶     childrenList := BuildList(RandomPickWeighted(¶     [[_GIRL,girlProbability], [_BOY,boyProbability]]),¶     var,1,numberOfChildren,1);¶     ¶     //Print the list of simulated children (comment¶     //this line out for a large number of trials).¶     ¶     Write(childrenList);¶    ¶     /*¶     If the list contains 3 boys, increment the three¶     boys counter.¶     */¶     ¶     If(Count(childrenList, _GIRL) =? numberOfGirls)¶     {¶         twoGirlsCounter++;¶         ¶         WriteString(" - ");¶         ¶         Write(numberOfGirls);¶         ¶         WriteString(" girls.");¶     }¶    ¶     NewLine();¶}¶NewLine();¶¶Echo("The number of trials is: ", numberOfTrials);¶¶Echo("The number of children is: ", numberOfChildren);¶¶Echo("The number of trials that have 2 girls: ",¶ twoGirlsCounter, "/ ", numberOfTrials);¶ ¶Echo("The probability of having 2 girls: ",¶ NM(twoGirlsCounter/numberOfTrials) );
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 3",sequence="19",timestamp="2018-12-06 01:43:38.276",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("Ci8vIFNvbHV0aW9uIHRvIHBhcnQgMS4KCm51bWJlck9mVHJpYWxzIDo9IDEwMDA7CgpkYXlzQnJva2VuIDo9IDA7CgpSZXBlYXQobnVtYmVyT2ZUcmlhbHMpCnsKCiAgICBjYXJBIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDIwLzEwMF0sWyJSVU5OSU5HIiw4MC8xMDBdXSk7CiAgICBjYXJCIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDI1LzEwMF0sWyJSVU5OSU5HIiw3NS8xMDBdXSk7CiAgICBjYXJDIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDM1LzEwMF0sWyJSVU5OSU5HIiw2NS8xMDBdXSk7CgogICAgSWYoY2FyQSA9PyAiQlJPS0VOIiAmPyBjYXJCID0/ICJCUk9LRU4iICY/IGNhckMgPT8gIkJST0tFTiIpCiAgICB7CiAgICAgICAgZGF5c0Jyb2tlbisrOwogICAgfQp9CgpFY2hvKCJQcm9iYWJpbGl0eSBvZiBoYXZpbmcgYWxsIHRocmVlIGNhcnMgYnJva2VuIG9uIGFueSBnaXZlbiBkYXkgIiwgTk0oZGF5c0Jyb2tlbiAvIG51bWJlck9mVHJpYWxzKSk7CgoKLy89PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCi8vIFNvbHV0aW9uIHRvIHBhcnQgMi4KCm51bWJlck9mVHJpYWxzIDo9IDEwOwoKZGF5c0Jyb2tlbkxpc3QgOj0gW107CgpSZXBlYXQobnVtYmVyT2ZUcmlhbHMpCnsKICAgIGRheXNCcm9rZW4gOj0gMDsKICAgIAogICAgLy9TaW11bGF0ZSBvbmUgeWVhci4KICAgIFJlcGVhdCgzNjUpCiAgICB7CiAgICAgICAgY2FyQSA6PSBSYW5kb21QaWNrV2VpZ2h0ZWQoW1siQlJPS0VOIiwyMC8xMDBdLFsiUlVOTklORyIsODAvMTAwXV0pOwogICAgICAgIGNhckIgOj0gUmFuZG9tUGlja1dlaWdodGVkKFtbIkJST0tFTiIsMjUvMTAwXSxbIlJVTk5JTkciLDc1LzEwMF1dKTsKICAgICAgICBjYXJDIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDM1LzEwMF0sWyJSVU5OSU5HIiw2NS8xMDBdXSk7CiAgICAKICAgICAgICBJZihjYXJBID0/ICJCUk9LRU4iICY/IGNhckIgPT8gIkJST0tFTiIgJj8gY2FyQyA9PyAiQlJPS0VOIikKICAgICAgICB7CiAgICAgICAgICAgIGRheXNCcm9rZW4rKzsKICAgICAgICB9CiAgICB9CiAgICAKICAgIEFwcGVuZCEoZGF5c0Jyb2tlbkxpc3QsIGRheXNCcm9rZW4pOwp9CgpFY2hvKCJUaGUgYXZlcmFnZSBudW1iZXIgb2YgZGF5cyBpbiBhIHllYXIgdGhhdCBCaWxsIGlzIHdpdGhvdXQgYSBjYXI6ICIsIE5NKE1lYW4oZGF5c0Jyb2tlbkxpc3QpKSk7Cgo=");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:47:46.287",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:48:39.55",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:48:44.291",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:48:45.155",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    carA := RandomPickWeighted([["BROKEN", 20/100], ["RUNNING", 80/100]]);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:48:51.403",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:48:51.563",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:48:53.321",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    carA := RandomPickWeighted([["BROKEN", 20/100], ["RUNNING", 80/100]]);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:49:12.202",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:49:12.365",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:49:54.198",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:49:55.953",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:49:56.22",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:50:02.894",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:50:06.062",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:52:22.826",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:52:28.646",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:52:30.72",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:52:35.441",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:52:36.408",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:52:37.927",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:52:49.664",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:52:49.819",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:52:50.655",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+carA
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:52:51.072",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:52:51.228",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:52:53.608",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+carA
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:53:54.297",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+:= RandomPickWeighted([["BROKEN", 20/100],["RUNNING", 80/100]]);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:53:56.62",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+:= RandomPickWeighted([["BROKEN", 20/100],["RUNNING", 80/100]]);
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:54:16.232",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:54:54.332",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:54:55.218",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:54:56.811",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:55:00.1",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+            
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:55:02.079",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:55:05.382",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:55:06.91",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:55:17.861",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:55:20.322",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 3",sequence="20",timestamp="2018-12-06 03:55:26.507",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 500;¶¶daysBroke := 0;¶¶Repeat(numberOfTrials)¶{¶    carA := RandomPickWeighted([["BROKEN", 20/100], ["RUNNING", 80/100]]);¶ ¶    carB := RandomPickWeighted([["BROKEN", 25/100], ["RUNNING", 75/100]]);¶    ¶    carC := RandomPickWeighted([["BROKEN", 35/100], ["RUNNING", 65/100]]);¶    ¶    If(carA =? "BROKEN" &? carB =? "BROKEN" &? "BROKEN")¶    {¶        daysBroken++;¶    }¶}¶¶Echo("Probability of having all three cars broken at once on any given day ", NM(daysBroken/ numberOfTrials));¶¶//Part 2¶¶numberOfTrials := 10;¶¶daysBrokenList := [];¶¶Repeat(numberOfTrials)¶{¶    daysBroken := 0;¶    ¶    Repeat(365)¶    {¶        carA := RandomPickWeighted([["BROKEN", 20/100],["RUNNING", 80/100]]);¶        ¶        carB := RandomPickWeighted([["BROKEN", 25/100],["RUNNING", 75/100]]);¶        ¶        carC := RandomPickWeighted([["BROKEN", 35/100],["RUNNING", 65/100]]);¶¶        If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶        {¶            daysBroken++¶        }¶    }¶    ¶    Append!(daysBrokenList, daysBroken);¶¶}
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:55:27.077",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Program 3",mpversion=".259",preserve="false"¶      Result: The predicate expression must evaluate to True or False (make sure ':=' is not the dominate operator in the predicate expression. Also, expressions like 'index =? 1 |? 2' should be 'index =? 1 |? index =? 2).  Error on or before line 573 starting at index 4.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 3",sequence="21",timestamp="2018-12-06 03:55:53.439",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 500;¶¶daysBroke := 0;¶¶Repeat(numberOfTrials)¶{¶    carA := RandomPickWeighted([["BROKEN", 20/100], ["RUNNING", 80/100]]);¶ ¶    carB := RandomPickWeighted([["BROKEN", 25/100], ["RUNNING", 75/100]]);¶    ¶    carC := RandomPickWeighted([["BROKEN", 35/100], ["RUNNING", 65/100]]);¶    ¶    If(carA =? "BROKEN" &? carB =? "BROKEN" &? "BROKEN")¶    {¶        daysBroken++;¶    }¶}¶¶Echo("Probability of having all three cars broken at once on any given day ", NM(daysBroken/ numberOfTrials));¶¶//Part 2¶¶numberOfTrials := 10;¶¶daysBrokenList := [];¶¶Repeat(numberOfTrials)¶{¶    daysBroken := 0;¶    ¶    Repeat(365)¶    {¶        carA := RandomPickWeighted([["BROKEN", 20/100],["RUNNING", 80/100]]);¶        ¶        carB := RandomPickWeighted([["BROKEN", 25/100],["RUNNING", 75/100]]);¶        ¶        carC := RandomPickWeighted([["BROKEN", 35/100],["RUNNING", 65/100]]);¶¶        If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶        {¶            daysBroken++;¶        }¶    }¶    ¶    Append!(daysBrokenList, daysBroken);¶¶}
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:55:53.977",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Program 3",mpversion=".259",preserve="false"¶      Result: The predicate expression must evaluate to True or False (make sure ':=' is not the dominate operator in the predicate expression. Also, expressions like 'index =? 1 |? 2' should be 'index =? 1 |? index =? 2).  Error on or before line 573 starting at index 4.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 3",sequence="22",timestamp="2018-12-06 03:56:01.18",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("Ci8vIFNvbHV0aW9uIHRvIHBhcnQgMS4KCm51bWJlck9mVHJpYWxzIDo9IDEwMDA7CgpkYXlzQnJva2VuIDo9IDA7CgpSZXBlYXQobnVtYmVyT2ZUcmlhbHMpCnsKCiAgICBjYXJBIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDIwLzEwMF0sWyJSVU5OSU5HIiw4MC8xMDBdXSk7CiAgICBjYXJCIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDI1LzEwMF0sWyJSVU5OSU5HIiw3NS8xMDBdXSk7CiAgICBjYXJDIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDM1LzEwMF0sWyJSVU5OSU5HIiw2NS8xMDBdXSk7CgogICAgSWYoY2FyQSA9PyAiQlJPS0VOIiAmPyBjYXJCID0/ICJCUk9LRU4iICY/IGNhckMgPT8gIkJST0tFTiIpCiAgICB7CiAgICAgICAgZGF5c0Jyb2tlbisrOwogICAgfQp9CgpFY2hvKCJQcm9iYWJpbGl0eSBvZiBoYXZpbmcgYWxsIHRocmVlIGNhcnMgYnJva2VuIG9uIGFueSBnaXZlbiBkYXkgIiwgTk0oZGF5c0Jyb2tlbiAvIG51bWJlck9mVHJpYWxzKSk7CgoKLy89PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCi8vIFNvbHV0aW9uIHRvIHBhcnQgMi4KCm51bWJlck9mVHJpYWxzIDo9IDEwOwoKZGF5c0Jyb2tlbkxpc3QgOj0gW107CgpSZXBlYXQobnVtYmVyT2ZUcmlhbHMpCnsKICAgIGRheXNCcm9rZW4gOj0gMDsKICAgIAogICAgLy9TaW11bGF0ZSBvbmUgeWVhci4KICAgIFJlcGVhdCgzNjUpCiAgICB7CiAgICAgICAgY2FyQSA6PSBSYW5kb21QaWNrV2VpZ2h0ZWQoW1siQlJPS0VOIiwyMC8xMDBdLFsiUlVOTklORyIsODAvMTAwXV0pOwogICAgICAgIGNhckIgOj0gUmFuZG9tUGlja1dlaWdodGVkKFtbIkJST0tFTiIsMjUvMTAwXSxbIlJVTk5JTkciLDc1LzEwMF1dKTsKICAgICAgICBjYXJDIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDM1LzEwMF0sWyJSVU5OSU5HIiw2NS8xMDBdXSk7CiAgICAKICAgICAgICBJZihjYXJBID0/ICJCUk9LRU4iICY/IGNhckIgPT8gIkJST0tFTiIgJj8gY2FyQyA9PyAiQlJPS0VOIikKICAgICAgICB7CiAgICAgICAgICAgIGRheXNCcm9rZW4rKzsKICAgICAgICB9CiAgICB9CiAgICAKICAgIEFwcGVuZCEoZGF5c0Jyb2tlbkxpc3QsIGRheXNCcm9rZW4pOwp9CgpFY2hvKCJUaGUgYXZlcmFnZSBudW1iZXIgb2YgZGF5cyBpbiBhIHllYXIgdGhhdCBCaWxsIGlzIHdpdGhvdXQgYSBjYXI6ICIsIE5NKE1lYW4oZGF5c0Jyb2tlbkxpc3QpKSk7Cgo=");
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:56:11.647",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+:= RandomPickWeighted([["BROKEN", 20/100],["RUNNING", 80/100]]);
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 3",sequence="23",timestamp="2018-12-06 03:56:17.164",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("Ci8vIFNvbHV0aW9uIHRvIHBhcnQgMS4KCm51bWJlck9mVHJpYWxzIDo9IDEwMDA7CgpkYXlzQnJva2VuIDo9IDA7CgpSZXBlYXQobnVtYmVyT2ZUcmlhbHMpCnsKCiAgICBjYXJBIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDIwLzEwMF0sWyJSVU5OSU5HIiw4MC8xMDBdXSk7CiAgICBjYXJCIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDI1LzEwMF0sWyJSVU5OSU5HIiw3NS8xMDBdXSk7CiAgICBjYXJDIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDM1LzEwMF0sWyJSVU5OSU5HIiw2NS8xMDBdXSk7CgogICAgSWYoY2FyQSA9PyAiQlJPS0VOIiAmPyBjYXJCID0/ICJCUk9LRU4iICY/IGNhckMgPT8gIkJST0tFTiIpCiAgICB7CiAgICAgICAgZGF5c0Jyb2tlbisrOwogICAgfQp9CgpFY2hvKCJQcm9iYWJpbGl0eSBvZiBoYXZpbmcgYWxsIHRocmVlIGNhcnMgYnJva2VuIG9uIGFueSBnaXZlbiBkYXkgIiwgTk0oZGF5c0Jyb2tlbiAvIG51bWJlck9mVHJpYWxzKSk7CgoKLy89PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCi8vIFNvbHV0aW9uIHRvIHBhcnQgMi4KCm51bWJlck9mVHJpYWxzIDo9IDEwOwoKZGF5c0Jyb2tlbkxpc3QgOj0gW107CgpSZXBlYXQobnVtYmVyT2ZUcmlhbHMpCnsKICAgIGRheXNCcm9rZW4gOj0gMDsKICAgIAogICAgLy9TaW11bGF0ZSBvbmUgeWVhci4KICAgIFJlcGVhdCgzNjUpCiAgICB7CiAgICAgICAgY2FyQSA6PSBSYW5kb21QaWNrV2VpZ2h0ZWQoW1siQlJPS0VOIiwyMC8xMDBdLFsiUlVOTklORyIsODAvMTAwXV0pOwogICAgICAgIGNhckIgOj0gUmFuZG9tUGlja1dlaWdodGVkKFtbIkJST0tFTiIsMjUvMTAwXSxbIlJVTk5JTkciLDc1LzEwMF1dKTsKICAgICAgICBjYXJDIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDM1LzEwMF0sWyJSVU5OSU5HIiw2NS8xMDBdXSk7CiAgICAKICAgICAgICBJZihjYXJBID0/ICJCUk9LRU4iICY/IGNhckIgPT8gIkJST0tFTiIgJj8gY2FyQyA9PyAiQlJPS0VOIikKICAgICAgICB7CiAgICAgICAgICAgIGRheXNCcm9rZW4rKzsKICAgICAgICB9CiAgICB9CiAgICAKICAgIEFwcGVuZCEoZGF5c0Jyb2tlbkxpc3QsIGRheXNCcm9rZW4pOwp9CgpFY2hvKCJUaGUgYXZlcmFnZSBudW1iZXIgb2YgZGF5cyBpbiBhIHllYXIgdGhhdCBCaWxsIGlzIHdpdGhvdXQgYSBjYXI6ICIsIE5NKE1lYW4oZGF5c0Jyb2tlbkxpc3QpKSk7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 3",sequence="24",timestamp="2018-12-06 03:56:59.991",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 500;¶¶daysBroke := 0;¶¶Repeat(numberOfTrials)¶{¶    carA := RandomPickWeighted([["BROKEN", 20/100], ["RUNNING", 80/100]]);¶ ¶    carB := RandomPickWeighted([["BROKEN", 25/100], ["RUNNING", 75/100]]);¶    ¶    carC := RandomPickWeighted([["BROKEN", 35/100], ["RUNNING", 65/100]]);¶    ¶    If(carA =? "BROKEN" &? carB =? "BROKEN" &? "BROKEN")¶    {¶        daysBroken++;¶    }¶}¶¶Echo("Probability of having all three cars broken at once on any given day ", NM(daysBroken/ numberOfTrials));¶¶//Part 2¶¶numberOfTrials := 10;¶¶daysBrokenList := [];¶¶Repeat(numberOfTrials)¶{¶    daysBroken := 0;¶    ¶    Repeat(365)¶    {¶        carA := RandomPickWeighted([["BROKEN", 20/100],["RUNNING", 80/100]]);¶        ¶        carB := RandomPickWeighted([["BROKEN", 25/100],["RUNNING", 75/100]]);¶        ¶        carC := RandomPickWeighted([["BROKEN", 35/100],["RUNNING", 65/100]]);¶¶        If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶        {¶            daysBroken++;¶        }¶    }¶    ¶    Append!(daysBrokenList, daysBroken);¶¶}¶¶Echo("The average days that Bill is without a car is NM(Mean(daysBroken))";
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:57:00.6",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Program 3",mpversion=".259",preserve="false"¶      Result: The predicate expression must evaluate to True or False (make sure ':=' is not the dominate operator in the predicate expression. Also, expressions like 'index =? 1 |? 2' should be 'index =? 1 |? index =? 2).  Error on or before line 573 starting at index 4.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 3",sequence="25",timestamp="2018-12-06 03:57:41.153",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 500;¶¶daysBroken := 0;¶¶Repeat(numberOfTrials)¶{¶    carA := RandomPickWeighted([["BROKEN", 20/100], ["RUNNING", 80/100]]);¶ ¶    carB := RandomPickWeighted([["BROKEN", 25/100], ["RUNNING", 75/100]]);¶    ¶    carC := RandomPickWeighted([["BROKEN", 35/100], ["RUNNING", 65/100]]);¶    ¶    If(carA =? "BROKEN" &? carB =? "BROKEN" &? "BROKEN")¶    {¶        daysBroken++;¶    }¶}¶¶Echo("Probability of having all three cars broken at once on any given day ", NM(daysBroken/ numberOfTrials));¶¶//Part 2¶¶numberOfTrials := 10;¶¶daysBrokenList := [];¶¶Repeat(numberOfTrials)¶{¶    daysBroken := 0;¶    ¶    Repeat(365)¶    {¶        carA := RandomPickWeighted([["BROKEN", 20/100],["RUNNING", 80/100]]);¶        ¶        carB := RandomPickWeighted([["BROKEN", 25/100],["RUNNING", 75/100]]);¶        ¶        carC := RandomPickWeighted([["BROKEN", 35/100],["RUNNING", 65/100]]);¶¶        If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶        {¶            daysBroken++;¶        }¶    }¶    ¶    Append!(daysBrokenList, daysBroken);¶¶}¶¶Echo("The average days that Bill is without a car is NM(Mean(daysBroken))";
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:57:41.697",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Program 3",mpversion=".259",preserve="false"¶      Result: The predicate expression must evaluate to True or False (make sure ':=' is not the dominate operator in the predicate expression. Also, expressions like 'index =? 1 |? 2' should be 'index =? 1 |? index =? 2).  Error on or before line 573 starting at index 4.¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 3",sequence="26",timestamp="2018-12-06 03:59:02.059",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 500;¶¶daysBroken := 0;¶¶Repeat(numberOfTrials)¶{¶    carA := RandomPickWeighted([["BROKEN", 20/100], ["RUNNING", 80/100]]);¶ ¶    carB := RandomPickWeighted([["BROKEN", 25/100], ["RUNNING", 75/100]]);¶    ¶    carC := RandomPickWeighted([["BROKEN", 35/100], ["RUNNING", 65/100]]);¶    ¶    If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶    {¶        daysBroken++;¶    }¶}¶¶Echo("Probability of having all three cars broken at once on any given day ", NM(daysBroken/ numberOfTrials));¶¶//Part 2¶¶numberOfTrials := 10;¶¶daysBrokenList := [];¶¶Repeat(numberOfTrials)¶{¶    daysBroken := 0;¶    ¶    Repeat(365)¶    {¶        carA := RandomPickWeighted([["BROKEN", 20/100],["RUNNING", 80/100]]);¶        ¶        carB := RandomPickWeighted([["BROKEN", 25/100],["RUNNING", 75/100]]);¶        ¶        carC := RandomPickWeighted([["BROKEN", 35/100],["RUNNING", 65/100]]);¶¶        If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶        {¶            daysBroken++;¶        }¶    }¶    ¶    Append!(daysBrokenList, daysBroken);¶¶}¶¶Echo("The average days that Bill is without a car is NM(Mean(daysBroken))";
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 03:59:08.422",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Program 3",mpversion=".259",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ) )*** close parentheses token for sub-expression but found ***( ; )*** instead.  Error on or before line 609 starting at index 74.¶      ¶      Side Effects:¶      Probability of having all three cars broken at once on any given day 0.016 ¶      ¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 3",sequence="27",timestamp="2018-12-06 03:59:59.692",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("Ci8vIFNvbHV0aW9uIHRvIHBhcnQgMS4KCm51bWJlck9mVHJpYWxzIDo9IDEwMDA7CgpkYXlzQnJva2VuIDo9IDA7CgpSZXBlYXQobnVtYmVyT2ZUcmlhbHMpCnsKCiAgICBjYXJBIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDIwLzEwMF0sWyJSVU5OSU5HIiw4MC8xMDBdXSk7CiAgICBjYXJCIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDI1LzEwMF0sWyJSVU5OSU5HIiw3NS8xMDBdXSk7CiAgICBjYXJDIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDM1LzEwMF0sWyJSVU5OSU5HIiw2NS8xMDBdXSk7CgogICAgSWYoY2FyQSA9PyAiQlJPS0VOIiAmPyBjYXJCID0/ICJCUk9LRU4iICY/IGNhckMgPT8gIkJST0tFTiIpCiAgICB7CiAgICAgICAgZGF5c0Jyb2tlbisrOwogICAgfQp9CgpFY2hvKCJQcm9iYWJpbGl0eSBvZiBoYXZpbmcgYWxsIHRocmVlIGNhcnMgYnJva2VuIG9uIGFueSBnaXZlbiBkYXkgIiwgTk0oZGF5c0Jyb2tlbiAvIG51bWJlck9mVHJpYWxzKSk7CgoKLy89PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCi8vIFNvbHV0aW9uIHRvIHBhcnQgMi4KCm51bWJlck9mVHJpYWxzIDo9IDEwOwoKZGF5c0Jyb2tlbkxpc3QgOj0gW107CgpSZXBlYXQobnVtYmVyT2ZUcmlhbHMpCnsKICAgIGRheXNCcm9rZW4gOj0gMDsKICAgIAogICAgLy9TaW11bGF0ZSBvbmUgeWVhci4KICAgIFJlcGVhdCgzNjUpCiAgICB7CiAgICAgICAgY2FyQSA6PSBSYW5kb21QaWNrV2VpZ2h0ZWQoW1siQlJPS0VOIiwyMC8xMDBdLFsiUlVOTklORyIsODAvMTAwXV0pOwogICAgICAgIGNhckIgOj0gUmFuZG9tUGlja1dlaWdodGVkKFtbIkJST0tFTiIsMjUvMTAwXSxbIlJVTk5JTkciLDc1LzEwMF1dKTsKICAgICAgICBjYXJDIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDM1LzEwMF0sWyJSVU5OSU5HIiw2NS8xMDBdXSk7CiAgICAKICAgICAgICBJZihjYXJBID0/ICJCUk9LRU4iICY/IGNhckIgPT8gIkJST0tFTiIgJj8gY2FyQyA9PyAiQlJPS0VOIikKICAgICAgICB7CiAgICAgICAgICAgIGRheXNCcm9rZW4rKzsKICAgICAgICB9CiAgICB9CiAgICAKICAgIEFwcGVuZCEoZGF5c0Jyb2tlbkxpc3QsIGRheXNCcm9rZW4pOwp9CgpFY2hvKCJUaGUgYXZlcmFnZSBudW1iZXIgb2YgZGF5cyBpbiBhIHllYXIgdGhhdCBCaWxsIGlzIHdpdGhvdXQgYSBjYXI6ICIsIE5NKE1lYW4oZGF5c0Jyb2tlbkxpc3QpKSk7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 3",sequence="28",timestamp="2018-12-06 04:00:14.18",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 500;¶¶daysBroken := 0;¶¶Repeat(numberOfTrials)¶{¶    carA := RandomPickWeighted([["BROKEN", 20/100], ["RUNNING", 80/100]]);¶ ¶    carB := RandomPickWeighted([["BROKEN", 25/100], ["RUNNING", 75/100]]);¶    ¶    carC := RandomPickWeighted([["BROKEN", 35/100], ["RUNNING", 65/100]]);¶    ¶    If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶    {¶        daysBroken++;¶    }¶}¶¶Echo("Probability of having all three cars broken at once on any given day ", NM(daysBroken/ numberOfTrials));¶¶//Part 2¶¶numberOfTrials := 10;¶¶daysBrokenList := [];¶¶Repeat(numberOfTrials)¶{¶    daysBroken := 0;¶    ¶    Repeat(365)¶    {¶        carA := RandomPickWeighted([["BROKEN", 20/100],["RUNNING", 80/100]]);¶        ¶        carB := RandomPickWeighted([["BROKEN", 25/100],["RUNNING", 75/100]]);¶        ¶        carC := RandomPickWeighted([["BROKEN", 35/100],["RUNNING", 65/100]]);¶¶        If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶        {¶            daysBroken++;¶        }¶    }¶    ¶    Append!(daysBrokenList, daysBroken);¶¶}¶¶Echo("The average days that Bill is without a car is" NM(Mean(daysBroken));
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 04:00:20.533",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Program 3",mpversion=".259",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ) )*** close parentheses token for sub-expression but found ***( NM )*** instead.  Error on or before line 609 starting at index 54.¶      ¶      Side Effects:¶      Probability of having all three cars broken at once on any given day 0.032 ¶      ¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 3",sequence="29",timestamp="2018-12-06 04:00:24.755",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("Ci8vIFNvbHV0aW9uIHRvIHBhcnQgMS4KCm51bWJlck9mVHJpYWxzIDo9IDEwMDA7CgpkYXlzQnJva2VuIDo9IDA7CgpSZXBlYXQobnVtYmVyT2ZUcmlhbHMpCnsKCiAgICBjYXJBIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDIwLzEwMF0sWyJSVU5OSU5HIiw4MC8xMDBdXSk7CiAgICBjYXJCIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDI1LzEwMF0sWyJSVU5OSU5HIiw3NS8xMDBdXSk7CiAgICBjYXJDIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDM1LzEwMF0sWyJSVU5OSU5HIiw2NS8xMDBdXSk7CgogICAgSWYoY2FyQSA9PyAiQlJPS0VOIiAmPyBjYXJCID0/ICJCUk9LRU4iICY/IGNhckMgPT8gIkJST0tFTiIpCiAgICB7CiAgICAgICAgZGF5c0Jyb2tlbisrOwogICAgfQp9CgpFY2hvKCJQcm9iYWJpbGl0eSBvZiBoYXZpbmcgYWxsIHRocmVlIGNhcnMgYnJva2VuIG9uIGFueSBnaXZlbiBkYXkgIiwgTk0oZGF5c0Jyb2tlbiAvIG51bWJlck9mVHJpYWxzKSk7CgoKLy89PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCi8vIFNvbHV0aW9uIHRvIHBhcnQgMi4KCm51bWJlck9mVHJpYWxzIDo9IDEwOwoKZGF5c0Jyb2tlbkxpc3QgOj0gW107CgpSZXBlYXQobnVtYmVyT2ZUcmlhbHMpCnsKICAgIGRheXNCcm9rZW4gOj0gMDsKICAgIAogICAgLy9TaW11bGF0ZSBvbmUgeWVhci4KICAgIFJlcGVhdCgzNjUpCiAgICB7CiAgICAgICAgY2FyQSA6PSBSYW5kb21QaWNrV2VpZ2h0ZWQoW1siQlJPS0VOIiwyMC8xMDBdLFsiUlVOTklORyIsODAvMTAwXV0pOwogICAgICAgIGNhckIgOj0gUmFuZG9tUGlja1dlaWdodGVkKFtbIkJST0tFTiIsMjUvMTAwXSxbIlJVTk5JTkciLDc1LzEwMF1dKTsKICAgICAgICBjYXJDIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDM1LzEwMF0sWyJSVU5OSU5HIiw2NS8xMDBdXSk7CiAgICAKICAgICAgICBJZihjYXJBID0/ICJCUk9LRU4iICY/IGNhckIgPT8gIkJST0tFTiIgJj8gY2FyQyA9PyAiQlJPS0VOIikKICAgICAgICB7CiAgICAgICAgICAgIGRheXNCcm9rZW4rKzsKICAgICAgICB9CiAgICB9CiAgICAKICAgIEFwcGVuZCEoZGF5c0Jyb2tlbkxpc3QsIGRheXNCcm9rZW4pOwp9CgpFY2hvKCJUaGUgYXZlcmFnZSBudW1iZXIgb2YgZGF5cyBpbiBhIHllYXIgdGhhdCBCaWxsIGlzIHdpdGhvdXQgYSBjYXI6ICIsIE5NKE1lYW4oZGF5c0Jyb2tlbkxpc3QpKSk7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 3",sequence="30",timestamp="2018-12-06 04:00:44.467",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 500;¶¶daysBroken := 0;¶¶Repeat(numberOfTrials)¶{¶    carA := RandomPickWeighted([["BROKEN", 20/100], ["RUNNING", 80/100]]);¶ ¶    carB := RandomPickWeighted([["BROKEN", 25/100], ["RUNNING", 75/100]]);¶    ¶    carC := RandomPickWeighted([["BROKEN", 35/100], ["RUNNING", 65/100]]);¶    ¶    If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶    {¶        daysBroken++;¶    }¶}¶¶Echo("Probability of having all three cars broken at once on any given day ", NM(daysBroken/ numberOfTrials));¶¶//Part 2¶¶numberOfTrials := 10;¶¶daysBrokenList := [];¶¶Repeat(numberOfTrials)¶{¶    daysBroken := 0;¶    ¶    Repeat(365)¶    {¶        carA := RandomPickWeighted([["BROKEN", 20/100],["RUNNING", 80/100]]);¶        ¶        carB := RandomPickWeighted([["BROKEN", 25/100],["RUNNING", 75/100]]);¶        ¶        carC := RandomPickWeighted([["BROKEN", 35/100],["RUNNING", 65/100]]);¶¶        If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶        {¶            daysBroken++;¶        }¶    }¶    ¶    Append!(daysBrokenList, daysBroken);¶¶}¶¶Echo("The average days that Bill is without a car is:" NM(Mean(daysBroken)));
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 04:00:50.866",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Program 3",mpversion=".259",preserve="false"¶      Result: Error encountered during parsing: Expected a ***( ) )*** close parentheses token for sub-expression but found ***( NM )*** instead.  Error on or before line 609 starting at index 55.¶      ¶      Side Effects:¶      Probability of having all three cars broken at once on any given day 0.014 ¶      ¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 3",sequence="31",timestamp="2018-12-06 04:01:23.197",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("Ci8vIFNvbHV0aW9uIHRvIHBhcnQgMS4KCm51bWJlck9mVHJpYWxzIDo9IDEwMDA7CgpkYXlzQnJva2VuIDo9IDA7CgpSZXBlYXQobnVtYmVyT2ZUcmlhbHMpCnsKCiAgICBjYXJBIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDIwLzEwMF0sWyJSVU5OSU5HIiw4MC8xMDBdXSk7CiAgICBjYXJCIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDI1LzEwMF0sWyJSVU5OSU5HIiw3NS8xMDBdXSk7CiAgICBjYXJDIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDM1LzEwMF0sWyJSVU5OSU5HIiw2NS8xMDBdXSk7CgogICAgSWYoY2FyQSA9PyAiQlJPS0VOIiAmPyBjYXJCID0/ICJCUk9LRU4iICY/IGNhckMgPT8gIkJST0tFTiIpCiAgICB7CiAgICAgICAgZGF5c0Jyb2tlbisrOwogICAgfQp9CgpFY2hvKCJQcm9iYWJpbGl0eSBvZiBoYXZpbmcgYWxsIHRocmVlIGNhcnMgYnJva2VuIG9uIGFueSBnaXZlbiBkYXkgIiwgTk0oZGF5c0Jyb2tlbiAvIG51bWJlck9mVHJpYWxzKSk7CgoKLy89PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCi8vIFNvbHV0aW9uIHRvIHBhcnQgMi4KCm51bWJlck9mVHJpYWxzIDo9IDEwOwoKZGF5c0Jyb2tlbkxpc3QgOj0gW107CgpSZXBlYXQobnVtYmVyT2ZUcmlhbHMpCnsKICAgIGRheXNCcm9rZW4gOj0gMDsKICAgIAogICAgLy9TaW11bGF0ZSBvbmUgeWVhci4KICAgIFJlcGVhdCgzNjUpCiAgICB7CiAgICAgICAgY2FyQSA6PSBSYW5kb21QaWNrV2VpZ2h0ZWQoW1siQlJPS0VOIiwyMC8xMDBdLFsiUlVOTklORyIsODAvMTAwXV0pOwogICAgICAgIGNhckIgOj0gUmFuZG9tUGlja1dlaWdodGVkKFtbIkJST0tFTiIsMjUvMTAwXSxbIlJVTk5JTkciLDc1LzEwMF1dKTsKICAgICAgICBjYXJDIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDM1LzEwMF0sWyJSVU5OSU5HIiw2NS8xMDBdXSk7CiAgICAKICAgICAgICBJZihjYXJBID0/ICJCUk9LRU4iICY/IGNhckIgPT8gIkJST0tFTiIgJj8gY2FyQyA9PyAiQlJPS0VOIikKICAgICAgICB7CiAgICAgICAgICAgIGRheXNCcm9rZW4rKzsKICAgICAgICB9CiAgICB9CiAgICAKICAgIEFwcGVuZCEoZGF5c0Jyb2tlbkxpc3QsIGRheXNCcm9rZW4pOwp9CgpFY2hvKCJUaGUgYXZlcmFnZSBudW1iZXIgb2YgZGF5cyBpbiBhIHllYXIgdGhhdCBCaWxsIGlzIHdpdGhvdXQgYSBjYXI6ICIsIE5NKE1lYW4oZGF5c0Jyb2tlbkxpc3QpKSk7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 3",sequence="32",timestamp="2018-12-06 04:01:36.789",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("Ci8vIFNvbHV0aW9uIHRvIHBhcnQgMS4KCm51bWJlck9mVHJpYWxzIDo9IDEwMDA7CgpkYXlzQnJva2VuIDo9IDA7CgpSZXBlYXQobnVtYmVyT2ZUcmlhbHMpCnsKCiAgICBjYXJBIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDIwLzEwMF0sWyJSVU5OSU5HIiw4MC8xMDBdXSk7CiAgICBjYXJCIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDI1LzEwMF0sWyJSVU5OSU5HIiw3NS8xMDBdXSk7CiAgICBjYXJDIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDM1LzEwMF0sWyJSVU5OSU5HIiw2NS8xMDBdXSk7CgogICAgSWYoY2FyQSA9PyAiQlJPS0VOIiAmPyBjYXJCID0/ICJCUk9LRU4iICY/IGNhckMgPT8gIkJST0tFTiIpCiAgICB7CiAgICAgICAgZGF5c0Jyb2tlbisrOwogICAgfQp9CgpFY2hvKCJQcm9iYWJpbGl0eSBvZiBoYXZpbmcgYWxsIHRocmVlIGNhcnMgYnJva2VuIG9uIGFueSBnaXZlbiBkYXkgIiwgTk0oZGF5c0Jyb2tlbiAvIG51bWJlck9mVHJpYWxzKSk7CgoKLy89PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCi8vIFNvbHV0aW9uIHRvIHBhcnQgMi4KCm51bWJlck9mVHJpYWxzIDo9IDEwOwoKZGF5c0Jyb2tlbkxpc3QgOj0gW107CgpSZXBlYXQobnVtYmVyT2ZUcmlhbHMpCnsKICAgIGRheXNCcm9rZW4gOj0gMDsKICAgIAogICAgLy9TaW11bGF0ZSBvbmUgeWVhci4KICAgIFJlcGVhdCgzNjUpCiAgICB7CiAgICAgICAgY2FyQSA6PSBSYW5kb21QaWNrV2VpZ2h0ZWQoW1siQlJPS0VOIiwyMC8xMDBdLFsiUlVOTklORyIsODAvMTAwXV0pOwogICAgICAgIGNhckIgOj0gUmFuZG9tUGlja1dlaWdodGVkKFtbIkJST0tFTiIsMjUvMTAwXSxbIlJVTk5JTkciLDc1LzEwMF1dKTsKICAgICAgICBjYXJDIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDM1LzEwMF0sWyJSVU5OSU5HIiw2NS8xMDBdXSk7CiAgICAKICAgICAgICBJZihjYXJBID0/ICJCUk9LRU4iICY/IGNhckIgPT8gIkJST0tFTiIgJj8gY2FyQyA9PyAiQlJPS0VOIikKICAgICAgICB7CiAgICAgICAgICAgIGRheXNCcm9rZW4rKzsKICAgICAgICB9CiAgICB9CiAgICAKICAgIEFwcGVuZCEoZGF5c0Jyb2tlbkxpc3QsIGRheXNCcm9rZW4pOwp9CgpFY2hvKCJUaGUgYXZlcmFnZSBudW1iZXIgb2YgZGF5cyBpbiBhIHllYXIgdGhhdCBCaWxsIGlzIHdpdGhvdXQgYSBjYXI6ICIsIE5NKE1lYW4oZGF5c0Jyb2tlbkxpc3QpKSk7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 3",sequence="33",timestamp="2018-12-06 04:02:07.377",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 500;¶¶daysBroken := 0;¶¶Repeat(numberOfTrials)¶{¶    carA := RandomPickWeighted([["BROKEN", 20/100], ["RUNNING", 80/100]]);¶ ¶    carB := RandomPickWeighted([["BROKEN", 25/100], ["RUNNING", 75/100]]);¶    ¶    carC := RandomPickWeighted([["BROKEN", 35/100], ["RUNNING", 65/100]]);¶    ¶    If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶    {¶        daysBroken++;¶    }¶}¶¶Echo("Probability of having all three cars broken at once on any given day ", NM(daysBroken/ numberOfTrials));¶¶//Part 2¶¶numberOfTrials := 10;¶¶daysBrokenList := [];¶¶Repeat(numberOfTrials)¶{¶    daysBroken := 0;¶    ¶    Repeat(365)¶    {¶        carA := RandomPickWeighted([["BROKEN", 20/100],["RUNNING", 80/100]]);¶        ¶        carB := RandomPickWeighted([["BROKEN", 25/100],["RUNNING", 75/100]]);¶        ¶        carC := RandomPickWeighted([["BROKEN", 35/100],["RUNNING", 65/100]]);¶¶        If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶        {¶            daysBroken++;¶        }¶    }¶    ¶    Append!(daysBrokenList, daysBroken);¶¶}¶¶Echo("The average days that Bill is without a car is:", NM(Mean(daysBroken)));
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 04:02:13.746",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Program 3",mpversion=".259",preserve="false"¶      Result:  Error:  Error: Argument must be a list.   Error on or before line 609 starting at index 59.¶      ¶      Side Effects:¶      Probability of having all three cars broken at once on any given day 0.018 ¶      ¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 3",sequence="34",timestamp="2018-12-06 04:02:24.7",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 500;¶¶daysBroken := 0;¶¶Repeat(numberOfTrials)¶{¶    carA := RandomPickWeighted([["BROKEN", 20/100], ["RUNNING", 80/100]]);¶ ¶    carB := RandomPickWeighted([["BROKEN", 25/100], ["RUNNING", 75/100]]);¶    ¶    carC := RandomPickWeighted([["BROKEN", 35/100], ["RUNNING", 65/100]]);¶    ¶    If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶    {¶        daysBroken++;¶    }¶}¶¶Echo("Probability of having all three cars broken at once on any given day ", NM(daysBroken/ numberOfTrials));¶¶//Part 2¶¶numberOfTrials := 10;¶¶daysBrokenList := [];¶¶Repeat(numberOfTrials)¶{¶    daysBroken := 0;¶    ¶    Repeat(365)¶    {¶        carA := RandomPickWeighted([["BROKEN", 20/100],["RUNNING", 80/100]]);¶        ¶        carB := RandomPickWeighted([["BROKEN", 25/100],["RUNNING", 75/100]]);¶        ¶        carC := RandomPickWeighted([["BROKEN", 35/100],["RUNNING", 65/100]]);¶¶        If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶        {¶            daysBroken++;¶        }¶    }¶    ¶    Append!(daysBrokenList, daysBroken);¶¶}¶¶Echo("The average days that Bill is without a car is:", NM(Mean(daysBrokenList)));
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 3",sequence="35",timestamp="2018-12-06 04:02:45.94",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 500;¶¶daysBroken := 0;¶¶Repeat(numberOfTrials)¶{¶    carA := RandomPickWeighted([["BROKEN", 20/100], ["RUNNING", 80/100]]);¶ ¶    carB := RandomPickWeighted([["BROKEN", 25/100], ["RUNNING", 75/100]]);¶    ¶    carC := RandomPickWeighted([["BROKEN", 35/100], ["RUNNING", 65/100]]);¶    ¶    If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶    {¶        daysBroken++;¶    }¶}¶¶Echo("Probability of having all three cars broken at once on any given day ", NM(daysBroken/ numberOfTrials));¶¶//Part 2¶¶numberOfTrials := 500;¶¶daysBrokenList := [];¶¶Repeat(numberOfTrials)¶{¶    daysBroken := 0;¶    ¶    Repeat(365)¶    {¶        carA := RandomPickWeighted([["BROKEN", 20/100],["RUNNING", 80/100]]);¶        ¶        carB := RandomPickWeighted([["BROKEN", 25/100],["RUNNING", 75/100]]);¶        ¶        carC := RandomPickWeighted([["BROKEN", 35/100],["RUNNING", 65/100]]);¶¶        If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶        {¶            daysBroken++;¶        }¶    }¶    ¶    Append!(daysBrokenList, daysBroken);¶¶}¶¶Echo("The average days that Bill is without a car is:", NM(Mean(daysBrokenList)));
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 04:03:16.152",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Program 3",mpversion=".259",preserve="false"¶      Result: Evaluation timeout exceeded or user halted evaluation. Error on or before line 597 starting at index 16.¶      ¶      Side Effects:¶      Probability of having all three cars broken at once on any given day 0.016 ¶      ¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 3",sequence="36",timestamp="2018-12-06 04:03:31.353",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+Hint("Ci8vIFNvbHV0aW9uIHRvIHBhcnQgMS4KCm51bWJlck9mVHJpYWxzIDo9IDEwMDA7CgpkYXlzQnJva2VuIDo9IDA7CgpSZXBlYXQobnVtYmVyT2ZUcmlhbHMpCnsKCiAgICBjYXJBIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDIwLzEwMF0sWyJSVU5OSU5HIiw4MC8xMDBdXSk7CiAgICBjYXJCIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDI1LzEwMF0sWyJSVU5OSU5HIiw3NS8xMDBdXSk7CiAgICBjYXJDIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDM1LzEwMF0sWyJSVU5OSU5HIiw2NS8xMDBdXSk7CgogICAgSWYoY2FyQSA9PyAiQlJPS0VOIiAmPyBjYXJCID0/ICJCUk9LRU4iICY/IGNhckMgPT8gIkJST0tFTiIpCiAgICB7CiAgICAgICAgZGF5c0Jyb2tlbisrOwogICAgfQp9CgpFY2hvKCJQcm9iYWJpbGl0eSBvZiBoYXZpbmcgYWxsIHRocmVlIGNhcnMgYnJva2VuIG9uIGFueSBnaXZlbiBkYXkgIiwgTk0oZGF5c0Jyb2tlbiAvIG51bWJlck9mVHJpYWxzKSk7CgoKLy89PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCi8vIFNvbHV0aW9uIHRvIHBhcnQgMi4KCm51bWJlck9mVHJpYWxzIDo9IDEwOwoKZGF5c0Jyb2tlbkxpc3QgOj0gW107CgpSZXBlYXQobnVtYmVyT2ZUcmlhbHMpCnsKICAgIGRheXNCcm9rZW4gOj0gMDsKICAgIAogICAgLy9TaW11bGF0ZSBvbmUgeWVhci4KICAgIFJlcGVhdCgzNjUpCiAgICB7CiAgICAgICAgY2FyQSA6PSBSYW5kb21QaWNrV2VpZ2h0ZWQoW1siQlJPS0VOIiwyMC8xMDBdLFsiUlVOTklORyIsODAvMTAwXV0pOwogICAgICAgIGNhckIgOj0gUmFuZG9tUGlja1dlaWdodGVkKFtbIkJST0tFTiIsMjUvMTAwXSxbIlJVTk5JTkciLDc1LzEwMF1dKTsKICAgICAgICBjYXJDIDo9IFJhbmRvbVBpY2tXZWlnaHRlZChbWyJCUk9LRU4iLDM1LzEwMF0sWyJSVU5OSU5HIiw2NS8xMDBdXSk7CiAgICAKICAgICAgICBJZihjYXJBID0/ICJCUk9LRU4iICY/IGNhckIgPT8gIkJST0tFTiIgJj8gY2FyQyA9PyAiQlJPS0VOIikKICAgICAgICB7CiAgICAgICAgICAgIGRheXNCcm9rZW4rKzsKICAgICAgICB9CiAgICB9CiAgICAKICAgIEFwcGVuZCEoZGF5c0Jyb2tlbkxpc3QsIGRheXNCcm9rZW4pOwp9CgpFY2hvKCJUaGUgYXZlcmFnZSBudW1iZXIgb2YgZGF5cyBpbiBhIHllYXIgdGhhdCBCaWxsIGlzIHdpdGhvdXQgYSBjYXI6ICIsIE5NKE1lYW4oZGF5c0Jyb2tlbkxpc3QpKSk7Cgo=");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 3",sequence="37",timestamp="2018-12-06 04:03:51.158",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 300;¶¶daysBroken := 0;¶¶Repeat(numberOfTrials)¶{¶    carA := RandomPickWeighted([["BROKEN", 20/100], ["RUNNING", 80/100]]);¶ ¶    carB := RandomPickWeighted([["BROKEN", 25/100], ["RUNNING", 75/100]]);¶    ¶    carC := RandomPickWeighted([["BROKEN", 35/100], ["RUNNING", 65/100]]);¶    ¶    If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶    {¶        daysBroken++;¶    }¶}¶¶Echo("Probability of having all three cars broken at once on any given day ", NM(daysBroken/ numberOfTrials));¶¶//Part 2¶¶numberOfTrials := 300;¶¶daysBrokenList := [];¶¶Repeat(numberOfTrials)¶{¶    daysBroken := 0;¶    ¶    Repeat(365)¶    {¶        carA := RandomPickWeighted([["BROKEN", 20/100],["RUNNING", 80/100]]);¶        ¶        carB := RandomPickWeighted([["BROKEN", 25/100],["RUNNING", 75/100]]);¶        ¶        carC := RandomPickWeighted([["BROKEN", 35/100],["RUNNING", 65/100]]);¶¶        If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶        {¶            daysBroken++;¶        }¶    }¶    ¶    Append!(daysBrokenList, daysBroken);¶¶}¶¶Echo("The average days that Bill is without a car is:", NM(Mean(daysBrokenList)));
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 04:04:21.397",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Program 3",mpversion=".259",preserve="false"¶      Result: Evaluation timeout exceeded or user halted evaluation. Error on or before line 593 starting at index 69.¶      ¶      Side Effects:¶      Probability of having all three cars broken at once on any given day 0.01 ¶      ¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 3",sequence="38",timestamp="2018-12-06 04:04:39.855",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 500;¶¶daysBroken := 0;¶¶Repeat(numberOfTrials)¶{¶    carA := RandomPickWeighted([["BROKEN", 20/100], ["RUNNING", 80/100]]);¶ ¶    carB := RandomPickWeighted([["BROKEN", 25/100], ["RUNNING", 75/100]]);¶    ¶    carC := RandomPickWeighted([["BROKEN", 35/100], ["RUNNING", 65/100]]);¶    ¶    If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶    {¶        daysBroken++;¶    }¶}¶¶Echo("Probability of having all three cars broken at once on any given day ", NM(daysBroken/ numberOfTrials));¶¶//Part 2¶¶numberOfTrials := 500;¶¶daysBrokenList := [];¶¶Repeat(numberOfTrials)¶{¶    daysBroken := 0;¶    ¶    Repeat(365)¶    {¶        carA := RandomPickWeighted([["BROKEN", 20/100],["RUNNING", 80/100]]);¶        ¶        carB := RandomPickWeighted([["BROKEN", 25/100],["RUNNING", 75/100]]);¶        ¶        carC := RandomPickWeighted([["BROKEN", 35/100],["RUNNING", 65/100]]);¶¶        If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶        {¶            daysBroken++;¶        }¶    }¶    ¶    Append!(daysBrokenList, daysBroken);¶¶}¶¶Echo("The average days that Bill is without a car is:", NM(Mean(daysBrokenList)));
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 04:05:51.422",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Program 3",mpversion=".259",preserve="false"¶      Result: User halted evaluation. Error on or before line 593 starting at index 49.¶      ¶      Side Effects:¶      Probability of having all three cars broken at once on any given day 0.022 ¶      ¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 3",sequence="39",timestamp="2018-12-06 04:06:05.174",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 500;¶¶daysBroken := 0;¶¶Repeat(numberOfTrials)¶{¶    carA := RandomPickWeighted([["BROKEN", 20/100], ["RUNNING", 80/100]]);¶ ¶    carB := RandomPickWeighted([["BROKEN", 25/100], ["RUNNING", 75/100]]);¶    ¶    carC := RandomPickWeighted([["BROKEN", 35/100], ["RUNNING", 65/100]]);¶    ¶    If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶    {¶        daysBroken++;¶    }¶}¶¶Echo("Probability of having all three cars broken at once on any given day ", NM(daysBroken/ numberOfTrials));¶¶//Part 2¶¶numberOfTrials := 100;¶¶daysBrokenList := [];¶¶Repeat(numberOfTrials)¶{¶    daysBroken := 0;¶    ¶    Repeat(365)¶    {¶        carA := RandomPickWeighted([["BROKEN", 20/100],["RUNNING", 80/100]]);¶        ¶        carB := RandomPickWeighted([["BROKEN", 25/100],["RUNNING", 75/100]]);¶        ¶        carC := RandomPickWeighted([["BROKEN", 35/100],["RUNNING", 65/100]]);¶¶        If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶        {¶            daysBroken++;¶        }¶    }¶    ¶    Append!(daysBrokenList, daysBroken);¶¶}¶¶Echo("The average days that Bill is without a car is:", NM(Mean(daysBrokenList)));
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 04:06:35.366",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Program 3",mpversion=".259",preserve="false"¶      Result:  Error: Evaluation timeout exceeded or user halted evaluation.  Error on or before line 595 starting at index 16.¶      ¶      Side Effects:¶      Probability of having all three cars broken at once on any given day 0.016 ¶      ¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 3",sequence="40",timestamp="2018-12-06 04:07:00.954",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+¶numberOfTrials := 500;¶¶daysBroken := 0;¶¶Repeat(numberOfTrials)¶{¶    carA := RandomPickWeighted([["BROKEN", 20/100], ["RUNNING", 80/100]]);¶ ¶    carB := RandomPickWeighted([["BROKEN", 25/100], ["RUNNING", 75/100]]);¶    ¶    carC := RandomPickWeighted([["BROKEN", 35/100], ["RUNNING", 65/100]]);¶    ¶    If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶    {¶        daysBroken++;¶    }¶}¶¶Echo("Probability of having all three cars broken at once on any given day ", NM(daysBroken/ numberOfTrials));¶¶//Part 2¶¶numberOfTrials := 10;¶¶daysBrokenList := [];¶¶Repeat(numberOfTrials)¶{¶    daysBroken := 0;¶    ¶    Repeat(365)¶    {¶        carA := RandomPickWeighted([["BROKEN", 20/100],["RUNNING", 80/100]]);¶        ¶        carB := RandomPickWeighted([["BROKEN", 25/100],["RUNNING", 75/100]]);¶        ¶        carC := RandomPickWeighted([["BROKEN", 35/100],["RUNNING", 65/100]]);¶¶        If(carA =? "BROKEN" &? carB =? "BROKEN" &? carC =? "BROKEN")¶        {¶            daysBroken++;¶        }¶    }¶    ¶    Append!(daysBrokenList, daysBroken);¶¶}¶¶Echo("The average days that Bill is without a car is:", NM(Mean(daysBrokenList)));
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 04:11:02.605",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+numberOfTrials := 100;¶¶numberOfChildren := 6;¶¶numberOfGirls := 2;¶¶twoGirlsCounter := 0;¶¶girlProbability := 49/100;¶¶boyProbability := 51/100;¶¶Repeat(numberOfTrials)¶    {¶     //Create a random list of simulated children.¶     ¶     childrenList := BuildList(RandomPickWeighted(¶     [[_GIRL,girlProbability], [_BOY,boyProbability]]),¶     var,1,numberOfChildren,1);¶     ¶     //Print the list of simulated children (comment¶     //this line out for a large number of trials).¶     ¶     Write(childrenList);¶    ¶     /*¶     If the list contains 3 boys, increment the three¶     boys counter.¶     */¶     ¶     If(Count(childrenList, _GIRL) =? numberOfGirls)¶     {¶         twoGirlsCounter++;¶         ¶         WriteString(" - ");¶         ¶         Write(numberOfGirls);¶         ¶         WriteString(" girls.");¶     }¶    ¶     NewLine();¶}¶NewLine();¶¶Echo("The number of trials is: ", numberOfTrials);¶¶Echo("The number of children is: ", numberOfChildren);¶¶Echo("The number of trials that have 2 girls: ",¶ twoGirlsCounter, "/ ", numberOfTrials);¶ ¶Echo("The probability of having 2 girls: ",¶ NM(twoGirlsCounter/numberOfTrials) );
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 04:13:41.996",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+Flips
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 04:14:46.598",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+2 girls
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 4",sequence="41",timestamp="2018-12-06 04:19:16.824",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+//What is the probability when flipping 4 coins all come up as heads?¶numberOfTrials := 100;¶¶numberOfFlips := 4;¶¶numberOfHeads := 4;¶¶fourHeadsCounter := 0;¶¶headsProbability := 50/100;¶¶tailsProbability := 50/100;¶¶Repeat(numberOfTrials)¶    {¶     //Create a random list of simulated children.¶     ¶     flipsList := BuildList(RandomPickWeighted(¶     [[_HEADS,headsProbability], [_TAILS,tailsProbability]]),¶     var,1,numberOfFlips,1);¶     ¶     //Print the list of simulated children (comment¶     //this line out for a large number of trials).¶     ¶     Write(flipsList);¶    ¶     /*¶     If the list contains 3 boys, increment the three¶     boys counter.¶     */¶     ¶     If(Count(flipsList, _HEADS) =? numberOfHeads)¶     {¶         fourHeadsCounter++;¶         ¶         WriteString(" - ");¶         ¶         Write(numberOfHeads);¶         ¶         WriteString(" heads.");¶     }¶    ¶     NewLine();¶}¶NewLine();¶¶Echo("The number of trials is: ", numberOfTrials);¶¶Echo("The number of flips is: ", numberOfFlips);¶¶Echo("The number of trials that have 4 heads: ",¶ twoHeadsCounter, "/ ", numberOfTrials);¶ ¶Echo("The probability of having 4 heads: ",¶ NM(twoGirlsCounter/numberOfTrials) );
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 04:19:17.504",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Program 4",mpversion=".259",preserve="false"¶      Result: The variable <twoHeadsCounter> does not have a value assigned to it.  Error on or before line 691 starting at index 1.¶      ¶      Side Effects:¶      [_TAILS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_TAILS,_TAILS,_TAILS,_TAILS]¶      [_TAILS,_TAILS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_TAILS,_TAILS,_HEADS,_TAILS]¶      [_TAILS,_TAILS,_TAILS,_HEADS]¶      [_TAILS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_TAILS,_HEADS,_HEADS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_TAILS,_HEADS,_TAILS,_HEADS]¶      [_TAILS,_TAILS,_HEADS,_HEADS]¶      [_TAILS,_HEADS,_HEADS,_TAILS]¶      [_TAILS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_TAILS,_HEADS,_TAILS,_TAILS]¶      [_TAILS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_TAILS]¶      [_TAILS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_TAILS,_HEADS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_TAILS]¶      [_TAILS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_TAILS,_HEADS,_HEADS,_HEADS]¶      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_TAILS,_TAILS,_TAILS,_TAILS]¶      [_TAILS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_TAILS,_TAILS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_TAILS]¶      [_TAILS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_TAILS]¶      [_TAILS,_TAILS,_HEADS,_TAILS]¶      [_TAILS,_HEADS,_TAILS,_HEADS]¶      [_TAILS,_TAILS,_HEADS,_TAILS]¶      [_TAILS,_HEADS,_HEADS,_HEADS]¶      [_HEADS,_TAILS,_TAILS,_TAILS]¶      [_TAILS,_TAILS,_HEADS,_HEADS]¶      [_TAILS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_TAILS]¶      [_TAILS,_HEADS,_TAILS,_HEADS]¶      [_TAILS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_TAILS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_TAILS,_TAILS]¶      [_TAILS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_TAILS,_TAILS,_TAILS,_TAILS]¶      [_TAILS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_TAILS,_HEADS,_HEADS,_TAILS]¶      [_TAILS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.¶      [_TAILS,_TAILS,_TAILS,_HEADS]¶      [_TAILS,_HEADS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_TAILS,_HEADS,_HEADS,_HEADS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_TAILS,_TAILS,_TAILS,_TAILS]¶      [_TAILS,_TAILS,_TAILS,_HEADS]¶      [_TAILS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_TAILS,_HEADS,_TAILS,_HEADS]¶      [_TAILS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_TAILS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_TAILS,_HEADS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_TAILS,_HEADS,_HEADS,_HEADS]¶      ¶      The number of trials is: 100 ¶      The number of flips is: 4 ¶      ¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 4",sequence="42",timestamp="2018-12-06 04:19:30.231",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+//What is the probability when flipping 4 coins all come up as heads?¶numberOfTrials := 100;¶¶numberOfFlips := 4;¶¶numberOfHeads := 4;¶¶fourHeadsCounter := 0;¶¶headsProbability := 50/100;¶¶tailsProbability := 50/100;¶¶Repeat(numberOfTrials)¶    {¶     //Create a random list of simulated children.¶     ¶     flipsList := BuildList(RandomPickWeighted(¶     [[_HEADS,headsProbability], [_TAILS,tailsProbability]]),¶     var,1,numberOfFlips,1);¶     ¶     //Print the list of simulated children (comment¶     //this line out for a large number of trials).¶     ¶     Write(flipsList);¶    ¶     /*¶     If the list contains 3 boys, increment the three¶     boys counter.¶     */¶     ¶     If(Count(flipsList, _HEADS) =? numberOfHeads)¶     {¶         fourHeadsCounter++;¶         ¶         WriteString(" - ");¶         ¶         Write(numberOfHeads);¶         ¶         WriteString(" heads.");¶     }¶    ¶     NewLine();¶}¶NewLine();¶¶Echo("The number of trials is: ", numberOfTrials);¶¶Echo("The number of flips is: ", numberOfFlips);¶¶Echo("The number of trials that have 4 heads: ",¶ FourHeadsCounter, "/ ", numberOfTrials);¶ ¶Echo("The probability of having 4 heads: ",¶ NM(twoGirlsCounter/numberOfTrials) );
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 04:19:30.916",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Program 4",mpversion=".259",preserve="false"¶      Result: The variable <FourHeadsCounter> does not have a value assigned to it.  Error on or before line 691 starting at index 1.¶      ¶      Side Effects:¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_TAILS,_HEADS,_HEADS,_HEADS]¶      [_TAILS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_TAILS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_TAILS,_TAILS,_HEADS,_HEADS]¶      [_TAILS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_TAILS,_HEADS,_HEADS,_TAILS]¶      [_TAILS,_HEADS,_TAILS,_TAILS]¶      [_TAILS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_TAILS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_TAILS,_TAILS]¶      [_TAILS,_TAILS,_HEADS,_TAILS]¶      [_TAILS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_TAILS,_TAILS]¶      [_TAILS,_TAILS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_TAILS,_TAILS]¶      [_TAILS,_HEADS,_TAILS,_TAILS]¶      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.¶      [_TAILS,_HEADS,_HEADS,_TAILS]¶      [_TAILS,_TAILS,_TAILS,_TAILS]¶      [_TAILS,_HEADS,_TAILS,_HEADS]¶      [_TAILS,_TAILS,_TAILS,_TAILS]¶      [_TAILS,_TAILS,_TAILS,_TAILS]¶      [_TAILS,_TAILS,_HEADS,_HEADS]¶      [_TAILS,_TAILS,_HEADS,_HEADS]¶      [_TAILS,_TAILS,_TAILS,_TAILS]¶      [_TAILS,_HEADS,_HEADS,_HEADS]¶      [_TAILS,_HEADS,_TAILS,_TAILS]¶      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.¶      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.¶      [_TAILS,_HEADS,_HEADS,_HEADS]¶      [_TAILS,_TAILS,_TAILS,_HEADS]¶      [_TAILS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_TAILS,_TAILS]¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_TAILS,_TAILS,_TAILS,_TAILS]¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_TAILS,_TAILS]¶      [_TAILS,_TAILS,_HEADS,_HEADS]¶      [_TAILS,_HEADS,_TAILS,_TAILS]¶      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.¶      [_TAILS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_TAILS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.¶      [_TAILS,_HEADS,_HEADS,_HEADS]¶      [_TAILS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_TAILS,_HEADS,_TAILS,_TAILS]¶      [_TAILS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_TAILS]¶      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.¶      [_TAILS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_TAILS,_TAILS,_HEADS,_HEADS]¶      [_TAILS,_HEADS,_TAILS,_TAILS]¶      [_TAILS,_HEADS,_TAILS,_TAILS]¶      [_TAILS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_TAILS,_TAILS]¶      [_TAILS,_HEADS,_TAILS,_TAILS]¶      [_TAILS,_TAILS,_TAILS,_TAILS]¶      [_TAILS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_TAILS,_HEADS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_TAILS,_HEADS,_HEADS,_HEADS]¶      [_TAILS,_HEADS,_HEADS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_TAILS,_HEADS,_TAILS,_HEADS]¶      [_TAILS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_TAILS]¶      ¶      The number of trials is: 100 ¶      The number of flips is: 4 ¶      ¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 4",sequence="43",timestamp="2018-12-06 04:20:03.588",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+//What is the probability when flipping 4 coins all come up as heads?¶numberOfTrials := 100;¶¶numberOfFlips := 4;¶¶numberOfHeads := 4;¶¶fourHeadsCounter := 0;¶¶headsProbability := 50/100;¶¶tailsProbability := 50/100;¶¶Repeat(numberOfTrials)¶    {¶     //Create a random list of simulated children.¶     ¶     flipsList := BuildList(RandomPickWeighted(¶     [[_HEADS,headsProbability], [_TAILS,tailsProbability]]),¶     var,1,numberOfFlips,1);¶     ¶     //Print the list of simulated children (comment¶     //this line out for a large number of trials).¶     ¶     Write(flipsList);¶    ¶     /*¶     If the list contains 3 boys, increment the three¶     boys counter.¶     */¶     ¶     If(Count(flipsList, _HEADS) =? numberOfHeads)¶     {¶         fourHeadsCounter++;¶         ¶         WriteString(" - ");¶         ¶         Write(numberOfHeads);¶         ¶         WriteString(" heads.");¶     }¶    ¶     NewLine();¶}¶NewLine();¶¶Echo("The number of trials is: ", numberOfTrials);¶¶Echo("The number of flips is: ", numberOfFlips);¶¶Echo("The number of trials that have 4 heads: ", fourHeadsCounter, "/ ", numberOfTrials);¶ ¶Echo("The probability of having 4 heads: ", NM(twoGirlsCounter/numberOfTrials) );
+
+%/info
+
+%info,subtype="paste",timestamp="2018-12-06 04:20:04.272",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",mpversion=".259"
+    %error,parent="Program 4",mpversion=".259",preserve="false"¶      Result:  Error: The variable <twoGirlsCounter> does not have a value assigned to it.   Error on or before line 692 starting at index 62.¶      ¶      Side Effects:¶      [_TAILS,_HEADS,_HEADS,_TAILS]¶      [_TAILS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_TAILS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.¶      [_TAILS,_HEADS,_HEADS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_TAILS,_TAILS,_HEADS,_TAILS]¶      [_TAILS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_TAILS,_TAILS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_TAILS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_TAILS,_HEADS,_HEADS,_HEADS]¶      [_TAILS,_HEADS,_HEADS,_HEADS]¶      [_TAILS,_HEADS,_TAILS,_HEADS]¶      [_TAILS,_HEADS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_TAILS,_TAILS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_TAILS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_TAILS]¶      [_TAILS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_TAILS]¶      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.¶      [_TAILS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_TAILS,_TAILS]¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_TAILS,_TAILS,_TAILS,_TAILS]¶      [_HEADS,_HEADS,_TAILS,_TAILS]¶      [_HEADS,_HEADS,_TAILS,_TAILS]¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_TAILS,_HEADS,_HEADS,_HEADS]¶      [_TAILS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.¶      [_TAILS,_HEADS,_HEADS,_HEADS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_TAILS,_TAILS,_HEADS,_TAILS]¶      [_TAILS,_HEADS,_TAILS,_HEADS]¶      [_TAILS,_TAILS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_TAILS]¶      [_HEADS,_HEADS,_HEADS,_HEADS] - 4 heads.¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_TAILS,_TAILS,_HEADS,_HEADS]¶      [_TAILS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_TAILS,_HEADS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_TAILS]¶      [_TAILS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_TAILS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_TAILS,_TAILS,_HEADS,_TAILS]¶      [_TAILS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_TAILS,_HEADS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_TAILS,_TAILS]¶      [_HEADS,_TAILS,_HEADS,_HEADS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_TAILS,_HEADS,_HEADS,_HEADS]¶      [_TAILS,_HEADS,_HEADS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_HEADS]¶      [_TAILS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_HEADS,_TAILS]¶      [_TAILS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_TAILS,_TAILS,_HEADS]¶      [_HEADS,_HEADS,_TAILS,_TAILS]¶      [_TAILS,_HEADS,_TAILS,_TAILS]¶      [_TAILS,_HEADS,_TAILS,_HEADS]¶      [_TAILS,_TAILS,_HEADS,_TAILS]¶      ¶      The number of trials is: 100 ¶      The number of flips is: 4 ¶      The number of trials that have 4 heads: 5 / 100 ¶      ¶.   %/error
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 4",sequence="44",timestamp="2018-12-06 04:20:19.305",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+//What is the probability when flipping 4 coins all come up as heads?¶numberOfTrials := 100;¶¶numberOfFlips := 4;¶¶numberOfHeads := 4;¶¶fourHeadsCounter := 0;¶¶headsProbability := 50/100;¶¶tailsProbability := 50/100;¶¶Repeat(numberOfTrials)¶    {¶     //Create a random list of simulated children.¶     ¶     flipsList := BuildList(RandomPickWeighted(¶     [[_HEADS,headsProbability], [_TAILS,tailsProbability]]),¶     var,1,numberOfFlips,1);¶     ¶     //Print the list of simulated children (comment¶     //this line out for a large number of trials).¶     ¶     Write(flipsList);¶    ¶     /*¶     If the list contains 3 boys, increment the three¶     boys counter.¶     */¶     ¶     If(Count(flipsList, _HEADS) =? numberOfHeads)¶     {¶         fourHeadsCounter++;¶         ¶         WriteString(" - ");¶         ¶         Write(numberOfHeads);¶         ¶         WriteString(" heads.");¶     }¶    ¶     NewLine();¶}¶NewLine();¶¶Echo("The number of trials is: ", numberOfTrials);¶¶Echo("The number of flips is: ", numberOfFlips);¶¶Echo("The number of trials that have 4 heads: ", fourHeadsCounter, "/ ", numberOfTrials);¶ ¶Echo("The probability of having 4 heads: ", NM(fourHeadsCounter/numberOfTrials) );
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 4",sequence="45",timestamp="2018-12-06 04:20:39.902",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+//What is the probability when flipping 4 coins and having them all come up as heads?¶numberOfTrials := 100;¶¶numberOfFlips := 4;¶¶numberOfHeads := 4;¶¶fourHeadsCounter := 0;¶¶headsProbability := 50/100;¶¶tailsProbability := 50/100;¶¶Repeat(numberOfTrials)¶    {¶     //Create a random list of simulated children.¶     ¶     flipsList := BuildList(RandomPickWeighted(¶     [[_HEADS,headsProbability], [_TAILS,tailsProbability]]),¶     var,1,numberOfFlips,1);¶     ¶     //Print the list of simulated children (comment¶     //this line out for a large number of trials).¶     ¶     Write(flipsList);¶    ¶     /*¶     If the list contains 3 boys, increment the three¶     boys counter.¶     */¶     ¶     If(Count(flipsList, _HEADS) =? numberOfHeads)¶     {¶         fourHeadsCounter++;¶         ¶         WriteString(" - ");¶         ¶         Write(numberOfHeads);¶         ¶         WriteString(" heads.");¶     }¶    ¶     NewLine();¶}¶NewLine();¶¶Echo("The number of trials is: ", numberOfTrials);¶¶Echo("The number of flips is: ", numberOfFlips);¶¶Echo("The number of trials that have 4 heads: ", fourHeadsCounter, "/ ", numberOfTrials);¶ ¶Echo("The probability of having 4 heads: ", NM(fourHeadsCounter/numberOfTrials) );
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Program 4",sequence="46",timestamp="2018-12-06 04:20:45.408",username="Kyle Johnson",hostname="DESKTOP-HU9QBGM",hostaddresses="192.168.1.3",mpversion=".259"
+//What is the probability when flipping 4 coins and having them all come up as heads?¶numberOfTrials := 100;¶¶numberOfFlips := 4;¶¶numberOfHeads := 4;¶¶fourHeadsCounter := 0;¶¶headsProbability := 50/100;¶¶tailsProbability := 50/100;¶¶Repeat(numberOfTrials)¶    {¶     //Create a random list of simulated children.¶     ¶     flipsList := BuildList(RandomPickWeighted(¶     [[_HEADS,headsProbability], [_TAILS,tailsProbability]]),¶     var,1,numberOfFlips,1);¶     ¶     //Print the list of simulated children (comment¶     //this line out for a large number of trials).¶     ¶     Write(flipsList);¶    ¶     /*¶     If the list contains 3 boys, increment the three¶     boys counter.¶     */¶     ¶     If(Count(flipsList, _HEADS) =? numberOfHeads)¶     {¶         fourHeadsCounter++;¶         ¶         WriteString(" - ");¶         ¶         Write(numberOfHeads);¶         ¶         WriteString(" heads.");¶     }¶    ¶     NewLine();¶}¶NewLine();¶¶Echo("The number of trials is: ", numberOfTrials);¶¶Echo("The number of flips is: ", numberOfFlips);¶¶Echo("The number of trials that have 4 heads: ", fourHeadsCounter, "/ ", numberOfTrials);¶ ¶Echo("The probability of having 4 heads: ", NM(fourHeadsCounter/numberOfTrials) );
+
+%/info
+

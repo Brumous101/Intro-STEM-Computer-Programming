@@ -1,0 +1,214 @@
+v.04
+
+identify_points_practice.mpws
+
+INSTRUCTIONS
+
+1) Evaluate each of the following folds once. Each
+fold (except Problem 0) will launch a GUI-based
+application that will have you practice identifying
+the positions of points.
+
+2) Do not delete ANY of the output folds that are
+created during the evaluation of these folds. 
+
+3) If the X coordinate of the highlighted point is
+past the middle of the X axis, then the coordinate
+must be specified from the right side of the
+rectangle (for example, x + width - 2).
+
+4) If the Y coordinate of the highlighted point is
+past the middle of the Y axis, then the coordinate
+must be specified from the top of the rectangle
+(for example, x + height - 2).
+
+
+
+%group,name="Problem 0",description="Programmer's information."
+========================================================================================================
+Problem 0
+
+In the following fold, replace "xxx" with your
+first name, replace "yyy" with your last name, and
+replace "000000" with your SSU ID number:
+
+%mathpiper,name="Problem 0",subtype="problem",unassign_all="true",truncate="6000",timeout="5000"
+
+[
+["firstName", "Kyle"],
+["lastName", "Johnson"],
+["ssuIDNumber", "264694"],
+];
+
+%/mathpiper
+
+    %output,parent="Problem 0",mpversion=".259",preserve="false"
+      Result: [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]]
+.   %/output
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 0"
+
+LocalSymbols(foldResult)
+{    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .259", 1, True)
+    {
+        StringToNumber(Version()) >=? .259;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+    FoldGrade("The code does not produce side effect output", 1, False)
+    {
+        Local(procedureNames);
+        
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'firstName' a string that is not 'xxx'", 1, True)
+    {
+        String?(foldResult["firstName"]) &? foldResult["firstName"] !=? "xxx";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'lastName' is a string that is not 'yyy'", 1, True)
+    {
+        String?(foldResult["lastName"]) &? foldResult["lastName"] !=? "yyy";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'ssuIDNumber' is not '000000'", 1, True)
+    {
+        foldResult["ssuIDNumber"] !=? "000000" &? foldResult["ssuIDNumber"] !=? 0;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 0",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]];
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .259. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The variable 'firstName' a string that is not 'xxx'. (1/1)
+        PASS: The variable 'lastName' is a string that is not 'yyy'. (1/1)
+        PASS: The variable 'ssuIDNumber' is not '000000'. (1/1)
+      
+        13/13 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+========================================================
+Practice 1
+
+%mathpiper,name="practice1",preserve_output="true"
+
+PointSelectPractice(3);
+
+%/mathpiper
+
+    %output,parent="practice1",mpversion=".259",preserve="true"
+      Result: True
+      
+      Side Effects:
+      Correct in a row: 3
+      Correct in a row needed: 3
+      Wrong count: 0
+      
+.   %/output
+
+
+
+
+
+
+
+
+
+
+========================================================
+Practice 2
+
+%mathpiper,name="practice2",preserve_output="true"
+
+PointSelectPractice(3);
+
+%/mathpiper
+
+    %output,parent="practice2",mpversion=".259",preserve="true"
+      Result: True
+      
+      Side Effects:
+      Correct in a row: 3
+      Correct in a row needed: 3
+      Wrong count: 1
+      
+.   %/output
+
+
+
+
+
+
+
+
+
+
+========================================================
+Practice 3
+
+%mathpiper,name="practice3",preserve_output="true"
+
+PointSelectPractice(3);
+
+%/mathpiper
+
+    %output,parent="practice3",mpversion=".259",preserve="true"
+      Result: True
+      
+      Side Effects:
+      Correct in a row: 3
+      Correct in a row needed: 3
+      Wrong count: 0
+      
+.   %/output
+

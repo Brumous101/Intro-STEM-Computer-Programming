@@ -1,0 +1,2700 @@
+v.18
+
+points_patterns_problems_3.mpws
+
+Complete all of the exercises in this worksheet by placing
+the code you write for each problem into the empty fold
+which is provided in each exercise section.
+
+Further information:
+
+- ADDITIONAL VARIABLES CAN BE USED IN YOUR PROGRAMS BEYOND
+THE VARIABLES THAT ARE SPECIFIED IN EACH PROBLEM.
+
+- All variables that are used in procedures must be make
+local to that procedure.
+
+- Do not use the "Echo" or "Write" procedures in your
+programs unless you are using them for debugging. Remove all
+procedures from your code that produce side effects output
+before submitting your worksheet.
+
+- The string "Head" is not equal to the string "HEAD".
+
+- The "truncate" attribute in a fold header limits the
+amount of output that a program will insert into the
+worksheet. This reduces the chances of crashing
+MathPiperIDE.
+
+- The "timeout" attribute in a fold header stops a running
+program after the specified number of milliseconds. This
+prevents programs that contain infinite loops from locking
+up MathPiperIDE.
+
+
+
+
+
+%group,name="Problem 0",description="Programmer's information."
+========================================================================================================
+Problem 0
+
+In the following fold, replace "xxx" with your
+first name, replace "yyy" with your last name, and
+replace "000000" with your SSU ID number:
+
+%mathpiper,name="Problem 0",subtype="problem",unassign_all="true",truncate="6000",timeout="5000"
+
+[
+["firstName", "Kyle"],
+["lastName", "Johnson"],
+["ssuIDNumber", "264694"],
+];
+
+%/mathpiper
+
+    %output,parent="Problem 0",mpversion=".259",preserve="false"
+      Result: [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]]
+.   %/output
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 0"
+
+LocalSymbols(foldResult)
+{    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .259", 1, True)
+    {
+        StringToNumber(Version()) >=? .259;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+    FoldGrade("The code does not produce side effect output", 1, False)
+    {
+        Local(procedureNames);
+        
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'firstName' a string that is not 'xxx'", 1, True)
+    {
+        String?(foldResult["firstName"]) &? foldResult["firstName"] !=? "xxx";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'lastName' is a string that is not 'yyy'", 1, True)
+    {
+        String?(foldResult["lastName"]) &? foldResult["lastName"] !=? "yyy";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'ssuIDNumber' is not '000000'", 1, True)
+    {
+        foldResult["ssuIDNumber"] !=? "000000" &? foldResult["ssuIDNumber"] !=? 0;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 0",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]];
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .259. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The variable 'firstName' a string that is not 'xxx'. (1/1)
+        PASS: The variable 'lastName' is a string that is not 'yyy'. (1/1)
+        PASS: The variable 'ssuIDNumber' is not '000000'. (1/1)
+      
+        13/13 passes
+.   %/output
+
+%/group
+
+
+
+
+
+Use the following procedure in all of the problems
+in this worksheet:
+
+%mathpiper
+
+Procedure("arc", ["centerX", "centerY", "radius", "startAngleDegrees", "endAngleDegrees", "angleStepDegrees","pointCount"])
+{
+    Local(angleDegrees, angleRadians);
+    
+    angleDegrees := startAngleDegrees;
+    
+    While(angleDegrees <=? endAngleDegrees)
+    {
+        angleRadians := angleDegrees * NM(Pi/180);
+        
+        PlotterPoint("A"+ToString(pointCount++), 
+                        centerX + (radius * CosD(angleRadians)), 
+                        centerY + (radius * SinD(angleRadians)));
+        
+        angleDegrees +:= angleStepDegrees;
+    }
+    pointCount;
+}
+PlotterClear();
+
+arc(0,0,1,0,90,5,1);
+
+%/mathpiper
+
+
+
+
+
+
+
+%group,name="Problem 1",description="One 90 degree arc."
+========================================================================================================
+Problem 1
+
+a) Create a no parameter procedure named
+"mainProcedure" that uses a single call to the "arc"
+procedure to draw the points that are shown in
+figure 1. The labels of the plotted points should
+match the labels of the points in the figures.
+This procedure should contain a call to
+PlotterClear().
+
+b) Place the following line of code at the end of
+your code:
+
+mainProcedure();
+
+
+%mathpiper,name="Problem 1",subtype="hint"
+Hint("ClByb2NlZHVyZSgiYXJjIiwgWyJjZW50ZXJYIiwgImNlbnRlclkiLCAicmFkaXVzIiwgInN0YXJ0QW5nbGVEZWdyZWVzIiwgImVuZEFuZ2xlRGVncmVlcyIsICJhbmdsZVN0ZXBEZWdyZWVzIiwicG9pbnRDb3VudCJdKQp7CiAgICBMb2NhbChhbmdsZURlZ3JlZXMsIGFuZ2xlUmFkaWFucyk7CiAgICAKICAgIGFuZ2xlRGVncmVlcyA6PSBzdGFydEFuZ2xlRGVncmVlczsKICAgIAogICAgV2hpbGUoYW5nbGVEZWdyZWVzIDw9PyBlbmRBbmdsZURlZ3JlZXMpCiAgICB7CiAgICAgICAgYW5nbGVSYWRpYW5zIDo9IGFuZ2xlRGVncmVlcyAqIE5NKFBpLzE4MCk7CiAgICAgICAgCiAgICAgICAgUGxvdHRlclBvaW50KCJBIitUb1N0cmluZyhwb2ludENvdW50KyspLCAKICAgICAgICAgICAgICAgICAgICAgICAgY2VudGVyWCArIChyYWRpdXMgKiBDb3NEKGFuZ2xlUmFkaWFucykpLCAKICAgICAgICAgICAgICAgICAgICAgICAgY2VudGVyWSArIChyYWRpdXMgKiBTaW5EKGFuZ2xlUmFkaWFucykpKTsKICAgICAgICAKICAgICAgICBhbmdsZURlZ3JlZXMgKzo9IGFuZ2xlU3RlcERlZ3JlZXM7CiAgICB9CiAgICAKICAgIHBvaW50Q291bnQ7Cn0KCgpQcm9jZWR1cmUoIm1haW5Qcm9jZWR1cmUiLCBbXSkKewogICAgUGxvdHRlckNsZWFyKCk7CiAgICAKICAgIExvY2FsKHBvaW50Q291bnQpOwogICAgCiAgICBwb2ludENvdW50IDo9IDE7CiAgICAKICAgIHBvaW50Q291bnQgOj0gYXJjKDEsIDEsIDUsIDAsIDkwLCA1LCBwb2ludENvdW50KTsKfQoKbWFpblByb2NlZHVyZSgpOwoK");
+%/mathpiper
+
+    %output,parent="Problem 1",mpversion=".259",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 1",subtype="problem",unassign_all="true",truncate="2000",timeout="5000"
+
+Procedure("arc", ["centerX", "centerY", "radius", "startAngleDegrees", "endAngleDegrees", "angleStepDegrees","pointCount"])
+{
+    Local(angleDegrees, angleRadians);
+    
+    angleDegrees := startAngleDegrees;
+    
+    While(angleDegrees <=? endAngleDegrees)
+    {
+        angleRadians := angleDegrees * NM(Pi/180);
+        
+        PlotterPoint("A"+ToString(pointCount++), 
+                        centerX + (radius * CosD(angleRadians)), 
+                        centerY + (radius * SinD(angleRadians)));
+        
+        angleDegrees +:= angleStepDegrees;
+    }
+    pointCount;
+}
+
+PlotterClear();
+
+arc(0,0,1,0,90,5,1);
+
+Procedure("mainProcedure", [])
+{
+    PlotterClear();
+
+    Local(pointCount);
+    
+    pointCount := 1;
+    
+    pointCount := arc(1,1,5,0,90,5, pointCount);
+}
+
+mainProcedure();
+    
+    
+
+%/mathpiper
+
+    %output,parent="Problem 1",mpversion=".259",preserve="false"
+      Result: 20
+.   %/output
+
+
+
+
+
+%mathpiper_grade,name="Problem 1"
+
+FoldGrade("MathPiper version = .259", 1, True)
+{
+    StringToNumber(Version()) >=? .259;
+}
+
+//-----------------------------------------------------------------------------------------
+
+LocalSymbols(pointsMap)
+{    
+    pointsSort(list) :=
+    {
+        Sort(list,Lambda([x,y], StringToNumber(StringSubstring(x[1], 2, Length(x[1]))) <? StringToNumber(StringSubstring(y[1], 2, Length(y[1])))));
+    }
+    
+    pointsMap := [];
+    
+    testPlotterPoint(name, x, y) :=
+    {
+        pointsMap[name] := [x, y];
+    }
+    
+    ?foldCode := Substitute('PlotterPoint, 'testPlotterPoint) ?foldCode;
+    
+    ?foldCode := Substitute('PlotterClear(), ' 'PlotterClear()) ?foldCode;
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("\"mainProcedure()\" is the last expression in the fold", 1, False)
+    {
+        Local(mainPosition);
+        
+        mainPosition := Length(?foldCode[1]);
+    
+        If(Procedure?(?foldCode[1][mainPosition]) &? ?foldCode[1][mainPosition][0] =? 'mainProcedure)
+        {
+            Local(resultMessage);
+            resultMessage := True;
+            If(?foldCode[1][mainPosition] !=? 'mainProcedure())
+            {
+                resultMessage := "The call to \"mainProcedure\" must have zero arguments.";
+            }
+            
+            ?foldCode[1][mainPosition] := ` '('(@ ?foldCode[1][mainPosition]));
+            resultMessage;
+        }
+        Else
+        {
+            False;
+        }
+    
+    }
+            
+    // --------------------------------------------------------
+    
+    {
+        Local(procedures, procedureName, parameters, body);
+        
+        procedures := ProceduresGet(?foldCode);
+        
+        If(procedures !=? [])
+        {
+            { // arc
+            
+                procedureName := "arc";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has seven formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 7;
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+            
+            
+            
+            { // mainProcedure
+            
+                procedureName := "mainProcedure";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has zero formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 0;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One copy of a call to \"PlotterClear\" is present ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"PlotterClear");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One copy of a call to \"arc\" is present ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"arc");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure produces a correct result", 1, True)
+                    {
+                        Local(procedureResult, correctValue);
+                        
+                        correctValue := [["A1",[6.0,1.0]],["A2",[5.980973491,1.435778714]],["A3",[5.924038765,1.868240889]],["A4",[5.829629132,2.294095226]],["A5",[5.698463104,2.710100717]],["A6",[5.531538935,3.113091309]],["A7",[5.330127019,3.500000000]],["A8",[5.095760222,3.867882182]],["A9",[4.830222216,4.213938049]],["A10",[4.535533906,4.535533906]],["A11",[4.213938049,4.830222216]],["A12",[3.867882182,5.095760222]],["A13",[3.500000001,5.330127019]],["A14",[3.113091308,5.531538936]],["A15",[2.710100719,5.698463104]],["A16",[2.294095226,5.829629132]],["A17",[1.868240887,5.924038766]],["A18",[1.435778715,5.980973491]],["A19",[0.9999999990,6.0]]];
+                        
+                        ExceptionCatch(
+                        {
+                            `( Apply(NM(Lambda(@procedure["parameters"], @procedure["body"]), 10), []) );
+                            
+                            procedureResult := pointsSort(pointsMap);
+    
+                            If(procedureResult !=? correctValue)
+                            {
+                                "The following points are not in the correct position: (" + ToString(Difference(correctValue, procedureResult)) + ")";
+                            }
+                            Else
+                            {
+                                True;
+                            }
+                        },
+                        "",
+                        "Exception: " + ExceptionGet()["message"]);                
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+        }
+        Else
+        {
+            FoldGrade("At least one procedure is defined in the fold", 0, True)
+            {
+                False;
+            }
+        }
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 1",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        Procedure("arc",["centerX","centerY","radius","startAngleDegrees","endAngleDegrees","angleStepDegrees","pointCount"])
+        {
+          Local(angleDegrees,angleRadians);
+      
+          angleDegrees := startAngleDegrees;
+      
+          While(angleDegrees <=? endAngleDegrees)
+          {
+            angleRadians := angleDegrees*NM(Pi/180);
+      
+            PlotterPoint("A" + ToString(pointCount++ ),centerX + radius*CosD(angleRadians),centerY + radius*SinD(angleRadians));
+      
+            angleDegrees +:= angleStepDegrees;
+          }
+      
+          pointCount;
+        }
+      
+        PlotterClear();
+      
+        arc(0,0,1,0,90,5,1);
+      
+        Procedure("mainProcedure",[])
+        {
+          PlotterClear();
+      
+          Local(pointCount);
+      
+          pointCount := 1;
+      
+          pointCount := arc(1,1,5,0,90,5,pointCount);
+        }
+      
+        mainProcedure();
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: MathPiper version = .259. (1/1)
+        PASS: "mainProcedure()" is the last expression in the fold. (1/1)
+      arc:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure has seven formal parameters. (1/1)
+      mainProcedure:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure has zero formal parameters. (1/1)
+        PASS: One copy of a call to "PlotterClear" is present . (1/1)
+        PASS: One copy of a call to "arc" is present . (1/1)
+        PASS: The procedure produces a correct result. (1/1)
+      
+        16/16 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+%group,name="Problem 2",description="Two 90 degree arcs."
+========================================================================================================
+Problem 2
+
+a) Create a no parameter procedure named
+"mainProcedure" that uses two calls to the "arc"
+procedure to draw the points that are shown in
+figure 2. The labels of the plotted points should
+match the labels of the points in the figures.
+This procedure should contain a call to
+PlotterClear().
+
+b) Place the following line of code at the end of
+your code:
+
+mainProcedure();
+
+
+%mathpiper,name="Problem 2",subtype="hint"
+Hint("ClByb2NlZHVyZSgiYXJjIiwgWyJjZW50ZXJYIiwgImNlbnRlclkiLCAicmFkaXVzIiwgInN0YXJ0QW5nbGVEZWdyZWVzIiwgImVuZEFuZ2xlRGVncmVlcyIsICJhbmdsZVN0ZXBEZWdyZWVzIiwicG9pbnRDb3VudCJdKQp7CiAgICBMb2NhbChhbmdsZURlZ3JlZXMsIGFuZ2xlUmFkaWFucyk7CiAgICAKICAgIGFuZ2xlRGVncmVlcyA6PSBzdGFydEFuZ2xlRGVncmVlczsKICAgIAogICAgV2hpbGUoYW5nbGVEZWdyZWVzIDw9PyBlbmRBbmdsZURlZ3JlZXMpCiAgICB7CiAgICAgICAgYW5nbGVSYWRpYW5zIDo9IGFuZ2xlRGVncmVlcyAqIE5NKFBpLzE4MCk7CiAgICAgICAgCiAgICAgICAgUGxvdHRlclBvaW50KCJBIitUb1N0cmluZyhwb2ludENvdW50KyspLCAKICAgICAgICAgICAgICAgICAgICAgICAgY2VudGVyWCArIHJhZGl1cyAqIENvc0QoYW5nbGVSYWRpYW5zKSwgCiAgICAgICAgICAgICAgICAgICAgICAgIGNlbnRlclkgKyByYWRpdXMgKiBTaW5EKGFuZ2xlUmFkaWFucykpOwogICAgICAgIAogICAgICAgIGFuZ2xlRGVncmVlcyArOj0gYW5nbGVTdGVwRGVncmVlczsKICAgIH0KICAgIAogICAgcG9pbnRDb3VudDsKfQoKClByb2NlZHVyZSgibWFpblByb2NlZHVyZSIsIFtdKQp7CiAgICBQbG90dGVyQ2xlYXIoKTsKICAgIAogICAgTG9jYWwocG9pbnRDb3VudCk7CiAgICAKICAgIHBvaW50Q291bnQgOj0gMTsKICAgIAogICAgcG9pbnRDb3VudCA6PSBhcmMoMSwgMSwgNSwgMCwgOTAsIDUsIHBvaW50Q291bnQpOwogICAgCiAgICBwb2ludENvdW50IDo9IGFyYygxLCAxLCA2LCAwLCA5MCwgNSwgcG9pbnRDb3VudCk7Cn0KCm1haW5Qcm9jZWR1cmUoKTsKCg==");
+%/mathpiper
+
+    %output,parent="Problem 2",mpversion=".259",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 2",subtype="problem",unassign_all="true",truncate="2000",timeout="5000"
+
+Procedure("arc", ["centerX", "centerY", "radius", "startAngleDegrees", "endAngleDegrees", "angleStepDegrees","pointCount"])
+{
+    Local(angleDegrees, angleRadians);
+    
+    angleDegrees := startAngleDegrees;
+    
+    While(angleDegrees <=? endAngleDegrees)
+    {
+        angleRadians := angleDegrees * NM(Pi/180);
+        
+        PlotterPoint("A"+ToString(pointCount++), 
+                        centerX + (radius * CosD(angleRadians)), 
+                        centerY + (radius * SinD(angleRadians)));
+        
+        angleDegrees +:= angleStepDegrees;
+    }
+    pointCount;
+}
+
+Procedure("mainProcedure", [])
+{
+    Local(pointCount);
+    
+    PlotterClear();
+    
+    pointCount := 1;
+    
+    pointCount := arc(1,1,5,0,90,5,pointCount);
+    
+    pointCount := arc(1,1,6,0,90,5,pointCount);
+}
+
+mainProcedure();
+
+
+%/mathpiper
+
+    %output,parent="Problem 2",mpversion=".259",preserve="false"
+      Result: 39
+.   %/output
+
+
+
+
+
+%mathpiper_grade,name="Problem 2"
+
+FoldGrade("MathPiper version = .259", 1, True)
+{
+    StringToNumber(Version()) >=? .259;
+}
+
+//-----------------------------------------------------------------------------------------
+
+LocalSymbols(pointsMap)
+{    
+    pointsSort(list) :=
+    {
+        Sort(list,Lambda([x,y], StringToNumber(StringSubstring(x[1], 2, Length(x[1]))) <? StringToNumber(StringSubstring(y[1], 2, Length(y[1])))));
+    }
+    
+    pointsMap := [];
+    
+    testPlotterPoint(name, x, y) :=
+    {
+        pointsMap[name] := [x, y];
+    }
+    
+    ?foldCode := Substitute('PlotterPoint, 'testPlotterPoint) ?foldCode;
+    
+    ?foldCode := Substitute('PlotterClear(), ' 'PlotterClear()) ?foldCode;
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("\"mainProcedure()\" is the last expression in the fold", 1, False)
+    {
+        Local(mainPosition);
+        
+        mainPosition := Length(?foldCode[1]);
+    
+        If(Procedure?(?foldCode[1][mainPosition]) &? ?foldCode[1][mainPosition][0] =? 'mainProcedure)
+        {
+            Local(resultMessage);
+            resultMessage := True;
+            If(?foldCode[1][mainPosition] !=? 'mainProcedure())
+            {
+                resultMessage := "The call to \"mainProcedure\" must have zero arguments.";
+            }
+            
+            ?foldCode[1][mainPosition] := ` '('(@ ?foldCode[1][mainPosition]));
+            resultMessage;
+        }
+        Else
+        {
+            False;
+        }
+    
+    }
+            
+    // --------------------------------------------------------
+    
+    {
+        Local(procedures, procedureName, parameters, body);
+        
+        procedures := ProceduresGet(?foldCode);
+        
+        If(procedures !=? [])
+        {
+            { // arc
+            
+                procedureName := "arc";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has seven formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 7;
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+            
+            
+            
+            { // mainProcedure
+            
+                procedureName := "mainProcedure";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has zero formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 0;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One copy of a call to \"PlotterClear\" is present ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"PlotterClear");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("Two copies of a call to \"arc\" are present ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"arc");
+                        procedureCount =? 2;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure produces a correct result", 1, True)
+                    {
+                        Local(procedureResult, correctValue);
+                        
+                        correctValue := [["A1",[6.0,1.0]],["A2",[5.980973491,1.435778714]],["A3",[5.924038765,1.868240889]],["A4",[5.829629132,2.294095226]],["A5",[5.698463104,2.710100717]],["A6",[5.531538935,3.113091309]],["A7",[5.330127019,3.500000000]],["A8",[5.095760222,3.867882182]],["A9",[4.830222216,4.213938049]],["A10",[4.535533906,4.535533906]],["A11",[4.213938049,4.830222216]],["A12",[3.867882182,5.095760222]],["A13",[3.500000001,5.330127019]],["A14",[3.113091308,5.531538936]],["A15",[2.710100719,5.698463104]],["A16",[2.294095226,5.829629132]],["A17",[1.868240887,5.924038766]],["A18",[1.435778715,5.980973491]],["A19",[0.9999999990,6.0]],["A20",[7.0,1.0]],["A21",[6.977168189,1.522934457]],["A22",[6.908846518,2.041889066]],["A23",[6.795554958,2.552914271]],["A24",[6.638155725,3.052120860]],["A25",[6.437846722,3.535709570]],["A26",[6.196152423,4.000000000]],["A27",[5.914912266,4.441458618]],["A28",[5.596266659,4.856725658]],["A29",[5.242640687,5.242640687]],["A30",[4.856725658,5.596266659]],["A31",[4.441458618,5.914912266]],["A32",[4.000000001,6.196152422]],["A33",[3.535709570,6.437846723]],["A34",[3.052120862,6.638155724]],["A35",[2.552914271,6.795554958]],["A36",[2.041889064,6.908846519]],["A37",[1.522934458,6.977168189]],["A38",[0.9999999988,7.0]]];
+                        
+                        ExceptionCatch(
+                        {
+                            `( Apply(NM(Lambda(@procedure["parameters"], @procedure["body"]), 10), []) );
+                            
+                            procedureResult := pointsSort(pointsMap);
+    
+                            If(procedureResult !=? correctValue)
+                            {
+                                "The following points are not in the correct position: (" + ToString(Difference(correctValue, procedureResult)) + ")";
+                            }
+                            Else
+                            {
+                                True;
+                            }
+                        },
+                        "",
+                        "Exception: " + ExceptionGet()["message"]);                
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+        }
+        Else
+        {
+            FoldGrade("At least one procedure is defined in the fold", 0, True)
+            {
+                False;
+            }
+        }
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 2",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        Procedure("arc",["centerX","centerY","radius","startAngleDegrees","endAngleDegrees","angleStepDegrees","pointCount"])
+        {
+          Local(angleDegrees,angleRadians);
+      
+          angleDegrees := startAngleDegrees;
+      
+          While(angleDegrees <=? endAngleDegrees)
+          {
+            angleRadians := angleDegrees*NM(Pi/180);
+      
+            PlotterPoint("A" + ToString(pointCount++ ),centerX + radius*CosD(angleRadians),centerY + radius*SinD(angleRadians));
+      
+            angleDegrees +:= angleStepDegrees;
+          }
+      
+          pointCount;
+        }
+      
+        Procedure("mainProcedure",[])
+        {
+          Local(pointCount);
+      
+          PlotterClear();
+      
+          pointCount := 1;
+      
+          pointCount := arc(1,1,5,0,90,5,pointCount);
+      
+          pointCount := arc(1,1,6,0,90,5,pointCount);
+        }
+      
+        mainProcedure();
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: MathPiper version = .259. (1/1)
+        PASS: "mainProcedure()" is the last expression in the fold. (1/1)
+      arc:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure has seven formal parameters. (1/1)
+      mainProcedure:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure has zero formal parameters. (1/1)
+        PASS: One copy of a call to "PlotterClear" is present . (1/1)
+        PASS: Two copies of a call to "arc" are present . (1/1)
+        PASS: The procedure produces a correct result. (1/1)
+      
+        16/16 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 3",description="Five 90 degree arcs."
+========================================================================================================
+Problem 3
+
+a) Create a no parameter procedure named
+"mainProcedure" that uses a single call to the "arc"
+procedure to draw the points that are shown in
+figure 3. The labels of the plotted points should
+match the labels of the points in the figures.
+This procedure should contain a call to
+PlotterClear().
+
+b) Place the following line of code at the end of
+your code:
+
+mainProcedure();
+
+
+%mathpiper,name="Problem 3",subtype="hint"
+Hint("ClByb2NlZHVyZSgiYXJjIiwgWyJjZW50ZXJYIiwgImNlbnRlclkiLCAicmFkaXVzIiwgInN0YXJ0QW5nbGVEZWdyZWVzIiwgImVuZEFuZ2xlRGVncmVlcyIsICJhbmdsZVN0ZXBEZWdyZWVzIiwicG9pbnRDb3VudCJdKQp7CiAgICBMb2NhbChhbmdsZURlZ3JlZXMsIGFuZ2xlUmFkaWFucyk7CiAgICAKICAgIGFuZ2xlRGVncmVlcyA6PSBzdGFydEFuZ2xlRGVncmVlczsKICAgIAogICAgV2hpbGUoYW5nbGVEZWdyZWVzIDw9PyBlbmRBbmdsZURlZ3JlZXMpCiAgICB7CiAgICAgICAgYW5nbGVSYWRpYW5zIDo9IGFuZ2xlRGVncmVlcyAqIE5NKFBpLzE4MCk7CiAgICAgICAgCiAgICAgICAgUGxvdHRlclBvaW50KCJBIitUb1N0cmluZyhwb2ludENvdW50KyspLCAKICAgICAgICAgICAgICAgICAgICAgICAgY2VudGVyWCArIHJhZGl1cyAqIENvc0QoYW5nbGVSYWRpYW5zKSwgCiAgICAgICAgICAgICAgICAgICAgICAgIGNlbnRlclkgKyByYWRpdXMgKiBTaW5EKGFuZ2xlUmFkaWFucykpOwogICAgICAgIAogICAgICAgIGFuZ2xlRGVncmVlcyArOj0gYW5nbGVTdGVwRGVncmVlczsKICAgIH0KICAgIAogICAgcG9pbnRDb3VudDsKfQoKClByb2NlZHVyZSgibWFpblByb2NlZHVyZSIsIFtdKQp7CiAgICBQbG90dGVyQ2xlYXIoKTsKICAgIAogICAgTG9jYWwocG9pbnRDb3VudCk7CiAgICAKICAgIHBvaW50Q291bnQgOj0gMTsKICAgIAogICAgRm9yKHJhZGl1cyA6PSA1LCByYWRpdXMgPD0/IDksIHJhZGl1cyArOj0gMSkKICAgIHsKICAgICAgICBwb2ludENvdW50IDo9IGFyYygxLCAxLCByYWRpdXMsIDAsIDkwLCA1LCBwb2ludENvdW50KTsKICAgIH0KfQoKbWFpblByb2NlZHVyZSgpOwoK");
+%/mathpiper
+
+    %output,parent="Problem 3",mpversion=".259",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 3",subtype="problem",unassign_all="true",truncate="2000",timeout="5000"
+
+Procedure("arc", ["centerX", "centerY", "radius", "startAngleDegrees", "endAngleDegrees", "angleStepDegrees","pointCount"])
+{
+    Local(angleDegrees, angleRadians);
+    
+    angleDegrees := startAngleDegrees;
+    
+    While(angleDegrees <=? endAngleDegrees)
+    {
+        angleRadians := angleDegrees * NM(Pi/180);
+        
+        PlotterPoint("A"+ToString(pointCount++), 
+                        centerX + (radius * CosD(angleRadians)), 
+                        centerY + (radius * SinD(angleRadians)));
+        
+        angleDegrees +:= angleStepDegrees;
+    }
+    pointCount;
+}
+
+Procedure("mainProcedure", [])
+{
+    Local(pointCount, radian);
+    
+    PlotterClear();
+    
+    pointCount := 1;
+    
+    For(radian := 5, radian <=? 9, radian +:= 1)
+    {
+        pointCount := arc(1, 1, radian, 0, 90, 5, pointCount);
+    }
+}
+
+mainProcedure();
+%/mathpiper
+
+    %output,parent="Problem 3",mpversion=".259",preserve="false"
+      Result: 96
+.   %/output
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 3"
+
+FoldGrade("MathPiper version = .259", 1, True)
+{
+    StringToNumber(Version()) >=? .259;
+}
+
+//-----------------------------------------------------------------------------------------
+
+LocalSymbols(pointsMap)
+{    
+    pointsSort(list) :=
+    {
+        Sort(list,Lambda([x,y], StringToNumber(StringSubstring(x[1], 2, Length(x[1]))) <? StringToNumber(StringSubstring(y[1], 2, Length(y[1])))));
+    }
+    
+    pointsMap := [];
+    
+    testPlotterPoint(name, x, y) :=
+    {
+        pointsMap[name] := [x, y];
+    }
+    
+    ?foldCode := Substitute('PlotterPoint, 'testPlotterPoint) ?foldCode;
+    
+    ?foldCode := Substitute('PlotterClear(), ' 'PlotterClear()) ?foldCode;
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("\"mainProcedure()\" is the last expression in the fold", 1, False)
+    {
+        Local(mainPosition);
+        
+        mainPosition := Length(?foldCode[1]);
+    
+        If(Procedure?(?foldCode[1][mainPosition]) &? ?foldCode[1][mainPosition][0] =? 'mainProcedure)
+        {
+            Local(resultMessage);
+            resultMessage := True;
+            If(?foldCode[1][mainPosition] !=? 'mainProcedure())
+            {
+                resultMessage := "The call to \"mainProcedure\" must have zero arguments.";
+            }
+            
+            ?foldCode[1][mainPosition] := ` '('(@ ?foldCode[1][mainPosition]));
+            resultMessage;
+        }
+        Else
+        {
+            False;
+        }
+    
+    }
+            
+    // --------------------------------------------------------
+    
+    {
+        Local(procedures, procedureName, parameters, body);
+        
+        procedures := ProceduresGet(?foldCode);
+        
+        If(procedures !=? [])
+        {
+            { // arc
+            
+                procedureName := "arc";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has seven formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 7;
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+            
+            
+            
+            { // mainProcedure
+            
+                procedureName := "mainProcedure";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has zero formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 0;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One copy of a call to \"PlotterClear\" is present ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"PlotterClear");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One copy of a call to \"arc\" is present ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"arc");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure produces a correct result", 1, True)
+                    {
+                        Local(procedureResult, correctValue);
+                        
+                        correctValue := [["A1",[6.0,1.0]],["A2",[5.980973491,1.435778714]],["A3",[5.924038765,1.868240889]],["A4",[5.829629132,2.294095226]],["A5",[5.698463104,2.710100717]],["A6",[5.531538935,3.113091309]],["A7",[5.330127019,3.500000000]],["A8",[5.095760222,3.867882182]],["A9",[4.830222216,4.213938049]],["A10",[4.535533906,4.535533906]],["A11",[4.213938049,4.830222216]],["A12",[3.867882182,5.095760222]],["A13",[3.500000001,5.330127019]],["A14",[3.113091308,5.531538936]],["A15",[2.710100719,5.698463104]],["A16",[2.294095226,5.829629132]],["A17",[1.868240887,5.924038766]],["A18",[1.435778715,5.980973491]],["A19",[0.9999999990,6.0]],["A20",[7.0,1.0]],["A21",[6.977168189,1.522934457]],["A22",[6.908846518,2.041889066]],["A23",[6.795554958,2.552914271]],["A24",[6.638155725,3.052120860]],["A25",[6.437846722,3.535709570]],["A26",[6.196152423,4.000000000]],["A27",[5.914912266,4.441458618]],["A28",[5.596266659,4.856725658]],["A29",[5.242640687,5.242640687]],["A30",[4.856725658,5.596266659]],["A31",[4.441458618,5.914912266]],["A32",[4.000000001,6.196152422]],["A33",[3.535709570,6.437846723]],["A34",[3.052120862,6.638155724]],["A35",[2.552914271,6.795554958]],["A36",[2.041889064,6.908846519]],["A37",[1.522934458,6.977168189]],["A38",[0.9999999988,7.0]],["A39",[8.0,1.0]],["A40",[7.973362887,1.610090199]],["A41",[7.893654271,2.215537244]],["A42",[7.761480784,2.811733316]],["A43",[7.577848346,3.394141003]],["A44",[7.344154509,3.958327832]],["A45",[7.062177827,4.500000000]],["A46",[6.734064310,5.015035055]],["A47",[6.362311102,5.499513268]],["A48",[5.949747468,5.949747468]],["A49",[5.499513268,6.362311102]],["A50",[5.015035054,6.734064310]],["A51",[4.500000001,7.062177826]],["A52",[3.958327831,7.344154510]],["A53",[3.394141006,7.577848345]],["A54",[2.811733316,7.761480784]],["A55",[2.215537241,7.893654272]],["A56",[1.610090201,7.973362887]],["A57",[0.9999999986,8.0]],["A58",[9.0,1.0]],["A59",[8.969557585,1.697245942]],["A60",[8.878462024,2.389185422]],["A61",[8.727406610,3.070552361]],["A62",[8.517540966,3.736161146]],["A63",[8.250462296,4.380946094]],["A64",[7.928203230,5.000000000]],["A65",[7.553216354,5.588611491]],["A66",[7.128355545,6.142300878]],["A67",[6.656854250,6.656854250]],["A68",[6.142300878,7.128355545]],["A69",[5.588611490,7.553216354]],["A70",[5.000000002,7.928203230]],["A71",[4.380946093,8.250462297]],["A72",[3.736161150,8.517540966]],["A73",[3.070552361,8.727406610]],["A74",[2.389185418,8.878462025]],["A75",[1.697245944,8.969557585]],["A76",[0.9999999984,9.0]],["A77",[10.0,1.0]],["A78",[9.965752283,1.784401685]],["A79",[9.863269777,2.562833599]],["A80",[9.693332437,3.329371406]],["A81",[9.457233587,4.078181290]],["A82",[9.156770083,4.803564355]],["A83",[8.794228634,5.500000000]],["A84",[8.372368399,6.162187928]],["A85",[7.894399988,6.785088487]],["A86",[7.363961031,7.363961031]],["A87",[6.785088487,7.894399988]],["A88",[6.162187927,8.372368399]],["A89",[5.500000002,8.794228633]],["A90",[4.803564354,9.156770084]],["A91",[4.078181293,9.457233586]],["A92",[3.329371406,9.693332437]],["A93",[2.562833596,9.863269778]],["A94",[1.784401687,9.965752283]],["A95",[0.9999999982,10.0]]];
+                        
+                        ExceptionCatch(
+                        {
+                            `( Apply(NM(Lambda(@procedure["parameters"], @procedure["body"]), 10), []) );
+                            
+                            procedureResult := pointsSort(pointsMap);
+    
+                            If(procedureResult !=? correctValue)
+                            {
+                                "The following points are not in the correct position: (" + ToString(Difference(correctValue, procedureResult)) + ")";
+                            }
+                            Else
+                            {
+                                True;
+                            }
+                        },
+                        "",
+                        "Exception: " + ExceptionGet()["message"]);                
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+        }
+        Else
+        {
+            FoldGrade("At least one procedure is defined in the fold", 0, True)
+            {
+                False;
+            }
+        }
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 3",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        Procedure("arc",["centerX","centerY","radius","startAngleDegrees","endAngleDegrees","angleStepDegrees","pointCount"])
+        {
+          Local(angleDegrees,angleRadians);
+      
+          angleDegrees := startAngleDegrees;
+      
+          While(angleDegrees <=? endAngleDegrees)
+          {
+            angleRadians := angleDegrees*NM(Pi/180);
+      
+            PlotterPoint("A" + ToString(pointCount++ ),centerX + radius*CosD(angleRadians),centerY + radius*SinD(angleRadians));
+      
+            angleDegrees +:= angleStepDegrees;
+          }
+      
+          pointCount;
+        }
+      
+        Procedure("mainProcedure",[])
+        {
+          Local(pointCount,radian);
+      
+          PlotterClear();
+      
+          pointCount := 1;
+      
+          For(radian := 5,radian <=? 9,radian +:= 1)
+          {
+            pointCount := arc(1,1,radian,0,90,5,pointCount);
+          }
+        }
+      
+        mainProcedure();
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: MathPiper version = .259. (1/1)
+        PASS: "mainProcedure()" is the last expression in the fold. (1/1)
+      arc:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure has seven formal parameters. (1/1)
+      mainProcedure:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure has zero formal parameters. (1/1)
+        PASS: One copy of a call to "PlotterClear" is present . (1/1)
+        PASS: One copy of a call to "arc" is present . (1/1)
+        PASS: The procedure produces a correct result. (1/1)
+      
+        16/16 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 4",description="Ninteen lines at different angles."
+========================================================================================================
+Problem 4
+
+a) Create a no parameter procedure named
+"mainProcedure" that uses a single call to the "arc"
+procedure to draw the points that are shown in
+figure 4. The labels of the plotted points should
+match the labels of the points in the figures.
+This procedure should contain a call to
+PlotterClear().
+
+mainProcedure();
+
+
+%mathpiper,name="Problem 4",subtype="hint"
+Hint("ClByb2NlZHVyZSgiYXJjIiwgWyJjZW50ZXJYIiwgImNlbnRlclkiLCAicmFkaXVzIiwgInN0YXJ0QW5nbGVEZWdyZWVzIiwgImVuZEFuZ2xlRGVncmVlcyIsICJhbmdsZVN0ZXBEZWdyZWVzIiwicG9pbnRDb3VudCJdKQp7CiAgICBMb2NhbChhbmdsZURlZ3JlZXMsIGFuZ2xlUmFkaWFucyk7CiAgICAKICAgIGFuZ2xlRGVncmVlcyA6PSBzdGFydEFuZ2xlRGVncmVlczsKICAgIAogICAgV2hpbGUoYW5nbGVEZWdyZWVzIDw9PyBlbmRBbmdsZURlZ3JlZXMpCiAgICB7CiAgICAgICAgYW5nbGVSYWRpYW5zIDo9IGFuZ2xlRGVncmVlcyAqIE5NKFBpLzE4MCk7CiAgICAgICAgCiAgICAgICAgUGxvdHRlclBvaW50KCJBIitUb1N0cmluZyhwb2ludENvdW50KyspLCAKICAgICAgICAgICAgICAgICAgICAgICAgY2VudGVyWCArIHJhZGl1cyAqIENvc0QoYW5nbGVSYWRpYW5zKSwgCiAgICAgICAgICAgICAgICAgICAgICAgIGNlbnRlclkgKyByYWRpdXMgKiBTaW5EKGFuZ2xlUmFkaWFucykpOwogICAgICAgIAogICAgICAgIGFuZ2xlRGVncmVlcyArOj0gYW5nbGVTdGVwRGVncmVlczsKICAgIH0KICAgIAogICAgcG9pbnRDb3VudDsKfQoKClByb2NlZHVyZSgibWFpblByb2NlZHVyZSIsIFtdKQp7CiAgICBMb2NhbChwb2ludENvdW50KTsKICAgIAogICAgUGxvdHRlckNsZWFyKCk7CiAgICAKICAgIHBvaW50Q291bnQgOj0gMTsKICAgIAogICAgRm9yKGFuZ2xlIDo9IDAsIGFuZ2xlIDw9PyA5MCwgYW5nbGUgKzo9IDUpCiAgICB7CiAgICAgICAgRm9yKHJhZGl1cyA6PSA2LCByYWRpdXMgPD0/IDgsIHJhZGl1cysrICkKICAgICAgICB7CiAgICAgICAgICAgIHBvaW50Q291bnQgOj0gYXJjKDEsMSxyYWRpdXMsYW5nbGUsYW5nbGUsMSxwb2ludENvdW50KTsKICAgICAgICB9CiAgICB9Cn0KCm1haW5Qcm9jZWR1cmUoKTsKCg==");
+%/mathpiper
+
+    %output,parent="Problem 4",mpversion=".259",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 4",subtype="problem",unassign_all="true",truncate="2000",timeout="5000"
+
+Procedure("arc", ["centerX", "centerY", "radius", "startAngleDegrees", "endAngleDegrees", "angleStepDegrees","pointCount"])
+{
+    Local(angleDegrees, angleRadians);
+    
+    angleDegrees := startAngleDegrees;
+    
+    While(angleDegrees <=? endAngleDegrees)
+    {
+        angleRadians := angleDegrees * NM(Pi/180);
+        
+        PlotterPoint("A"+ToString(pointCount++), 
+                        centerX + (radius * CosD(angleRadians)), 
+                        centerY + (radius * SinD(angleRadians)));
+        
+        angleDegrees +:= angleStepDegrees;
+    }
+    pointCount;
+}
+
+Procedure("mainProcedure", [])
+{
+    Local(pointCount);
+    
+    PlotterClear();
+    
+    pointCount := 1;
+    
+    For(angle := 0, angle <=? 90, angle +:= 5)
+    {
+         For(radius := 6, radius <=? 8, radius ++)
+         {
+            pointCount := arc(1, 1, radius, angle, angle, 5, pointCount);
+         }
+    }   
+}
+
+mainProcedure();
+%/mathpiper
+
+    %output,parent="Problem 4",mpversion=".259",preserve="false"
+      Result: 58
+.   %/output
+
+
+
+
+
+%mathpiper_grade,name="Problem 4"
+
+FoldGrade("MathPiper version = .259", 1, True)
+{
+    StringToNumber(Version()) >=? .259;
+}
+
+//-----------------------------------------------------------------------------------------
+
+LocalSymbols(pointsMap)
+{    
+    pointsSort(list) :=
+    {
+        Sort(list,Lambda([x,y], StringToNumber(StringSubstring(x[1], 2, Length(x[1]))) <? StringToNumber(StringSubstring(y[1], 2, Length(y[1])))));
+    }
+    
+    pointsMap := [];
+    
+    testPlotterPoint(name, x, y) :=
+    {
+        pointsMap[name] := [x, y];
+    }
+    
+    ?foldCode := Substitute('PlotterPoint, 'testPlotterPoint) ?foldCode;
+    
+    ?foldCode := Substitute('PlotterClear(), ' 'PlotterClear()) ?foldCode;
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("\"mainProcedure()\" is the last expression in the fold", 1, False)
+    {
+        Local(mainPosition);
+        
+        mainPosition := Length(?foldCode[1]);
+    
+        If(Procedure?(?foldCode[1][mainPosition]) &? ?foldCode[1][mainPosition][0] =? 'mainProcedure)
+        {
+            Local(resultMessage);
+            resultMessage := True;
+            If(?foldCode[1][mainPosition] !=? 'mainProcedure())
+            {
+                resultMessage := "The call to \"mainProcedure\" must have zero arguments.";
+            }
+            
+            ?foldCode[1][mainPosition] := ` '('(@ ?foldCode[1][mainPosition]));
+            resultMessage;
+        }
+        Else
+        {
+            False;
+        }
+    
+    }
+            
+    // --------------------------------------------------------
+    
+    {
+        Local(procedures, procedureName, parameters, body);
+        
+        procedures := ProceduresGet(?foldCode);
+        
+        If(procedures !=? [])
+        {
+            { // arc
+            
+                procedureName := "arc";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has seven formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 7;
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+            
+            
+            
+            { // mainProcedure
+            
+                procedureName := "mainProcedure";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has zero formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 0;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One copy of a call to \"PlotterClear\" is present ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"PlotterClear");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One copy of a call to \"arc\" is present ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"arc");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure produces a correct result", 1, True)
+                    {
+                        Local(procedureResult, correctValue);
+                        
+                        correctValue := [["A1",[7.0,1.0]],["A2",[8.0,1.0]],["A3",[9.0,1.0]],["A4",[6.977168189,1.522934457]],["A5",[7.973362887,1.610090199]],["A6",[8.969557585,1.697245942]],["A7",[6.908846518,2.041889066]],["A8",[7.893654271,2.215537244]],["A9",[8.878462024,2.389185422]],["A10",[6.795554958,2.552914271]],["A11",[7.761480784,2.811733316]],["A12",[8.727406610,3.070552361]],["A13",[6.638155725,3.052120860]],["A14",[7.577848346,3.394141003]],["A15",[8.517540966,3.736161146]],["A16",[6.437846722,3.535709570]],["A17",[7.344154509,3.958327832]],["A18",[8.250462296,4.380946094]],["A19",[6.196152423,4.000000000]],["A20",[7.062177827,4.500000000]],["A21",[7.928203230,5.000000000]],["A22",[5.914912266,4.441458618]],["A23",[6.734064310,5.015035055]],["A24",[7.553216354,5.588611491]],["A25",[5.596266659,4.856725658]],["A26",[6.362311102,5.499513268]],["A27",[7.128355545,6.142300878]],["A28",[5.242640687,5.242640687]],["A29",[5.949747468,5.949747468]],["A30",[6.656854250,6.656854250]],["A31",[4.856725658,5.596266659]],["A32",[5.499513268,6.362311102]],["A33",[6.142300878,7.128355545]],["A34",[4.441458618,5.914912266]],["A35",[5.015035054,6.734064310]],["A36",[5.588611490,7.553216354]],["A37",[4.000000001,6.196152422]],["A38",[4.500000001,7.062177826]],["A39",[5.000000002,7.928203230]],["A40",[3.535709570,6.437846723]],["A41",[3.958327831,7.344154510]],["A42",[4.380946093,8.250462297]],["A43",[3.052120862,6.638155724]],["A44",[3.394141006,7.577848345]],["A45",[3.736161150,8.517540966]],["A46",[2.552914271,6.795554958]],["A47",[2.811733316,7.761480784]],["A48",[3.070552361,8.727406610]],["A49",[2.041889064,6.908846519]],["A50",[2.215537241,7.893654272]],["A51",[2.389185418,8.878462025]],["A52",[1.522934458,6.977168189]],["A53",[1.610090201,7.973362887]],["A54",[1.697245944,8.969557585]],["A55",[0.9999999988,7.0]],["A56",[0.9999999986,8.0]],["A57",[0.9999999984,9.0]]];
+                        
+                        ExceptionCatch(
+                        {
+                            `( Apply(NM(Lambda(@procedure["parameters"], @procedure["body"]), 10), []) );
+                            
+                            procedureResult := pointsSort(pointsMap);
+    
+                            If(procedureResult !=? correctValue)
+                            {
+                                "The following points are not in the correct position: (" + ToString(Difference(correctValue, procedureResult)) + ")";
+                            }
+                            Else
+                            {
+                                True;
+                            }
+                        },
+                        "",
+                        "Exception: " + ExceptionGet()["message"]);                
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+        }
+        Else
+        {
+            FoldGrade("At least one procedure is defined in the fold", 0, True)
+            {
+                False;
+            }
+        }
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 4",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        Procedure("arc",["centerX","centerY","radius","startAngleDegrees","endAngleDegrees","angleStepDegrees","pointCount"])
+        {
+          Local(angleDegrees,angleRadians);
+      
+          angleDegrees := startAngleDegrees;
+      
+          While(angleDegrees <=? endAngleDegrees)
+          {
+            angleRadians := angleDegrees*NM(Pi/180);
+      
+            PlotterPoint("A" + ToString(pointCount++ ),centerX + radius*CosD(angleRadians),centerY + radius*SinD(angleRadians));
+      
+            angleDegrees +:= angleStepDegrees;
+          }
+      
+          pointCount;
+        }
+      
+        Procedure("mainProcedure",[])
+        {
+          Local(pointCount);
+      
+          PlotterClear();
+      
+          pointCount := 1;
+      
+          For(angle := 0,angle <=? 90,angle +:= 5)
+          {
+            For(radius := 6,radius <=? 8,radius++ )
+            {
+              pointCount := arc(1,1,radius,angle,angle,5,pointCount);
+            }
+          }
+        }
+      
+        mainProcedure();
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: MathPiper version = .259. (1/1)
+        PASS: "mainProcedure()" is the last expression in the fold. (1/1)
+      arc:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure has seven formal parameters. (1/1)
+      mainProcedure:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure has zero formal parameters. (1/1)
+        PASS: One copy of a call to "PlotterClear" is present . (1/1)
+        PASS: One copy of a call to "arc" is present . (1/1)
+        PASS: The procedure produces a correct result. (1/1)
+      
+        16/16 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 5",description="Arcs at different radii."
+========================================================================================================
+Problem 5
+
+a) Create a no parameter procedure named
+"mainProcedure" that uses a single call to the "arc"
+procedure to draw the points that are shown in
+figure 5. The labels of the plotted points should
+match the labels of the points in the figures.
+This procedure should contain a call to
+PlotterClear().
+
+b) Place the following line of code at the end of
+your code:
+
+mainProcedure();
+
+
+%mathpiper,name="Problem 5",subtype="hint"
+Hint("ClByb2NlZHVyZSgiYXJjIiwgWyJjZW50ZXJYIiwgImNlbnRlclkiLCAicmFkaXVzIiwgInN0YXJ0QW5nbGVEZWdyZWVzIiwgImVuZEFuZ2xlRGVncmVlcyIsICJhbmdsZVN0ZXBEZWdyZWVzIiwicG9pbnRDb3VudCJdKQp7CiAgICBMb2NhbChhbmdsZURlZ3JlZXMsIGFuZ2xlUmFkaWFucyk7CiAgICAKICAgIGFuZ2xlRGVncmVlcyA6PSBzdGFydEFuZ2xlRGVncmVlczsKICAgIAogICAgV2hpbGUoYW5nbGVEZWdyZWVzIDw9PyBlbmRBbmdsZURlZ3JlZXMpCiAgICB7CiAgICAgICAgYW5nbGVSYWRpYW5zIDo9IGFuZ2xlRGVncmVlcyAqIE5NKFBpLzE4MCk7CiAgICAgICAgCiAgICAgICAgUGxvdHRlclBvaW50KCJBIitUb1N0cmluZyhwb2ludENvdW50KyspLCAKICAgICAgICAgICAgICAgICAgICAgICAgY2VudGVyWCArIHJhZGl1cyAqIENvc0QoYW5nbGVSYWRpYW5zKSwgCiAgICAgICAgICAgICAgICAgICAgICAgIGNlbnRlclkgKyByYWRpdXMgKiBTaW5EKGFuZ2xlUmFkaWFucykpOwogICAgICAgIAogICAgICAgIGFuZ2xlRGVncmVlcyArOj0gYW5nbGVTdGVwRGVncmVlczsKICAgIH0KICAgIAogICAgcG9pbnRDb3VudDsKfQoKClByb2NlZHVyZSgibWFpblByb2NlZHVyZSIsIFtdKQp7CiAgICBQbG90dGVyQ2xlYXIoKTsKICAgIAogICAgTG9jYWwocG9pbnRDb3VudCk7CiAgICAKICAgIHBvaW50Q291bnQgOj0gMTsKICAgIAogICAgcmFkaXVzIDo9IDU7CiAgICAKICAgIHN0YXJ0QW5nbGUgOj0gMDsKICAgIAogICAgZW5kQW5nbGUgOj0gMTA7CiAgICAKICAgIFdoaWxlKGVuZEFuZ2xlIDw9PyA5MCkKICAgIHsKICAgICAgICBwb2ludENvdW50IDo9IGFyYygxLCAxLCByYWRpdXMsIHN0YXJ0QW5nbGUsIGVuZEFuZ2xlLCA1LCBwb2ludENvdW50KTsKICAgICAgICAKICAgICAgICByYWRpdXMrKzsKICAgICAgICAKICAgICAgICBzdGFydEFuZ2xlICs6PSAxMDsKICAgICAgICAKICAgICAgICBlbmRBbmdsZSArOj0gMTA7CiAgICB9Cn0KCm1haW5Qcm9jZWR1cmUoKTsKCg==");
+%/mathpiper
+
+    %output,parent="Problem 5",mpversion=".259",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 5",subtype="problem",unassign_all="true",truncate="2000",timeout="5000"
+
+Procedure("arc", ["centerX", "centerY", "radius", "startAngleDegrees", "endAngleDegrees", "angleStepDegrees","pointCount"])
+{
+    Local(angleDegrees, angleRadians);
+    
+    angleDegrees := startAngleDegrees;
+    
+    While(angleDegrees <=? endAngleDegrees)
+    {
+        angleRadians := angleDegrees * NM(Pi/180);
+        
+        PlotterPoint("A"+ToString(pointCount++), 
+                        centerX + (radius * CosD(angleRadians)), 
+                        centerY + (radius * SinD(angleRadians)));
+        
+        angleDegrees +:= angleStepDegrees;
+    }
+    pointCount;
+}
+
+Procedure("mainProcedure", [])
+{
+    Local(pointCount);
+    
+    PlotterClear();
+    
+    pointCount := 1;
+    
+    radius := 5;
+    
+    startAngle := 0;
+    
+    endAngle := 10;
+    
+    While(endAngle <=? 90)
+    {
+        pointCount := arc(1, 1, radius, startAngle, endAngle, 5, pointCount);
+    
+        radius ++;
+        
+        startAngle +:= 10;
+        
+        endAngle +:= 10;
+    }
+}
+
+mainProcedure();
+
+%/mathpiper
+
+    %output,parent="Problem 5",mpversion=".259",preserve="false"
+      Result: 100
+.   %/output
+
+
+
+
+
+%mathpiper_grade,name="Problem 5"
+
+FoldGrade("MathPiper version = .259", 1, True)
+{
+    StringToNumber(Version()) >=? .259;
+}
+
+//-----------------------------------------------------------------------------------------
+
+LocalSymbols(pointsMap)
+{    
+    pointsSort(list) :=
+    {
+        Sort(list,Lambda([x,y], StringToNumber(StringSubstring(x[1], 2, Length(x[1]))) <? StringToNumber(StringSubstring(y[1], 2, Length(y[1])))));
+    }
+    
+    pointsMap := [];
+    
+    testPlotterPoint(name, x, y) :=
+    {
+        pointsMap[name] := [x, y];
+    }
+    
+    ?foldCode := Substitute('PlotterPoint, 'testPlotterPoint) ?foldCode;
+    
+    ?foldCode := Substitute('PlotterClear(), ' 'PlotterClear()) ?foldCode;
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("\"mainProcedure()\" is the last expression in the fold", 1, False)
+    {
+        Local(mainPosition);
+        
+        mainPosition := Length(?foldCode[1]);
+    
+        If(Procedure?(?foldCode[1][mainPosition]) &? ?foldCode[1][mainPosition][0] =? 'mainProcedure)
+        {
+            Local(resultMessage);
+            resultMessage := True;
+            If(?foldCode[1][mainPosition] !=? 'mainProcedure())
+            {
+                resultMessage := "The call to \"mainProcedure\" must have zero arguments.";
+            }
+            
+            ?foldCode[1][mainPosition] := ` '('(@ ?foldCode[1][mainPosition]));
+            resultMessage;
+        }
+        Else
+        {
+            False;
+        }
+    
+    }
+            
+    // --------------------------------------------------------
+    
+    {
+        Local(procedures, procedureName, parameters, body);
+        
+        procedures := ProceduresGet(?foldCode);
+        
+        If(procedures !=? [])
+        {
+            { // arc
+            
+                procedureName := "arc";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has seven formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 7;
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+            
+            
+            
+            { // mainProcedure
+            
+                procedureName := "mainProcedure";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has zero formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 0;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One copy of a call to \"PlotterClear\" is present ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"PlotterClear");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One copy of a call to \"arc\" is present ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"arc");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure produces a correct result", 1, True)
+                    {
+                        Local(procedureResult, correctValue);
+                        
+                        correctValue := [["A1",[6.0,1.0]],["A2",[5.980973491,1.435778714]],["A3",[5.924038765,1.868240889]],["A4",[6.908846518,2.041889066]],["A5",[6.795554958,2.552914271]],["A6",[6.638155725,3.052120860]],["A7",[7.577848346,3.394141003]],["A8",[7.344154509,3.958327832]],["A9",[7.062177827,4.500000000]],["A10",[7.928203230,5.000000000]],["A11",[7.553216354,5.588611491]],["A12",[7.128355545,6.142300878]],["A13",[7.894399988,6.785088487]],["A14",[7.363961031,7.363961031]],["A15",[6.785088487,7.894399988]],["A16",[7.427876097,8.660444431]],["A17",[6.735764363,9.191520443]],["A18",[6.000000002,9.660254037]],["A19",[6.500000002,10.52627944]],["A20",[5.648800878,10.96938566]],["A21",[4.762221581,11.33661883]],["A22",[5.104241724,12.27631145]],["A23",[4.105828541,12.59110992]],["A24",[3.083778128,12.81769304]],["A25",[3.257426305,13.80250079]],["A26",[2.133024658,13.95053108]],["A27",[0.9999999973,14.0]]];
+                        
+                        ExceptionCatch(
+                        {
+                            `( Apply(NM(Lambda(@procedure["parameters"], @procedure["body"]), 10), []) );
+                            
+                            procedureResult := pointsSort(pointsMap);
+    
+                            If(procedureResult !=? correctValue)
+                            {
+                                "The following points are not in the correct position: (" + ToString(Difference(correctValue, procedureResult)) + ")";
+                            }
+                            Else
+                            {
+                                True;
+                            }
+                        },
+                        "",
+                        "Exception: " + ExceptionGet()["message"]);                
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+        }
+        Else
+        {
+            FoldGrade("At least one procedure is defined in the fold", 0, True)
+            {
+                False;
+            }
+        }
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 5",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        Procedure("arc",["centerX","centerY","radius","startAngleDegrees","endAngleDegrees","angleStepDegrees","pointCount"])
+        {
+          Local(angleDegrees,angleRadians);
+      
+          angleDegrees := startAngleDegrees;
+      
+          While(angleDegrees <=? endAngleDegrees)
+          {
+            angleRadians := angleDegrees*NM(Pi/180);
+      
+            PlotterPoint("A" + ToString(pointCount++ ),centerX + radius*CosD(angleRadians),centerY + radius*SinD(angleRadians));
+      
+            angleDegrees +:= angleStepDegrees;
+          }
+      
+          pointCount;
+        }
+      
+        Procedure("mainProcedure",[])
+        {
+          Local(pointCount);
+      
+          PlotterClear();
+      
+          pointCount := 1;
+      
+          radius := 5;
+      
+          startAngle := 0;
+      
+          endAngle := 10;
+      
+          While(endAngle <=? 90)
+          {
+            pointCount := arc(1,1,radius,startAngle,endAngle,5,pointCount);
+      
+            radius++;
+      
+            startAngle +:= 10;
+      
+            endAngle +:= 10;
+          }
+        }
+      
+        mainProcedure();
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: MathPiper version = .259. (1/1)
+        PASS: "mainProcedure()" is the last expression in the fold. (1/1)
+      arc:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure has seven formal parameters. (1/1)
+      mainProcedure:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure has zero formal parameters. (1/1)
+        PASS: One copy of a call to "PlotterClear" is present . (1/1)
+        PASS: One copy of a call to "arc" is present . (1/1)
+        PASS: The procedure produces a correct result. (1/1)
+      
+        16/16 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 6",description="Concentric circles."
+========================================================================================================
+Problem 6
+
+a) Create a no parameter procedure named
+"mainProcedure" that uses a single call to the "arc"
+procedure to draw the points that are shown in
+figure 6. The labels of the plotted points should
+match the labels of the points in the figures.
+This procedure should contain a call to
+PlotterClear().
+
+b) Place the following line of code at the end of
+your code:
+
+mainProcedure();
+
+
+%mathpiper,name="Problem 6",subtype="hint"
+Hint("ClByb2NlZHVyZSgiYXJjIiwgWyJjZW50ZXJYIiwgImNlbnRlclkiLCAicmFkaXVzIiwgInN0YXJ0QW5nbGVEZWdyZWVzIiwgImVuZEFuZ2xlRGVncmVlcyIsICJhbmdsZVN0ZXBEZWdyZWVzIiwicG9pbnRDb3VudCJdKQp7CiAgICBMb2NhbChhbmdsZURlZ3JlZXMsIGFuZ2xlUmFkaWFucyk7CiAgICAKICAgIGFuZ2xlRGVncmVlcyA6PSBzdGFydEFuZ2xlRGVncmVlczsKICAgIAogICAgV2hpbGUoYW5nbGVEZWdyZWVzIDw9PyBlbmRBbmdsZURlZ3JlZXMpCiAgICB7CiAgICAgICAgYW5nbGVSYWRpYW5zIDo9IGFuZ2xlRGVncmVlcyAqIE5NKFBpLzE4MCk7CiAgICAgICAgCiAgICAgICAgUGxvdHRlclBvaW50KCJBIitUb1N0cmluZyhwb2ludENvdW50KyspLCAKICAgICAgICAgICAgICAgICAgICAgICAgY2VudGVyWCArIHJhZGl1cyAqIENvc0QoYW5nbGVSYWRpYW5zKSwgCiAgICAgICAgICAgICAgICAgICAgICAgIGNlbnRlclkgKyByYWRpdXMgKiBTaW5EKGFuZ2xlUmFkaWFucykpOwogICAgICAgIAogICAgICAgIGFuZ2xlRGVncmVlcyArOj0gYW5nbGVTdGVwRGVncmVlczsKICAgIH0KICAgIAogICAgcG9pbnRDb3VudDsKfQoKClByb2NlZHVyZSgibWFpblByb2NlZHVyZSIsIFtdKQp7CiAgICBMb2NhbChwb2ludENvdW50LCByYWRpdXMpOwogICAgCiAgICBQbG90dGVyQ2xlYXIoKTsKICAgIAogICAgcG9pbnRDb3VudCA6PSAxOwogICAgCiAgICBGb3IocmFkaXVzIDo9IDEsIHJhZGl1cyA8PT8gNCwgcmFkaXVzKyspCiAgICB7CiAgICAgICAgcG9pbnRDb3VudCA6PSBhcmMoNSwgNSwgcmFkaXVzLCAwLCAzNDAsIDIwLCBwb2ludENvdW50KTsKICAgIH0KfQoKbWFpblByb2NlZHVyZSgpOwoK");
+%/mathpiper
+
+    %output,parent="Problem 6",mpversion=".259",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 6",subtype="problem",unassign_all="true",truncate="2000",timeout="5000"
+
+Procedure("arc", ["centerX", "centerY", "radius", "startAngleDegrees", "endAngleDegrees", "angleStepDegrees","pointCount"])
+{
+    Local(angleDegrees, angleRadians);
+    
+    angleDegrees := startAngleDegrees;
+    
+    While(angleDegrees <=? endAngleDegrees)
+    {
+        angleRadians := angleDegrees * NM(Pi/180);
+        
+        PlotterPoint("A"+ToString(pointCount++), 
+                        centerX + (radius * CosD(angleRadians)), 
+                        centerY + (radius * SinD(angleRadians)));
+        
+        angleDegrees +:= angleStepDegrees;
+    }
+    pointCount;
+}
+
+Procedure("mainProcedure", [])
+{
+    Local(pointCount, radius);
+    
+    PlotterClear();
+    
+    pointCount := 1;
+    
+    For(radius := 1, radius <=? 4, radius ++)
+    {
+        pointCount := arc(5, 5, radius, 0, 340, 20, pointCount);
+    }
+}
+
+mainProcedure();
+
+%/mathpiper
+
+    %output,parent="Problem 6",mpversion=".259",preserve="false"
+      Result: 73
+.   %/output
+
+
+
+
+
+%mathpiper_grade,name="Problem 6"
+
+FoldGrade("MathPiper version = .259", 1, True)
+{
+    StringToNumber(Version()) >=? .259;
+}
+
+//-----------------------------------------------------------------------------------------
+
+LocalSymbols(pointsMap)
+{    
+    pointsSort(list) :=
+    {
+        Sort(list,Lambda([x,y], StringToNumber(StringSubstring(x[1], 2, Length(x[1]))) <? StringToNumber(StringSubstring(y[1], 2, Length(y[1])))));
+    }
+    
+    pointsMap := [];
+    
+    testPlotterPoint(name, x, y) :=
+    {
+        pointsMap[name] := [x, y];
+    }
+    
+    ?foldCode := Substitute('PlotterPoint, 'testPlotterPoint) ?foldCode;
+    
+    ?foldCode := Substitute('PlotterClear(), ' 'PlotterClear()) ?foldCode;
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("\"mainProcedure()\" is the last expression in the fold", 1, False)
+    {
+        Local(mainPosition);
+        
+        mainPosition := Length(?foldCode[1]);
+    
+        If(Procedure?(?foldCode[1][mainPosition]) &? ?foldCode[1][mainPosition][0] =? 'mainProcedure)
+        {
+            Local(resultMessage);
+            resultMessage := True;
+            If(?foldCode[1][mainPosition] !=? 'mainProcedure())
+            {
+                resultMessage := "The call to \"mainProcedure\" must have zero arguments.";
+            }
+            
+            ?foldCode[1][mainPosition] := ` '('(@ ?foldCode[1][mainPosition]));
+            resultMessage;
+        }
+        Else
+        {
+            False;
+        }
+    
+    }
+            
+    // --------------------------------------------------------
+    
+    {
+        Local(procedures, procedureName, parameters, body);
+        
+        procedures := ProceduresGet(?foldCode);
+        
+        If(procedures !=? [])
+        {
+            { // arc
+            
+                procedureName := "arc";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has seven formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 7;
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+            
+            
+            
+            { // mainProcedure
+            
+                procedureName := "mainProcedure";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has zero formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 0;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One copy of a call to \"PlotterClear\" is present ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"PlotterClear");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One copy of a call to \"arc\" is present ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"arc");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure produces a correct result", 1, True)
+                    {
+                        Local(procedureResult, correctValue);
+                        
+                        correctValue := [["A1",[6.0,5.0]],["A2",[5.939692621,5.342020143]],["A3",[5.766044443,5.642787610]],["A4",[5.500000000,5.866025404]],["A5",[5.173648177,5.984807753]],["A6",[4.826351822,5.984807753]],["A7",[4.500000000,5.866025404]],["A8",[4.233955557,5.642787610]],["A9",[4.060307379,5.342020144]],["A10",[4.0,5.000000000]],["A11",[4.060307379,4.657979857]],["A12",[4.233955557,4.357212391]],["A13",[4.500000000,4.133974596]],["A14",[4.826351822,4.015192247]],["A15",[5.173648178,4.015192247]],["A16",[5.500000000,4.133974596]],["A17",[5.766044443,4.357212390]],["A18",[5.939692621,4.657979857]],["A19",[7.0,5.0]],["A20",[6.879385242,5.684040287]],["A21",[6.532088886,6.285575219]],["A22",[6.000000000,6.732050807]],["A23",[5.347296355,6.969615506]],["A24",[4.652703645,6.969615506]],["A25",[4.000000001,6.732050808]],["A26",[3.467911113,6.285575219]],["A27",[3.120614759,5.684040287]],["A28",[3.0,4.999999999]],["A29",[3.120614758,4.315959713]],["A30",[3.467911113,3.714424781]],["A31",[4.000000000,3.267949192]],["A32",[4.652703644,3.030384494]],["A33",[5.347296356,3.030384494]],["A34",[6.000000000,3.267949192]],["A35",[6.532088886,3.714424780]],["A36",[6.879385242,4.315959714]],["A37",[8.0,5.0]],["A38",[7.819077862,6.026060430]],["A39",[7.298133329,6.928362829]],["A40",[6.500000001,7.598076211]],["A41",[5.520944532,7.954423259]],["A42",[4.479055467,7.954423259]],["A43",[3.500000001,7.598076212]],["A44",[2.701866670,6.928362829]],["A45",[2.180922138,6.026060431]],["A46",[2.0,4.999999999]],["A47",[2.180922138,3.973939570]],["A48",[2.701866670,3.071637172]],["A49",[3.500000001,2.401923788]],["A50",[4.479055467,2.045576741]],["A51",[5.520944534,2.045576741]],["A52",[6.500000000,2.401923789]],["A53",[7.298133329,3.071637170]],["A54",[7.819077863,3.973939571]],["A55",[9.0,5.0]],["A56",[8.758770483,6.368080573]],["A57",[8.064177772,7.571150439]],["A58",[7.000000001,8.464101615]],["A59",[5.694592709,8.939231012]],["A60",[4.305407289,8.939231012]],["A61",[3.000000001,8.464101616]],["A62",[1.935822227,7.571150438]],["A63",[1.241229517,6.368080574]],["A64",[1.0,4.999999998]],["A65",[1.241229517,3.631919427]],["A66",[1.935822226,2.428849562]],["A67",[3.000000001,1.535898384]],["A68",[4.305407289,1.060768988]],["A69",[5.694592712,1.060768988]],["A70",[7.000000000,1.535898385]],["A71",[8.064177772,2.428849560]],["A72",[8.758770484,3.631919428]]];
+                        
+                        ExceptionCatch(
+                        {
+                            `( Apply(NM(Lambda(@procedure["parameters"], @procedure["body"]), 10), []) );
+                            
+                            procedureResult := pointsSort(pointsMap);
+    
+                            If(procedureResult !=? correctValue)
+                            {
+                                "The following points are not in the correct position: (" + ToString(Difference(correctValue, procedureResult)) + ")";
+                            }
+                            Else
+                            {
+                                True;
+                            }
+                        },
+                        "",
+                        "Exception: " + ExceptionGet()["message"]);                
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+        }
+        Else
+        {
+            FoldGrade("At least one procedure is defined in the fold", 0, True)
+            {
+                False;
+            }
+        }
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 6",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        Procedure("arc",["centerX","centerY","radius","startAngleDegrees","endAngleDegrees","angleStepDegrees","pointCount"])
+        {
+          Local(angleDegrees,angleRadians);
+      
+          angleDegrees := startAngleDegrees;
+      
+          While(angleDegrees <=? endAngleDegrees)
+          {
+            angleRadians := angleDegrees*NM(Pi/180);
+      
+            PlotterPoint("A" + ToString(pointCount++ ),centerX + radius*CosD(angleRadians),centerY + radius*SinD(angleRadians));
+      
+            angleDegrees +:= angleStepDegrees;
+          }
+      
+          pointCount;
+        }
+      
+        Procedure("mainProcedure",[])
+        {
+          Local(pointCount,radius);
+      
+          PlotterClear();
+      
+          pointCount := 1;
+      
+          For(radius := 1,radius <=? 4,radius++ )
+          {
+            pointCount := arc(5,5,radius,0,340,20,pointCount);
+          }
+        }
+      
+        mainProcedure();
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: MathPiper version = .259. (1/1)
+        PASS: "mainProcedure()" is the last expression in the fold. (1/1)
+      arc:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure has seven formal parameters. (1/1)
+      mainProcedure:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure has zero formal parameters. (1/1)
+        PASS: One copy of a call to "PlotterClear" is present . (1/1)
+        PASS: One copy of a call to "arc" is present . (1/1)
+        PASS: The procedure produces a correct result. (1/1)
+      
+        16/16 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 7",description="Twelve lines at different angles."
+========================================================================================================
+Problem 7
+
+a) Create a no parameter procedure named
+"mainProcedure" that uses a single call to the "arc"
+procedure to draw the points that are shown in
+figure 7. The labels of the plotted points should
+match the labels of the points in the figures.
+This procedure should contain a call to
+PlotterClear().
+
+c) Place the following line of code at the end of
+your code:
+
+mainProcedure();
+
+
+%mathpiper,name="Problem 7",subtype="hint"
+Hint("ClByb2NlZHVyZSgiYXJjIiwgWyJjZW50ZXJYIiwgImNlbnRlclkiLCAicmFkaXVzIiwgInN0YXJ0QW5nbGVEZWdyZWVzIiwgImVuZEFuZ2xlRGVncmVlcyIsICJhbmdsZVN0ZXBEZWdyZWVzIiwicG9pbnRDb3VudCJdKQp7CiAgICBMb2NhbChhbmdsZURlZ3JlZXMsIGFuZ2xlUmFkaWFucyk7CiAgICAKICAgIGFuZ2xlRGVncmVlcyA6PSBzdGFydEFuZ2xlRGVncmVlczsKICAgIAogICAgV2hpbGUoYW5nbGVEZWdyZWVzIDw9PyBlbmRBbmdsZURlZ3JlZXMpCiAgICB7CiAgICAgICAgYW5nbGVSYWRpYW5zIDo9IGFuZ2xlRGVncmVlcyAqIE5NKFBpLzE4MCk7CiAgICAgICAgCiAgICAgICAgUGxvdHRlclBvaW50KCJBIitUb1N0cmluZyhwb2ludENvdW50KyspLCAKICAgICAgICAgICAgICAgICAgICAgICAgY2VudGVyWCArIHJhZGl1cyAqIENvc0QoYW5nbGVSYWRpYW5zKSwgCiAgICAgICAgICAgICAgICAgICAgICAgIGNlbnRlclkgKyByYWRpdXMgKiBTaW5EKGFuZ2xlUmFkaWFucykpOwogICAgICAgIAogICAgICAgIGFuZ2xlRGVncmVlcyArOj0gYW5nbGVTdGVwRGVncmVlczsKICAgIH0KICAgIAogICAgcG9pbnRDb3VudDsKfQoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIixbXSkKewogIFBsb3R0ZXJDbGVhcigpOwoKICBwb2ludENvdW50IDo9IDE7CgogIHN0YXJ0QW5nbGUgOj0gMDsKCiAgZW5kQW5nbGUgOj0gMzYwOwoKICBjZW50ZXJYIDo9IDU7CgogIGNlbnRlclkgOj0gNTsKICAKICBzdGFydFJhZGl1cyA6PSAxOwogIAogIGVuZFJhZGl1cyA6PSA0OwoKICBhbmdsZVN0ZXAgOj0gMzA7CgogIEZvcihhbmdsZSA6PSBzdGFydEFuZ2xlLCBhbmdsZSA8PyBlbmRBbmdsZSwgYW5nbGUgKzo9IGFuZ2xlU3RlcCkKICB7CiAgICBGb3IocmFkaXVzIDo9IHN0YXJ0UmFkaXVzLCByYWRpdXMgPD0/IGVuZFJhZGl1cywgcmFkaXVzKysgKQogICAgewogICAgICBwb2ludENvdW50IDo9IGFyYyg1LDUscmFkaXVzLGFuZ2xlLGFuZ2xlLGFuZ2xlU3RlcCxwb2ludENvdW50KTsKICAgIH0KICB9Cn0KCm1haW5Qcm9jZWR1cmUoKTsKCgoK");
+%/mathpiper
+
+    %output,parent="Problem 7",mpversion=".259",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 7",subtype="problem",unassign_all="true",truncate="2000",timeout="5000"
+
+Procedure("arc", ["centerX", "centerY", "radius", "startAngleDegrees", "endAngleDegrees", "angleStepDegrees","pointCount"])
+{
+    Local(angleDegrees, angleRadians);
+    
+    angleDegrees := startAngleDegrees;
+    
+    While(angleDegrees <=? endAngleDegrees)
+    {
+        angleRadians := angleDegrees * NM(Pi/180);
+        
+        PlotterPoint("A"+ToString(pointCount++), 
+                        centerX + (radius * CosD(angleRadians)), 
+                        centerY + (radius * SinD(angleRadians)));
+        
+        angleDegrees +:= angleStepDegrees;
+    }
+    pointCount;
+}
+
+Procedure("mainProcedure", [])
+{
+    Local(pointCount);
+    
+    PlotterClear();
+    
+    pointCount := 1;
+    
+    startAngle := 0;
+    
+    endAngle := 360;
+    
+    centerX := 5;
+    
+    centerY := 5;
+    
+    startRadius := 1;
+    
+    endRadius := 4;
+    
+    angleStep := 30;
+    
+    For(angle := startAngle, angle <? endAngle, angle +:= angleStep)
+    {
+        For(radius := startRadius, radius <=? endRadius, radius++)
+        {
+            pointCount := arc(5, 5, radius, angle, angle, angleStep, pointCount);
+        }
+    }
+}
+
+mainProcedure();
+
+%/mathpiper
+
+    %output,parent="Problem 7",mpversion=".259",preserve="false"
+      Result: 49
+.   %/output
+
+
+
+
+
+%mathpiper_grade,name="Problem 7"
+
+FoldGrade("MathPiper version = .259", 1, True)
+{
+    StringToNumber(Version()) >=? .259;
+}
+
+//-----------------------------------------------------------------------------------------
+
+LocalSymbols(pointsMap)
+{    
+    pointsSort(list) :=
+    {
+        Sort(list,Lambda([x,y], StringToNumber(StringSubstring(x[1], 2, Length(x[1]))) <? StringToNumber(StringSubstring(y[1], 2, Length(y[1])))));
+    }
+    
+    pointsMap := [];
+    
+    testPlotterPoint(name, x, y) :=
+    {
+        pointsMap[name] := [x, y];
+    }
+    
+    ?foldCode := Substitute('PlotterPoint, 'testPlotterPoint) ?foldCode;
+    
+    ?foldCode := Substitute('PlotterClear(), ' 'PlotterClear()) ?foldCode;
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("\"mainProcedure()\" is the last expression in the fold", 1, False)
+    {
+        Local(mainPosition);
+        
+        mainPosition := Length(?foldCode[1]);
+    
+        If(Procedure?(?foldCode[1][mainPosition]) &? ?foldCode[1][mainPosition][0] =? 'mainProcedure)
+        {
+            Local(resultMessage);
+            resultMessage := True;
+            If(?foldCode[1][mainPosition] !=? 'mainProcedure())
+            {
+                resultMessage := "The call to \"mainProcedure\" must have zero arguments.";
+            }
+            
+            ?foldCode[1][mainPosition] := ` '('(@ ?foldCode[1][mainPosition]));
+            resultMessage;
+        }
+        Else
+        {
+            False;
+        }
+    
+    }
+            
+    // --------------------------------------------------------
+    
+    {
+        Local(procedures, procedureName, parameters, body);
+        
+        procedures := ProceduresGet(?foldCode);
+        
+        If(procedures !=? [])
+        {
+            { // arc
+            
+                procedureName := "arc";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has seven formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 7;
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+            
+            
+            
+            { // mainProcedure
+            
+                procedureName := "mainProcedure";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has zero formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 0;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One copy of a call to \"PlotterClear\" is present ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"PlotterClear");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One copy of a call to \"arc\" is present ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"arc");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure produces a correct result", 1, True)
+                    {
+                        Local(procedureResult, correctValue);
+                        
+                        correctValue := [["A1",[6.0,5.0]],["A2",[7.0,5.0]],["A3",[8.0,5.0]],["A4",[9.0,5.0]],["A5",[5.866025404,5.500000000]],["A6",[6.732050808,6.000000000]],["A7",[7.598076211,6.500000000]],["A8",[8.464101615,7.000000000]],["A9",[5.500000000,5.866025404]],["A10",[6.000000000,6.732050807]],["A11",[6.500000001,7.598076211]],["A12",[7.000000001,8.464101615]],["A13",[5.000000000,6.0]],["A14",[5.000000000,7.0]],["A15",[4.999999999,8.0]],["A16",[4.999999999,9.0]],["A17",[4.500000000,5.866025404]],["A18",[4.000000001,6.732050808]],["A19",[3.500000001,7.598076212]],["A20",[3.000000001,8.464101616]],["A21",[4.133974596,5.500000000]],["A22",[3.267949192,6.000000000]],["A23",[2.401923789,6.500000000]],["A24",[1.535898385,7.000000000]],["A25",[4.0,5.000000000]],["A26",[3.0,4.999999999]],["A27",[2.0,4.999999999]],["A28",[1.0,4.999999998]],["A29",[4.133974596,4.500000000]],["A30",[3.267949192,4.000000000]],["A31",[2.401923788,3.500000001]],["A32",[1.535898384,3.000000001]],["A33",[4.500000000,4.133974596]],["A34",[4.000000000,3.267949192]],["A35",[3.500000001,2.401923788]],["A36",[3.000000001,1.535898384]],["A37",[5.000000000,4.0]],["A38",[4.999999999,3.0]],["A39",[4.999999999,2.0]],["A40",[4.999999998,1.0]],["A41",[5.500000000,4.133974596]],["A42",[6.000000000,3.267949192]],["A43",[6.500000000,2.401923789]],["A44",[7.000000000,1.535898385]],["A45",[5.866025404,4.500000000]],["A46",[6.732050808,4.000000001]],["A47",[7.598076212,3.500000001]],["A48",[8.464101616,3.000000002]]];
+                        
+                        ExceptionCatch(
+                        {
+                            `( Apply(NM(Lambda(@procedure["parameters"], @procedure["body"]), 10), []) );
+                            
+                            procedureResult := pointsSort(pointsMap);
+    
+                            If(procedureResult !=? correctValue)
+                            {
+                                "The following points are not in the correct position: (" + ToString(Difference(correctValue, procedureResult)) + ")";
+                            }
+                            Else
+                            {
+                                True;
+                            }
+                        },
+                        "",
+                        "Exception: " + ExceptionGet()["message"]);                
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+        }
+        Else
+        {
+            FoldGrade("At least one procedure is defined in the fold", 0, True)
+            {
+                False;
+            }
+        }
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 7",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        Procedure("arc",["centerX","centerY","radius","startAngleDegrees","endAngleDegrees","angleStepDegrees","pointCount"])
+        {
+          Local(angleDegrees,angleRadians);
+      
+          angleDegrees := startAngleDegrees;
+      
+          While(angleDegrees <=? endAngleDegrees)
+          {
+            angleRadians := angleDegrees*NM(Pi/180);
+      
+            PlotterPoint("A" + ToString(pointCount++ ),centerX + radius*CosD(angleRadians),centerY + radius*SinD(angleRadians));
+      
+            angleDegrees +:= angleStepDegrees;
+          }
+      
+          pointCount;
+        }
+      
+        Procedure("mainProcedure",[])
+        {
+          Local(pointCount);
+      
+          PlotterClear();
+      
+          pointCount := 1;
+      
+          startAngle := 0;
+      
+          endAngle := 360;
+      
+          centerX := 5;
+      
+          centerY := 5;
+      
+          startRadius := 1;
+      
+          endRadius := 4;
+      
+          angleStep := 30;
+      
+          For(angle := startAngle,angle <? endAngle,angle +:= angleStep)
+          {
+            For(radius := startRadius,radius <=? endRadius,radius++ )
+            {
+              pointCount := arc(5,5,radius,angle,angle,angleStep,pointCount);
+            }
+          }
+        }
+      
+        mainProcedure();
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: MathPiper version = .259. (1/1)
+        PASS: "mainProcedure()" is the last expression in the fold. (1/1)
+      arc:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure has seven formal parameters. (1/1)
+      mainProcedure:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure has zero formal parameters. (1/1)
+        PASS: One copy of a call to "PlotterClear" is present . (1/1)
+        PASS: One copy of a call to "arc" is present . (1/1)
+        PASS: The procedure produces a correct result. (1/1)
+      
+        16/16 passes
+.   %/output
+
+%/group
+
+
+
+

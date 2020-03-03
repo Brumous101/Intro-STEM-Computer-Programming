@@ -1,0 +1,275 @@
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 0",sequence="1",timestamp="2018-12-11 16:05:17.583",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶[¶["firstName", "Kyle"],¶["lastName", "Johnson"],¶["ssuIDNumber", "264694"],¶];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 0",sequence="2",timestamp="2018-12-11 16:05:31.171",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="5",timestamp="2018-12-11 16:08:21.046",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("exchangeElements3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 2;¶    ¶    listLength := Length(list);¶    ¶    If(Odd?(listLength))¶    {¶        listLength--;¶    }¶    ¶    While(index <=? listLength)¶    {¶        Append!(resultList, list[index]);¶        ¶        Append!(resultList, list[index-1]);¶        ¶        index +:= 2;¶    }¶    ¶    resultList;¶}¶¶[¶    exchangeElements3(["A","B","C","D","E","F","G","H"]),¶    exchangeElements3(["a","b","c","d","e","f","g"]),¶];
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 2",sequence="6",timestamp="2018-12-11 16:14:13.53",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("addSubtract3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {¶        If((list[index]) <=? 50)¶        {¶            Append!(resultList, list[index] + 1);¶        }¶        Else¶        {¶            Append!(resultList, list[index] - 1);¶        }¶        ¶        index +:= 1;¶    }¶    ¶    resultList;¶}¶¶[¶    addSubtract3([42,68,23,52,14,81]),¶    addSubtract3([35,5,58,96,19,65]),¶];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 2",sequence="7",timestamp="2018-12-11 16:14:52.813",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="8",timestamp="2018-12-11 16:20:58.968",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("separate3", ["list"])¶{¶    Local(resultList, index, listLength, firstList, secondList, thirdList, selector);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    firstList := [];¶    ¶    secondList := [];¶    ¶    selector := 1;¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {¶        If(selector =? "A")¶        {¶            Append!(firstList, list[index]);¶        }¶        Else If(selector =? "A")¶        {¶            Append!(secondList, list[index]);¶        }¶        Else¶        {¶            Append!(thirdList, list[index]);¶            ¶            selector := 0;¶        }¶        ¶        selector++;¶        ¶        index +:= 1;¶    }¶    ¶    [firstList, secondList, thirdList];¶}¶¶separate3(["A","B","B","D","A","F","B","A","I","A","K"]);¶¶//Result: [[1,5,8,10],[2,3,7]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="9",timestamp="2018-12-11 16:21:45.592",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("separate3", ["list"])¶{¶    Local(resultList, index, listLength, firstList, secondList, thirdList, selector);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    firstList := [];¶    ¶    secondList := [];¶    ¶    thirdList := [];¶    ¶    selector := 1;¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {¶        If(selector =? "A")¶        {¶            Append!(firstList, list[index]);¶        }¶        Else If(selector =? "A")¶        {¶            Append!(secondList, list[index]);¶        }¶        Else¶        {¶            Append!(thirdList, list[index]);¶            ¶            selector := 0;¶        }¶        ¶        selector++;¶        ¶        index +:= 1;¶    }¶    ¶    [firstList, secondList];¶}¶¶separate3(["A","B","B","D","A","F","B","A","I","A","K"]);¶¶//Result: [[1,5,8,10],[2,3,7]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="10",timestamp="2018-12-11 16:22:16.108",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("separate3", ["list"])¶{¶    Local(resultList, index, listLength, firstList, secondList, thirdList, selector);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    firstList := [];¶    ¶    secondList := [];¶    ¶    thirdList := [];¶    ¶    selector := 1;¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {¶        If(selector =? "A")¶        {¶            Append!(firstList, index);¶        }¶        Else If(selector =? "A")¶        {¶            Append!(secondList, index);¶        }¶        Else¶        {¶            Append!(thirdList, list[index]);¶            ¶            selector := 0;¶        }¶        ¶        selector++;¶        ¶        index +:= 1;¶    }¶    ¶    [firstList, secondList];¶}¶¶separate3(["A","B","B","D","A","F","B","A","I","A","K"]);¶¶//Result: [[1,5,8,10],[2,3,7]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="11",timestamp="2018-12-11 16:23:31.242",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("separate3", ["list"])¶{¶    Local(resultList, index, listLength, firstList, secondList, thirdList, selector);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    firstList := [];¶    ¶    secondList := [];¶    ¶    thirdList := [];¶    ¶    selector := 1;¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {¶        If(selector =? A)¶        {¶            Append!(firstList, index);¶        }¶        Else If(selector =? B)¶        {¶            Append!(secondList, index);¶        }¶        Else¶        {¶            Append!(thirdList, list[index]);¶            ¶            selector := 0;¶        }¶        ¶        selector++;¶        ¶        index +:= 1;¶    }¶    ¶    [firstList, secondList];¶}¶¶separate3(["A","B","B","D","A","F","B","A","I","A","K"]);¶¶//Result: [[1,5,8,10],[2,3,7]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="12",timestamp="2018-12-11 16:24:14.562",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("separate3", ["list"])¶{¶    Local(resultList, index, listLength, firstList, secondList, thirdList, selector);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    firstList := [];¶    ¶    secondList := [];¶    ¶    thirdList := [];¶    ¶    selector := 1;¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {¶        If(selector =? "A")¶        {¶            Append!(firstList, index);¶        }¶        Else If(selector =? B)¶        {¶            Append!(secondList, index);¶        }¶        Else¶        {¶            Append!(thirdList, index);¶            ¶        }¶        ¶        selector++;¶        ¶        index +:= 1;¶    }¶    ¶    [firstList, secondList];¶}¶¶separate3(["A","B","B","D","A","F","B","A","I","A","K"]);¶¶//Result: [[1,5,8,10],[2,3,7]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="13",timestamp="2018-12-11 16:24:25.952",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("separate3", ["list"])¶{¶    Local(resultList, index, listLength, firstList, secondList, thirdList, selector);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    firstList := [];¶    ¶    secondList := [];¶    ¶    thirdList := [];¶    ¶    selector := 1;¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {¶        If(selector =? "A")¶        {¶            Append!(firstList, index);¶        }¶        Else If(selector =? "B")¶        {¶            Append!(secondList, index);¶        }¶        Else¶        {¶            Append!(thirdList, index);¶            ¶        }¶        ¶        selector++;¶        ¶        index +:= 1;¶    }¶    ¶    [firstList, secondList];¶}¶¶separate3(["A","B","B","D","A","F","B","A","I","A","K"]);¶¶//Result: [[1,5,8,10],[2,3,7]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="14",timestamp="2018-12-11 16:26:45.046",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("separate3", ["list"])¶{¶    Local(resultList, index, listLength, firstList, secondList, thirdList, selector);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    firstList := [];¶    ¶    secondList := [];¶    ¶    thirdList := [];¶    ¶    selector := 1;¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {¶        If(selector =? "A")¶        {¶            Append!(firstList, index);¶        }¶        Else(selector =? "B")¶        {¶            Append!(secondList, index);¶        }¶        ¶        selector++;¶        ¶        index +:= 1;¶    }¶    ¶    [firstList, secondList];¶}¶¶separate3(["A","B","B","D","A","F","B","A","I","A","K"]);¶¶//Result: [[1,5,8,10],[2,3,7]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="15",timestamp="2018-12-11 16:27:11.332",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("separate3", ["list"])¶{¶    Local(resultList, index, listLength, firstList, secondList, thirdList, selector);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    firstList := [];¶    ¶    secondList := [];¶    ¶    thirdList := [];¶    ¶    selector := 1;¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {¶        If(selector =? "A")¶        {¶            Append!(firstList, index);¶        }¶        Else¶        {¶            Append!(secondList, index);¶        }¶        ¶        selector++;¶        ¶        index +:= 1;¶    }¶    ¶    [firstList, secondList];¶}¶¶separate3(["A","B","B","D","A","F","B","A","I","A","K"]);¶¶//Result: [[1,5,8,10],[2,3,7]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="16",timestamp="2018-12-11 16:28:57.421",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("separate3", ["list"])¶{¶    Local(resultList, index, listLength, firstList, secondList, thirdList, selector);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    firstList := [];¶    ¶    secondList := [];¶    ¶    thirdList := [];¶    ¶    selector := 1;¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(selector <=? listLength)¶    {¶        If(list[index] =? "A")¶        {¶            Append!(firstList, index);¶        }¶        Else If(selector =? "B")¶        {¶            Append!(secondList, index);¶        }¶        Else¶        {¶            Append!(thirdList, index);¶            ¶        }¶        ¶        selector++;¶        ¶        index +:= 1;¶    }¶    ¶    [firstList, secondList];¶}¶¶separate3(["A","B","B","D","A","F","B","A","I","A","K"]);¶¶//Result: [[1,5,8,10],[2,3,7]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 3",sequence="17",timestamp="2018-12-11 16:29:26.187",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("separate3", ["list"])¶{¶    Local(resultList, index, listLength, firstList, secondList, thirdList, selector);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    firstList := [];¶    ¶    secondList := [];¶    ¶    thirdList := [];¶    ¶    selector := 1;¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(selector <=? listLength)¶    {¶        If(list[index] =? "A")¶        {¶            Append!(firstList, index);¶        }¶        Else If(list[index] =? "B")¶        {¶            Append!(secondList, index);¶        }¶        ¶        selector++;¶        ¶        index +:= 1;¶    }¶    ¶    [firstList, secondList];¶}¶¶separate3(["A","B","B","D","A","F","B","A","I","A","K"]);¶¶//Result: [[1,5,8,10],[2,3,7]]
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 3",sequence="18",timestamp="2018-12-11 16:29:38.813",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="19",timestamp="2018-12-11 16:31:42.831",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("VerticalZigzag", ["lowerLeftX", "lowerLeftY", "width","height", "pointCount"])¶{¶    Local(xIndex, yIndex, yIndex1, yIndex, direction);¶    ¶    //diagnal¶    ¶    yIndex := lowerLeftY;¶    ¶    direction := 1;¶    ¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        ¶        yIndex +:= direction;¶        ¶        If(yIndex =? lowerLeftY + height)¶        {¶            direction := -1;¶        }¶        ¶        If(yIndex =? lowerLeftY)¶        {¶            direction := 1;¶        }¶    }¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    zigzag(1, 1, 20, 4, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="20",timestamp="2018-12-11 16:31:58.499",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("VerticalZigzag", ["lowerLeftX", "lowerLeftY", "width","height", "pointCount"])¶{¶    Local(xIndex, yIndex, yIndex1, yIndex, direction);¶    ¶    //diagnal¶    ¶    yIndex := lowerLeftY;¶    ¶    direction := 1;¶    ¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        ¶        yIndex +:= direction;¶        ¶        If(yIndex =? lowerLeftY + height)¶        {¶            direction := -1;¶        }¶        ¶        If(yIndex =? lowerLeftY)¶        {¶            direction := 1;¶        }¶    }¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    VerticalZigzag(1, 1, 20, 4, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="21",timestamp="2018-12-11 16:34:07.514",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("VerticalZigzag", ["lowerLeftX", "lowerLeftY", "width","height", "pointCount"])¶{¶    Local(xIndex, yIndex, yIndex1, yIndex, direction);¶    ¶    //diagnal¶    ¶    yIndex := lowerLeftY;¶    ¶    direction := 1;¶    ¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        ¶        yIndex +:= direction;¶        ¶        If(yIndex =? lowerLeftY + width)¶        {¶            direction := -1;¶        }¶        ¶        If(yIndex =? lowerLeftY)¶        {¶            direction := 1;¶        }¶    }¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    VerticalZigzag(1, 1, 20, 4, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="22",timestamp="2018-12-11 16:35:12.733",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("VerticalZigzag", ["lowerLeftX", "lowerLeftY", "width","height", "pointCount"])¶{¶    Local(xIndex, yIndex, yIndex1, yIndex, direction);¶    ¶    //diagnal¶    ¶    yIndex := lowerLeftY;¶    ¶    direction := 1;¶    ¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        ¶        yIndex +:= direction;¶        ¶        If(yIndex =? lowerLeftY + width)¶        {¶            direction := 1;¶        }¶        ¶        If(yIndex =? lowerLeftY)¶        {¶            direction := -1;¶        }¶    }¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    VerticalZigzag(1, 1, 20, 4, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="23",timestamp="2018-12-11 16:35:45.187",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("VerticalZigzag", ["lowerLeftX", "lowerLeftY", "width","height", "pointCount"])¶{¶    Local(xIndex, yIndex, yIndex1, yIndex, direction);¶    ¶    //diagnal¶    ¶    yIndex := lowerLeftY;¶    ¶    direction := 1;¶    ¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        ¶        yIndex +:= direction;¶        ¶        If(xIndex =? lowerLeftY + width)¶        {¶            direction := -1;¶        }¶        ¶        If(xIndex =? lowerLeftY)¶        {¶            direction := 1;¶        }¶    }¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    VerticalZigzag(1, 1, 20, 4, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="24",timestamp="2018-12-11 16:36:21.796",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("VerticalZigzag", ["lowerLeftX", "lowerLeftY", "width","height", "pointCount"])¶{¶    Local(xIndex, yIndex, yIndex1, yIndex, direction);¶    ¶    //diagnal¶    ¶    yIndex := lowerLeftY;¶    ¶    direction := 1;¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        ¶        yIndex +:= direction;¶        ¶        If(xIndex =? lowerLeftY + width)¶        {¶            direction := -1;¶        }¶        ¶        If(xIndex =? lowerLeftY)¶        {¶            direction := 1;¶        }¶    }¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    VerticalZigzag(1, 1, 20, 4, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="25",timestamp="2018-12-11 16:38:32.564",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("verticalZigzag", ["lowerLeftX", "lowerLeftY", "width","height", "pointCount"])¶{¶    Local(xIndex, yIndex, yIndex1, yIndex, direction);¶    ¶    //diagnal¶    ¶    yIndex := lowerLeftY;¶    ¶    direction := 1;¶    ¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        ¶        yIndex +:= direction;¶        ¶        If(yIndex =? lowerLeftY + height)¶        {¶            direction := -1;¶        }¶        ¶        If(yIndex =? lowerLeftY)¶        {¶            direction := 1;¶        }¶    }¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    VerticalZigzag(1, 1, 20, 4, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="26",timestamp="2018-12-11 16:38:38.078",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("verticalZigzag", ["lowerLeftX", "lowerLeftY", "width","height", "pointCount"])¶{¶    Local(xIndex, yIndex, yIndex1, yIndex, direction);¶    ¶    //diagnal¶    ¶    yIndex := lowerLeftY;¶    ¶    direction := 1;¶    ¶    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        ¶        yIndex +:= direction;¶        ¶        If(yIndex =? lowerLeftY + height)¶        {¶            direction := -1;¶        }¶        ¶        If(yIndex =? lowerLeftY)¶        {¶            direction := 1;¶        }¶    }¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    verticalZigzag(1, 1, 20, 4, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="27",timestamp="2018-12-11 16:40:19.115",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("verticalZigzag", ["lowerLeftX", "lowerLeftY", "width","height", "pointCount"])¶{¶    Local(xIndex, yIndex, yIndex1, yIndex, direction);¶    ¶    //diagnal¶    ¶    xIndex := lowerLeftX;¶    ¶    direction := 1;¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        ¶        xIndex +:= direction;¶        ¶        If(xIndex =? lowerLeftX + width)¶        {¶            direction := -1;¶        }¶        ¶        If(xIndex =? lowerLeftX)¶        {¶            direction := 1;¶        }¶    }¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    verticalZigzag(1, 1, 20, 4, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="28",timestamp="2018-12-11 16:41:58.064",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("verticalZigzag", ["lowerLeftX", "lowerLeftY", "width","height", "pointCount"])¶{¶    Local(xIndex, yIndex, yIndex1, yIndex, direction);¶    ¶    //diagnal¶    ¶    xIndex := lowerLeftX;¶    ¶    direction := 1;¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        ¶        xIndex +:= direction;¶        ¶        If(xIndex =? lowerLeftX + width)¶        {¶            direction := 1;¶        }¶        ¶        If(xIndex =? lowerLeftX)¶        {¶            direction := -1;¶        }¶    }¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    verticalZigzag(1, 1, 20, 4, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="29",timestamp="2018-12-11 16:43:42.279",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("verticalZigzag", ["lowerLeftX", "lowerLeftY", "width","height", "pointCount"])¶{¶    Local(xIndex, yIndex, yIndex, direction);¶    ¶    //diagnal¶    ¶    xIndex := lowerLeftX;¶    ¶    direction := 1;¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        ¶        xIndex +:= direction;¶        ¶        If(xIndex =? lowerLeftX + width)¶        {¶            direction := -1;¶        }¶        ¶        If(xIndex =? lowerLeftX)¶        {¶            direction := 1;¶        }¶    }¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    verticalZigzag(1, 1, 20, 4, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="30",timestamp="2018-12-11 16:45:38.283",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("verticalZigzag", ["lowerLeftX", "lowerLeftY", "width","height", "pointCount"])¶{¶    Local(xIndex, yIndex, yIndex, direction);¶    ¶    //diagnal¶    ¶    xIndex := lowerLeftX;¶    ¶    direction := 1;¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        ¶        xIndex +:= direction;¶        ¶        If(xIndex =? lowerLeftX + width)¶        {¶            direction := -1;¶        }¶        ¶        If(xIndex =? lowerLeftX)¶        {¶            direction := 1;¶        }¶    }¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    verticalZigzag(1, 1, 20, 4, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 4",sequence="31",timestamp="2018-12-11 16:45:53.202",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="32",timestamp="2018-12-11 16:47:45.999",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("verticalZigzag", ["lowerLeftX", "lowerLeftY", "width","height", "pointCount"])¶{¶    Local(xIndex, yIndex, yIndex1, direction);¶    ¶    //diagnal¶    ¶    xIndex := lowerLeftX;¶    ¶    direction := -1;¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        ¶        xIndex +:= direction;¶        ¶        If(xIndex =? lowerLeftX + width)¶        {¶            direction := -1;¶        }¶        ¶        If(xIndex =? lowerLeftX)¶        {¶            direction := 1;¶        }¶    }¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    verticalZigzag(1, 1, 20, 4, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="33",timestamp="2018-12-11 16:48:18.546",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("verticalZigzag", ["lowerLeftX", "lowerLeftY", "width","height", "pointCount"])¶{¶    Local(xIndex, yIndex, yIndex1, direction);¶    ¶    //diagnal¶    ¶    xIndex := lowerLeftX;¶    ¶    direction := 1;¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        ¶        xIndex +:= direction;¶        ¶        If(xIndex =? lowerLeftX + width)¶        {¶            direction := -1;¶        }¶        ¶        If(xIndex =? lowerLeftX)¶        {¶            direction := 1;¶        }¶    }¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    verticalZigzag(1, 1, 20, 4, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="34",timestamp="2018-12-11 16:48:41.592",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("verticalZigzag", ["lowerLeftX", "lowerLeftY", "width","height", "pointCount"])¶{¶    Local(xIndex, yIndex, yIndex1, direction);¶    ¶    //diagnal¶    ¶    //xIndex := lowerLeftX;¶    ¶    direction := 1;¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        ¶        xIndex +:= direction;¶        ¶        If(xIndex =? lowerLeftX + width)¶        {¶            direction := -1;¶        }¶        ¶        If(xIndex =? lowerLeftX)¶        {¶            direction := 1;¶        }¶    }¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    verticalZigzag(1, 1, 20, 4, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="35",timestamp="2018-12-11 16:48:45.922",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("verticalZigzag", ["lowerLeftX", "lowerLeftY", "width","height", "pointCount"])¶{¶    Local(xIndex, yIndex, yIndex1, direction);¶    ¶    //diagnal¶    ¶    xIndex := lowerLeftX;¶    ¶    direction := 1;¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        ¶        xIndex +:= direction;¶        ¶        If(xIndex =? lowerLeftX + width)¶        {¶            direction := -1;¶        }¶        ¶        If(xIndex =? lowerLeftX)¶        {¶            direction := 1;¶        }¶    }¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    verticalZigzag(1, 1, 20, 4, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="36",timestamp="2018-12-11 16:54:57.765",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("exchangeElements3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {¶        If(index =? 1)¶        {¶            Append!(resultList, list[listlength]);¶        }¶        Else If(index =? listLength)¶        {¶            Append!(resultList, list[1]);¶        }¶        ¶        index +:= 1;¶    }¶    ¶    resultList;¶}¶¶[¶    exchangeElements3(["A","B","C","D","E","F","G","H"]),¶    exchangeElements3(["a","b","c","d","e","f","g"]),¶];¶¶//Result: [["H","B","C","D","E","F","G","A"],["g","b","c","d","e","f","a"]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="37",timestamp="2018-12-11 16:55:08.281",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("exchangeElements3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {¶        If(index =? 1)¶        {¶            Append!(resultList, list[listLength]);¶        }¶        Else If(index =? listLength)¶        {¶            Append!(resultList, list[1]);¶        }¶        ¶        index +:= 1;¶    }¶    ¶    resultList;¶}¶¶[¶    exchangeElements3(["A","B","C","D","E","F","G","H"]),¶    exchangeElements3(["a","b","c","d","e","f","g"]),¶];¶¶//Result: [["H","B","C","D","E","F","G","A"],["g","b","c","d","e","f","a"]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="38",timestamp="2018-12-11 16:55:42.108",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("exchangeElements3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {¶        If(index =? 1)¶        {¶            Append!(resultList, list[listLength]);¶        }¶        Else If(index =? listLength)¶        {¶            Append!(resultList, list[1]);¶        }¶        Else¶        {¶            Append!(resultList, list[index]);¶        }¶        ¶        index +:= 1;¶    }¶    ¶    resultList;¶}¶¶[¶    exchangeElements3(["A","B","C","D","E","F","G","H"]),¶    exchangeElements3(["a","b","c","d","e","f","g"]),¶];¶¶//Result: [["H","B","C","D","E","F","G","A"],["g","b","c","d","e","f","a"]]
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 1",sequence="39",timestamp="2018-12-11 16:55:58.78",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 4",sequence="40",timestamp="2018-12-11 17:01:23.294",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("verticalZigzag", ["lowerLeftX", "lowerLeftY", "width","height", "pointCount"])¶{¶    Local(xIndex, yIndex, yIndex1, direction);¶    ¶    //diagnal¶    ¶    xIndex := lowerLeftX;¶    ¶    direction := 1;¶    ¶    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)¶    {¶        PlotterPoint("A" + ToString(pointCount++), xIndex, yIndex);¶        ¶        xIndex +:= direction;¶        ¶        If(xIndex =? lowerLeftX + width)¶        {¶            direction := -1;¶        }¶        ¶        If(xIndex =? lowerLeftX)¶        {¶            direction := 1;¶        }¶    }¶}¶¶Procedure("mainProcedure", [])¶{¶    PlotterClear();¶    ¶    verticalZigzag(1, 1, 4, 20, 1);¶}¶¶mainProcedure();
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 4",sequence="41",timestamp="2018-12-11 17:02:07.827",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="42",timestamp="2018-12-11 17:06:10.857",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("exchangeElements3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? list)¶    {¶        Append!(resultList, list[index])¶        ¶        index +:= 1;¶    }¶    ¶    resultList;¶}¶¶[¶    exchangeElements3(["A","B","C","D","E","F","G","H"]),¶    exchangeElements3(["a","b","c","d","e","f","g"]),¶];¶¶//Result: [["H","B","C","D","E","F","G","A"],["g","b","c","d","e","f","a"]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="43",timestamp="2018-12-11 17:06:18.92",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("exchangeElements3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? list)¶    {¶        Append!(resultList, list[index]);¶        ¶        index +:= 1;¶    }¶    ¶    resultList;¶}¶¶[¶    exchangeElements3(["A","B","C","D","E","F","G","H"]),¶    exchangeElements3(["a","b","c","d","e","f","g"]),¶];¶¶//Result: [["H","B","C","D","E","F","G","A"],["g","b","c","d","e","f","a"]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="44",timestamp="2018-12-11 17:06:40.578",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("exchangeElements3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? "list")¶    {¶        Append!(resultList, list[index]);¶        ¶        index +:= 1;¶    }¶    ¶    resultList;¶}¶¶[¶    exchangeElements3(["A","B","C","D","E","F","G","H"]),¶    exchangeElements3(["a","b","c","d","e","f","g"]),¶];¶¶//Result: [["H","B","C","D","E","F","G","A"],["g","b","c","d","e","f","a"]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="45",timestamp="2018-12-11 17:06:57.389",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("exchangeElements3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? ["list"])¶    {¶        Append!(resultList, list[index]);¶        ¶        index +:= 1;¶    }¶    ¶    resultList;¶}¶¶[¶    exchangeElements3(["A","B","C","D","E","F","G","H"]),¶    exchangeElements3(["a","b","c","d","e","f","g"]),¶];¶¶//Result: [["H","B","C","D","E","F","G","A"],["g","b","c","d","e","f","a"]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="46",timestamp="2018-12-11 17:08:29.983",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("exchangeElements3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? list)¶    {¶        ¶        ¶        index +:= 1;¶    }¶    ¶    resultList;¶}¶¶[¶    exchangeElements3(["A","B","C","D","E","F","G","H"]),¶    exchangeElements3(["a","b","c","d","e","f","g"]),¶];¶¶//Result: [["H","B","C","D","E","F","G","A"],["g","b","c","d","e","f","a"]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="47",timestamp="2018-12-11 17:10:28.014",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("exchangeElements3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {¶        Append!(resultList, list[index]);¶        ¶        index +:= 1;¶    }¶    ¶    resultList;¶}¶¶[¶    exchangeElements3(["A","B","C","D","E","F","G","H"]),¶    exchangeElements3(["a","b","c","d","e","f","g"]),¶];¶¶//Result: [["H","B","C","D","E","F","G","A"],["g","b","c","d","e","f","a"]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="48",timestamp="2018-12-11 17:14:34.077",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("exchangeElements3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {¶        resultList := list[index];¶        ¶        If(index =? 1)¶        {¶            list[1] := list[listLength];¶        index +:= 1;¶    }¶    ¶    resultList;¶}¶¶[¶    exchangeElements3(["A","B","C","D","E","F","G","H"]),¶    exchangeElements3(["a","b","c","d","e","f","g"]),¶];¶¶//Result: [["H","B","C","D","E","F","G","A"],["g","b","c","d","e","f","a"]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="49",timestamp="2018-12-11 17:15:13.093",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("exchangeElements3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {¶        resultList := list[index];¶        ¶        If(index =? 1)¶        {¶            list[1] := list[listLength];¶            ¶            list[listLength] := list[1];¶        }¶        ¶        index +:= 1;¶    }¶    ¶    resultList;¶}¶¶[¶    exchangeElements3(["A","B","C","D","E","F","G","H"]),¶    exchangeElements3(["a","b","c","d","e","f","g"]),¶];¶¶//Result: [["H","B","C","D","E","F","G","A"],["g","b","c","d","e","f","a"]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="50",timestamp="2018-12-11 17:16:28.17",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("exchangeElements3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {¶        resultList := list[index];¶        ¶        If(index =? 1)¶        {¶            list[1] := list[listLength];¶            ¶            list[listLength] := list[1];¶        }¶        ¶        Append!(resultList, list[index]);¶        ¶        index +:= 1;¶    }¶    ¶    resultList;¶}¶¶[¶    exchangeElements3(["A","B","C","D","E","F","G","H"]),¶    exchangeElements3(["a","b","c","d","e","f","g"]),¶];¶¶//Result: [["H","B","C","D","E","F","G","A"],["g","b","c","d","e","f","a"]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="51",timestamp="2018-12-11 17:16:52.968",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("exchangeElements3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {¶        resultList := list[index];¶        ¶        Append!(resultList, list[index]);¶        ¶        index +:= 1;¶    }¶    ¶    resultList;¶}¶¶[¶    exchangeElements3(["A","B","C","D","E","F","G","H"]),¶    exchangeElements3(["a","b","c","d","e","f","g"]),¶];¶¶//Result: [["H","B","C","D","E","F","G","A"],["g","b","c","d","e","f","a"]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="52",timestamp="2018-12-11 17:17:25.161",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("exchangeElements3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {        ¶        Append!(resultList, list[index]);¶        ¶        index +:= 1;¶    }¶    ¶    resultList;¶}¶¶[¶    exchangeElements3(["A","B","C","D","E","F","G","H"]),¶    exchangeElements3(["a","b","c","d","e","f","g"]),¶];¶¶//Result: [["H","B","C","D","E","F","G","A"],["g","b","c","d","e","f","a"]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="53",timestamp="2018-12-11 17:19:31.734",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("exchangeElements3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {        ¶        Append!(resultList, list[index]);¶        ¶        If(index =? 1)¶        {¶            resultList[1] := list[listLength]¶        }¶        ¶        Else If(index =?)¶        {¶            resultList[listLength] := list[1]¶        }¶        ¶        index +:= 1;¶    }¶    ¶    resultList;¶}¶¶[¶    exchangeElements3(["A","B","C","D","E","F","G","H"]),¶    exchangeElements3(["a","b","c","d","e","f","g"]),¶];¶¶//Result: [["H","B","C","D","E","F","G","A"],["g","b","c","d","e","f","a"]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="54",timestamp="2018-12-11 17:19:39.39",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("exchangeElements3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {        ¶        Append!(resultList, list[index]);¶        ¶        If(index =? 1)¶        {¶            resultList[1] := list[listLength];¶        }¶        ¶        Else If(index =?)¶        {¶            resultList[listLength] := list[1];¶        }¶        ¶        index +:= 1;¶    }¶    ¶    resultList;¶}¶¶[¶    exchangeElements3(["A","B","C","D","E","F","G","H"]),¶    exchangeElements3(["a","b","c","d","e","f","g"]),¶];¶¶//Result: [["H","B","C","D","E","F","G","A"],["g","b","c","d","e","f","a"]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="55",timestamp="2018-12-11 17:20:09.515",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("exchangeElements3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {        ¶        Append!(resultList, list[index]);¶        ¶        If(index =? 1)¶        {¶            resultList[1] := list[listLength];¶        }¶        ¶        Else If(index =? listlength)¶        {¶            resultList[listLength] := list[1];¶        }¶        ¶        index +:= 1;¶    }¶    ¶    resultList;¶}¶¶[¶    exchangeElements3(["A","B","C","D","E","F","G","H"]),¶    exchangeElements3(["a","b","c","d","e","f","g"]),¶];¶¶//Result: [["H","B","C","D","E","F","G","A"],["g","b","c","d","e","f","a"]]
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 1",sequence="56",timestamp="2018-12-11 17:20:17.859",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+¶Procedure("exchangeElements3", ["list"])¶{¶    Local(resultList, index, listLength);¶    ¶    Check(List?(list), "The argument must be a list.");¶    ¶    resultList := [];¶    ¶    index := 1;¶    ¶    listLength := Length(list);¶    ¶    While(index <=? listLength)¶    {        ¶        Append!(resultList, list[index]);¶        ¶        If(index =? 1)¶        {¶            resultList[1] := list[listLength];¶        }¶        ¶        Else If(index =? listLength)¶        {¶            resultList[listLength] := list[1];¶        }¶        ¶        index +:= 1;¶    }¶    ¶    resultList;¶}¶¶[¶    exchangeElements3(["A","B","C","D","E","F","G","H"]),¶    exchangeElements3(["a","b","c","d","e","f","g"]),¶];¶¶//Result: [["H","B","C","D","E","F","G","A"],["g","b","c","d","e","f","a"]]
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 1",sequence="57",timestamp="2018-12-11 17:20:36.734",username="Brumo",hostname="DESKTOP-P10IL3Q",hostaddresses="146.85.226.82",mpversion=".259"
+Not logged.
+
+%/info
+

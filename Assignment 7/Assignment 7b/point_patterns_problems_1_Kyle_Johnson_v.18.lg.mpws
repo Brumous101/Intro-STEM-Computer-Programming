@@ -1,0 +1,2123 @@
+v.18
+
+point_patterns_problems_1.mpws
+
+Complete all of the exercises in this worksheet by placing
+the code you write for each problem into the empty fold
+which is provided in each exercise section.
+
+Further information:
+
+- ADDITIONAL VARIABLES CAN BE USED IN YOUR PROGRAMS BEYOND
+THE VARIABLES THAT ARE SPECIFIED IN EACH PROBLEM.
+
+- All variables that are used in procedures must be make
+local to that procedure.
+
+- Do not use the "Echo" or "Write" procedures in your
+programs unless you are using them for debugging. Remove all
+procedures from your code that produce side effects output
+before submitting your worksheet.
+
+- The string "Head" is not equal to the string "HEAD".
+
+- The "truncate" attribute in a fold header limits the
+amount of output that a program will insert into the
+worksheet. This reduces the chances of crashing
+MathPiperIDE.
+
+- The "timeout" attribute in a fold header stops a running
+program after the specified number of milliseconds. This
+prevents programs that contain infinite loops from locking
+up MathPiperIDE.
+
+
+
+
+
+%group,name="Problem 0",description="Programmer's information."
+========================================================================================================
+Problem 0
+
+In the following fold, replace "xxx" with your
+first name, replace "yyy" with your last name, and
+replace "000000" with your SSU ID number:
+
+%mathpiper,name="Problem 0",subtype="problem",unassign_all="true",truncate="6000",timeout="5000"
+
+[
+["firstName", "Kyle"],
+["lastName", "Johnson"],
+["ssuIDNumber", "264694"],
+];
+
+%/mathpiper
+
+    %output,parent="Problem 0",mpversion=".259",preserve="false"
+      Result: [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]]
+.   %/output
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 0"
+
+LocalSymbols(foldResult)
+{    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .259", 1, True)
+    {
+        StringToNumber(Version()) >=? .259;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+    FoldGrade("The code does not produce side effect output", 1, False)
+    {
+        Local(procedureNames);
+        
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'firstName' a string that is not 'xxx'", 1, True)
+    {
+        String?(foldResult["firstName"]) &? foldResult["firstName"] !=? "xxx";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'lastName' is a string that is not 'yyy'", 1, True)
+    {
+        String?(foldResult["lastName"]) &? foldResult["lastName"] !=? "yyy";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'ssuIDNumber' is not '000000'", 1, True)
+    {
+        foldResult["ssuIDNumber"] !=? "000000" &? foldResult["ssuIDNumber"] !=? 0;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 0",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]];
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .259. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The variable 'firstName' a string that is not 'xxx'. (1/1)
+        PASS: The variable 'lastName' is a string that is not 'yyy'. (1/1)
+        PASS: The variable 'ssuIDNumber' is not '000000'. (1/1)
+      
+        13/13 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 1",description="Horizontal line."
+========================================================================================================
+Problem 1
+
+a) Create a procedure named "horizontalLine" that
+has the parameters ["startX", "endX",
+"yCoordinate", "pointCount"]. Use a single "For"
+loop and a single "PlotterPoint" procedure to
+draw a horizontal line of any length at any
+specified "y" coordnate. Have all point labels
+start with a capital "A". Use "pointCount" to make
+all point labels unique. "pointCount" should have
+an initial value of 1. This procedure should not
+contain any number literals.
+
+b) Create a no parameter procedure named
+"mainProcedure" that uses the "horizontalLine"
+procedure to draw the line that is shown in figure
+1 of the points_patterns_exercises_1.pdf document.
+The labels of the plotted points should match the
+names of the points in the figures. The main
+procedure should contain a call to
+PlotterClear().
+
+c) Place the following line of code at the end of
+the fold:
+
+mainProcedure();
+
+
+%mathpiper,name="Problem 1",subtype="hint"
+Hint("ClByb2NlZHVyZSgiaG9yaXpvbnRhbExpbmUiLCBbInN0YXJ0WCIsICJlbmRYIiwgInlDb29yZGluYXRlIiwgInBvaW50Q291bnQiXSkKeyAgIAogICAgTG9jYWwoeEluZGV4KTsKICAgIAogICAgRm9yKHhJbmRleCA6PSBzdGFydFgsIHhJbmRleCA8PT8gZW5kWCwgeEluZGV4KyspCiAgICB7CiAgICAgICAgUGxvdHRlclBvaW50KCJBIiArIFRvU3RyaW5nKHBvaW50Q291bnQrKyksIHhJbmRleCwgeUNvb3JkaW5hdGUpOwogICAgfQogICAgCiAgICBwb2ludENvdW50Owp9CgoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIiwgW10pCnsKICAgIFBsb3R0ZXJDbGVhcigpOwogICAgaG9yaXpvbnRhbExpbmUoMSwgMTAsIDIsIDEpOwp9CgoKbWFpblByb2NlZHVyZSgpOwoK");
+%/mathpiper
+
+    %output,parent="Problem 1",mpversion=".259",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 1",subtype="problem",unassign_all="true",truncate="1000",timeout="5000"
+
+Procedure("horizontalLine", ["startX", "endX", "yCoordinate", "pointCount"])
+{
+    Local(xIndex);
+    
+    For(xIndex := startX, xIndex <=? endX, xIndex++)
+    {
+        PlotterPoint("A" + ToString(pointCount++),xIndex, yCoordinate);
+    }
+    
+    pointCount;
+}
+
+Procedure("mainProcedure",[])
+{
+    PlotterClear();
+    horizontalLine(1,10,2,1);
+}
+
+mainProcedure();
+
+%/mathpiper
+
+    %output,parent="Problem 1",mpversion=".259",preserve="false"
+      Result: 11
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 1"
+
+FoldGrade("MathPiper version >= .259", 1, True)
+{
+    StringToNumber(Version()) >=? .259;
+}
+
+// --------------------------------------------------------
+    
+LocalSymbols(pointsMap)
+{    
+    pointsSort(list) :=
+    {
+        Sort(list,Lambda([x,y], StringToNumber(StringSubstring(x[1], 2, Length(x[1]))) <? StringToNumber(StringSubstring(y[1], 2, Length(y[1])))));
+    }
+    
+    pointsMap := [];
+    
+    testPlotterPoint(name, x, y) :=
+    {
+        pointsMap[name] := [x, y];
+    }
+
+    ?foldCode := Substitute('PlotterPoint, 'testPlotterPoint) ?foldCode;
+    
+    ?foldCode := Substitute('PlotterClear(), ' 'PlotterClear()) ?foldCode;
+
+    // --------------------------------------------------------
+
+    FoldGrade("\"mainProcedure()\" is the last expression in the fold", 1, False)
+    {
+        Local(mainPosition);
+        
+        mainPosition := Length(?foldCode[1]);
+    
+        If(Procedure?(?foldCode[1][mainPosition]) &? ?foldCode[1][mainPosition][0] =? 'mainProcedure)
+        {
+            Local(resultMessage);
+            resultMessage := True;
+            If(?foldCode[1][mainPosition] !=? 'mainProcedure())
+            {
+                resultMessage := "The call to \"mainProcedure\" must have zero arguments.";
+            }
+            
+            ?foldCode[1][mainPosition] := ` '('(@ ?foldCode[1][mainPosition]));
+            resultMessage;
+        }
+        Else
+        {
+            False;
+        }
+    
+    }
+                
+    // --------------------------------------------------------
+    
+    {
+        Local(procedures, procedureName, parameters, body);
+        
+        procedures := ProceduresGet(?foldCode);
+        
+        If(procedures !=? [])
+        {
+            { // horizontalLine
+            
+                procedureName := "horizontalLine";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has four formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 4;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure does not use any number literals", 1, False)
+                    {
+                        Length(PositionsPattern2(procedure["body"], a_Number?)) =? 0;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("One loop is used", 1, False)
+                    {
+                        Local(procedureNames, loopCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        loopCount := Count(procedureNames,"While") + Count(procedureNames,"Until") + Count(procedureNames,"For") ;
+                        loopCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One \"PlotterPoint\" procedure is used ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"testPlotterPoint");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("The \"Local\" procedure is used", 1, False)
+                    {
+                        Local(procedureNames);
+                        procedureNames := ProcedureList(procedure["body"]);
+                        Contains?(procedureNames,"Local");
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("\"pointCount;\" is the last expression in the fold", 1, False)
+                    {
+                        procedure["body"][Length(procedure["body"])] =? 'pointCount;
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+            
+            
+            
+            
+            { // mainProcedure
+               
+                procedureName := "mainProcedure";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure exists and it has the correct name", 1, True)
+                    {
+                        procedure !=? None;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has zero formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 0;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One copy of a call to \"PlotterClear\" is present ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"PlotterClear");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure produces a correct result", 1, True)
+                    {
+                        Local(procedureResult, correctValue);
+                        
+                        correctValue := [["A1",[1,2]],["A2",[2,2]],["A3",[3,2]],["A4",[4,2]],["A5",[5,2]],["A6",[6,2]],["A7",[7,2]],["A8",[8,2]],["A9",[9,2]],["A10",[10,2]]];
+    
+                        ExceptionCatch(
+                        {
+                            `( Apply(Lambda(@procedure["parameters"], @procedure["body"]), []) );
+                            
+                            procedureResult := pointsSort(pointsMap);
+    
+                            If(procedureResult !=? correctValue)
+                            {
+                                "The following points are not in the correct position: (" + ToString(Difference(correctValue, procedureResult)) + ")";
+                            }
+                            Else
+                            {
+                                True;
+                            }
+                            
+                        },
+                        "",
+                        "Exception: " + ExceptionGet()["message"]);    
+                    }
+
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+        }
+        Else
+        {
+            FoldGrade("At least one procedure is defined in the fold", 0, True)
+            {
+                False;
+            }
+        }
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 1",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        Procedure("horizontalLine",["startX","endX","yCoordinate","pointCount"])
+        {
+          Local(xIndex);
+      
+          For(xIndex := startX,xIndex <=? endX,xIndex++ )
+          {
+            PlotterPoint("A" + ToString(pointCount++ ),xIndex,yCoordinate);
+          }
+      
+          pointCount;
+        }
+      
+        Procedure("mainProcedure",[])
+        {
+          PlotterClear();
+      
+          horizontalLine(1,10,2,1);
+        }
+      
+        mainProcedure();
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: MathPiper version >= .259. (1/1)
+        PASS: "mainProcedure()" is the last expression in the fold. (1/1)
+      horizontalLine:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure has four formal parameters. (1/1)
+        PASS: The procedure does not use any number literals. (1/1)
+        PASS: One loop is used. (1/1)
+        PASS: One "PlotterPoint" procedure is used . (1/1)
+        PASS: The "Local" procedure is used. (1/1)
+        PASS: "pointCount;" is the last expression in the fold. (1/1)
+      mainProcedure:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure exists and it has the correct name. (1/1)
+        PASS: The procedure has zero formal parameters. (1/1)
+        PASS: One copy of a call to "PlotterClear" is present . (1/1)
+        PASS: The procedure produces a correct result. (1/1)
+      
+        21/21 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+
+%group,name="Problem 2",description="Vertical line."
+========================================================================================================
+Problem 2
+
+a) Create a procedure named "verticalLine" that
+has the parameters ["startY", "endY", "xCoordinate", "pointCount"].
+Use a single loop and a single "PlotterPoint"
+procedure to draw a vertical line of any length
+at any specified "x" coordnate. Have all point
+labels start with a capital "B". Use "pointCount" to
+make all point labels unique. It should have an
+initial value of 1. This procedure should not
+contain any number literals.
+
+b) Create a no parameter procedure named
+"mainProcedure" that uses the "verticalLine"
+procedure to draw the line that is shown in figure
+2 of the points_patterns_exercises_1.pdf document.
+The labels of the plotted points should match the
+labels of the points in the figures. The main
+procedure should contain a call to
+PlotterClear().
+
+c) Place the following line of code at the end of
+the fold:
+
+mainProcedure();
+
+
+%mathpiper,name="Problem 2",subtype="hint"
+Hint("ClByb2NlZHVyZSgidmVydGljYWxMaW5lIiwgWyJzdGFydFkiLCAiZW5kWSIsICJ4Q29vcmRpbmF0ZSIsICJwb2ludENvdW50Il0pCnsgICAgCiAgICBMb2NhbCh5SW5kZXgpOwogICAgCiAgICBGb3IoeUluZGV4IDo9IHN0YXJ0WSwgeUluZGV4IDw9PyBlbmRZLCB5SW5kZXgrKykKICAgIHsKICAgICAgICBQbG90dGVyUG9pbnQoIkIiICsgVG9TdHJpbmcocG9pbnRDb3VudCsrKSwgeENvb3JkaW5hdGUsIHlJbmRleCk7CiAgICB9CiAgICAKICAgIHBvaW50Q291bnQ7Cn0KCgpQcm9jZWR1cmUoIm1haW5Qcm9jZWR1cmUiLCBbXSkKewogICAgUGxvdHRlckNsZWFyKCk7CiAgICB2ZXJ0aWNhbExpbmUoMSwgNiwgMywgMSk7Cn0KCgptYWluUHJvY2VkdXJlKCk7Cgo=");
+%/mathpiper
+
+    %output,parent="Problem 2",mpversion=".259",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 2",subtype="problem",unassign_all="true",truncate="1000",timeout="5000"
+
+Procedure("verticalLine", ["startY","endY","xCoordinate","pointCount"])
+{
+    Local(yIndex);
+    
+    For(yIndex := startY, yIndex <=? endY, yIndex++)
+    {
+        PlotterPoint("B" + ToString(pointCount++), xCoordinate,yIndex);
+    }
+    
+    pointCount;
+}
+
+Procedure("mainProcedure", [])
+{
+    PlotterClear();
+    verticalLine(1,6,3,1);
+}
+
+mainProcedure();
+
+%/mathpiper
+
+    %output,parent="Problem 2",mpversion=".259",preserve="false"
+      Result: 7
+.   %/output
+
+
+
+
+
+%mathpiper_grade,name="Problem 2"
+
+FoldGrade("MathPiper version >= .259", 1, True)
+{
+    StringToNumber(Version()) >=? .259;
+}
+
+// --------------------------------------------------------
+    
+LocalSymbols(pointsMap)
+{    
+    pointsSort(list) :=
+    {
+        Sort(list,Lambda([x,y], StringToNumber(StringSubstring(x[1], 2, Length(x[1]))) <? StringToNumber(StringSubstring(y[1], 2, Length(y[1])))));
+    }
+    
+    pointsMap := [];
+    
+    testPlotterPoint(name, x, y) :=
+    {
+        pointsMap[name] := [x, y];
+    }
+    
+    ?foldCode := Substitute('PlotterPoint, 'testPlotterPoint) ?foldCode;
+    
+    ?foldCode := Substitute('PlotterClear(), ' 'PlotterClear()) ?foldCode;
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("\"mainProcedure()\" is the last expression in the fold", 1, False)
+    {
+        Local(mainPosition);
+        
+        mainPosition := Length(?foldCode[1]);
+    
+        If(Procedure?(?foldCode[1][mainPosition]) &? ?foldCode[1][mainPosition][0] =? 'mainProcedure)
+        {
+            Local(resultMessage);
+            resultMessage := True;
+            If(?foldCode[1][mainPosition] !=? 'mainProcedure())
+            {
+                resultMessage := "The call to \"mainProcedure\" must have zero arguments.";
+            }
+            
+            ?foldCode[1][mainPosition] := ` '('(@ ?foldCode[1][mainPosition]));
+            resultMessage;
+        }
+        Else
+        {
+            False;
+        }
+    
+    }
+            
+    // --------------------------------------------------------
+    
+    {
+        Local(procedures, procedureName, parameters, body);
+        
+        procedures := ProceduresGet(?foldCode);
+        
+        If(procedures !=? [])
+        {
+            { // verticalLine
+            
+                procedureName := "verticalLine";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure exists and it has the correct name", 1, True)
+                    {
+                        procedure !=? None;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has four formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 4;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure does not use any number literals", 1, False)
+                    {
+                        Length(PositionsPattern2(procedure["body"], a_Number?)) =? 0;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("One loop is used", 1, False)
+                    {
+                        Local(procedureNames, loopCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        loopCount := Count(procedureNames,"While") + Count(procedureNames,"Until") + Count(procedureNames,"For") ;
+                        loopCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One \"PlotterPoint\" procedure is used ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"testPlotterPoint");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("The \"Local\" procedure is used", 1, False)
+                    {
+                        Local(procedureNames);
+                        procedureNames := ProcedureList(procedure["body"]);
+                        Contains?(procedureNames,"Local");
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("\"pointCount;\" is the last expression in the fold", 1, False)
+                    {
+                        procedure["body"][Length(procedure["body"])] =? 'pointCount;
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+            
+            
+            
+            
+            { // mainProcedure
+            
+                procedureName := "mainProcedure";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure exists and it has the correct name", 1, True)
+                    {
+                        procedure !=? None;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has zero formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 0;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One copy of a call to \"PlotterClear\" is present ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"PlotterClear");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure produces a correct result", 1, True)
+                    {
+                        Local(procedureResult, correctValue);
+                        
+                        correctValue := [["B1",[3,1]],["B2",[3,2]],["B3",[3,3]],["B4",[3,4]],["B5",[3,5]],["B6",[3,6]]];
+    
+                        ExceptionCatch(
+                        {                        
+                            `( Apply(Lambda(@procedure["parameters"], @procedure["body"]), []) );
+                            
+                            procedureResult := pointsSort(pointsMap);
+    
+                            If(procedureResult !=? correctValue)
+                            {
+                                "The following points are not in the correct position: (" + ToString(Difference(correctValue, procedureResult)) + ")";
+                            }
+                            Else
+                            {
+                                True;
+                            }
+                            
+                        },
+                        "",
+                        "Exception: " + ExceptionGet()["message"]);                
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+        }
+        Else
+        {
+            FoldGrade("At least one procedure is defined in the fold", 0, True)
+            {
+                False;
+            }
+        }
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 2",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        Procedure("verticalLine",["startY","endY","xCoordinate","pointCount"])
+        {
+          Local(yIndex);
+      
+          For(yIndex := startY,yIndex <=? endY,yIndex++ )
+          {
+            PlotterPoint("B" + ToString(pointCount++ ),xCoordinate,yIndex);
+          }
+      
+          pointCount;
+        }
+      
+        Procedure("mainProcedure",[])
+        {
+          PlotterClear();
+      
+          verticalLine(1,6,3,1);
+        }
+      
+        mainProcedure();
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: MathPiper version >= .259. (1/1)
+        PASS: "mainProcedure()" is the last expression in the fold. (1/1)
+      verticalLine:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure exists and it has the correct name. (1/1)
+        PASS: The procedure has four formal parameters. (1/1)
+        PASS: The procedure does not use any number literals. (1/1)
+        PASS: One loop is used. (1/1)
+        PASS: One "PlotterPoint" procedure is used . (1/1)
+        PASS: The "Local" procedure is used. (1/1)
+        PASS: "pointCount;" is the last expression in the fold. (1/1)
+      mainProcedure:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure exists and it has the correct name. (1/1)
+        PASS: The procedure has zero formal parameters. (1/1)
+        PASS: One copy of a call to "PlotterClear" is present . (1/1)
+        PASS: The procedure produces a correct result. (1/1)
+      
+        22/22 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+%group,name="Problem 3",description="Solid rectangle."
+========================================================================================================
+Problem 3
+
+a) Create a procedure named "solidRectangle" that has
+the parameters ["lowerLeftX", "lowerLeftY", "width",
+"height", "pointCount"]. Use nested "For" loops and a single
+"PlotterPoint" procedure to draw a solid rectangle
+of any width and height at the specified X,Y
+coordinates. The parameters "lowerLeftX" and
+"lowerLeftY" are the X,Y coordinates of the lower
+left corner of the rectangle. Have all point labels
+start with a capital "C". Use "pointCount" to
+make all point labels unique. It should have an
+initial value of 1. This procedure should not
+contain any number literals.
+
+b) Create a no parameter procedure named
+"mainProcedure" that uses the "solidRectangle"
+procedure to draw the line that is shown in figure
+3 of the points_patterns_exercises_1.pdf document.
+The labels of the plotted points should match the
+labels of the points in the figures. The main
+procedure should contain a call to
+PlotterClear().
+
+c) Place the following line of code at the end of
+the fold:
+
+mainProcedure();
+
+
+%mathpiper,name="Problem 3",subtype="hint"
+Hint("ClByb2NlZHVyZSgic29saWRSZWN0YW5nbGUiLCBbImxvd2VyTGVmdFgiLCAibG93ZXJMZWZ0WSIsICJ3aWR0aCIsICJoZWlnaHQiLCAicG9pbnRDb3VudCJdKQp7CiAgICBMb2NhbCh4SW5kZXgsIHlJbmRleCk7CiAgICAKICAgIEZvcih5SW5kZXggOj0gbG93ZXJMZWZ0WSwgeUluZGV4IDw9PyBsb3dlckxlZnRZICsgaGVpZ2h0LCB5SW5kZXgrKykKICAgIHsgICAgCiAgICAgICAgRm9yKHhJbmRleCA6PSBsb3dlckxlZnRYLCB4SW5kZXggPD0/IGxvd2VyTGVmdFggKyB3aWR0aCwgeEluZGV4KyspCiAgICAgICAgewogICAgICAgICAgICBQbG90dGVyUG9pbnQoIkMiICsgVG9TdHJpbmcocG9pbnRDb3VudCsrKSwgeEluZGV4LCB5SW5kZXgpOwogICAgICAgIH0KICAgIH0KICAgIAogICAgcG9pbnRDb3VudDsKfQoKClByb2NlZHVyZSgibWFpblByb2NlZHVyZSIsIFtdKQp7CiAgICBQbG90dGVyQ2xlYXIoKTsKICAgIHNvbGlkUmVjdGFuZ2xlKDEsIDIsIDUsIDUsIDEpOwp9CgoKbWFpblByb2NlZHVyZSgpOwoK");
+%/mathpiper
+
+    %output,parent="Problem 3",mpversion=".259",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 3",subtype="problem",unassign_all="true",truncate="1000",timeout="5000"
+
+Procedure("solidRectangle",["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])
+{
+    Local(xIndex, yIndex);
+    
+    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)
+    {
+        For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)
+        {    
+            PlotterPoint("C"+ToString(pointCount++),xIndex,yIndex);
+        }
+    }
+
+    pointCount;
+}
+
+Procedure("mainProcedure",[])
+{
+    PlotterClear();
+    solidRectangle(1,2,5,5,1);
+}
+
+mainProcedure();
+
+    
+%/mathpiper
+
+    %output,parent="Problem 3",mpversion=".259",preserve="false"
+      Result: 37
+.   %/output
+
+
+
+
+
+%mathpiper_grade,name="Problem 3"
+
+FoldGrade("MathPiper version >= .259", 1, True)
+{
+    StringToNumber(Version()) >=? .259;
+}
+
+// --------------------------------------------------------
+
+LocalSymbols(pointsMap)
+{    
+    pointsSort(list) :=
+    {
+        Sort(list,Lambda([x,y], StringToNumber(StringSubstring(x[1], 2, Length(x[1]))) <? StringToNumber(StringSubstring(y[1], 2, Length(y[1])))));
+    }
+    
+    pointsMap := [];
+    
+    testPlotterPoint(name, x, y) :=
+    {
+        pointsMap[name] := [x, y];
+    }
+    
+    ?foldCode := Substitute('PlotterPoint, 'testPlotterPoint) ?foldCode;
+    
+    ?foldCode := Substitute('PlotterClear(), ' 'PlotterClear()) ?foldCode;
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("\"mainProcedure()\" is the last expression in the fold", 1, False)
+    {
+        Local(mainPosition);
+        
+        mainPosition := Length(?foldCode[1]);
+    
+        If(Procedure?(?foldCode[1][mainPosition]) &? ?foldCode[1][mainPosition][0] =? 'mainProcedure)
+        {
+            Local(resultMessage);
+            resultMessage := True;
+            If(?foldCode[1][mainPosition] !=? 'mainProcedure())
+            {
+                resultMessage := "The call to \"mainProcedure\" must have zero arguments.";
+            }
+            
+            ?foldCode[1][mainPosition] := ` '('(@ ?foldCode[1][mainPosition]));
+            resultMessage;
+        }
+        Else
+        {
+            False;
+        }
+    
+    }
+            
+    // --------------------------------------------------------
+    
+    {
+        Local(procedures, procedureName, parameters, body);
+        
+        procedures := ProceduresGet(?foldCode);
+        
+        If(procedures !=? [])
+        {
+            { // solidRectangle
+            
+                procedureName := "solidRectangle";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure exists and it has the correct name", 1, True)
+                    {
+                        procedure !=? None;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has five formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 5;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure does not use any number literals", 1, False)
+                    {
+                        Length(PositionsPattern2(procedure["body"], a_Number?)) =? 0;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("Exactly two \"For\" loops are used and no other loops are used", 1, False)
+                    {
+                        Local(procedureNames, loopCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        loopCount := Count(procedureNames,"While") + Count(procedureNames,"Until");
+                        loopCount =? 0 &? Count(procedureNames,"For") =? 2;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One \"PlotterPoint\" procedure is used ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"testPlotterPoint");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("The \"Local\" procedure is used", 1, False)
+                    {
+                        Local(procedureNames);
+                        procedureNames := ProcedureList(procedure["body"]);
+                        Contains?(procedureNames,"Local");
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("\"pointCount;\" is the last expression in the fold", 1, False)
+                    {
+                        procedure["body"][Length(procedure["body"])] =? 'pointCount;
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+            
+            
+            
+            
+            { // mainProcedure
+            
+                procedureName := "mainProcedure";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure exists and it has the correct name", 1, True)
+                    {
+                        procedure !=? None;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has zero formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 0;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One copy of a call to \"PlotterClear\" is present ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"PlotterClear");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure produces a correct result", 1, True)
+                    {
+                        Local(procedureResult, correctValue);
+                        
+                        correctValue := [["C1",[1,2]],["C2",[2,2]],["C3",[3,2]],["C4",[4,2]],["C5",[5,2]],["C6",[6,2]],["C7",[1,3]],["C8",[2,3]],["C9",[3,3]],["C10",[4,3]],["C11",[5,3]],["C12",[6,3]],["C13",[1,4]],["C14",[2,4]],["C15",[3,4]],["C16",[4,4]],["C17",[5,4]],["C18",[6,4]],["C19",[1,5]],["C20",[2,5]],["C21",[3,5]],["C22",[4,5]],["C23",[5,5]],["C24",[6,5]],["C25",[1,6]],["C26",[2,6]],["C27",[3,6]],["C28",[4,6]],["C29",[5,6]],["C30",[6,6]],["C31",[1,7]],["C32",[2,7]],["C33",[3,7]],["C34",[4,7]],["C35",[5,7]],["C36",[6,7]]];
+                        
+                        ExceptionCatch(
+                        {                                      
+                            `( Apply(Lambda(@procedure["parameters"], @procedure["body"]), []) );
+                            
+                            procedureResult := pointsSort(pointsMap);
+    
+                            If(procedureResult !=? correctValue)
+                            {
+                                "The following points are not in the correct position: (" + ToString(Difference(correctValue, procedureResult)) + ")";
+                            }
+                            Else
+                            {
+                                True;
+                            }
+                            
+                        },
+                        "",
+                        "Exception: " + ExceptionGet()["message"]);                
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+        }
+        Else
+        {
+            FoldGrade("At least one procedure is defined in the fold", 0, True)
+            {
+                False;
+            }
+        }
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 3",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        Procedure("solidRectangle",["lowerLeftX","lowerLeftY","width","height","pointCount"])
+        {
+          Local(xIndex,yIndex);
+      
+          For(yIndex := lowerLeftY,yIndex <=? lowerLeftY + height,yIndex++ )
+          {
+            For(xIndex := lowerLeftX,xIndex <=? lowerLeftX + width,xIndex++ )
+            {
+              PlotterPoint("C" + ToString(pointCount++ ),xIndex,yIndex);
+            }
+          }
+      
+          pointCount;
+        }
+      
+        Procedure("mainProcedure",[])
+        {
+          PlotterClear();
+      
+          solidRectangle(1,2,5,5,1);
+        }
+      
+        mainProcedure();
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: MathPiper version >= .259. (1/1)
+        PASS: "mainProcedure()" is the last expression in the fold. (1/1)
+      solidRectangle:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure exists and it has the correct name. (1/1)
+        PASS: The procedure has five formal parameters. (1/1)
+        PASS: The procedure does not use any number literals. (1/1)
+        PASS: Exactly two "For" loops are used and no other loops are used. (1/1)
+        PASS: One "PlotterPoint" procedure is used . (1/1)
+        PASS: The "Local" procedure is used. (1/1)
+        PASS: "pointCount;" is the last expression in the fold. (1/1)
+      mainProcedure:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure exists and it has the correct name. (1/1)
+        PASS: The procedure has zero formal parameters. (1/1)
+        PASS: One copy of a call to "PlotterClear" is present . (1/1)
+        PASS: The procedure produces a correct result. (1/1)
+      
+        22/22 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 4",description="Solid rectangle 2."
+========================================================================================================
+Problem 4
+
+a) Create a procedure named "solidRectangle2" that
+has the parameters ["lowerLeftX", "lowerLeftY",
+"width", "height", "pointCount"]. Use nested "For" loops and a
+single "PlotterPoint" procedure to draw a solid
+rectangle of any width and height at the specified
+X,Y coordinate. The parameters "lowerLeftX" and
+"lowerLeftY" are the X,Y coordinate of the lower
+left corner of the rectangle. Have all point labels
+start with a capital "D". Use "pointCount" to
+make all point labels unique. It should have an
+initial value of 1. This procedure should not
+contain any number literals.
+
+b) Create a no parameter procedure named
+"mainProcedure" that uses the "solidRectangle2"
+procedure to draw the line that is shown in figure
+4 of the points_patterns_exercises_1.pdf document.
+The labels of the plotted points should match the
+labels of the points in the figures. The main
+procedure should contain a call to
+PlotterClear().
+
+c) Place the following line of code at the end of
+the fold:
+
+mainProcedure();
+
+
+%mathpiper,name="Problem 4",subtype="hint"
+Hint("ClByb2NlZHVyZSgic29saWRSZWN0YW5nbGUyIiwgWyJsb3dlckxlZnRYIiwgImxvd2VyTGVmdFkiLCAid2lkdGgiLCAiaGVpZ2h0IiwgInBvaW50Q291bnQiXSkKewogICAgTG9jYWwoeEluZGV4LCB5SW5kZXgpOwogICAgCiAgICBGb3IoeEluZGV4IDo9IGxvd2VyTGVmdFgsIHhJbmRleCA8PT8gbG93ZXJMZWZ0WCArIHdpZHRoLCB4SW5kZXgrKykKICAgIHsgICAgCiAgICAgICAgRm9yKHlJbmRleCA6PSBsb3dlckxlZnRZLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBoZWlnaHQsIHlJbmRleCsrKQogICAgICAgIHsKICAgICAgICAgICAgUGxvdHRlclBvaW50KCJEIiArIFRvU3RyaW5nKHBvaW50Q291bnQrKyksIHhJbmRleCwgeUluZGV4KTsKICAgICAgICB9CiAgICB9CiAgICAKICAgIHBvaW50Q291bnQ7Cn0KCgpQcm9jZWR1cmUoIm1haW5Qcm9jZWR1cmUiLCBbXSkKewogICAgUGxvdHRlckNsZWFyKCk7CiAgICBzb2xpZFJlY3RhbmdsZTIoMSwgMiwgNSwgNSwgMSk7Cn0KCgptYWluUHJvY2VkdXJlKCk7Cgo=");
+%/mathpiper
+
+
+%mathpiper,name="Problem 4",subtype="problem",unassign_all="true",truncate="1000",timeout="5000"
+
+Procedure("solidRectangle2", ["lowerLeftX", "lowerLeftY", "width", "height", "pointCount"])
+{
+    Local(xIndex, yIndex);
+    
+    For(xIndex := lowerLeftX, xIndex <=? lowerLeftX + width, xIndex++)
+    {
+        For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)
+        {
+            PlotterPoint("D" + ToString(pointCount++),xIndex,yIndex);
+        }
+    }
+    
+    pointCount;
+}
+
+Procedure("mainProcedure",[])
+{
+    PlotterClear();
+    solidRectangle2(1,2,5,5,1);
+}
+
+mainProcedure();
+%/mathpiper
+
+    %output,parent="Problem 4",mpversion=".259",preserve="false"
+      Result: 37
+.   %/output
+
+
+
+
+
+%mathpiper_grade,name="Problem 4"
+
+FoldGrade("MathPiper version >= .259", 1, True)
+{
+    StringToNumber(Version()) >=? .259;
+}
+
+// --------------------------------------------------------
+LocalSymbols(pointsMap)
+{    
+    pointsSort(list) :=
+    {
+        Sort(list,Lambda([x,y], StringToNumber(StringSubstring(x[1], 2, Length(x[1]))) <? StringToNumber(StringSubstring(y[1], 2, Length(y[1])))));
+    }
+    
+    pointsMap := [];
+    
+    testPlotterPoint(name, x, y) :=
+    {
+        pointsMap[name] := [x, y];
+    }
+    
+    ?foldCode := Substitute('PlotterPoint, 'testPlotterPoint) ?foldCode;
+    
+    ?foldCode := Substitute('PlotterClear(), ' 'PlotterClear()) ?foldCode;
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("\"mainProcedure()\" is the last expression in the fold", 1, False)
+    {
+        Local(mainPosition);
+        
+        mainPosition := Length(?foldCode[1]);
+    
+        If(Procedure?(?foldCode[1][mainPosition]) &? ?foldCode[1][mainPosition][0] =? 'mainProcedure)
+        {
+            Local(resultMessage);
+            resultMessage := True;
+            If(?foldCode[1][mainPosition] !=? 'mainProcedure())
+            {
+                resultMessage := "The call to \"mainProcedure\" must have zero arguments.";
+            }
+            
+            ?foldCode[1][mainPosition] := ` '('(@ ?foldCode[1][mainPosition]));
+            resultMessage;
+        }
+        Else
+        {
+            False;
+        }
+    
+    }
+            
+    // --------------------------------------------------------
+    
+    {
+        Local(procedures, procedureName, parameters, body);
+        
+        procedures := ProceduresGet(?foldCode);
+        
+        If(procedures !=? [])
+        {
+            { // solidRectangle2
+            
+                procedureName := "solidRectangle2";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure exists and it has the correct name", 1, True)
+                    {
+                        procedure !=? None;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has five formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 5;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure does not use any number literals", 1, False)
+                    {
+                        Length(PositionsPattern2(procedure["body"], a_Number?)) =? 0;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("Exactly two \"For\" loops are used and no other loops are used", 1, False)
+                    {
+                        Local(procedureNames, loopCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        loopCount := Count(procedureNames,"While") + Count(procedureNames,"Until");
+                        loopCount =? 0 &? Count(procedureNames,"For") =? 2;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One \"PlotterPoint\" procedure is used ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"testPlotterPoint");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("The \"Local\" procedure is used", 1, False)
+                    {
+                        Local(procedureNames);
+                        procedureNames := ProcedureList(procedure["body"]);
+                        Contains?(procedureNames,"Local");
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("\"pointCount;\" is the last expression in the fold", 1, False)
+                    {
+                        procedure["body"][Length(procedure["body"])] =? 'pointCount;
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+            
+            
+            
+            
+            { // mainProcedure
+            
+                procedureName := "mainProcedure";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure exists and it has the correct name", 1, True)
+                    {
+                        procedure !=? None;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has zero formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 0;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One copy of a call to \"PlotterClear\" is present ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"PlotterClear");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure produces a correct result", 1, True)
+                    {
+                        Local(procedureResult, correctValue);
+                        
+                        correctValue := [["D1",[1,2]],["D2",[1,3]],["D3",[1,4]],["D4",[1,5]],["D5",[1,6]],["D6",[1,7]],["D7",[2,2]],["D8",[2,3]],["D9",[2,4]],["D10",[2,5]],["D11",[2,6]],["D12",[2,7]],["D13",[3,2]],["D14",[3,3]],["D15",[3,4]],["D16",[3,5]],["D17",[3,6]],["D18",[3,7]],["D19",[4,2]],["D20",[4,3]],["D21",[4,4]],["D22",[4,5]],["D23",[4,6]],["D24",[4,7]],["D25",[5,2]],["D26",[5,3]],["D27",[5,4]],["D28",[5,5]],["D29",[5,6]],["D30",[5,7]],["D31",[6,2]],["D32",[6,3]],["D33",[6,4]],["D34",[6,5]],["D35",[6,6]],["D36",[6,7]]];
+                        
+                        ExceptionCatch(
+                        {   
+                            `( Apply(Lambda(@procedure["parameters"], @procedure["body"]), []) );
+                            
+                            procedureResult := pointsSort(pointsMap);
+    
+                            If(procedureResult !=? correctValue)
+                            {
+                                "The following points are not in the correct position: (" + ToString(Difference(correctValue, procedureResult)) + ")";
+                            }
+                            Else
+                            {
+                                True;
+                            }
+                            
+                        },
+                        "",
+                        "Exception: " + ExceptionGet()["message"]);                
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+        }
+        Else
+        {
+            FoldGrade("At least one procedure is defined in the fold", 0, True)
+            {
+                False;
+            }
+        }
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 4",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        Procedure("solidRectangle2",["lowerLeftX","lowerLeftY","width","height","pointCount"])
+        {
+          Local(xIndex,yIndex);
+      
+          For(xIndex := lowerLeftX,xIndex <=? lowerLeftX + width,xIndex++ )
+          {
+            For(yIndex := lowerLeftY,yIndex <=? lowerLeftY + height,yIndex++ )
+            {
+              PlotterPoint("D" + ToString(pointCount++ ),xIndex,yIndex);
+            }
+          }
+      
+          pointCount;
+        }
+      
+        Procedure("mainProcedure",[])
+        {
+          PlotterClear();
+      
+          solidRectangle2(1,2,5,5,1);
+        }
+      
+        mainProcedure();
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: MathPiper version >= .259. (1/1)
+        PASS: "mainProcedure()" is the last expression in the fold. (1/1)
+      solidRectangle2:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure exists and it has the correct name. (1/1)
+        PASS: The procedure has five formal parameters. (1/1)
+        PASS: The procedure does not use any number literals. (1/1)
+        PASS: Exactly two "For" loops are used and no other loops are used. (1/1)
+        PASS: One "PlotterPoint" procedure is used . (1/1)
+        PASS: The "Local" procedure is used. (1/1)
+        PASS: "pointCount;" is the last expression in the fold. (1/1)
+      mainProcedure:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure exists and it has the correct name. (1/1)
+        PASS: The procedure has zero formal parameters. (1/1)
+        PASS: One copy of a call to "PlotterClear" is present . (1/1)
+        PASS: The procedure produces a correct result. (1/1)
+      
+        22/22 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 5",description="Solid rectangle holes."
+========================================================================================================
+Problem 5
+
+a) Create a procedure named "solidRectangleHoles"
+that has the parameters ["lowerLeftX", "lowerLeftY",
+"width", "height", "pointCount"]. Use nested "For" loops and a
+single "PlotterPoint" procedure to draw a solid
+rectangle of any width and height at the specified
+X,Y coordinate. The parameters "lowerLeftX" and
+"lowerLeftY" are the X,Y coordinate of the lower
+left corner of the rectangle. Have all point labels
+start with a capital "E". Use "pointCount" to
+make all point labels unique. It should have an
+initial value of 1. This procedure should not
+contain more than three number literals.
+
+b) Create a no parameter procedure named
+"mainProcedure" that uses the
+"solidRectangleHoles" procedure to draw the line
+that is shown in figure 5 of the
+points_patterns_exercises_1.pdf document. The
+labels of the plotted points should match the
+labels of the points in the figures. The main
+procedure should contain a call to
+PlotterClear().
+
+c) Place the following line of code at the end of
+the fold:
+
+mainProcedure();
+
+
+%mathpiper,name="Problem 5",subtype="hint"
+Hint("ClByb2NlZHVyZSgic29saWRSZWN0YW5nbGVIb2xlcyIsIFsibG93ZXJMZWZ0WCIsICJsb3dlckxlZnRZIiwgIndpZHRoIiwgImhlaWdodCIsICJwb2ludENvdW50Il0pCnsKICAgIExvY2FsKHhJbmRleCwgeUluZGV4KTsKICAgIAogICAgRm9yKHlJbmRleCA6PSBsb3dlckxlZnRZLCB5SW5kZXggPD0/IGxvd2VyTGVmdFkgKyBoZWlnaHQsIHlJbmRleCsrKQogICAgeyAgICAKICAgICAgICBGb3IoeEluZGV4IDo9IGxvd2VyTGVmdFgsIHhJbmRleCA8PT8gbG93ZXJMZWZ0WCArIHdpZHRoLCB4SW5kZXgrKykKICAgICAgICB7CiAgICAgICAgICAgIElmKHBvaW50Q291bnQgIT0/IDggJj8gcG9pbnRDb3VudCAhPT8gMTEgJj8gcG9pbnRDb3VudCAhPT8gMjkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIFBsb3R0ZXJQb2ludCgiRSIgKyBUb1N0cmluZyhwb2ludENvdW50KSwgeEluZGV4LCB5SW5kZXgpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICBwb2ludENvdW50Kys7CiAgICAgICAgfQogICAgfQogICAgCiAgICBwb2ludENvdW50Owp9CgoKUHJvY2VkdXJlKCJtYWluUHJvY2VkdXJlIiwgW10pCnsKICAgIFBsb3R0ZXJDbGVhcigpOwogICAgc29saWRSZWN0YW5nbGVIb2xlcygxLCAyLCA1LCA1LCAxKTsKfQoKCgoKbWFpblByb2NlZHVyZSgpOwoK");
+%/mathpiper
+
+    %output,parent="Problem 5",mpversion=".259",preserve="false"
+      Result: True
+.   %/output
+
+
+%mathpiper,name="Problem 5",subtype="problem",unassign_all="true",truncate="1000",timeout="5000"
+
+Procedure("solidRectangleHoles",["lowerLeftX","lowerLeftY","width","height","pointCount"])
+{
+    Local(xIndex,yIndex);
+    
+    For(yIndex := lowerLeftY, yIndex <=? lowerLeftY + height, yIndex++)
+    {
+        For(xIndex := lowerLeftX, xIndex<=? lowerLeftX + width, xIndex++)
+        {
+            If(pointCount !=? 8 &? pointCount !=? 11 &? pointCount !=? 29)
+            {
+                PlotterPoint("E" + ToString(pointCount++), xIndex, yIndex);
+            }
+            Else
+            {
+                pointCount++;
+            }
+        }
+    }
+    
+    pointCount;
+    
+}
+
+Procedure("mainProcedure",[])
+{
+    PlotterClear();
+    solidRectangleHoles(1,2,5,5,1);
+}
+
+mainProcedure();
+
+%/mathpiper
+
+    %output,parent="Problem 5",mpversion=".259",preserve="false"
+      Result: 37
+.   %/output
+
+
+
+
+
+%mathpiper_grade,name="Problem 5"
+
+FoldGrade("MathPiper version >= .259", 1, True)
+{
+    StringToNumber(Version()) >=? .259;
+}
+
+// --------------------------------------------------------
+LocalSymbols(pointsMap)
+{    
+    pointsSort(list) :=
+    {
+        Sort(list,Lambda([x,y], StringToNumber(StringSubstring(x[1], 2, Length(x[1]))) <? StringToNumber(StringSubstring(y[1], 2, Length(y[1])))));
+    }
+    
+    pointsMap := [];
+    
+    testPlotterPoint(name, x, y) :=
+    {
+        pointsMap[name] := [x, y];
+    }
+    
+    ?foldCode := Substitute('PlotterPoint, 'testPlotterPoint) ?foldCode;
+    
+    ?foldCode := Substitute('PlotterClear(), ' 'PlotterClear()) ?foldCode;
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("\"mainProcedure()\" is the last expression in the fold", 1, False)
+    {
+        Local(mainPosition);
+        
+        mainPosition := Length(?foldCode[1]);
+    
+        If(Procedure?(?foldCode[1][mainPosition]) &? ?foldCode[1][mainPosition][0] =? 'mainProcedure)
+        {
+            Local(resultMessage);
+            resultMessage := True;
+            If(?foldCode[1][mainPosition] !=? 'mainProcedure())
+            {
+                resultMessage := "The call to \"mainProcedure\" must have zero arguments.";
+            }
+            
+            ?foldCode[1][mainPosition] := ` '('(@ ?foldCode[1][mainPosition]));
+            resultMessage;
+        }
+        Else
+        {
+            False;
+        }
+    
+    }
+            
+    // --------------------------------------------------------
+    
+    {
+        Local(procedures, procedureName, parameters, body);
+        
+        procedures := ProceduresGet(?foldCode);
+        
+        If(procedures !=? [])
+        {
+            { // solidRectangleHoles
+            
+                procedureName := "solidRectangleHoles";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure exists and it has the correct name", 1, True)
+                    {
+                        procedure !=? None;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has five formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 5;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure uses no more than three number literals", 1, False)
+                    {
+                        Length(PositionsPattern2(procedure["body"], a_Number?)) <=? 3;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("Exactly two \"For\" loops are used and no other loops are used", 1, False)
+                    {
+                        Local(procedureNames, loopCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        loopCount := Count(procedureNames,"While") + Count(procedureNames,"Until");
+                        loopCount =? 0 &? Count(procedureNames,"For") =? 2;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One \"PlotterPoint\" procedure is used ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"testPlotterPoint");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("The \"Local\" procedure is used", 1, False)
+                    {
+                        Local(procedureNames);
+                        procedureNames := ProcedureList(procedure["body"]);
+                        Contains?(procedureNames,"Local");
+                    }
+    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("\"pointCount;\" is the last expression in the fold", 1, False)
+                    {
+                        procedure["body"][Length(procedure["body"])] =? 'pointCount;
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+            
+            
+            
+            
+            { // mainProcedure
+            
+                procedureName := "mainProcedure";
+        
+                Echo(procedureName + ":");
+                
+                Local(procedure);
+                
+                procedure := procedures[procedureName];
+                
+                If(procedure !=? None)
+                {
+                    FoldGrade("The procedure does not throw an exception when defined", 1, True)
+                    {
+                        ExceptionCatch(
+                        {
+                            `( Procedure(@procedureName, @procedure["parameters"]) @procedure["body"] );
+                            True;
+                        },
+                        "",
+                        {
+                            ExceptionGet()["message"];
+                        });
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure exists and it has the correct name", 1, True)
+                    {
+                        procedure !=? None;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure has zero formal parameters", 1, False)
+                    {
+                        Length(procedure["parameters"]) =? 0;
+                    }
+                    
+                    // --------------------------------------------------------
+                    
+                    FoldGrade("One copy of a call to \"PlotterClear\" is present ", 1, True)
+                    {
+                        Local(procedureNames, procedureCount);
+                        procedureNames := ProcedureListAll(procedure["body"]);
+                        procedureCount := Count(procedureNames,"PlotterClear");
+                        procedureCount =? 1;
+                    }
+                    
+                    // --------------------------------------------------------
+                
+                    FoldGrade("The procedure produces a correct result", 1, True)
+                    {
+                        Local(procedureResult, correctValue);
+                        
+                        correctValue := [["E1",[1,2]],["E2",[2,2]],["E3",[3,2]],["E4",[4,2]],["E5",[5,2]],["E6",[6,2]],["E7",[1,3]],["E9",[3,3]],["E10",[4,3]],["E12",[6,3]],["E13",[1,4]],["E14",[2,4]],["E15",[3,4]],["E16",[4,4]],["E17",[5,4]],["E18",[6,4]],["E19",[1,5]],["E20",[2,5]],["E21",[3,5]],["E22",[4,5]],["E23",[5,5]],["E24",[6,5]],["E25",[1,6]],["E26",[2,6]],["E27",[3,6]],["E28",[4,6]],["E30",[6,6]],["E31",[1,7]],["E32",[2,7]],["E33",[3,7]],["E34",[4,7]],["E35",[5,7]],["E36",[6,7]]];
+                        
+                        ExceptionCatch(
+                        {                      
+                            `( Apply(Lambda(@procedure["parameters"], @procedure["body"]), []) );
+                            
+                            procedureResult := pointsSort(pointsMap);
+    
+                            If(procedureResult !=? correctValue)
+                            {
+                                "The following points are not in the correct position: (" + ToString(Difference(correctValue, procedureResult)) + ")";
+                            }
+                            Else
+                            {
+                                True;
+                            }
+                            
+                        },
+                        "",
+                        "Exception: " + ExceptionGet()["message"]);                
+                    }
+                }
+                Else
+                {
+                    FoldGrade("The procedure name is correct", 0, True)
+                    {
+                        False;
+                    }
+                }
+            }
+        }
+        Else
+        {
+            FoldGrade("At least one procedure is defined in the fold", 0, True)
+            {
+                False;
+            }
+        }
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 5",mpversion=".259",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        Procedure("solidRectangleHoles",["lowerLeftX","lowerLeftY","width","height","pointCount"])
+        {
+          Local(xIndex,yIndex);
+      
+          For(yIndex := lowerLeftY,yIndex <=? lowerLeftY + height,yIndex++ )
+          {
+            For(xIndex := lowerLeftX,xIndex <=? lowerLeftX + width,xIndex++ )
+            {
+              If(pointCount !=? 8 &? pointCount !=? 11 &? pointCount !=? 29)
+              {
+                PlotterPoint("E" + ToString(pointCount++ ),xIndex,yIndex);
+              }
+              Else 
+              {
+                pointCount++;
+              }
+            }
+          }
+      
+          pointCount;
+        }
+      
+        Procedure("mainProcedure",[])
+        {
+          PlotterClear();
+      
+          solidRectangleHoles(1,2,5,5,1);
+        }
+      
+        mainProcedure();
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: MathPiper version >= .259. (1/1)
+        PASS: "mainProcedure()" is the last expression in the fold. (1/1)
+      solidRectangleHoles:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure exists and it has the correct name. (1/1)
+        PASS: The procedure has five formal parameters. (1/1)
+        PASS: The procedure uses no more than three number literals. (1/1)
+        PASS: Exactly two "For" loops are used and no other loops are used. (1/1)
+        PASS: One "PlotterPoint" procedure is used . (1/1)
+        PASS: The "Local" procedure is used. (1/1)
+        PASS: "pointCount;" is the last expression in the fold. (1/1)
+      mainProcedure:
+        PASS: The procedure does not throw an exception when defined. (1/1)
+        PASS: The procedure exists and it has the correct name. (1/1)
+        PASS: The procedure has zero formal parameters. (1/1)
+        PASS: One copy of a call to "PlotterClear" is present . (1/1)
+        PASS: The procedure produces a correct result. (1/1)
+      
+        22/22 passes
+.   %/output
+
+%/group
+
+
